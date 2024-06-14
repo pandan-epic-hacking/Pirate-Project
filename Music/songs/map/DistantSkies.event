@@ -19,7 +19,7 @@ DistantSkies_0:
         BYTE           VOICE   48
         BYTE           PAN     c_v-1
         BYTE           N24     Cn3   v064
-        BYTE           VOL     127
+        BYTE           VOL     107
         BYTE   W24
         BYTE           N12     Gn3
         BYTE   W12
@@ -296,7 +296,8 @@ DistantSkies_0_22:
 DistantSkies_1:
         BYTE   KEYSH   DistantSkies_key+0
 // 000   ----------------------------------------
-        BYTE           VOL     127
+        BYTE           VOICE   45
+        BYTE           VOL     107
         BYTE   W72
 // 001   ----------------------------------------
         BYTE   W72
@@ -340,7 +341,6 @@ DistantSkies_1_LOOP:
         BYTE   W96
         BYTE   W48
 // 015   ----------------------------------------
-        BYTE           VOICE   45
         BYTE           N12     Gn4   v063
         BYTE   W12
         BYTE                   En4
@@ -467,7 +467,6 @@ DistantSkies_1_LOOP:
 // 040   ----------------------------------------
         BYTE   W72
 // 041   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  DistantSkies_1_LOOP
         BYTE   FINE
@@ -479,43 +478,43 @@ DistantSkies_2:
 // 000   ----------------------------------------
         BYTE           VOICE   49
         BYTE           PAN     c_v-2
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Gn3
-        BYTE           VOL     127
+        BYTE           VOL     107
         BYTE   W12
-        BYTE           N12     Cn3   v056
+        BYTE           N12     Cn3   v044
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Gn3   v063
+        BYTE                   Gn3   v050
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE                   Cn3   v048
+        BYTE                   Cn3   v038
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v056
+        BYTE                   Cn3   v044
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v063
+        BYTE                   Cn3   v050
         BYTE           N12     Gn3
         BYTE   W12
 // 001   ----------------------------------------
 DistantSkies_2_1:
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v056
+        BYTE                   Cn3   v044
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v063
+        BYTE                   Cn3   v050
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v048
+        BYTE                   Cn3   v038
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v056
+        BYTE                   Cn3   v044
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Cn3   v063
+        BYTE                   Cn3   v050
         BYTE           N12     Gn3
         BYTE   W12
         BYTE   PEND
@@ -524,66 +523,66 @@ DistantSkies_2_1:
          POIN2  DistantSkies_2_1
 // 003   ----------------------------------------
         BYTE           PAN     c_v+0
-        BYTE           N12     Dn3   v048
+        BYTE           N12     Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
-        BYTE           N12     Gn2
-        BYTE   W24
-        BYTE                   Dn3   v048
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v056
-        BYTE           N12     Dn3
-        BYTE   W12
-        BYTE                   Fn3   v063
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v048
-        BYTE           N12     Dn3
-        BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Dn3   v038
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Fn3   v050
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn3   v063
+        BYTE                   Dn3   v044
+        BYTE           N12     Gn2
+        BYTE   W24
+        BYTE                   Gn2   v038
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Gn2   v044
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Gn3   v050
         BYTE           N12     Gn2
         BYTE   W12
 // 004   ----------------------------------------
 DistantSkies_2_4:
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Fn3   v063
+        BYTE                   Fn3   v050
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v063
+        BYTE                   Gn2   v050
         BYTE           N12     Gn3
         BYTE   W12
         BYTE   PEND
@@ -591,92 +590,92 @@ DistantSkies_2_4:
         BYTE   PATT
          POIN2  DistantSkies_2_4
 // 006   ----------------------------------------
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Fn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Fn3
         BYTE   W24
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Gn3   v048
+        BYTE                   Gn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn3   v056
+        BYTE                   Gn3   v044
         BYTE           N12     Gn2
         BYTE   W24
 // 007   ----------------------------------------
 DistantSkies_2_LOOP:
-        BYTE           N12     Dn3   v048
+        BYTE           N12     Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
-        BYTE           N12     Gn2
-        BYTE   W24
-        BYTE                   Dn3   v048
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v056
-        BYTE           N12     Dn3
-        BYTE   W12
-        BYTE                   Fn3   v063
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v048
-        BYTE           N12     Dn3
-        BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Dn3   v038
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Fn3   v050
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn3   v063
+        BYTE                   Dn3   v044
+        BYTE           N12     Gn2
+        BYTE   W24
+        BYTE                   Gn2   v038
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Gn2   v044
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Gn3   v050
         BYTE           N12     Gn2
         BYTE   W12
 // 008   ----------------------------------------
 DistantSkies_2_8:
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Fn3   v063
+        BYTE                   Fn3   v050
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v063
+        BYTE                   Gn2   v050
         BYTE           N12     An3
         BYTE   W12
         BYTE   PEND
@@ -685,60 +684,60 @@ DistantSkies_2_8:
          POIN2  DistantSkies_2_4
 // 010   ----------------------------------------
 DistantSkies_2_10:
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
-        BYTE           N12     Dn3
-        BYTE   W24
-        BYTE                   Dn3   v048
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Gn2   v044
+        BYTE           N12     Dn3
+        BYTE   W24
+        BYTE                   Dn3   v038
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
         BYTE   PEND
 // 011   ----------------------------------------
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
-        BYTE           N12     Gn2
-        BYTE   W24
-        BYTE                   Dn3   v048
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v056
-        BYTE           N12     Dn3
-        BYTE   W12
-        BYTE                   Fn3   v063
-        BYTE           N12     Gn2
-        BYTE   W12
-        BYTE                   Gn2   v048
-        BYTE           N12     Dn3
-        BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Dn3   v038
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Fn3   v050
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn3   v063
+        BYTE                   Dn3   v044
+        BYTE           N12     Gn2
+        BYTE   W24
+        BYTE                   Gn2   v038
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Gn2   v044
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Gn3   v050
         BYTE           N12     Gn2
         BYTE   W12
 // 012   ----------------------------------------
@@ -752,22 +751,22 @@ DistantSkies_2_10:
          POIN2  DistantSkies_2_10
 // 015   ----------------------------------------
 DistantSkies_2_15:
-        BYTE           N12     Dn3   v048
+        BYTE           N12     Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v063
+        BYTE                   Dn3   v050
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Dn3   v063
+        BYTE                   Dn3   v050
         BYTE           N12     Gn2
         BYTE   W12
         BYTE   PEND
@@ -778,23 +777,23 @@ DistantSkies_2_15:
         BYTE   PATT
          POIN2  DistantSkies_2_15
 // 018   ----------------------------------------
-        BYTE           N24     Cn3   v048
+        BYTE           N24     Cn3   v038
         BYTE           N24     Fn2
         BYTE   W24
-        BYTE                   Fn2   v056
+        BYTE                   Fn2   v044
         BYTE           N24     Cn3
         BYTE   W24
-        BYTE                   Fn2   v063
+        BYTE                   Fn2   v050
         BYTE           N24     Cn3
         BYTE   W24
 // 019   ----------------------------------------
-        BYTE                   Fn2   v048
+        BYTE                   Fn2   v038
         BYTE           N24     Cn3
         BYTE   W24
-        BYTE                   Cn3   v056
+        BYTE                   Cn3   v044
         BYTE           N24     Fn2
         BYTE   W24
-        BYTE                   Cn3   v063
+        BYTE                   Cn3   v050
         BYTE           N24     Fn2
         BYTE   W24
 // 020   ----------------------------------------
@@ -830,104 +829,104 @@ DistantSkies_2_15:
         BYTE   W48
 // 033   ----------------------------------------
 DistantSkies_2_33:
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Fn3   v048
+        BYTE                   Fn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Fn3
         BYTE   W24
         BYTE   PEND
 // 034   ----------------------------------------
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Gn3   v048
+        BYTE                   Gn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   An3   v056
+        BYTE                   An3   v044
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Gn3
         BYTE   W12
 // 035   ----------------------------------------
         BYTE   PATT
          POIN2  DistantSkies_2_33
 // 036   ----------------------------------------
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Gn3   v048
+        BYTE                   Gn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     As3
         BYTE   W24
 // 037   ----------------------------------------
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE           N12     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Fn3
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Fn3
         BYTE   W24
 // 038   ----------------------------------------
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Gn3   v048
+        BYTE                   Gn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   An3   v056
+        BYTE                   An3   v044
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn3   v048
+        BYTE                   Gn3   v038
         BYTE           N12     Gn2
         BYTE   W12
 // 039   ----------------------------------------
         BYTE                   Dn3
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Fn3   v048
+        BYTE                   Fn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Fn3
         BYTE   W24
 // 040   ----------------------------------------
-        BYTE                   Dn3   v048
+        BYTE                   Dn3   v038
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE           N12     Dn3
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N12     Gn3
         BYTE   W12
-        BYTE                   Gn3   v056
+        BYTE                   Gn3   v044
         BYTE           N12     Gn2
         BYTE   W24
 // 041   ----------------------------------------
@@ -942,13 +941,13 @@ DistantSkies_3:
 // 000   ----------------------------------------
         BYTE           VOICE   62
         BYTE           PAN     c_v-20
-        BYTE           VOL     127
+        BYTE           VOL     107
         BYTE   W72
 // 001   ----------------------------------------
         BYTE   W72
 // 002   ----------------------------------------
         BYTE   W24
-        BYTE           N24     Gn3   v064
+        BYTE           N24     Gn3   v051
         BYTE           N24     As3
         BYTE           N24     Dn4
         BYTE           N24     Fn4
@@ -959,29 +958,29 @@ DistantSkies_3:
         BYTE   W24
 // 003   ----------------------------------------
 DistantSkies_3_3:
-        BYTE           N24     Dn2   v063
+        BYTE           N24     Dn2   v050
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn2   v032
+        BYTE                   Dn2   v025
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Gn2   v032
+        BYTE                   Gn2   v025
         BYTE           N24     Dn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE           N24     Gn2
         BYTE           N12     An2
         BYTE   W12
         BYTE                   As2
         BYTE   W12
-        BYTE                   An2   v032
+        BYTE                   An2   v025
         BYTE           N24     Dn2
         BYTE           N24     Gn2
         BYTE   W12
@@ -990,29 +989,29 @@ DistantSkies_3_3:
         BYTE   PEND
 // 004   ----------------------------------------
 DistantSkies_3_4:
-        BYTE           N24     Dn3   v063
+        BYTE           N24     Dn3   v050
         BYTE           N24     An2
         BYTE           N24     Fn2
         BYTE   W24
-        BYTE                   Dn3   v032
+        BYTE                   Dn3   v025
         BYTE           N24     An2
         BYTE           N24     Fn2
         BYTE   W24
-        BYTE                   An2   v063
+        BYTE                   An2   v050
         BYTE           N24     Fn2
         BYTE           N24     Dn3
         BYTE   W24
-        BYTE                   An2   v032
+        BYTE                   An2   v025
         BYTE           N24     Fn2
         BYTE           N24     Dn3
         BYTE   W24
-        BYTE                   Dn3   v063
+        BYTE                   Dn3   v050
         BYTE           N12     En2
         BYTE           N24     An2
         BYTE   W12
         BYTE           N12     Fn2
         BYTE   W12
-        BYTE           N24     Dn3   v032
+        BYTE           N24     Dn3   v025
         BYTE           N12     En2
         BYTE           N24     An2
         BYTE   W12
@@ -1021,29 +1020,29 @@ DistantSkies_3_4:
         BYTE   PEND
 // 005   ----------------------------------------
 DistantSkies_3_5:
-        BYTE           N24     En3   v063
+        BYTE           N24     En3   v050
         BYTE           N24     Cn3
         BYTE           N24     Gn2
         BYTE   W24
-        BYTE                   En3   v032
+        BYTE                   En3   v025
         BYTE           N24     Cn3
         BYTE           N24     Gn2
         BYTE   W24
-        BYTE                   Gn2   v063
+        BYTE                   Gn2   v050
         BYTE           N24     En3
         BYTE           N24     Cn3
         BYTE   W24
-        BYTE                   Gn2   v032
+        BYTE                   Gn2   v025
         BYTE           N24     En3
         BYTE           N24     Cn3
         BYTE   W24
-        BYTE                   Cn3   v063
+        BYTE                   Cn3   v050
         BYTE           N24     Gn2
         BYTE           N12     Fn3
         BYTE   W12
         BYTE                   En3
         BYTE   W12
-        BYTE           N24     Cn3   v032
+        BYTE           N24     Cn3   v025
         BYTE           N24     Gn2
         BYTE           N12     Fn3
         BYTE   W12
@@ -1051,23 +1050,23 @@ DistantSkies_3_5:
         BYTE   W12
         BYTE   PEND
 // 006   ----------------------------------------
-        BYTE           N24     Gn2   v063
+        BYTE           N24     Gn2   v050
         BYTE           N24     Dn3
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn3   v032
+        BYTE                   Dn3   v025
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   As2   v063
+        BYTE                   As2   v050
         BYTE           N24     Dn3
         BYTE           N24     Gn2
         BYTE   W24
-        BYTE           N12     As2   v032
+        BYTE           N12     As2   v025
         BYTE           N12     Gn2
         BYTE           N12     Dn3
         BYTE   W12
-        BYTE                   Cn4   v063
+        BYTE                   Cn4   v050
         BYTE           N12     Fs3
         BYTE           N12     An3
         BYTE           N12     Dn3
@@ -1078,29 +1077,29 @@ DistantSkies_3_5:
         BYTE   W48
 // 007   ----------------------------------------
 DistantSkies_3_LOOP:
-        BYTE           N24     Dn2   v063
+        BYTE           N24     Dn2   v050
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn2   v032
+        BYTE                   Dn2   v025
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Gn2   v032
+        BYTE                   Gn2   v025
         BYTE           N24     Dn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE           N24     Gn2
         BYTE           N12     An2
         BYTE   W12
         BYTE                   As2
         BYTE   W12
-        BYTE                   An2   v032
+        BYTE                   An2   v025
         BYTE           N24     Dn2
         BYTE           N24     Gn2
         BYTE   W12
@@ -1114,23 +1113,23 @@ DistantSkies_3_LOOP:
          POIN2  DistantSkies_3_5
 // 010   ----------------------------------------
 DistantSkies_3_10:
-        BYTE           N24     Dn3   v063
+        BYTE           N24     Dn3   v050
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Gn2   v032
+        BYTE                   Gn2   v025
         BYTE           N24     Dn3
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   Dn3   v063
+        BYTE                   Dn3   v050
         BYTE           N24     As2
         BYTE           N24     Gn2
         BYTE   W24
-        BYTE           N12     Dn3   v032
+        BYTE           N12     Dn3   v025
         BYTE           N12     Gn2
         BYTE           N12     As2
         BYTE   W12
-        BYTE                   Cn4   v063
+        BYTE                   Cn4   v050
         BYTE           N12     Fs3
         BYTE           N12     An3
         BYTE           N12     Dn3
@@ -1153,15 +1152,15 @@ DistantSkies_3_10:
         BYTE   PATT
          POIN2  DistantSkies_3_10
 // 015   ----------------------------------------
-        BYTE           N24     Dn2   v063
+        BYTE           N24     Dn2   v050
         BYTE           N24     Gn2
         BYTE           N24     As2
         BYTE   W24
-        BYTE                   As2   v048
+        BYTE                   As2   v038
         BYTE           N24     Dn2
         BYTE           N24     Gn2
         BYTE   W24
-        BYTE                   Gn2   v063
+        BYTE                   Gn2   v050
         BYTE           N24     Dn2
         BYTE           N24     As2
         BYTE   W24
@@ -1170,25 +1169,25 @@ DistantSkies_3_10:
         BYTE           N24     Dn3
         BYTE           N24     An2
         BYTE   W24
-        BYTE                   An2   v048
+        BYTE                   An2   v038
         BYTE           N24     Fn3
         BYTE           N24     Dn3
         BYTE   W24
-        BYTE                   An2   v063
+        BYTE                   An2   v050
         BYTE           N24     Fn3
         BYTE           N24     Dn3
         BYTE   W24
 // 017   ----------------------------------------
 DistantSkies_3_17:
-        BYTE           N24     En3   v063
+        BYTE           N24     En3   v050
         BYTE           N24     Cn3
         BYTE           N24     Gn2
         BYTE   W24
-        BYTE                   Gn2   v048
+        BYTE                   Gn2   v038
         BYTE           N24     En3
         BYTE           N24     Cn3
         BYTE   W24
-        BYTE                   Gn2   v063
+        BYTE                   Gn2   v050
         BYTE           N24     En3
         BYTE           N24     Cn3
         BYTE   W24
@@ -1197,15 +1196,15 @@ DistantSkies_3_17:
         BYTE   PATT
          POIN2  DistantSkies_3_17
 // 019   ----------------------------------------
-        BYTE           N24     Gn2   v063
+        BYTE           N24     Gn2   v050
         BYTE           N24     Cn3
         BYTE           N24     En3
         BYTE   W24
-        BYTE                   Cn3   v048
+        BYTE                   Cn3   v038
         BYTE           N24     Gn3
         BYTE           N24     En3
         BYTE   W24
-        BYTE                   Gn3   v063
+        BYTE                   Gn3   v050
         BYTE           N24     En3
         BYTE           N24     Cn3
         BYTE           N24     As3
@@ -1213,225 +1212,225 @@ DistantSkies_3_17:
 // 020   ----------------------------------------
         BYTE                   Fn2
         BYTE   W12
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Gs2
         BYTE           N12     Fn3
         BYTE   W12
-        BYTE           N24     Cn2   v063
+        BYTE           N24     Cn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Fn2   v063
+        BYTE           N24     Fn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Cn2   v063
+        BYTE           N24     Cn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
 // 021   ----------------------------------------
-        BYTE           N24     Cs2   v063
+        BYTE           N24     Cs2   v050
         BYTE   W12
-        BYTE           N12     Fn2   v048
+        BYTE           N12     Fn2   v038
         BYTE           N12     Cs3
         BYTE           N12     Gs2
         BYTE   W12
-        BYTE           N24     Gs1   v063
+        BYTE           N24     Gs1   v050
         BYTE   W12
-        BYTE           N12     Fn2   v048
+        BYTE           N12     Fn2   v038
         BYTE           N12     Cs3
         BYTE           N12     Gs2
         BYTE   W12
-        BYTE           N24     Cs2   v063
+        BYTE           N24     Cs2   v050
         BYTE   W12
-        BYTE           N12     Cs3   v048
+        BYTE           N12     Cs3   v038
         BYTE           N12     Gs2
         BYTE           N12     Fn2
         BYTE   W12
-        BYTE           N24     Gs1   v063
+        BYTE           N24     Gs1   v050
         BYTE   W12
-        BYTE           N12     Cs3   v048
+        BYTE           N12     Cs3   v038
         BYTE           N12     Gs2
         BYTE           N12     Fn2
         BYTE   W12
 // 022   ----------------------------------------
-        BYTE           N24     Gs2   v063
+        BYTE           N24     Gs2   v050
         BYTE   W12
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Gs3
         BYTE           N12     Ds3
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Gs3
         BYTE           N12     Ds3
         BYTE   W12
-        BYTE           N24     Gs2   v063
+        BYTE           N24     Gs2   v050
         BYTE   W12
-        BYTE           N12     Gs3   v048
+        BYTE           N12     Gs3   v038
         BYTE           N12     Ds3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Gs3   v048
+        BYTE           N12     Gs3   v038
         BYTE           N12     Ds3
         BYTE           N12     Cn3
         BYTE   W12
 // 023   ----------------------------------------
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Ds3
         BYTE           N12     As2
         BYTE   W12
-        BYTE           N24     As1   v063
+        BYTE           N24     As1   v050
         BYTE   W12
-        BYTE           N12     Gn2   v048
+        BYTE           N12     Gn2   v038
         BYTE           N12     Ds3
         BYTE           N12     As2
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     As2
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE           N24     As1   v063
+        BYTE           N24     As1   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     As2
         BYTE           N12     Gn2
         BYTE   W12
 // 024   ----------------------------------------
-        BYTE           N24     Fn2   v063
+        BYTE           N24     Fn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Cn2   v063
+        BYTE           N24     Cn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Fn2   v063
+        BYTE           N24     Fn2   v050
         BYTE   W12
-        BYTE           N12     Fn3   v048
+        BYTE           N12     Fn3   v038
         BYTE           N12     Cn3
         BYTE           N12     Gs2
         BYTE   W12
-        BYTE           N24     Cn2   v063
+        BYTE           N24     Cn2   v050
         BYTE   W12
-        BYTE           N12     Fn3   v048
+        BYTE           N12     Fn3   v038
         BYTE           N12     Cn3
         BYTE           N12     Gs2
         BYTE   W12
 // 025   ----------------------------------------
-        BYTE           N24     Cs2   v063
+        BYTE           N24     Cs2   v050
         BYTE   W12
-        BYTE           N12     Fn2   v048
+        BYTE           N12     Fn2   v038
         BYTE           N12     Gs2
         BYTE           N12     Cs3
         BYTE   W12
-        BYTE           N24     Gs1   v063
+        BYTE           N24     Gs1   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Cs3
         BYTE           N12     Fn2
         BYTE   W12
-        BYTE           N24     Cs2   v063
+        BYTE           N24     Cs2   v050
         BYTE   W12
-        BYTE           N12     Fn2   v048
+        BYTE           N12     Fn2   v038
         BYTE           N12     Cs3
         BYTE           N12     Gs2
         BYTE   W12
-        BYTE           N24     Gs1   v063
+        BYTE           N24     Gs1   v050
         BYTE   W12
-        BYTE           N12     Fn2   v048
+        BYTE           N12     Fn2   v038
         BYTE           N12     Gs2
         BYTE           N12     Cs3
         BYTE   W12
 // 026   ----------------------------------------
-        BYTE           N24     Gs2   v063
+        BYTE           N24     Gs2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     Gs3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     Gs3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Gs2   v063
+        BYTE           N24     Gs2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     Cn3
         BYTE           N12     Gs3
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Ds3
         BYTE           N12     Gs3
         BYTE   W12
 // 027   ----------------------------------------
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     As2   v048
+        BYTE           N12     As2   v038
         BYTE           N12     Gn2
         BYTE           N12     Ds3
         BYTE   W12
-        BYTE           N24     As1   v063
+        BYTE           N24     As1   v050
         BYTE   W12
-        BYTE           N12     As2   v048
+        BYTE           N12     As2   v038
         BYTE           N12     Ds3
         BYTE           N12     Gn2
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     As2   v048
+        BYTE           N12     As2   v038
         BYTE           N12     Gn2
         BYTE           N12     Ds3
         BYTE   W12
-        BYTE           N24     As1   v063
+        BYTE           N24     As1   v050
         BYTE   W12
-        BYTE           N12     As2   v048
+        BYTE           N12     As2   v038
         BYTE           N12     Gn2
         BYTE           N12     Ds3
         BYTE   W12
 // 028   ----------------------------------------
-        BYTE           N24     Fn2   v063
+        BYTE           N24     Fn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Cn2   v063
+        BYTE           N24     Cn2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Fn2   v063
+        BYTE           N24     Fn2   v050
         BYTE   W12
-        BYTE           N12     Fn3   v048
+        BYTE           N12     Fn3   v038
         BYTE           N12     Cn3
         BYTE           N12     Gs2
         BYTE   W12
-        BYTE           N24     Cn2   v063
+        BYTE           N24     Cn2   v050
         BYTE   W12
-        BYTE           N12     Fn3   v048
+        BYTE           N12     Fn3   v038
         BYTE           N12     Cn3
         BYTE           N12     Gs2
         BYTE   W12
@@ -1440,27 +1439,27 @@ DistantSkies_3_17:
         BYTE           N24     Cn3
         BYTE   W24
 // 029   ----------------------------------------
-        BYTE                   Cs2   v063
+        BYTE                   Cs2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Cs3
         BYTE           N12     Fn2
         BYTE   W12
-        BYTE           N24     Gs1   v063
+        BYTE           N24     Gs1   v050
         BYTE   W12
-        BYTE           N12     Fn2   v048
+        BYTE           N12     Fn2   v038
         BYTE           N12     Gs2
         BYTE           N12     Cs3
         BYTE   W12
-        BYTE           N24     Cs2   v063
+        BYTE           N24     Cs2   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Cs3
         BYTE           N12     Fn2
         BYTE   W12
-        BYTE           N24     Gs1   v063
+        BYTE           N24     Gs1   v050
         BYTE   W12
-        BYTE           N12     Gs2   v048
+        BYTE           N12     Gs2   v038
         BYTE           N12     Fn2
         BYTE           N12     Cs3
         BYTE   W12
@@ -1469,27 +1468,27 @@ DistantSkies_3_17:
         BYTE           N24     Gs3
         BYTE   W24
 // 030   ----------------------------------------
-        BYTE                   Gs2   v063
+        BYTE                   Gs2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     Gs3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Cn3   v048
+        BYTE           N12     Cn3   v038
         BYTE           N12     Ds3
         BYTE           N12     Gs3
         BYTE   W12
-        BYTE           N24     Gs2   v063
+        BYTE           N24     Gs2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     Gs3
         BYTE           N12     Cn3
         BYTE   W12
-        BYTE           N24     Ds2   v063
+        BYTE           N24     Ds2   v050
         BYTE   W12
-        BYTE           N12     Ds3   v048
+        BYTE           N12     Ds3   v038
         BYTE           N12     Cn3
         BYTE           N12     Gs3
         BYTE   W12
@@ -1498,15 +1497,15 @@ DistantSkies_3_17:
         BYTE           N24     Ds3
         BYTE   W24
 // 031   ----------------------------------------
-        BYTE           TIE     Gn3   v056
+        BYTE           TIE     Gn3   v044
         BYTE           TIE     Cn4
         BYTE           TIE     Ds3
         BYTE   W96
         BYTE   W48
 // 032   ----------------------------------------
-        BYTE           EOT     Gn3
-        BYTE                   Cn4
-        BYTE                   Ds3
+        BYTE           EOT
+        BYTE           EOT     Cn4
+        BYTE                   Gn3
         BYTE           N48     Dn3
         BYTE           N48     Fs3
         BYTE           N48     An3
@@ -1516,12 +1515,12 @@ DistantSkies_3_17:
         BYTE           N48     As3
         BYTE           N48     Gn3
         BYTE   W48
-        BYTE                   Gn3   v048
+        BYTE                   Gn3   v038
         BYTE           N48     As3
         BYTE           N48     Dn3
         BYTE   W48
 // 033   ----------------------------------------
-        BYTE           TIE     Gn3   v063
+        BYTE           TIE     Gn3   v050
         BYTE   W72
 // 034   ----------------------------------------
         BYTE   W72
@@ -1541,10 +1540,10 @@ DistantSkies_3_17:
         BYTE           EOT
         BYTE           N36     Dn3
         BYTE   W36
-        BYTE                   Dn3   v056
+        BYTE                   Dn3   v044
         BYTE   W36
 // 040   ----------------------------------------
-        BYTE           N48     Dn3   v048
+        BYTE           N48     Dn3   v038
         BYTE   W72
 // 041   ----------------------------------------
         BYTE   GoTo
@@ -1558,7 +1557,7 @@ DistantSkies_4:
 // 000   ----------------------------------------
         BYTE           VOICE   47
         BYTE           N24     Cn3   v048
-        BYTE           VOL     127
+        BYTE           VOL     107
         BYTE   W24
         BYTE           N24     Cn3   v056
         BYTE   W24
@@ -1776,7 +1775,7 @@ DistantSkies_5:
         BYTE   KEYSH   DistantSkies_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     127
+        BYTE           VOL     107
         BYTE   W72
 // 001   ----------------------------------------
         BYTE   W72
@@ -2031,14 +2030,15 @@ DistantSkies_5_33:
 DistantSkies_6:
         BYTE   KEYSH   DistantSkies_key+0
 // 000   ----------------------------------------
-        BYTE           VOL     127
+        BYTE           VOICE   124
+        BYTE           VOL     107
         BYTE   W72
 // 001   ----------------------------------------
         BYTE   W72
 // 002   ----------------------------------------
         BYTE   W72
 // 003   ----------------------------------------
-        BYTE           VOICE   124
+DistantSkies_6_3:
         BYTE           N12     Dn1   v054
         BYTE           N96     Cs2
         BYTE   W24
@@ -2056,6 +2056,7 @@ DistantSkies_6:
         BYTE   W06
         BYTE                   Dn1
         BYTE   W18
+        BYTE   PEND
 // 004   ----------------------------------------
 DistantSkies_6_4:
         BYTE           N12     Dn1   v054
@@ -2110,23 +2111,8 @@ DistantSkies_6_LOOP:
         BYTE   PATT
          POIN2  DistantSkies_6_4
 // 011   ----------------------------------------
-        BYTE           N12     Dn1   v054
-        BYTE           N96     Cs2
-        BYTE   W24
-        BYTE           N12     Dn1
-        BYTE   W24
-        BYTE           N06
-        BYTE   W06
-        BYTE                   Dn1
-        BYTE   W18
-        BYTE           N12
-        BYTE   W24
-        BYTE                   Dn1
-        BYTE   W24
-        BYTE           N06
-        BYTE   W06
-        BYTE                   Dn1
-        BYTE   W18
+        BYTE   PATT
+         POIN2  DistantSkies_6_3
 // 012   ----------------------------------------
         BYTE   PATT
          POIN2  DistantSkies_6_4
@@ -2346,14 +2332,14 @@ DistantSkies_6_33:
 DistantSkies_7:
         BYTE   KEYSH   DistantSkies_key+0
 // 000   ----------------------------------------
-        BYTE           VOL     127
+        BYTE           VOICE   103
+        BYTE           VOL     107
         BYTE   W72
 // 001   ----------------------------------------
         BYTE   W72
 // 002   ----------------------------------------
         BYTE   W72
 // 003   ----------------------------------------
-        BYTE           VOICE   103
         BYTE           PAN     c_v-64
         BYTE           N12     Gn4   v054
         BYTE   W12

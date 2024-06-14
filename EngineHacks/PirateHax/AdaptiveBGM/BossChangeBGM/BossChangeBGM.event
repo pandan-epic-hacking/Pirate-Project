@@ -1,0 +1,31 @@
+#include "BossChangeBGM.lyn.event"
+
+BossMusicTable:
+POIN BossBGMTable
+
+//This is the flag used to denote that the boss music should be playing.
+BossMusicActiveFlagID:
+SHORT 0xEE //free global flag
+
+// This is the location that the current boss song ID is stored.
+// It needs to go somewhere that gets saved through suspend.
+// By default, this is in the unused 0th entry of the debuff table.
+// Note that its location is only the 0th entry in this project,
+// where the size of debuff table entries has been expanded.
+ALIGN 4
+BossMusicCurrentSongID:
+WORD DebuffTableRam+8 //uses 2 bytes
+
+PUSH
+	ORG $15FC8
+		jumpToHack(GetCurrentMapMusicIndexAddition)
+	ORG $835A8
+		jumpToHack(New_ShouldDisplayDeathQuoteForChar)
+	ORG $55CEC
+		POIN New_ekrBattleStarting
+	ORG $9A3534
+		POIN New_MapAnimBattleQuoteHandler
+	ORG $9A35B4
+		POIN New_MapAnimDeathQuoteHandler
+POP
+

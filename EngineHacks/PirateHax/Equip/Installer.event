@@ -5,23 +5,27 @@ ALIGN 4
 ALIGN 4
 EquipmentList:
 BYTE HideShield
+BYTE IronShield
 BYTE GlassShield
+BYTE HexlockShield
 BYTE AshArrow
 BYTE Eyepatch
+BYTE KnightRing
+BYTE Statuette
+BYTE ShoveGlove
+BYTE SwapShoes
 BYTE 0x00 //terminator
 
 // Defense equipment loses durability on each hit taken
 ALIGN 4
 DefenseEquipmentList:
 BYTE GlassShield
-BYTE HideShield
+BYTE HexlockShield
 BYTE 0x00 // terminator
 
 // Offense equipment loses durability on each attack made
 ALIGN 4
 OffenseEquipmentList:
-BYTE AshArrow
-BYTE Eyepatch
 BYTE 0x00 // terminator
 
 // Equipment in neither list doesn't decrement durability

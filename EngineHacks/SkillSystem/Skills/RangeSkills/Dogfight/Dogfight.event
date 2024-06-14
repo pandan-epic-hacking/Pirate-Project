@@ -1,0 +1,6 @@
+//Dogfight: If unit's AS > foe's AS, counterattack regardless of range.
+
+#include "Dogfight.lyn.event"
+
+DogfightIDLink:
+BYTE DogfightID

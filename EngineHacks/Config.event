@@ -90,9 +90,6 @@
 //If uncommented, will enable the Movement Arrow Hack.
 #define MOVEARROW_HACK
 
-//If uncommented, will enable Negative Weapon Wt/Crit Display.
-#define NEGATIVE_WTCRIT_DISPLAY
-
 //If uncommented, will enable the battle crit cap
 #define CRIT_CAP
 
@@ -227,7 +224,7 @@
 // #define ENABLE_GBA_LETHALITY
 
 // if set to false, only the skill will work, if set to true both the skill and the ability will work
-#define ENABLE_LEGACY_CANTO False
+#define ENABLE_LEGACY_CANTO True
 
 // if commented, enemies with Steal+ will steal as normal in vanilla (ie, the skill will be pretty much useless
 #define ENABLE_AI_STEAL_PLUS
@@ -338,7 +335,7 @@
 #define PRESS_SELECT_TO_VIEW_GROWTHS
 
 //If true, the stat colors for player units will reflect their growth in the stat.
-#define USE_STAT_COLORS True
+#define USE_STAT_COLORS False
 
 //If true, Fixed Growths mode will exist.
 #define FIXED_GROWTHS_MODE False

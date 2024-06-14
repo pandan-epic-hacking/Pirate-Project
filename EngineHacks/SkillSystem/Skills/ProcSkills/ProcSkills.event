@@ -81,7 +81,7 @@ POIN SkillTester
 WORD CounterMagicID
 
 Proc_Miracle:
-#incbin "Miracle/proc_miracle.dmp"
+#include "Miracle/proc_miracle.lyn.event"
 POIN SkillTester
 WORD MiracleID
 
@@ -236,3 +236,4 @@ WORD EyeForAnEyeID
 //Note to self: if poison bit is set in rounds data, 0x2000 is set at...somewhere, and that's later checked at 55342. 55350 = mov r1,#1; replace 1 with status id
 
 #include "_Animations/SkillAnimations.event"
+

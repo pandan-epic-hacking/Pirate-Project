@@ -1,0 +1,345 @@
+EventPointerTable(HubB_2EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+#define B2Level 10
+
+TurnBasedEvents:
+TurnEventPlayer(0, NewUnitsBlue, 1)
+TurnEventPlayer(0, MakeBossCharge, 9)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Door(13,3)
+Door(16,4)
+Door(20,4)
+Door(13,19)
+Door(16,18)
+Door(20,18)
+Chest(LightRune, 9, 4)
+Chest(SwapShoes, 9, 18)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss
+CauseGameOverIfLordDies
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [23,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+LoadUnit(22,10)
+LoadUnit(23,10)
+LoadUnit(24,10)
+LoadUnit(22,11)
+LoadUnit(24,11)
+LoadUnit(22,12)
+LoadUnit(24,12)
+LoadUnit(22,13)
+LoadUnit(23,13)
+LoadUnit(24,13)
+// add the new unit at 23,12
+UNIT
+
+// group 1: yadney's squad
+// group 2: top hallway guards
+
+B2Yadney:
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,True) [16,12] 0 0 0 0 [ShortSpear,KillerLance] GroupOneAI
+UNIT
+
+B2Baddies:
+UNIT Cruz Shaman CruzFake Level(11,Enemy,True) [5,9] 0 0 0 0 [Sagittae, Elfire, Vulnerary] NeverMoveAI
+UNIT Rebel Thief 0 Level(B2Level,Enemy,True) [9,17] 0 0 0 0 [SteelKnife, DoorKey, DoorKey, DoorKey] ThiefAI
+UNIT Rebel Thief 0 Level(B2Level,Enemy,True) [8,8] 0 0 0 0 [SteelDagger, DoorKey, DoorKey, DoorKey] ThiefAI
+
+// turn 1
+UNIT Rebel GriffinRider Cruz Level(B2Level,Enemy,True) [21,9] 0 0 0 0 [IronLance] ChargeAI
+UNIT Rebel Ninja Cruz Level(B2Level,Enemy,True) [19,10] 0 0 0 0 [SteelKnife,SteelDagger] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level,Enemy,True) [18,12] 0 0 0 0 [Javelin] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level,Enemy,True) [19,13] 0 0 0 0 [Axereaver,SteelLance] ChargeAI
+UNIT Rebel Shaman Cruz Level(B2Level,Enemy,True) [22,14] 0 0 0 0 [Elfire,Surge] ChargeAI
+
+// turn 2
+UNIT Rebel Vanguard Cruz Level(B2Level,Enemy,True) [18,9] 0 0 0 0 [HandAxe,SteelLance] BossAI
+UNIT Rebel Vanguard Cruz Level(B2Level,Enemy,True) [18,14] 0 0 0 0 [Javelin,SteelAxe] BossAI
+UNIT Rebel Myrmidon Cruz Level(B2Level,Enemy,True) [16,8] 0 0 0 0 [IronSword] ChargeAI
+UNIT Rebel GriffinRider Cruz Level(B2Level,Enemy,True) [13,13] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Fighter Cruz Level(B2Level,Enemy,True) [17,15] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Rebel Mage Cruz Level(B2Level,Enemy,True) [14,11] 0 0 0 0 [Fire] ChargeAI
+
+// turn 3 yadney squad
+UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [9,10] 0 0 0 0 [Onigiri,TealGem] GroupOneAI
+UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [9,12] 0 0 0 0 [Hammer,Crusher] GroupOneAI
+UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [10,8] 0 0 0 0 [IronLance] GroupOneAI
+UNIT Rebel SwordCav Cruz Level(B2Level, Enemy, True) [10,14] 0 0 0 0 [IronSword] GroupOneAI
+
+// turn 4
+UNIT Rebel Curate Cruz Level(B2Level,Enemy,True) [9,11] 0 0 0 0 [Physic] [0xE,0x3,0x0,0x20]
+// BL room
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
+UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [13,21] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [14,20] 0 0 0 0 [IronLance,Pike] ChargeAI
+
+// turn 5
+// TL room
+UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [12,1] 0 0 0 0 [Rapier] ChargeAI
+UNIT Rebel Ninja Cruz Level(B2Level, Enemy, True)  [14,2] 0 0 0 0 [SteelKnife] ChargeAI
+// BM room
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [16,21] 0 0 0 0 [IronBow] ChargeAI
+UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [17,19] 0 0 0 0 [IronMusket] ChargeAI
+
+// turn 6
+// TM room
+UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [16,1] 0 0 0 0 [Elfire] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [17,2] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [16,3] 0 0 0 0 [SteelBlade,IronBlade,SteelBlade] ChargeAI
+// BR room
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [20,19] 0 0 0 0 [SteelSword,Javelin,ChestKey] ChargeAI
+UNIT Rebel Ninja Cruz Level(B2Level, Enemy, True) [19,20] 0 0 0 0 [Bloodletter] ChargeAI
+
+// turn 7
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [19,3] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [21,3] 0 0 0 0 [Elfire] ChargeAI
+
+
+// end of chapter?? idk
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [6,8] 0 0 0 0 [SteelBow] AttackInTwoAI
+UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [6,10] 0 0 0 0 [SteelMusket] AttackInTwoAI
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [1,10] 0 0 0 0 [SteelSword,SteelLance] AttackInTwoAI
+UNIT Rebel Vanguard Cruz Level(B2Level, Enemy, True) [2,9] 0 0 0 0 [SteelAxe,SteelLance] AttackInTwoAI
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [3,13] 0 0 0 0 [Greatbow] BossAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [5,12] 0 0 0 0 [Javelin,Ridersbane] BossAI
+UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [5,14] 0 0 0 0 [Thunder] BossAI
+
+UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [15,5] 0 0 0 0 [IronAxe] GroupTwoAI
+UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [19,5] 0 0 0 0 [IronLance] GroupTwoAI
+UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [18,17] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [14,17] 0 0 0 0 [IronSword,Javelin] BossAI
+UNIT
+
+
+HusniyeSquad:
+UNIT Husniye 0 0 Level(10,NPC,True) [23,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
+UNIT
+
+AvocadoSquad:
+UNIT Avocado 0 0 Level(12,NPC,True) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT
+
+MagdalenaSquad:
+UNIT Magdalena 0 0 Level(17,NPC,True) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
+UNIT
+
+// fadi: to black
+// fadu: back from black
+
+BeginningScene:
+SetBackground(Ship)
+MUSC AvastMeHeartiesID
+FADU 16
+FlagIsSet(CruzAccused, 0xABD)
+	Text(B2_SuppliesAreGone)
+	GOTO 0xABE
+LABEL 0xABD
+	Text(B2_ChiefItsBad)
+LABEL 0xABE
+FADI 16
+
+// conditionals for the recruited one
+MUSC WelcomeAboardMateyID
+FADU 16
+FlagIsSet(HusniyeAccused, 0x1A1)
+	Text(B2_AvocadoJoins)
+LABEL 0x1A1
+FlagIsSet(AvocadoAccused, 0x2A2)
+	Text(B2_HusniyeJoins)
+LABEL 0x2A2
+FlagIsSet(CruzAccused, 0x3A3)
+	Text(B2_MagdalenaJoins)
+LABEL 0x3A3
+FADI 16
+
+EraseBackground
+LoadEnemies(B2Baddies)
+CAM1 Cruz
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
+FADU 16
+ASMC MakeMusicAhoyASMC
+CameraCursor(Cruz)
+ASMC MakeMusicAhoyASMC
+Text(B2_IntroCruz_Monologue)
+LoadEnemies(B2Yadney)
+ENUN
+MOVE 16 Yadney [4,9]
+ENUN
+CameraCursor(Yadney)
+CameraCursor(Cruz)
+ASMC MakeMusicAvastASMC
+Text(B2_IntroCruz_Thieves)
+CameraCursor(9,17)
+CameraCursor(8,8)
+STAL 60
+CameraCursor(Cruz)
+Text(B2_IntroCruz_Yadney)
+CameraCursor(Yadney)
+CamOn
+MOVE 16 Yadney [8,11]
+ENUN
+CamOff
+CameraCursor(Yadney)
+FADI 16
+ASMC MakeMusicAhoyASMC
+FlagIsSet(HusniyeAccused, 0x11)
+	LOAD1 1 AvocadoSquad
+	ENUN
+LABEL 0x11
+FlagIsSet(AvocadoAccused, 0x22)
+	LOAD1 1 HusniyeSquad
+	ENUN
+LABEL 0x22
+FlagIsSet(CruzAccused, 0x33)
+	LOAD1 1 MagdalenaSquad
+	ENUN
+LABEL 0x33
+GotoPrepScreen
+NoFade 
+ENDA
+
+NewUnitsBlue:
+FADU 16
+FlagIsSet(HusniyeAccused, 0x11)
+	CameraCursor(Avocado)
+	Text(B2_AvocadoAnim)
+	CUSA Avocado
+	CameraCursor(Avocado)
+LABEL 0x11
+FlagIsSet(AvocadoAccused, 0x22)
+	CameraCursor(Husniye)
+	Text(B2_HusniyeAnim)
+	CUSA Husniye
+	CameraCursor(Husniye)
+LABEL 0x22
+FlagIsSet(CruzAccused, 0x33)
+	CameraCursor(Magdalena)
+	Text(B2_MagdalenaAnim)
+	CUSA Magdalena
+	CameraCursor(Magdalena)
+LABEL 0x33
+NoFade
+ENDA
+
+MakeBossCharge:
+CameraCursor(Cruz)
+CHECK_ALIVE Yadney
+BEQ 0xFEED 0xC 0x0
+	Text(B2_CruzCharging_YadDead)
+	GOTO 0x654
+LABEL 0xFEED
+	Text(B2_CruzCharging_YadAlive)
+LABEL 0x654
+SetAI(Cruz,0,0,4,0)
+NoFade
+ENDA
+
+EndingScene:
+FadeOutMusic
+CHECK_ALIVE Yadney
+BEQ 0xBEEF 0xC 0x0
+	CameraCursor(Yadney)
+	Text(B2_IfYadneyAlive)
+LABEL 0xBEEF
+FADI 16
+// MUSC NeutralVictoryTheme
+SetBackground(Fort_Ruins)
+FADU 16
+Text(B2_Outro_SuppliesSubplot)
+FADI 16
+
+
+// put the rest of the outro here! with conditionals and stuff
+
+FlagIsSet(CruzAccused, 0x1A1)
+	MUSC StillZephyrsID
+	SetBackground(Inn)
+	FADI 16
+	Text(B2_Outro_Romance)
+	FADU 16
+	MUSC WelcomeAboardMateyID
+	FADI 16
+	Text(B2_Outro_MagdalenaPermanent)
+	FADU 16
+LABEL 0x1A1
+
+FlagIsSet(AvocadoAccused, 0x2B2)
+	// MUSC NeutralVictoryTheme
+	SetBackground(Inn)
+	FADI 16
+	Text(B2_Outro_Aftermath_Avocado)
+	FADU 16
+	// MUSC GreyMoralityID
+	SetBackground(Harbor)
+	FADI 16
+	Text(B2_Outro_RazvanSad)
+	FADU 16
+	MUSC WindAmbienceID
+	SetBackground(Ship)
+	FADI 16
+	Text(B2_Outro_HusniyePermanent)
+	FADI 16
+LABEL 0x2B2
+
+FlagIsSet(HusniyeAccused, 0x3C3)
+	// MUSC NeutralVictoryTheme
+	SetBackground(Inn)
+	FADI 16
+	Text(B2_Outro_Aftermath_Husniye)
+	FADU 16
+	// MUSC GreyMoralityID
+	SetBackground(Harbor)
+	FADI 16
+	Text(B2_Outro_RazvanSad)
+	FADU 16
+	MUSC WindAmbienceID
+	SetBackground(Ship)
+	FADI 16
+	Text(B2_Outro_AvocadoPermanent)
+	FADI 16
+LABEL 0x3C3
+
+GoToHubChapter(HubB)
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

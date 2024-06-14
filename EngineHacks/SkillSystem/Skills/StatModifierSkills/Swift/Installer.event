@@ -1,0 +1,15 @@
+#include "Swift.lyn.event"
+
+#define SwiftBonus 3
+
+ALIGN 4
+SwiftID_Link:
+WORD SwiftID
+
+ALIGN 4
+SwiftBonus_Link:
+WORD SwiftBonus
+
+ALIGN 4
+SwiftHelpText_Link:
+WORD SwiftHelpText

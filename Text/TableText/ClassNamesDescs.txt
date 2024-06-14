@@ -2,181 +2,380 @@
 Captain[X]
 
 ## CaptainDesc
- [X]
+Weapons: Sword, Gun[N]
+Traits: Steal, Locktouch[X]
 
 ## NinjaName
 Ninja[X]
 
 ## NinjaDesc
- [X]
+Weapons: Knife[N]
+Traits: Steal, Locktouch[X]
 
 ## VanguardName
 Vanguard[X]
 
 ## VanguardDesc
- [X]
+Weapons: Axe, Lance[N]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## CurateName
 Curate[X]
 
 ## CurateDesc
- [X]
+Weapons: Staff[N]
+Traits: Steal, Locktouch[X]
 
 ## DeserterName
 Deserter[X]
 
 ## DeserterDesc
- [X]
+Weapons: Lance[N]
+Traits: Steal, Locktouch[X]
 
 ## HunterName
 Hunter[X]
 
 ## HunterDesc
- [X]
+Weapons: Bow[N]
+Traits: Steal, Locktouch[X]
 
 ## GunnerName
 Gunner[X]
 
 ## GunnerDesc
- [X]
+Weapons: Gun[N]
+Traits: Steal, Locktouch[X]
 
 ## LanceCavName
 Lance Cav[X]
 
 ## LanceCavDesc
- [X]
+Weapons: Lance[N]
+Traits: Canto, Aid+[X]
 
 ## WardenName
 Warden[X]
 
 ## WardenDesc
- [X]
+Weapons: Sword, Lance[N]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## ThiefDesc
- [X]
+Weapons: Knife[N]
+Traits: Steal, Locktouch[X]
 
 ## MercenaryDesc
- [X]
+Weapons: Sword[N]
+Traits: Steal, Locktouch[X]
 
 ## MyrmidonDesc
- [X]
+Weapons: Sword[N]
+Traits: Steal, Locktouch[X]
 
 ## ArcherDesc
- [X]
+Weapons: Bow[N]
+Traits: Steal, Locktouch[X]
 
 ## DragonRiderName
 Dragon Rider[X]
 
 ## DragonRiderDesc
- [X]
+Weapons: Axe[N]
+Traits: Flight, Aid+[X]
 
 ## MageDesc
- [X]
+Weapons: Tome[N]
+Traits: Steal, Locktouch[X]
 
 ## ShamanDesc
- [X]
+Weapons: Tome[N]
+Traits: Steal, Locktouch[X]
 
 ## FighterDesc
- [X]
+Weapons: Axe[N]
+Traits: Steal, Locktouch[X]
 
 ## BrigandDesc
- [X]
+Weapons: Axe[N]
+Traits: Steal, Locktouch[X]
 
 ## PegasusRiderName
-Pegasus Rider[X]
+Peg. Rider[X]
 
 ## PegasusRiderDesc
- [X]
+Weapons: Sword[N]
+Traits: Flight, Aid+[X]
 
 ## TroubadourDesc
- [X]
+Weapons: Staff[N]
+Traits: Canto, Aid+[X]
 
 ## SoldierDesc
- [X]
+Weapons: Lance[N]
+Traits: Steal, Locktouch[X]
 
 ## SwordCavName
 Sword Cav[X]
 
 ## SwordCavDesc
- [X]
+Weapons: Sword[N]
+Traits: Canto, Aid+[X]
 
 ## AxeCavName
 Axe Cav[X]
 
 ## AxeCavDesc
- [X]
+Weapons: Axe[N]
+Traits: Canto, Aid+[X]
 
 ## GriffinRiderName
 Griffin Rider[X]
 
 ## GriffinRiderDesc
- [X]
+Weapons: Lance[N]
+Traits: Flight, Aid+[X]
 
 ## ChampionName
 Champion[X]
 
 ## ChampionDesc
- [X]
+Weapons: Sword, Lance[N]
+Traits: Steal, Locktouch[X]
 
 ## LogName
 Log[X]
 
 ## LogDesc
- [X]
+Weapons: None[N]
+Traits: Noncombatant[X]
 
 ## AssassinDesc
- [X]
+Weapons: Knife, Bow[N]
+Traits: Steal, Locktouch[X]
 
 ## CataphractName
 Cataphract[X]
 
 ## CataphractDesc
- [X]
+Weapons: Axe, Lance[N]
+Traits: Unbreakable, Canto, Aid+[X]
 
 ## MasterNinjaName
 Master Ninja[X]
 
 ## MasterNinjaDesc
- [X]
+Weapons: Knife, Sword[N]
+Traits: Steal, Locktouch[X]
 
 ## DreadnoughtName
-Dreadnought[X]
+Marshall[X]
 
 ## DreadnoughtDesc
- [X]
+Weapons: Axe, Lance, Bow[N]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## SageDesc
- [X]
+Weapons: Tome, Staff[N]
+Traits: Steal, Locktouch[X]
 
 ## SeraphName
 Seraph[X]
 
 ## SeraphDesc
- [X]
+Weapons: Staff, Lance[N]
+Traits: Flight, Aid+[X]
 
 ## SniperDesc
- [X]
+Weapons: Bow[N]
+Traits: Armsmaster, Steal, Locktouch[X]
+
+## DarkKnightName
+Dark Knight[X]
 
 ## MageKnightDesc
- [X]
+Weapons: Tome, Lance[N]
+Traits: Canto, Aid+[X]
 
 ## BombardierName
 Bombardier[X]
 
 ## BombardierDesc
- [X]
+Weapons: Bow, Lance[N]
+Traits: Flight, Aid+[X]
 
 ## MonkDesc
- [X]
+Weapons: Tome[N]
+Traits: Steal, Locktouch[X]
 
 ## TricksterName
 Trickster[X]
 
 ## TricksterDesc
- [X]
+Weapons: Knife, Tome[N]
+Traits: Steal, Locktouch[X]
 
 ## BowCavName
 Bow Cav[X]
 
 ## BowCavDesc
- [X]
+Weapons: Bow[N]
+Traits: Canto, Aid+[X]
+
+## RuneshieldName
+Runeshield[X]
+
+## RuneshieldDesc
+Weapons: Sword, Lance, Tome[N]
+Traits: Unbreakable, Steal, Locktouch[X]
+
+## WolfKnightName
+Wolfrider[X]
+
+## WolfKnightDesc
+Weapons: Knife, Lance[N]
+Traits: Steal, Locktouch, Canto[X]
+
+## ClericDesc
+Weapons: Staves[N]
+Traits: Steal, Locktouch[X]
+
+## HeroDesc
+Weapons: Swords, Axes[N]
+Traits: Steal, Locktouch[X]
+
+## SwordmasterDesc
+Weapons: Swords[N]
+Traits: Armsmaster, Steal, Locktouch[X]
+
+## SlayerName
+Slayer[X]
+
+## SlayerDesc
+Weapons: Swords, Tomes[N]
+Traits: Steal, Locktouch[X]
+
+## BerserkerDesc
+Weapons: Axes[N]
+Traits: Armsmaster, Steal, Locktouch[X]
+
+## WarMonkName
+War Monk[X]
+
+## WarMonkDesc
+Weapons: Axes, Staves[N]
+Traits: Steal, Locktouch[X]
+
+## HalberdierName
+Halberdier[X]
+
+## HalberdierDesc
+Weapons: Lances[N]
+Traits: Armsmaster, Steal, Locktouch[X]
+
+## AdventurerName
+Adventurer[X]
+
+## AdventurerDesc
+Weapons: Bows, Staves[N]
+Traits: Steal, Locktouch[X]
+
+## RangerDesc
+Weapons: Bows, Swords[N]
+Traits: Canto, Aid+[X]
+
+## MaligKnightName
+Malig Knight[X]
+
+## MaligKnightDesc
+Weapons: Axes, Tomes[N]
+Traits: Flight, Aid+[X]
+
+## WarriorDesc
+Weapons: Axes, Bows[N]
+Traits: Steal, Locktouch[X]
+
+## DragoonName
+Dragoon[X]
+
+## DragoonDesc
+Weapons: Swords, Guns[N]
+Traits: Canto, Aid+[X]
+
+## DeadPeerName
+Corpse[X]
+
+## DeadPeerDesc
+Weapons: None[N]
+Traits: Dead[X]
+
+## GryphknightName
+Gryphoknight[X]
+
+## GryphknightDesc
+Weapons: Lances[N]
+Traits: Flight+, Aid+[X]
+
+## DracoknightName
+Dracoknight[X]
+
+## DracoknightDesc
+Weapons: Axes[N]
+Traits: Flight+, Aid+[X]
+
+## FalcoknightDesc
+Weapons: Swords[N]
+Traits: Flight+, Aid+[X]
+
+## RogueDesc
+Weapons: Knives[N]
+Traits: Armsmaster, Steal, Locktouch[X]
+
+## MarksmanName
+Marksman[X]
+
+## MarksmanDesc
+Weapons: Guns[N]
+Traits: Armsmaster, Steal, Locktouch[X]
+
+## SaviorName
+Savior[X]
+
+## SaviorDesc
+Weapons: Staves[N]
+Traits: Canto+, Aid+[X]
+
+## SwordKnightName
+Sword Knight[X]
+
+## SwordKnightDesc
+Weapons: Swords[N]
+Traits: Canto+, Aid+[X]
+
+## AxeKnightName
+Axe Knight[X]
+
+## AxeKnightDesc
+Weapons: Axes[N]
+Traits: Canto+, Aid+[X]
+
+## LanceKnightName
+Lance Knight[X]
+
+## LanceKnightDesc
+Weapons: Lances[N]
+Traits: Canto+, Aid+[X]
+
+## BowKnightName
+Bow Knight[X]
+
+## BowKnightDesc
+Weapons: Bows[N]
+Traits: Canto+, Aid+[X]
+
+## HorseName
+Horse[X]
+
+## HorseDesc
+Weapons: None[N]
+Traits: It's a horse![X]

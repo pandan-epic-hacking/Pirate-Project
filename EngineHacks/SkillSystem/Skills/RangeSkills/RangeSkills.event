@@ -21,3 +21,5 @@ RunningStartBonus:
 ALIGN 4
 PanacheBonus:
 #incbin "Panache/Panache.dmp"
+
+#include "Dogfight/Dogfight.event"

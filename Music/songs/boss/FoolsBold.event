@@ -17,7 +17,7 @@ FoolsBold_0:
 // 000   ----------------------------------------
         BYTE   TEMPO   140/2
         BYTE           VOICE   22
-        BYTE           VOL     70
+        BYTE           VOL     40
         BYTE           PAN     c_v+30
         BYTE           N72     Gn3   v102
         BYTE           N72     Dn3
@@ -210,7 +210,7 @@ FoolsBold_1:
         BYTE   KEYSH   FoolsBold_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   121
-        BYTE           VOL     95
+        BYTE           VOL     65
         BYTE           N18     Cn1   v102
         BYTE           N36     As1
         BYTE   W36
@@ -443,7 +443,7 @@ FoolsBold_2:
 // 000   ----------------------------------------
         BYTE           VOICE   61
         BYTE           PAN     c_v-53
-        BYTE           VOL     87
+        BYTE           VOL     57
         BYTE           N09     Gn2   v101
         BYTE   W09
         BYTE                   An2
@@ -781,7 +781,7 @@ FoolsBold_3:
         BYTE   W72
 // 004   ----------------------------------------
 FoolsBold_3_LOOP:
-        BYTE           VOL     82
+        BYTE           VOL     52
         BYTE           N12     Dn3   v076
         BYTE           N12     As2
         BYTE           N12     Gn2
@@ -1101,7 +1101,7 @@ FoolsBold_4:
 // 000   ----------------------------------------
         BYTE           VOICE   50
         BYTE           PAN     c_v-26
-        BYTE           VOL     70
+        BYTE           VOL     40
         BYTE   W72
 // 001   ----------------------------------------
         BYTE   W72
@@ -1298,7 +1298,7 @@ FoolsBold_5:
 // 000   ----------------------------------------
         BYTE           VOICE   34
         BYTE           PAN     c_v-19
-        BYTE           VOL     81
+        BYTE           VOL     51
         BYTE           N12     Gn2   v102
         BYTE   W12
         BYTE                   Gn2
@@ -1554,7 +1554,7 @@ FoolsBold_6:
         BYTE   KEYSH   FoolsBold_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   116
-        BYTE           VOL     76
+        BYTE           VOL     46
         BYTE           PAN     c_v+45
         BYTE           N09     Gn2   v076
         BYTE   W09
@@ -1882,7 +1882,7 @@ FoolsBold_7:
         BYTE   KEYSH   FoolsBold_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   121
-        BYTE           VOL     91
+        BYTE           VOL     61
         BYTE   W18
         BYTE           N06     Gs1   v102
         BYTE   W06

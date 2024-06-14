@@ -31,9 +31,14 @@ draw_textID_at 13, 3, textID=0x4fe, growth_func=2 @str
 draw_textID_at 13, 5, textID=0x4ff, growth_func=3 @mag
 draw_textID_at 13, 7, textID=0x4EC, growth_func=4 @skl
 draw_textID_at 13, 9, textID=0x4ED, growth_func=5 @spd
-draw_textID_at 13, 11, textID=0x4ee, growth_func=6 @luck
-draw_textID_at 13, 13, textID=0x4ef, growth_func=7 @def
-draw_textID_at 13, 15, textID=0x4f0, growth_func=8 @res
+draw_textID_at 13, 11, 0x4f6 @move
+
+draw_textID_at 21, 3, textID=0x4ee, growth_func=6 @luck
+draw_textID_at 21, 5, textID=0x4ef, growth_func=7 @def
+draw_textID_at 21, 7, textID=0x4f0, growth_func=8 @res
+draw_textID_at 21, 11, textID=0x4f8 @aid
+
+
 
 b 	NoRescue
 .ltorg 
@@ -76,17 +81,18 @@ ldr		r0,[r0,#16]		@spd growth getter
 draw_growth_at 18, 9
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#20]		@luk growth getter
-draw_growth_at 18, 11
+draw_growth_at 26, 3
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#24]		@def growth getter
-draw_growth_at 18, 13
+draw_growth_at 26, 5
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#28]		@res growth getter
-draw_growth_at 18, 15
+draw_growth_at 26, 7
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
-draw_growth_at 18, 17
-draw_textID_at 13, 17, textID=0x4E9, growth_func=1 @hp name
+ldr		r0,[r0]			@hp growth getter
+draw_growth_at 26, 9
+draw_textID_at 21, 9, textID=0x4E9, growth_func=1 @hp name
+
 b		NextColumn
 .ltorg
 
@@ -95,28 +101,15 @@ b		ShowStats3
 
 NextColumn:
 
-draw_textID_at 21, 3, textID=0x4f7 @con
-draw_con_bar_with_getter_at 24, 3
-
-
-draw_textID_at 21, 5, textID=0x4f8 @aid
-draw_number_at 25, 5, 0x80189B8, 2 @aid getter
-draw_aid_icon_at 26, 5
-
-draw_status_text_at 21, 7
-
-draw_textID_at 21, 9, textID=0x4f1 @affin
-
-draw_affinity_icon_at 24, 9
-
+draw_move_number_at 17, 11
+draw_number_at 25, 11, 0x80189B8, 2 @aid getter
+draw_aid_icon_at 26, 11
+draw_status_text_at 13, 13
 
 ldr r0,=TalkTextIDLink
 ldrh r0,[r0]
-draw_talk_text_at 21, 11
+draw_talk_text_at 21, 13
 
-ldr r0,=SkillsTextIDLink
-ldrh r0, [r0]
-draw_textID_at 21, 13, colour=Yellow @skills
 
 Nexty:
 
@@ -128,12 +121,11 @@ draw_str_bar_at 16, 3
 draw_mag_bar_at 16, 5
 draw_skl_bar_at 16, 7
 draw_spd_bar_at 16, 9
-draw_luck_bar_at 16, 11
-draw_def_bar_at 16, 13
-draw_res_bar_at 16, 15
-draw_textID_at 13, 17, 0x4f6 @move
-draw_move_bar_with_getter_at 16, 17
-
+draw_luck_bar_at 24, 3
+draw_def_bar_at 24, 5
+draw_res_bar_at 24, 7
+draw_textID_at 21, 9, textID=0x4f7 @con
+draw_con_bar_with_getter_at 24, 9
 b		NextColumn
 .ltorg
 
@@ -150,39 +142,34 @@ mov r6, r0
 ldrb r0, [r6] 
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 21, 15
+draw_skill_icon_at 13, 16
 
 ldrb r0, [r6,#1]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 24, 15
+draw_skill_icon_at 16, 16
 
 ldrb r0, [r6, #2]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 27, 15
+draw_skill_icon_at 19, 16
 
 ldrb r0, [r6, #3]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 21, 17
+draw_skill_icon_at 22, 16
 
 ldrb r0, [r6, #4]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 24, 17
+draw_skill_icon_at 25, 16
 
 ldrb r0, [r6, #5]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 27, 17
+draw_skill_icon_at 28, 16
 
 SkillEnd:
-
-@ draw_textID_at 13, 15, textID=0x4f6 @move
-@ draw_move_bar_at 16, 15
-
-@blh DrawBWLNumbers
 
 ldr		r0,=StatScreenStruct
 sub		r0,#0x2

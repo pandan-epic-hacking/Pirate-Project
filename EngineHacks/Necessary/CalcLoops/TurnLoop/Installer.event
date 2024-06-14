@@ -10,7 +10,7 @@ POP
 
 ALIGN 4 
 TurnCalcLoop_Silent: // Effects that do not pause the game 
-POIN ProcessDebuffs ArmorMarch_StartOfTurn VigorDanceReset AstralBlessing ClearStudiousBlow // Standalone things that loop through all units and do not pause the game 
+POIN ProcessDebuffs ArmorMarch_StartOfTurn VigorDanceReset AstralBlessing ClearStudiousBlow ClearFortuneBitEachTurn ClearNailedDownPenalty Miraclemaker_BitReset SwiftStartOfTurn FrigidAura // Standalone things that loop through all units and do not pause the game 
 WORD 0 
 
 

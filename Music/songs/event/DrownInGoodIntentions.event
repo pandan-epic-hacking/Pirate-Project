@@ -1,0 +1,876 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    DrownInGoodIntentions_grp  voicegroup000
+        #define    DrownInGoodIntentions_pri  0
+        #define    DrownInGoodIntentions_rev  0
+        #define    DrownInGoodIntentions_key  0
+
+        // .rodata
+        // DrownInGoodIntentions
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+DrownInGoodIntentions_0:
+        BYTE   KEYSH   DrownInGoodIntentions_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   70/2
+        BYTE           VOICE   25
+        BYTE           PAN     c_v-20
+        BYTE           VOL     31
+        BYTE           N23     En3   v095
+        BYTE   W03
+        BYTE           VOL     32
+        BYTE   W01
+        BYTE                   33
+        BYTE   W02
+        BYTE                   34
+        BYTE   W01
+        BYTE                   35
+        BYTE   W02
+        BYTE                   36
+        BYTE   W01
+        BYTE                   38
+        BYTE   W02
+        BYTE                   39
+        BYTE           N11     As3
+        BYTE   W01
+        BYTE           VOL     41
+        BYTE   W02
+        BYTE                   42
+        BYTE   W01
+        BYTE                   44
+        BYTE   W02
+        BYTE                   46
+        BYTE   W01
+        BYTE                   48
+        BYTE   W02
+        BYTE                   51
+        BYTE   W01
+        BYTE                   54
+        BYTE   W02
+        BYTE                   57
+        BYTE           N23     As3   v093
+        BYTE           N23     Ds4   v072
+        BYTE   W01
+        BYTE           VOL     61
+        BYTE   W01
+        BYTE                   64
+        BYTE   W14
+        BYTE                   63
+        BYTE   W02
+        BYTE                   61
+        BYTE   W01
+        BYTE                   60
+        BYTE   W02
+        BYTE                   59
+        BYTE   W01
+        BYTE                   58
+        BYTE   W02
+        BYTE                   56
+        BYTE           N23     Gs3   v095
+        BYTE           N23     Cs4   v091
+        BYTE   W01
+        BYTE           VOL     55
+        BYTE   W02
+        BYTE                   54
+        BYTE   W01
+        BYTE                   52
+        BYTE   W02
+        BYTE                   51
+        BYTE   W01
+        BYTE                   50
+        BYTE   W01
+        BYTE                   49
+        BYTE   W03
+        BYTE                   50
+        BYTE   W03
+        BYTE                   51
+        BYTE   W03
+        BYTE                   52
+        BYTE   W03
+        BYTE                   53
+        BYTE   W03
+        BYTE                   54
+        BYTE   W01
+        BYTE           N23     Gn3   v076
+        BYTE           N23     Bn3   v075
+        BYTE   W02
+        BYTE           VOL     56
+        BYTE   W03
+        BYTE                   57
+        BYTE   W03
+        BYTE                   58
+        BYTE   W01
+        BYTE                   59
+        BYTE   W03
+        BYTE                   58
+        BYTE   W05
+        BYTE                   57
+        BYTE   W04
+        BYTE                   56
+        BYTE   W03
+// 001   ----------------------------------------
+        BYTE           N11     Fs3   v091
+        BYTE           N23     As3   v072
+        BYTE           VOL     55
+        BYTE   W03
+        BYTE                   54
+        BYTE   W03
+        BYTE                   53
+        BYTE   W02
+        BYTE                   52
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   50
+        BYTE   W01
+        BYTE           N11     En3   v091
+        BYTE           VOL     49
+        BYTE   W02
+        BYTE                   48
+        BYTE   W01
+        BYTE                   47
+        BYTE   W02
+        BYTE                   45
+        BYTE   W01
+        BYTE                   43
+        BYTE   W02
+        BYTE                   41
+        BYTE   W01
+        BYTE                   39
+        BYTE   W02
+        BYTE                   35
+        BYTE   W01
+DrownInGoodIntentions_0_LOOP:
+        BYTE           N44     Gs3   v074   gtp3
+        BYTE           N42     Bn2   v086   gtp1
+        BYTE   W04
+        BYTE           VOL     36
+        BYTE   W03
+        BYTE                   37
+        BYTE   W05
+        BYTE                   38
+        BYTE   W01
+        BYTE                   39
+        BYTE   W03
+        BYTE                   40
+        BYTE   W03
+        BYTE                   41
+        BYTE   W02
+        BYTE                   42
+        BYTE   W01
+        BYTE                   43
+        BYTE   W03
+        BYTE                   44
+        BYTE   W02
+        BYTE                   45
+        BYTE   W01
+        BYTE                   46
+        BYTE   W02
+        BYTE                   47
+        BYTE   W01
+        BYTE                   49
+        BYTE   W02
+        BYTE                   50
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   53
+        BYTE   W01
+        BYTE                   55
+        BYTE   W02
+        BYTE                   57
+        BYTE   W01
+        BYTE                   59
+        BYTE   W02
+        BYTE                   61
+        BYTE   W01
+        BYTE                   64
+        BYTE   W05
+        BYTE           N44     Gs3   v074   gtp3
+        BYTE           N44     Bn2   v086   gtp1
+        BYTE   W13
+        BYTE           VOL     63
+        BYTE   W03
+        BYTE                   62
+        BYTE   W01
+        BYTE                   61
+        BYTE   W03
+        BYTE                   60
+        BYTE   W03
+        BYTE                   59
+        BYTE   W01
+// 002   ----------------------------------------
+DrownInGoodIntentions_0_2:
+        BYTE   W01
+        BYTE           VOL     58
+        BYTE   W01
+        BYTE                   57
+        BYTE   W02
+        BYTE                   56
+        BYTE   W03
+        BYTE                   55
+        BYTE   W01
+        BYTE                   54
+        BYTE   W02
+        BYTE                   52
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   50
+        BYTE   W01
+        BYTE                   48
+        BYTE   W02
+        BYTE                   47
+        BYTE   W01
+        BYTE                   45
+        BYTE   W02
+        BYTE                   43
+        BYTE   W01
+        BYTE                   41
+        BYTE   W02
+        BYTE                   39
+        BYTE   W01
+        BYTE                   37
+        BYTE   W01
+        BYTE           N44     Gs3   v076   gtp3
+        BYTE           N44     Bn2   v088
+        BYTE   W02
+        BYTE           VOL     38
+        BYTE   W03
+        BYTE                   39
+        BYTE   W04
+        BYTE                   40
+        BYTE   W03
+        BYTE                   41
+        BYTE   W02
+        BYTE                   42
+        BYTE   W03
+        BYTE                   43
+        BYTE   W03
+        BYTE                   44
+        BYTE   W01
+        BYTE                   45
+        BYTE   W02
+        BYTE                   46
+        BYTE   W03
+        BYTE                   47
+        BYTE   W01
+        BYTE                   48
+        BYTE   W02
+        BYTE                   49
+        BYTE   W01
+        BYTE                   50
+        BYTE   W02
+        BYTE                   52
+        BYTE   W01
+        BYTE                   53
+        BYTE   W02
+        BYTE                   54
+        BYTE   W01
+        BYTE                   56
+        BYTE   W02
+        BYTE                   58
+        BYTE   W01
+        BYTE                   60
+        BYTE   W02
+        BYTE                   62
+        BYTE   W01
+        BYTE                   64
+        BYTE   W06
+        BYTE           N44     Gn3   v074   gtp3
+        BYTE           N44     As2   v090   gtp1
+        BYTE   W12
+        BYTE           VOL     63
+        BYTE   W03
+        BYTE                   62
+        BYTE   W02
+        BYTE                   61
+        BYTE   W03
+        BYTE                   60
+        BYTE   W03
+        BYTE                   59
+        BYTE   W01
+        BYTE   PEND
+// 003   ----------------------------------------
+DrownInGoodIntentions_0_3:
+        BYTE           VOL     58
+        BYTE   W02
+        BYTE                   57
+        BYTE   W03
+        BYTE                   56
+        BYTE   W01
+        BYTE                   55
+        BYTE   W02
+        BYTE                   54
+        BYTE   W01
+        BYTE                   53
+        BYTE   W02
+        BYTE                   52
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   49
+        BYTE   W01
+        BYTE                   48
+        BYTE   W02
+        BYTE                   46
+        BYTE   W01
+        BYTE                   45
+        BYTE   W02
+        BYTE                   43
+        BYTE   W01
+        BYTE                   41
+        BYTE   W02
+        BYTE                   39
+        BYTE   W01
+        BYTE                   35
+        BYTE           N44     Gs3   v074   gtp3
+        BYTE           N42     Bn2   v086   gtp1
+        BYTE   W04
+        BYTE           VOL     36
+        BYTE   W03
+        BYTE                   37
+        BYTE   W05
+        BYTE                   38
+        BYTE   W01
+        BYTE                   39
+        BYTE   W03
+        BYTE                   40
+        BYTE   W03
+        BYTE                   41
+        BYTE   W02
+        BYTE                   42
+        BYTE   W01
+        BYTE                   43
+        BYTE   W03
+        BYTE                   44
+        BYTE   W02
+        BYTE                   45
+        BYTE   W01
+        BYTE                   46
+        BYTE   W02
+        BYTE                   47
+        BYTE   W01
+        BYTE                   49
+        BYTE   W02
+        BYTE                   50
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   53
+        BYTE   W01
+        BYTE                   55
+        BYTE   W02
+        BYTE                   57
+        BYTE   W01
+        BYTE                   59
+        BYTE   W02
+        BYTE                   61
+        BYTE   W01
+        BYTE                   64
+        BYTE   W05
+        BYTE           N44     Gs3   v074   gtp3
+        BYTE           N44     Bn2   v086   gtp1
+        BYTE   W13
+        BYTE           VOL     63
+        BYTE   W03
+        BYTE                   62
+        BYTE   W01
+        BYTE                   61
+        BYTE   W03
+        BYTE                   60
+        BYTE   W03
+        BYTE                   59
+        BYTE   W01
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_0_2
+// 005   ----------------------------------------
+DrownInGoodIntentions_0_5:
+        BYTE           VOL     58
+        BYTE   W02
+        BYTE                   57
+        BYTE   W03
+        BYTE                   56
+        BYTE   W01
+        BYTE                   55
+        BYTE   W02
+        BYTE                   54
+        BYTE   W01
+        BYTE                   53
+        BYTE   W02
+        BYTE                   52
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   49
+        BYTE   W01
+        BYTE                   48
+        BYTE   W02
+        BYTE                   46
+        BYTE   W01
+        BYTE                   45
+        BYTE   W02
+        BYTE                   43
+        BYTE   W01
+        BYTE                   41
+        BYTE   W02
+        BYTE                   35
+        BYTE   W01
+        BYTE           N44     Gs3   v074   gtp3
+        BYTE           N42     Bn2   v086   gtp1
+        BYTE   W04
+        BYTE           VOL     36
+        BYTE   W03
+        BYTE                   37
+        BYTE   W05
+        BYTE                   38
+        BYTE   W01
+        BYTE                   39
+        BYTE   W03
+        BYTE                   40
+        BYTE   W03
+        BYTE                   41
+        BYTE   W02
+        BYTE                   42
+        BYTE   W01
+        BYTE                   43
+        BYTE   W03
+        BYTE                   44
+        BYTE   W02
+        BYTE                   45
+        BYTE   W01
+        BYTE                   46
+        BYTE   W02
+        BYTE                   47
+        BYTE   W01
+        BYTE                   49
+        BYTE   W02
+        BYTE                   50
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   53
+        BYTE   W01
+        BYTE                   55
+        BYTE   W02
+        BYTE                   57
+        BYTE   W01
+        BYTE                   59
+        BYTE   W02
+        BYTE                   61
+        BYTE   W01
+        BYTE                   64
+        BYTE   W05
+        BYTE           N44     Gs3   v074   gtp3
+        BYTE           N44     Bn2   v086   gtp1
+        BYTE   W13
+        BYTE           VOL     63
+        BYTE   W03
+        BYTE                   62
+        BYTE   W01
+        BYTE                   61
+        BYTE   W03
+        BYTE                   60
+        BYTE   W03
+        BYTE                   59
+        BYTE   W01
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_0_2
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_0_3
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_0_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_0_5
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_0_2
+// 011   ----------------------------------------
+        BYTE           VOL     58
+        BYTE   W02
+        BYTE                   57
+        BYTE   W03
+        BYTE                   56
+        BYTE   W01
+        BYTE                   55
+        BYTE   W02
+        BYTE                   54
+        BYTE   W01
+        BYTE                   53
+        BYTE   W02
+        BYTE                   52
+        BYTE   W01
+        BYTE                   51
+        BYTE   W02
+        BYTE                   49
+        BYTE   W01
+        BYTE                   48
+        BYTE   W02
+        BYTE                   46
+        BYTE   W01
+        BYTE                   45
+        BYTE   W02
+        BYTE                   43
+        BYTE   W01
+        BYTE                   41
+        BYTE   W02
+        BYTE                   35
+        BYTE   W72
+        BYTE   W01
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  DrownInGoodIntentions_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+DrownInGoodIntentions_1:
+        BYTE   KEYSH   DrownInGoodIntentions_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   21
+        BYTE           VOL     70
+        BYTE           PAN     c_v-32
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W24
+DrownInGoodIntentions_1_LOOP:
+        BYTE           N36     Gs3   v080
+        BYTE           N36     Ds3
+        BYTE   W36
+        BYTE           N12     Bn3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE                   Gs3
+        BYTE   W12
+// 002   ----------------------------------------
+DrownInGoodIntentions_1_2:
+        BYTE           N12     Gn3   v080
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N48     Gs3
+        BYTE           N48     Ds3
+        BYTE   W72
+        BYTE   PEND
+// 003   ----------------------------------------
+DrownInGoodIntentions_1_3:
+        BYTE   W24
+        BYTE           N36     Gs3   v080
+        BYTE           N36     Ds3
+        BYTE   W36
+        BYTE           N12     Bn3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE                   Gs3
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE                   Ds4
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N48     Gs3
+        BYTE           N48     Ds3
+        BYTE   W72
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_1_3
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_1_2
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_1_3
+// 008   ----------------------------------------
+        BYTE           N12     Ds4   v080
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N48     Gs3
+        BYTE           N48     Ds3
+        BYTE   W48
+        BYTE                   Ds3
+        BYTE           N48     Gn3
+        BYTE   W24
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  DrownInGoodIntentions_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+DrownInGoodIntentions_2:
+        BYTE   KEYSH   DrownInGoodIntentions_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   19
+        BYTE           VOL     70
+        BYTE           PAN     c_v+31
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W24
+DrownInGoodIntentions_2_LOOP:
+        BYTE   W72
+// 002   ----------------------------------------
+DrownInGoodIntentions_2_2:
+        BYTE   W24
+        BYTE           N11     Bn3   v080
+        BYTE   W12
+        BYTE           N03     As3
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE                   As3
+        BYTE   W04
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N11     Bn3
+        BYTE   W12
+        BYTE           N03     As3
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE                   As3
+        BYTE   W04
+        BYTE   PEND
+// 003   ----------------------------------------
+DrownInGoodIntentions_2_3:
+        BYTE           N12     Gs3   v080
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE           N48     Gs3
+        BYTE           N48     Ds3
+        BYTE   W72
+        BYTE   PEND
+// 004   ----------------------------------------
+DrownInGoodIntentions_2_4:
+        BYTE   W24
+        BYTE           N11     Bn3   v080
+        BYTE   W12
+        BYTE           N03     As3
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE                   As3
+        BYTE   W04
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N11     Ds4
+        BYTE   W12
+        BYTE           N03     Bn3
+        BYTE   W04
+        BYTE                   Cs4
+        BYTE   W04
+        BYTE                   Bn3
+        BYTE   W04
+        BYTE   PEND
+// 005   ----------------------------------------
+DrownInGoodIntentions_2_5:
+        BYTE           N12     As3   v080
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE           N48     Gs3
+        BYTE           N48     Ds3
+        BYTE   W72
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_2_2
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_2_3
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_2_4
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  DrownInGoodIntentions_2_5
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  DrownInGoodIntentions_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+DrownInGoodIntentions_3:
+        BYTE   KEYSH   DrownInGoodIntentions_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   100
+        BYTE           VOL     51
+        BYTE           PAN     c_v+18
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W24
+DrownInGoodIntentions_3_LOOP:
+        BYTE   W72
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE           N12     Gs2   v085
+        BYTE   W12
+        BYTE                   As2   v098
+        BYTE   W12
+        BYTE           N96     Bn2   v112
+        BYTE   W72
+// 004   ----------------------------------------
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W72
+// 005   ----------------------------------------
+        BYTE   W24
+        BYTE                   Ds3
+        BYTE   W72
+// 006   ----------------------------------------
+        BYTE   W24
+        BYTE           N72     Gs3
+        BYTE   W72
+// 007   ----------------------------------------
+        BYTE           N12
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N48     Bn3
+        BYTE   W48
+        BYTE                   As3   v098
+        BYTE   W24
+// 008   ----------------------------------------
+        BYTE   W24
+        BYTE           N96     Cs4   v112
+        BYTE   W72
+// 009   ----------------------------------------
+        BYTE   W24
+        BYTE           N36     As3
+        BYTE   W36
+        BYTE                   Gs3   v098
+        BYTE   W36
+// 010   ----------------------------------------
+        BYTE           N24     As3
+        BYTE   W24
+        BYTE           N48     Bn3   v112
+        BYTE   W48
+        BYTE                   Gn3   v102
+        BYTE   W24
+// 011   ----------------------------------------
+        BYTE   W24
+        BYTE                   Gs3   v112
+        BYTE   W48
+        BYTE                   Gs3   v085
+        BYTE   W24
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  DrownInGoodIntentions_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+DrownInGoodIntentions_4:
+        BYTE   KEYSH   DrownInGoodIntentions_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   9
+        BYTE           PAN     c_v-1
+        BYTE           VOL     76
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W24
+DrownInGoodIntentions_4_LOOP:
+        BYTE   W72
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W24
+        BYTE           N24     Bn3   v066
+        BYTE           N24     Ds4
+        BYTE   W01
+        BYTE           N23     Gs4
+        BYTE   W23
+        BYTE           N48     Gs4   v040
+        BYTE           N48     Bn3
+        BYTE           N48     Ds4
+        BYTE   W48
+// 010   ----------------------------------------
+        BYTE           N24     Gs4   v084
+        BYTE           N24     Ds5
+        BYTE   W24
+        BYTE           N12     Gs4   v053
+        BYTE           N12     Dn5
+        BYTE           N12     Bn4
+        BYTE           N12     Fs4
+        BYTE   W24
+        BYTE           N24     Bn4   v066
+        BYTE           N24     Gs4
+        BYTE           N24     Ds4
+        BYTE   W24
+        BYTE           N48     Bn4   v042
+        BYTE           N48     Gn4
+        BYTE           N48     Ds4
+        BYTE   W24
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE   GoTo
+         POIN2  DrownInGoodIntentions_4_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+DrownInGoodIntentions:
+        BYTE   5                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   DrownInGoodIntentions_pri // Priority
+        BYTE   DrownInGoodIntentions_rev // Reverb
+
+        POIN2   DrownInGoodIntentions_grp
+
+        POIN2   DrownInGoodIntentions_0
+        POIN2   DrownInGoodIntentions_1
+        POIN2   DrownInGoodIntentions_2
+        POIN2   DrownInGoodIntentions_3
+        POIN2   DrownInGoodIntentions_4
+
+        

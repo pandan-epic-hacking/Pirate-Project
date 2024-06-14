@@ -1,0 +1,5 @@
+#include "NewComputeUnitBattleDefense.lyn.event"
+
+ALIGN 4
+DelegationID_Link:
+WORD DelegationID

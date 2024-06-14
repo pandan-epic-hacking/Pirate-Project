@@ -10,6 +10,14 @@ POIN NewWeaponTriangleList
 POP
 
 ALIGN 4
+WTHitBonus_Link:
+WORD WTHitBonus
+
+ALIGN 4
+WTMtBonus_Link:
+WORD WTMtBonus
+
+ALIGN 4
 NewWeaponTriangleList:
 WTInteraction(Sword, Axe)
 WTInteraction(Lance, Sword)

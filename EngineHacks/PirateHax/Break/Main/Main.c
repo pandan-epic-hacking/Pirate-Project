@@ -19,7 +19,7 @@ bool DidUnitBreak(){
 		k++;
 	}
 	if ((gBattleActor.battleAttack > gBattleTarget.battleDefense)){ //did unit do damage
-		if (gBattleActor.wTriangleHitBonus > 0 || gBattleTarget.wTriangleHitBonus < 0)
+		if (gBattleActor.wTriangleHitBonus > 0 && gBattleTarget.wTriangleHitBonus < 0)
 		{
 			return true;
 		}

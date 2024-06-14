@@ -1,0 +1,16 @@
+
+ALIGN 4
+gShuffleId:
+WORD ShuffleID
+
+ALIGN 4
+gShuffleHelpText:
+WORD ShuffleHelpText
+
+/*
+ALIGN 4
+gSkillTester:
+POIN SkillTester
+*/
+
+#include "MasterChaxInstaller.event"

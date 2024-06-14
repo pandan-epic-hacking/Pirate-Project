@@ -23,6 +23,7 @@ void SetEventId(int eventId);
 
 //skillsys stuff
 extern u8 DazzleIDLink;
+extern u8 ArcaneArtificeIDLink;
 
 extern bool(*gSkillTester)(Unit* unit, int skillID);
 

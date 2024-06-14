@@ -167,7 +167,16 @@ StudiousBlowBitOffset_Link:
 WORD MiscOffset+11
 HardworkingBitOffset_Link: // stores value 0-5, 3 bits
 WORD MiscOffset+12
-
+FortuneStaffBitOffset_Link:
+WORD MiscOffset+15
+MiraclemakerBitOffset_Link:
+WORD MiscOffset+16
+NailedDownBitOffset_Link:
+WORD MiscOffset+17
+DelegationBitOffset_Link:
+WORD MiscOffset+18
+SwiftBitOffset_Link:
+WORD MiscOffset+19
 
 ALIGN 4 
 RalliesNumberOfBits_Link:

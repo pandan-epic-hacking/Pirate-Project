@@ -1,0 +1,84 @@
+
+## SongName_PortGreagor
+Port Greagor[X]
+
+## SongName_BeatToQuarters
+Beat to Quarters[X]
+
+## SongName_DistantSkies
+Distant Skies[X]
+
+## SongName_ScalleywagsOnDeck
+Scalleywags On Deck[X]
+
+## SongName_FoolsBold
+Fool's Bold[X]
+
+## SongName_ABlackheartsPride
+A Blackheart's Pride[X]
+
+## SongName_AvastMeHearties
+Avast Me Hearties[X]
+
+## SongName_StillZephyrs
+Still Zephyrs[X]
+
+## SongName_TheRebelsKnife
+The Rebel's Knife[X]
+
+## SongName_OrlandoTheme
+Orlando's Theme[X]
+
+## SongName_SwabbieTalk
+Swabbie Talk[X]
+
+## SongName_EmergencyCrewmate
+New Hands On Deck[X]
+
+## SongName_WelcomeAboardMatey
+Welcome Aboard, Matey[X]
+
+## SongName_ToTheCrowsNest
+To The Crow's Nest[X]
+
+## SongName_LookAtMeWares
+Look At Me Wares[X]
+
+## SongName_SleepinWithTheSkyFishes
+Sleepin' With the Sky Fishes[X]
+
+## SongName_DrownInGoodIntentions
+Drown in Good Intentions[X]
+
+## SongName_MeetTheCrew
+Meet the Crew[X]
+
+## SongName_OutIntoTheOpenSky
+Out Into the Open Sky[X]
+
+## SongName_LastDanceSinkingShip
+Last Dance, Sinking Ship[X]
+
+## SongName_WellAndTrulyLost
+Well and Truly Lost[X]
+
+## SongName_ToTheSkies
+To The Skies[X]
+
+## SongName_FinInTheClouds
+Fin In The Clouds[X]
+
+## SongName_LetterOpener
+Letter Opener[X]
+
+## SongName_TheWavesApprenticeID
+The Wave's Apprentice[X]
+
+## SongName_TougherTussleID
+Tougher Tussle[X]
+
+## SongName_TimesTickingID
+Time's Ticking[X]
+
+## SongName_CastawayHeart
+Castaway Heart[X]

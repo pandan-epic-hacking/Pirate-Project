@@ -8,12 +8,12 @@ pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
 	POIN prDebuffMov 
 	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prEquipmentMov prLuaHubMovement
-	POIN WellRested
+	POIN WellRested SwiftBoost
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
 	#endif
 	POIN prNullifyIfFreeze prNullifyIfGuardAI
-	POIN prDeftHandsCheck
+	POIN prDeftHandsCheck NailedDownMovPenalty // Nailed Down needs to go last cause it sets all other move bonus sources to 0
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif

@@ -1,0 +1,56 @@
+#include "FancyChapterPreview.lyn.event"
+
+FancyChapterPreviewMenu_Def:
+BYTE 24 		//x coord
+BYTE 13 		//y coord
+BYTE 5 			//width
+BYTE 6			//height (irrelevant)
+WORD 3 			//style
+POIN FancyChapterPreviewMenu_Commands
+POIN FancyChapterPreviewMenu_OnInit
+POIN 0			//OnEnd
+POIN 0x234FD	//NoCommandEffect (this is OnBPress)
+WORD 0			//OnRPress
+WORD 0			//OnHelpBox
+
+#define MenuCommandAction(name,description,colour,usability,effect,action) "WORD $80d7d94; SHORT name description; BYTE colour $4e; SHORT 0; POIN usability|1; POIN 0; POIN effect|1; POIN 0 action|1 0"
+
+FancyChapterPreviewMenu_Commands:
+//No
+MenuCommandAction(0x844,0,NormalText,$4F449,FancyChapterPreviewMenu_SelectNo,FancyChapterPreviewMenu_OnHover) 
+//Yes
+MenuCommandAction(0x843,0,NormalText,$4F449,FancyChapterPreviewMenu_SelectYes,FancyChapterPreviewMenu_OnHover) 
+UM_Separator
+
+ALIGN 4
+ChapterPreviewTable:
+FILL (256*10)
+
+TextDrawnFlagLoc_Link:
+WORD $202F0FF
+
+//use this to define the text IDs associated with each chapter for displaying here
+#define ChapterPreviewEntry(chapterID, chapterNameTextID, objectiveTextID, unitsTextID, lootTextID, chapterConfirmTextID) "PUSH; ORG ChapterPreviewTable+(chapterID*10); SHORT chapterNameTextID objectiveTextID unitsTextID lootTextID chapterConfirmTextID; POP"
+
+//use this in events; at the end, the yes/no result is 1/0 in sC
+#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; FADI 10; LOMA currentChapterID; CAMERA_CENTERED Lua; TEXTSTART; CLEAN; FADU 10;"
+
+#define FancyChapterPreview(chapterID, backgroundID, currentChapterID, callbackEvent) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; FADI 10; LOMA currentChapterID; CAMERA_CENTERED Lua; SADD s9 sC s0; CALL callbackEvent; TEXTSTART; CLEAN; SADD sC s9 s0; FADU 10;"
+
+//use this just before the previous one to set offset of the map preview from the center of the screen.
+//-1,-1 defaults to 
+#define FancyChapterMapOffset(xOffset,yOffset) "SVAL sB ((yOffset) << 16)|(xOffset)"
+
+ChapterPreviewEntry(HubA_1, HubA1Title, HubA1Objective, HubA1Units, HubA1Loot, HubA1Confirm)
+ChapterPreviewEntry(HubA_2, HubA2Title, HubA2Objective, HubA2Units, HubA2Loot, HubA2Confirm)
+ChapterPreviewEntry(HubA_3, HubA3Title, HubA3Objective, HubA3Units, HubA3Loot, HubA3Confirm)
+ChapterPreviewEntry(HubA_4, HubA4Title, HubA4Objective, HubA4Units, HubA4Loot, HubA4Confirm)
+ChapterPreviewEntry(HubA_5, HubA5Title, HubA5Objective, HubA5Units, HubA5Loot, HubA5Confirm)
+ChapterPreviewEntry(HubA_6, HubA6Title, HubA6Objective, HubA6Units, HubA6Loot, HubA6Confirm)
+
+// ChapterPreviewEntry(HubB_1, HubB1Title, HubB1Objective, HubB1Units, HubB1Loot, HubB1Confirm)
+ChapterPreviewEntry(HubB_2, HubB2Title, HubB2Objective, HubB2Units, HubB2Loot, HubB2Confirm)
+ChapterPreviewEntry(HubB_2a, HubB2Title, HubB2Objective, HubB2Units, HubB2Loot, HubB2Confirm)
+ChapterPreviewEntry(HubB_3, HubB3Title, HubB3Objective, HubB3Units, HubB3Loot, HubB3Confirm)
+ChapterPreviewEntry(HubB_4, HubB4Title, HubB4Objective, HubB4Units, HubB4Loot, HubB4Confirm)
+ChapterPreviewEntry(HubB_5, HubB5Title, HubB5Objective, HubB5Units, HubB5Loot, HubB5Confirm)

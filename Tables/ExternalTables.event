@@ -101,3 +101,21 @@ POP
 #include "ExternalTables/ItemStatBoosts.event"
 
 #include "ExternalTables/BossMusicTable.event"
+
+#include "ExternalTables/PromotionItemClassListPointers.event"
+
+ALIGN 4
+TestAnimationMapping:
+BYTE 0 1; SHORT 3
+BYTE 1 1; SHORT 3
+BYTE 2 1; SHORT 3
+BYTE 3 1; SHORT 3
+BYTE 4 1; SHORT 3
+BYTE 5 1; SHORT 3
+BYTE 6 1; SHORT 3
+BYTE 7 1; SHORT 3
+BYTE 9 1; SHORT 3
+BYTE 11 1; SHORT 3
+BYTE 13 1; SHORT 3
+
+ALIGN 4

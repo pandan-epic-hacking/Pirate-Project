@@ -60,6 +60,12 @@ Peacekeeper[X]
 ## PeacekeeperDesc
 Can't be countered.[X]
 
+## LunarBladeName
+Lunar Blade[X]
+
+## LunarBladeDesc
+An arcane blade glowing with soft light.[X]
+
 //LANCES
 
 ## SaunionName
@@ -93,13 +99,19 @@ Eff. vs. horses and fliers.[X]
 Sidepierce[X]
 
 ## SidepierceDesc
-Allows canto after attack.[X]
+User can move again with remaining Mov.[X]
 
 ## PitchforkName
 Pitchfork[X]
 
 ## PitchforkDesc
 Cannot counter/be countered.[X]
+
+## GuBalgName
+Gu'Balg[X]
+
+## GuBalgDesc
+It's... quite the weapon, alright.[X]
 
 //AXES
 
@@ -222,10 +234,16 @@ Ignores enemy resistance.[X]
 Restores HP equal to damage dealt.[X]
 
 ## GalestrikeName
-GaleStrike[X]
+Gale Strike[X]
 
 ## GalestrikeDesc
 Refreshes once per turn on a kill.[X]
+
+## ElsurgeName
+Elsurge[X]
+
+## ElsurgeDesc
+A short-range blast that cannot miss.[X]
 
 
 //KNIVES
@@ -262,6 +280,12 @@ Arcane Knife[X]
 
 ## ArcaneKnifeDesc
 A magical knife etched with runes.[X]
+
+## RuneDaggerName
+Rune Dagger[X]
+
+## RuneDaggerDesc
+Uses MAG, follow-ups consecutive.[X]
 
 ## PeshkatzName
 Peshkatz[X]
@@ -320,8 +344,7 @@ Does exactly as advertised.[X]
 Take Aim![X]
 
 ## TakeAimDesc
-+30 hit to an ally for 1 turn.[N]
-(currently doesn't work!)[X]
++30 hit to an ally for 1 turn.[X]
 
 // EQUIPS
 
@@ -331,17 +354,39 @@ Hide Shield[X]
 ## HideShieldDesc
 Grants +3 Def.[X]
 
+
+## IronShieldName
+Iron Shield[X]
+
+## IronShieldDesc
+Grants +5 Def but -2 Spd.[X]
+
 ## GlassShieldName
 Glass Shield[X]
 
 ## GlassShieldDesc
 Grants +7 Def/Res but breaks easily.[X]
 
+## HexlockShieldName
+
+Hexlock Shield[X]
+
+## HexlockShieldDesc
+
+Grants +1 Def, +3 Res.[X]
+
 ## ShoveGloveName
 Shove Glove[X]
 
 ## ShoveGloveDesc
 Allows the holder to shove units 1 tile.[X]
+
+## SwapShoesName
+Swap Shoes[X]
+
+## SwapShoesDesc
+Allows the holder to swap[N]
+places with an adjacent ally.[X]
 
 ## TealGemName
 Teal Gem[X]
@@ -356,20 +401,113 @@ Eyepatch[X]
 Grants +30 crit, but reduces hit by 30.[X]
 
 ## AshArrowName
-Ash Arrow[X]
+Ash Quiver[X]
 
 ## AshArrowDesc
 Can only be equipped with Bows.[N]
-Gives all attacks 100% Hit.[X]
+Gives all attacks +1 Range.[X]
 
 ## StatuetteName
 Statuette[X]
 
 ## StatuetteDesc
-The Balinokans' prized relic. Said[N]
-to possess miraculous properties.[X]
+The Balinokans' prized relic.[N]
+When equipped, user survives[N]
+lethal attacks when HP > 50%.[X]
 
 ## StatuetteUseDesc
 You feel more able[N]
 to withstand any[N]
 blow.[X]
+
+## KnightRingName
+Knight Ring[X]
+
+## KnightRingDesc
+Allows this unit to move again after[N]
+an action with remaining movement.[X]
+
+## LightRuneName
+Light Rune[X]
+
+## LightRuneDesc
+Temporarily creates an impenetrable[N]
+barrier, blocking paths.[X]
+
+## LightRuneUseDesc
+Use this to place[N]
+down a light rune.[X]
+
+## MineName
+Mine[X]
+
+## MineDesc
+A trap that explodes when walked on.[X]
+
+## MineUseDesc
+Use this to place[N]
+down a mine.[X]
+
+## MetisTomeName
+Meti's Tome[X]
+
+## MetisTomeDesc
+A knowledgeable tome that grants[N]
++5% to all a unit's growths.[X]
+
+## MetisTomeUseDesc
+Grants +5% to[N]
+all growths.[X]
+
+## BraveCrestName
+Brave Crest[X]
+
+## BraveCrestDesc
+If Lv. 10 or greater, use to access[N]
+or master the sword, lance, or axe.[X]
+
+## BraveCrestUseDesc
+Use on a Lv. 10 or higher[N]
+unit to gain great power.[X]
+
+## KnightPlateName
+Knight Plate[X]
+
+## KnightPlateDesc
+If Lv. 10 or greater, use to become[N]
+ironclad or gain greater armor.[X]
+
+## HunterMarkName
+Hunter Mark[X]
+
+## HunterMarkDesc
+If Lv. 10 or greater, use to access[N]
+or master the bow, knife, or gun.[X]
+
+## FlierPermitName
+Flier Permit[X]
+
+## FlierPermitDesc
+If Lv. 10 or greater, use to procure[N]
+a flying steed or hone piloting skill.[X]
+
+## MageRingName
+Magi Ring[X]
+
+## MageRingDesc
+If Lv. 10 or greater, use to access[N]
+a tome or staff through arcane ability.[X]
+
+## RiderBadgeName
+Rider Badge[X]
+
+## RiderBadgeDesc
+If Lv. 10 or greater, use to procure[N]
+a horse or hone equestrian talent.[X]
+
+## SuppliesItemName
+Supplies[X]
+
+## SuppliesItemDesc
+Contains fuel, along with[N]
+other pilfered loot.[X]

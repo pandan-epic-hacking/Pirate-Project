@@ -10,6 +10,15 @@
 #define HubA_6 7
 #define Chapter2 8
 #define HubALibrary 9
+#define HubB 10
+#define HubB_1 11
+#define HubB_2 12
+#define HubB_3 13
+#define HubB_4 14
+#define HubB_5 15
+#define Chapter3 16
+
+#define HubB_2a 0x3D
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4
@@ -52,6 +61,38 @@
 #define HubALibraryMapChangesID 0x99
 #define HubALibraryEventsID 0x9A
 
+#define HubBMapID 0x28
+#define HubBMapChangesID 0x29
+#define HubBEventsID 0x2A
+
+#define HubB_1MapID 0x2B
+#define HubB_1MapChangesID 0x2C
+#define HubB_1EventsID 0x2D
+
+#define HubB_2MapID 0x31
+#define HubB_2MapChangesID 0x32
+#define HubB_2EventsID 0x33
+
+#define HubB_3MapID 0x35
+#define HubB_3MapChangesID 0x36
+#define HubB_3EventsID 0x37
+
+#define HubB_4MapID 0x39
+#define HubB_4MapChangesID 0x3A
+#define HubB_4EventsID 0x3B
+
+#define HubB_5MapID 0x3F
+#define HubB_5MapChangesID 0x40
+#define HubB_5EventsID 0x41
+
+#define HubB_2aMapID 0x42
+#define HubB_2aMapChangesID 0x43
+#define HubB_2aEventsID 0x44
+
+#define Chapter3MapID 0x45
+#define Chapter3MapChangesID 0x46
+#define Chapter3EventsID 0x47
+
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88
 #define FlasubanVillageSkyPaletteID 0x89
@@ -71,6 +112,7 @@
 
 #define MountainousObjectID 0x6C
 #define MountainousPaletteID 0x6D
+#define MountainousLagdouPaletteID 0xA3
 #define MountainousConfigID 0x6E
 #define MountainousTileAnimationsID 0x5
 
@@ -82,3 +124,25 @@
 #define N426ImprovedCastleObjectID 0x9B
 #define N426ImprovedCastlePaletteID 0x9C
 #define N426ImprovedCastleConfigID 0x9D
+
+#define ZoramineImprovedStrongholdObjectID 0x9E
+#define ZoramineImprovedStrongholdPaletteID 0x9F
+#define ZoramineImprovedStrongholdConfigID 0xA0
+
+#define DesertBastionVillageObjectID 0xA1
+#define DesertBastionVillagePaletteID 0xA2
+// note that 0xA3 is vanilla mountainous lagdou palette, used in B-2
+#define DesertBastionVillageConfigID 0xA4
+
+#define DesertBastionObjectID 0xA5
+#define DesertBastionPaletteID 0xA6
+#define DesertBastionConfigID 0xA7
+
+#define SnowyBernObjectID 0xA8
+#define SnowyBernPaletteID 0xA9
+#define SnowyBernConfigID 0xAA
+#define SnowyBernAnimationsID 0xAB
+
+#define FlasubanFrontierObjectID 0xAC
+#define FlasubanFrontierPaletteID 0xAD
+#define FlasubanFrontierConfigID 0xAE

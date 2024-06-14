@@ -1,0 +1,123 @@
+## LuaDQ
+[MidRight][LoadLua]
+That last hit got me good.[N]
+Can barely see a thing[Beat][AN]
+Looks like this is the end[N]
+of me playing pirate.[AN]
+I just hope the others[N]
+don't[Beat] go down with me[Beat][AN][X]
+
+
+## PilarDQ
+[MidRight][LoadPilar]
+My knife hand is broken[Beat][AN]
+Lua, can you handle this[N]
+without my support here?[AN][CloseSpeechSlow][ClearFace]
+[MidLeft][LoadLua]
+It won't be easy without you,[N]
+but we'll figure it out.[AN]
+Better than we would without[N]
+your mastery of navigation.[AN][CloseSpeechSlow][ClearFace]
+[MidRight][LoadPilar]
+True enough. I will take my[N]
+leave, but a word of advice.[AN]
+Do not strain yourself trying[N]
+to make up for my absence.[AN]
+A leader must remain calm,[N]
+even in times of strife[Beat][AN]
+Do not forget that, Lua.[A][X]
+
+## DesiderioDQ
+[MidRight][LoadDesiderio]
+Damn it all[Beat] And I was just[N]
+getting into the fight, too.[AN]
+Sorry, boss, but I'm not[N]
+dying like this. Not here.[AN][CloseSpeechSlow][ClearFace]
+[MidLeft][LoadLua]
+Of course you're not.[AN]
+Who's going to do all the[N]
+busywork if you bite it?[AN][CloseSpeechSlow][ClearFace]
+[MidRight][LoadDesiderio][ToggleSmile]
+Heh[Beat] Always the boring jobs,[N]
+eh? Well, I'm not complaining.[AN]
+It'll give me some time to[N]
+heal up for when I'm needed.[AN][ToggleSmile]
+Keep a sharp eye out in battle,[N]
+boss. You won't have mine.[A][X]
+
+## RazvanDQ
+[MidRight][LoadRazvan]
+I can't let the captain down[N]
+after all she's done for me.[AN]
+I won't[Beat] run away[Beat][AN][CloseSpeechSlow][ClearFace]
+[MidLeft][LoadLua]
+Like hell you won't![N]
+This is an order, Razvan.[AN]
+Retreat to the backline[N]
+and recover for a time.[AN]
+Don't waste your life[N]
+in a place like this.[AN][CloseSpeechSlow][ClearFace]
+[MidRight][LoadRazvan]
+[Beat]An order? Then I guess[N]
+I can't refuse you, captain.[AN]
+I'll do whatever I can to be[N]
+of use, off the battlefield.[AN]
+I won't leave a debt unpaid![A][X]
+
+## XimoDQ
+[MidRight][LoadXimo]
+Guess they got too close, huh?[N]
+Sorry, Ma, you were right.[AN]
+I shoulda never left[Beat][N]
+Just got myself killed.[A][CloseEyes][X]
+
+## CarmenDQ
+[MidRight][LoadCarmen]
+This is hardly a fitting stage,[N]
+but everyone, please listen.[AN]
+This is my final song for you.[N]
+Hold your applause[Beat][A][CloseEyes][X]
+
+## HermenegildoDQ
+[MidRight][LoadHermenegildo]
+Ah, to die a debtor with my[N]
+name forgotten to history[Beat][AN]
+A pox on Captain Lua![N]
+I hope she's next[Beat][AN][CloseEyes][X]
+
+## EstelleDQ
+[MidRight][LoadEstelle]
+So this was the dark cloud[N]
+hanging over my divination?[AN]
+But I still have so much[N]
+to see[Beat] to learn[Beat][A][CloseEyes][X]
+
+
+## HusniyeDQ
+[MR][LoadHusniye]
+Everything I fled from[Beat][N]
+everything I sacrificed[Beat][AN]
+just to die here?[AN]
+I[Beat] [CloseEyes]I refuse[Beat][A][X]
+
+## AvocadoDQ
+[MR][LoadAvocado]
+So this is the death I have[N]
+wrought so many times[Beat][AN]
+[HalfCloseEyes]So this is how it feels[Beat][AN]
+A deserved[Beat] [CloseEyes]fate[Beat][A][X]
+
+## MagdalenaDQ
+[MR][LoadMagdalena]
+Port Receloso[Beat][AN]
+I will never see[N]
+your streets again[Beat][A][X]
+
+
+## FataDQ
+[MR][LoadFata]
+Damn it all, if this hasn't
+been a long time coming[Beat][AN]
+[HalfCloseEyes]Ismar, Djona[Beat] Morgan[Beat][AN]
+here's hoping you saved[Beat]
+a seat for me, [CloseEyes]huh[Beat]?[A][X]

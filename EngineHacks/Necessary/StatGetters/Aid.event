@@ -24,16 +24,13 @@ prSkillProtector:
 prAdjustAidIfMounted:
 {
 	rIfUnitHasAttribute(CA_MOUNTEDAID)
-		rCallSequence(_prNegate _prAddBaseMountedAidBonus _prAddMoreIfHorse)
+		rCallSequence(_prNegate _prAddBaseMountedAidBonus)
 
 _prNegate:
 	rMinus(rCurrent)
 
 _prAddBaseMountedAidBonus:
-	rAddConst(19)
-
-_prAddMoreIfHorse:
-	rIfUnitHasAttribute(CA_MOUNTED, rAddConst(5))
+	rAddConst(24)
 }
 
 #endif // MODULAR_GETTER_AID_EVENT

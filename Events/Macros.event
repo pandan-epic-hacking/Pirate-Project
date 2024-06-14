@@ -2,7 +2,7 @@
 #define SpawnReinforcements(UnitGroup) "CamOn; LOAD1 0x1 UnitGroup; ENUN; CamOff; RefreshSMS; ENUN; STAL 30"
 #define LoadPlayerUnits(unitPtr) "LOAD1 0x0 unitPtr; ENUN"
 #define LoadCutsceneUnits(unitGroup) "LOAD1 2 unitGroup; ENUN"
-#define LoadUnit(x,y) "UNIT 0x2 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for units in player placement with prep menu
+#define LoadUnit(x,y) "UNIT Carmen 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for units in player placement with prep menu
 #define LoadUnit(x,y,unitID) "UNIT unitID 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for loading specific force deployed units
 #define LoadEnemies(unitPtr) "LOAD1 0x1 unitPtr; ENUN"
 #define CameraCursor(character) "CAM1 character; STAL 20; FlashCursor(character,60)"
@@ -19,16 +19,31 @@
 #define GiveItem(Item,Character) "CALL $591F40; SMOV 0x3 Item ; GIVEITEMTO Character"
 #define SilentGiveItem(item,unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItemFunc|1"
 #define GiveGold(money) "SVAL 3 money; GIVEMONEY Lua"
-#define TakeGold(money) "SVAL 3 money; TAKEMONEY Lua"
+#define TakeGold(money) "SVAL 3 money; TAKEMONEY"
+#define FadeOutMusic "MUSCMID 0x7FFF"
+#define FadeoutMusic "MUSCMID 0x7FFF"
+#define GoToPrepScreen2 "CALL $591FD8" //Prep screen without ENDA
+#define ClearBackgroundSlow "FADI 3 CLEAN STAL 60 FADU 2"
+#define SoloTextbox(textId, xOffset, yOffset) "SVAL sB ((yOffset) << 16)|(xOffset); SOLOTEXTBOXSTART; TEXTSHOW textId; TEXTEND; REMA"
+#define SoloTextboxCenter(textId) "CenterTutorialTextBox; SOLOTEXTBOXSTART; TEXTSHOW textId; TEXTEND; REMA"
+#define LocationText(textId, x, y) "BROWNBOXTEXT textId[x,y]"
 
-#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
-#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+
+#define IfAliveDeadDialog(character,alivetext,deadtext, label1, label2) "CHECK_ALIVE character; BEQ label1 0x0 0xC; Text(alivetext); GOTO label2; LABEL label1; Text(deadtext); LABEL label2"
+
+#define TextWithMusicChange(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSC songId; TEXTCONT; TEXTEND; REMA"
+#define TextWithMusicChange2(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSS songId; TEXTCONT; TEXTEND; REMA"
+
+#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 
 #define HubChapterFirstTimeEvent(labelId, seenEID, selectionText) "EVBIT_MODIFY 4; CHECK_EVENTID seenEID; BNE labelId s0 sC; Text(selectionText); ENUT seenEID; LABEL labelId"
 
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
 #define CheckHowManyHubChaptersCompleted "ASMC CheckHowManyHubChaptersCompletedASMC"
+#define SpawnQuestSigil(eventId, labelId, trapId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; AddTrap(trapId, xPos, yPos); LABEL labelId"
+#define RemoveQuestSigil(eventId, labelId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; RemoveTrapAtCoords(xPos, yPos); LABEL labelId"
 
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
 #define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"
@@ -36,26 +51,33 @@
 #define HubFirstTimeTalkToUnit(firstTalkEID, labelID, textID) "CHECK_EVENTID firstTalkEID; BNE labelID s0 sC; Text(textID); ENUT firstTalkEID"
 #define RecruitThenHideCharacter(charID, textID) "Text(textID); CUSA charID; FlashCursor(charID, 60); FADI 10; SVAL s1 0x1; SET_CONDITION charID; FADU 10"
 #define HubRecruitUnit(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); GOTO finalLabelID"
-#define HubRecruitYodsen(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); TAKEMONEY; GOTO finalLabelID"
+#define HubRecruitMoney(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); TAKEMONEY; GOTO finalLabelID"
 #define HubRejectUnit(rejectedTextID, convoEID) "Text(rejectedTextID); ENUF convoEID"
 #define UnsetAllHubChapterFlags "ASMC UnsetAllHubChapterFlagsASMC"
 
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+#define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; FADU 15"
+
+
 #define InitiateTileRevertInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 
 #define InitiateTileRevertInHub(initialEvent, clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; CALL initialEvent; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 
 
 #define InitiateLoadMapHub(chapterId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; LOMA chapterId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
-
-#define InitiateLoadMapHub(chapterId, eventPointer, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; LOMA chapterId; STAL 10; CALL eventPointer; STAL 10; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+#define InitiateLoadMapHub(chapterId, eventPointer, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; CALL eventPointer; STAL 10; RemoveAll; LOMA chapterId; STAL 10; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); LABEL labelId"
-
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup, eventOffset) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); CALL eventOffset; LABEL labelId"
+
+#define CallEventIfEIDNotSet(eventId, labelId, eventOffset) "CHECK_EVENTID eventId; BNE labelId s0 sC; CALL eventOffset; LABEL labelId"
 
 #define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"
 #define GetTextFromMemSlot1 "ASMC GetTextFromMemorySlot1ASMC"
+
+#define TurnUnitGreenIfAlive(charId, labelId) "CHECK_ALIVE charId; BEQ labelId s0 sC; CUSN charId; LABEL labelId"
+#define TurnUnitBlueIfAlive(charId, labelId) "CHECK_ALIVE charId; BEQ labelId s0 sC; CUSA charId; LABEL labelId"
+
 
 #define GoToHubChapter(chapterId) "ASMC EyeForAnEyeResetASMC; MNC2 chapterId"
 
@@ -67,6 +89,14 @@
 #define WentToHubA4 0x8D
 #define WentToHubA5 0x8E
 #define WentToHubA6 0x8F
+
+#define WentToHub1 WentToHubA1
+#define WentToHub2 WentToHubA2
+#define WentToHub3 WentToHubA3
+#define WentToHub4 WentToHubA4
+#define WentToHub5 WentToHubA5
+#define WentToHub6 WentToHubA6
+
 
 #define LuaInAHubFlag 0xA0
 
@@ -83,3 +113,14 @@
 //SetUnitItemDurability(unitid, itemslot, durability)
 
 #define InAHubFlag 0xA0
+
+#define DefeatBoss "AFEV 3 EndingScene 2"
+#define DefeatAll "AFEV 3 EndingScene 6"
+
+#define FlagIsSet(id, label) "CHECK_EVENTID (id); BEQ (label) 0xc 0x0;"
+#define FlagNotSet(id, label) "CHECK_EVENTID (id); BNE (label) 0xc 0x0;"
+
+
+// rw helped
+#define FadeToBlack "FADI 16"
+#define FadeBackFromBlack "FADU 16"

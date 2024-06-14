@@ -1,42 +1,42 @@
 INLINE MagCharTable,Base Magic,Magic Growth
 None,0,0
-0x01 Lua,0,15
-0x02 Pilar,2,20
-0x03 Desiderio,1,5
-0x04 Razvan,2,65
-0x05 Carmen,0,60
+0x01 Lua,0,20
+0x02 Pilar,1,25
+0x03 Desiderio,0,15
+0x04 Razvan,4,70
+0x05 Carmen,0,55
 0x06 Ximo,0,25
-0x07 Estelle,1,40
-0x08 Hermenegildo,7,55
-0x09 MrYodsen,4,25
-0x0A Durgham,0,5
-0x0B Indio,1,49
+0x07 Estelle,0,40
+0x08 Hermenegildo,8,65
+0x09 MrYodsen,3,30
+0x0A Durgham,(-3),15
+0x0B Indio,2,70
 0x0C Leandra,0,14
-0x0D Jaime,1,30
-0x0E Leonor,0,20
-0x0F Ondeh,4,35
-0x10 Biko,0,20
-0x11 Tangyuan,2,25
-0x12 Juan,2,25
-0x13 Matteo,1,20
-0x14 Suzanne,6,35
-0x15 Tethys,0,5
-0x16 Marisa,1,10
-0x17 Saleh,11,30
-0x18 Ewan,2,45
-0x19 L'Arachel,5,50
-0x1A Dozla,0,5
-0x1B -,0,50
-0x1C Rennac,3,35
-0x1D Duessel,0,5
-0x1E Myrrh,2,85
+0x0D Jaime,1,35
+0x0E Leonor,4,50
+0x0F Ondeh,2,40
+0x10 Biko,(-1),15
+0x11 Tangyuan,(-1),15
+0x12 Juan,(-1),15
+0x13 Matteo,(-1),15
+0x14 Suzanne,2,25
+0x15 Orlando,3,35
+0x16 Rahel,(-1),15
+0x17 Dmitr,0,5
+0x18 Husniye,3,25
+0x19 Avocado,2,20
+0x1A Magdalena,1,40
+0x1B Ernest,(-4),10
+0x1C Kai,6,45
+0x1D Adrian,1,10
+0x1E Lexa,0,25
 0x1F Knoll,10,50
-0x20 Joshua,0,20
-0x21 Syrene,4,20
-0x22 Tana,2,15
+0x20 Ponta,5,40
+0x21 Passarola,1,35
+0x22 Neltume,(-3),30
 0x23 Lyon,13,50
 0x24 Orson,3,10
-0x25 Glen,2,0
+0x25 Noah,-3,15
 0x26 Selena,10,40
 0x27 Valter,2,10
 0x28 Riev,10,45
@@ -61,14 +61,14 @@ None,0,0
 0x3B Lyon's Summon,0,0
 0x3C <Summon>,0,0
 0x3D <'Summonern'>,0,0
-0x3E Knoll's Summon,0,0
-0x3F Ewan's Summon,0,0
+0x3E Flint,0,15
+0x3F Gerald,2,25
 0x40 Lyon (Ch 17),13,50
 0x41 Morva (Ch 20),6,85
 0x42 Orson (Ch 5x),3,10
-0x43 Triana,2,70
-0x44 Medwyn,4,35
-0x45 Bartz,0,15
+0x43 Triana,0,50
+0x44 Medwyn,0,35
+0x45 Bartz,2,25
 0x46 Khazhak,0,5
 0x47 Blackheart,0,5
 0x48 Buzu,1,10
@@ -103,122 +103,122 @@ None,0,0
 0x65 Jozef,0,0
 0x66 TheCloser,0,0
 0x67 BrickBoys,0,0
-0x68 O'Neill (Prologue),0,0
-0x69 Glen (Cutscene),0,0
-0x6A Zonta (Ch 5x),0,0
+0x68 Rochefort,0,0
+0x69 A6 Pirate,0,0
+0x6A A4Pirate,0,0
 0x6B A4PirateBoss,(-1),0
 0x6C A4RebelBoss,6,35
 0x6D Manfred,4,20
-0x6E CrimsonHeart,0,5
-Orson (Ch 5x),3,10
-Valter (Ch 15),2,5
-Selena (Ch 10B +ACY- 13B),10,40
-Valter (Prologue),2,5
-Breguet (Ch 1),0,5
-Bone (Ch 2),0,5
-Bazba (Ch 3),1,10
-Entombed (Ch 4),1,5
-Saar (Ch 5),1,5
-Novala (Ch 6),8,50
-Murray (Ch 7),2,5
-Tirado (Ch 8),3,15
-Binks (Ch 9A),2,10
-Pablo (Ch 10A),8,50
-Maelduin (Ch 12A),2,10
-Aias (Ch 13A),2,5
-Carlyle (Ch 14A),5,30
-Caellach (Ch 15),3,5
-Pablo (Ch 13A),8,50
-0,0,0
-Gorgon (Ch 18),10,65
-Riev (Ch 19 +ACY- 20),10,45
-0,0,0
-0,0,0
-Gheb (Ch 9B),2,5
-Beran (Ch 10B),3,15
-Cyclops (Ch 12B),2,5
-Wight (Ch 11A),2,5
-Deathgoyle (Ch 11B),3,5
-Entombed (Monster Boss),3,5
-0,0,0
-Gorgon (Ch 18),10,65
-Riev (Ch 19 +ACY- 20),10,45
-0,0,0
-0,0,0
-Gheb (Ch 9B),2,5
-Beran (Ch 10B),3,15
-Cyclops (Ch 12B),2,5
-Wight (Ch 11A),2,5
-Deathgoyle (Ch 11B),3,5
-Entombed (Monster Boss),3,5
-0,0,0
-#NAME?,0,0
-Hunter (Ch 16),3,10
-#NAME?,0,0
-Brigand,0,0
-0,0,0
-O'Neill (Prologue),0,5
-Glen (Cutscene),0,0
-Zonta (Ch 5x),1,5
-Vigarde (Ch 14B),5,15
-Lyon (Ch Final),20,20
-Orson (Ch 16),3,5
-0,0,0
-0,0,0
-#NAME?,0,0
-Hunter (Ch 16),3,10
-#NAME?,0,0
-Brigand,0,0
-0,0,0
-O'Neill (Prologue),0,5
-Glen (Cutscene),0,0
-Zonta (Ch 5x),1,5
-Vigarde (Ch 14B),5,15
-Lyon (Ch Final),20,20
-Orson (Ch 16),3,5
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-Grado Soldier (Special),0,0
-Grado Soldier 1 (Normal),0,0
-Grado Soldier 2,0,0
-Grado Soldier 3,0,0
-Grado Soldier 4,0,0
-Grado Soldier 5,0,0
-Grado Soldier 6,0,0
-Grado Soldier 7,0,0
-Grado Soldier 8,0,0
-Grado Soldier 9,0,0
-Grado Soldier 10 (Duessel's),0,0
-Grado Soldier 11 (Duessel's),0,0
-Grado Soldier 12 (Duessel's),0,0
-Grado Soldier 13,0,0
-Grado Remnant 1 (Main),0,0
-Cutthroat,0,0
-Grado Remnant 2 (Cutscene and C16 only?),0,0
-Grado Remnant 3 (C16 only?),0,0
-Grado Remnant 4 (C16 only?),0,0
-Wraith (Sage),0,0
-Wraith (Swords),0,0
-Wraith (Axes),0,0
-0,0,0
-0,0,0
-0,0,0
-Grado Soldier (Special),0,0
-Grado Soldier 1 (Normal),0,0
-Grado Soldier 2,0,0
-Grado Soldier 3,0,0
+0x6E CrimsonHeart,0,0
+0x6F TorchUnit,0,0
+0x70 Igniswords,0,0
+0x71 Ignacio,2,40
+0x72 TorchUnit2,2,5
+0x73 Hugo,0,5
+0x74 Juliana,3,60
+0x75 Elodia,1,10
+0x76 Ida,1,5
+0x77 Docksman,1,5
+0x78 A4FunnyArcher,8,50
+0x79 Antlion,2,5
+0x7A Kiril,3,15
+0x7B Dalila,4,0
+0x7C AlonsoChapter3,13,50
+0x7D BlackheartElite,0,0
+0x7E -,2,5
+0x7F -,5,30
+0x80 Grado Soldier (Main),3,5
+0x81 -,8,50
+0x82 -,0,0
+0x83 -,10,65
+0x84 -,10,45
+0x85 -,0,0
+0x86 -,0,0
+0x87 -,2,5
+0x88 -,3,15
+0x89 Grado (Duessel's),2,5
+0x8A Grado (Duessel's),2,5
+0x8B Grado (Duessel's),3,5
+0x8C Grado,3,5
+0x8D Grado Remnant (Main),0,0
+0x8E Cutthroat,10,65
+0x8F Grado Remnant (Cutscene/C16),10,45
+0x90 Grado Remnant (C16),0,0
+0x91 Grado Remnant (C16),0,0
+0x92 Wraith (Sage),2,5
+0x93 Wraith (Swords),3,15
+0x94 Wraith (Axes),2,5
+0x95 -,2,5
+0x96 -,3,5
+0x97 -,3,5
+0x98 -,0,0
+0x99 -,0,0
+0x9A -,3,10
+0x9B -,0,0
+0x9C -,0,0
+0x9D -,0,0
+0x9E -,0,5
+0x9F -,0,0
+0xA0 -,1,5
+0xA1 -,5,15
+0xA2 -,20,20
+0xA3 -,3,5
+0xA4 -,0,0
+0xA5 -,0,0
+0xA6 -,0,0
+0xA7 Mercenary (Ch 9A),3,10
+0xA8 Mercenary (Ch 10A),0,0
+0xA9 Remnant/Merc (Ch 13A),0,0
+0xAA Monster,0,0
+0xAB Monster,0,5
+0xAC Monster,0,0
+0xAD Monster,1,5
+0xAE Monster,5,15
+0xAF Monster,0,0
+0xB0 Monster,3,5
+0xB1 Monster,0,0
+0xB2 Monster,0,0
+0xB3 Monster,0,0
+0xB4 Monster,0,0
+0xB5 Monster,0,0
+0xB6 Monster,0,0
+0xB7 Monster,0,0
+0xB8 Monster,0,0
+0xB9 Monster,0,0
+0xBA Monster (Gorgon Egg?),0,0
+0xBB Monster,0,0
+0xBC Monster,0,0
+0xBD Monster (Dracozombie?),0,0
+0xBE Demon King,0,0
+0xBF -,0,0
+0xC0 Frelian,0,0
+0xC1 Frelian,0,0
+0xC2 -,0,0
+0xC3 -,0,0
+0xC4 -,0,0
+0xC5 Fado (Renais),0,0
+0xC6 -,0,0
+0xC7 Hayden (Frelia),0,0
+0xC8 Mansel (Rausten),0,0
+0xC9 Klimt (Carcino),0,0
+0xCA Dara (Caer Pelyn),0,0
+0xCB Ismaire (Jehanna),0,0
+0xCC Pegasus Messenger,0,0
+0xCD Rausten Knight,0,0
+0xCE Rausten Knight,0,0
+0xCF -,0,0
+0xD0 - Yadney,2,0
+0xD1 - Cruz,3,0
+0xD2 - CruzFake,3,0
+0xD3 - RecelosoPriest,0,0
+0xD4 - RecelosoCorpse,0,0
+0xD5 - RecelosoStudent,0,0
+0xD6 - RecelosoGuard,0,0
+0xD7 - RecelosoBarkeep,0,0
+0xD8 - B4Bandit,0,0
+0xD9 - Javier,2,20
+0xDA - Azahar,2,20
+0xDB - Nicodemus,6,15
 Grado Soldier 4,0,0
 Grado Soldier 5,0,0
 Grado Soldier 6,0,0

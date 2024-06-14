@@ -1,0 +1,468 @@
+EventPointerTable(HubB_5EventsID, PointerList)
+
+// 0xA: bottom left grave
+// 0xB: middle grave
+// 0xC: top right grave
+
+
+// 0x10: fata house
+// 0x11 - 0x17: nicodemus boss quotes
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, Trees_T2, 2)
+TurnEventPlayer(0, Trees_T3, 3)
+TurnEventPlayer(0, Trees_T4, 4)
+TurnEventPlayer(0, Trees_T5, 5)
+TurnEventPlayer(0, WarningReinforcements, 6)
+TurnEventPlayer(0, Trees_T6, 6)
+TurnEventPlayer(0,Reinforcements1,7)
+TurnEventPlayer(0, Trees_T7, 7)
+TurnEventPlayer(0, Trees_T8, 8)
+TurnEventPlayer(0,Reinforcements3,8)
+TurnEventPlayer(0,Reinforcements2,9)
+TurnEventPlayer(0, Trees_T10, 10)
+TurnEventPlayer(0, Trees_T12, 12)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Village(0x10,FataHouse,3,5)
+Arrive(20,0)
+Arrive(21,0)
+END_MAIN
+
+MiscBasedEvents:
+AREA 0xA B5_GraveEvent_A [0,18] [0,18]
+AREA 0xB B5_GraveEvent_B [4,13] [4,13]
+AREA 0xC B5_GraveEvent_C [14,8] [14,8]
+CauseGameOverIfLordDies
+END_MAIN
+
+Traps1:
+BlueSigil(20,0)
+BlueSigil(21,0)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [15,16] 0 0 0 0 [IronSword] NoAI
+LoadUnit(14,15)
+LoadUnit(14,17)
+LoadUnit(13,16)
+LoadUnit(15,14)
+LoadUnit(15,18)
+LoadUnit(16,15)
+LoadUnit(17,19)
+LoadUnit(0,17)
+LoadUnit(1,19)
+LoadUnit(8,19)
+LoadUnit(12,13)
+UNIT
+
+BeginningScene:
+TILECHANGE 0x1
+TILECHANGE 0x3
+TILECHANGE 0xB
+TILECHANGE 0xC
+TILECHANGE 0xE
+
+SetBackground(Ship)
+// storm ambience specifically
+Music(WindGustSoundID)
+FadeBackFromBlack
+
+TEXTSTART
+TEXTSHOW B5_LuaSky
+TEXTEND
+SOUN 0x11A
+TEXTCONT
+TEXTEND
+REMA
+
+FadeToBlack
+
+Music(FinInTheCloudsID)
+FadeBackFromBlack
+
+TEXTSTART
+TEXTSHOW B5_NicodemusSky
+TEXTEND
+SOUN 0x11A
+TEXTCONT
+TEXTEND
+REMA
+
+FadeToBlack
+
+STAL 30
+SOUN 0x11A
+STAL 20
+SOUN 0x11A
+SOUN 0x119
+STAL 10
+SOUN 0x11A
+// should be Dire Tides instead
+Music(NighttimeSoundID)
+STAL 60
+EraseBackground
+LOAD1 1 CutsceneNicoSquad
+CAM1 Nicodemus
+FadeBackFromBlack
+STAL 30
+CameraCursor(Nicodemus)
+Text(B5_NicodemusCrash)
+CameraCursor(Fata)
+Text(B5_FataMocksNicodemus)
+
+FadeToBlack
+Music(NighttimeSoundID)
+SetBackground(Forest_Dense)
+FadeBackFromBlack
+Text(B5_LuaCrash)
+FadeToBlack
+EraseBackground
+
+CAM1 [14,17]
+REMOVEALL_RED
+REMOVEALL_GREEN
+DISA Fata
+LOAD1 1 BadGuys
+LoadCutsceneUnits(LuaIntroSquad)
+Music(AvastMeHeartiesID)
+FadeBackFromBlack
+STAL 30
+Text(B5_SoldierFindsLua)
+CameraCursor(Lua)
+Text(B5_LuaPrepares)
+STAL 30
+CameraCursor(20,0)
+CameraCursor(21,0)
+STAL 30
+Text(B5_HillHighlight)
+CenterTextbox(B5_GraveExplanation)
+FadeToBlack
+REMOVEALL_BLUE
+GotoPrepScreen
+NoFade
+ENDA
+
+EndingScene:
+FadeOutMusic
+Text(B5_CurrentCharacterSignals)
+FadeToBlack
+Music(CastawayHeartID)
+SetBackground(Forest_Dense)
+FadeBackFromBlack
+Text(B5_ChatOnHill)
+FadeToBlack
+
+FlagIsSet(0x10, 0x1A1)
+	CHECK_ALIVE Fata
+	BEQ 0x1A1 s0 sC
+		FadeBackFromBlack
+		Music(WelcomeAboardMateyID)
+		// fata scene will happen (either way)
+		FlagIsSet(0x10, 0x2B2)
+		FlagIsSet(0x10, 0x2B2)
+		FlagIsSet(0x10, 0x2B2)
+		// fata scene: all flags on
+		Text(B5_Fata_Graves)
+		GiveItemWithDurability(SkillScroll,ShadeID,Fata)
+		GOTO 0x3C3
+		LABEL 0x2B2
+		// fata scene: missed a grave
+		Text(B5_Fata_NoGraves)
+		LABEL 0x3C3
+		// done with either fata scene
+		FadeToBlack
+LABEL 0x1A1
+
+SetBackground(Inn)
+// idk; some sort of spooky ambient-ish song? Dire Tides?
+Music(NighttimeSoundID)
+FadeBackFromBlack
+Text(B5_Wreckage_Intro)
+CenterTextbox(B5_Journal_Elodia)
+Text(B5_Wreckage_Interlude)
+Music(ABlackheartsPrideID)
+CenterTextbox(B5_Journal_Alonso)
+Text(B5_Wreckage_Outro)
+FadeToBlack
+GoToHubChapter(HubB)
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+
+FataTemp:
+UNIT Fata Monk 0 Level(10,Ally,True) [3,6] 0 0 1 REDA3R6 [Elfire,Luna] NoAI
+UNIT
+
+BadGuys:
+UNIT Nicodemus Cataphract 0 Level(13,Enemy,False) [21,2] 0 0 0 0 [Pike,SilverAxe,RiderBadge] GroupOneAI
+// brigand
+UNIT A6Pirate Brigand Nicodemus Level(10,Enemy,True) [23,1] 0 0 0 0 [SteelAxe,TealGem] [0x0,0x4,0x4,0x0]
+// boss squad
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [20,4] 0 0 0 0 [SteelLance] GroupOneAI
+UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [22,5] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT Incendivis SwordCav Nicodemus Level(10,Enemy,True) [24,4] 0 0 0 0 [SteelSword] GroupOneAI
+UNIT Incendivis Archer Nicodemus Level(10,Enemy,True) [19,0] 0 0 0 0 [Longbow,Tomereaver] AttackInRangeAI
+// t1
+// UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [8,17] 0 0 0 0 [SteelAxe,HandAxe] BossAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [8,17] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [13,14] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [9,15] 0 0 0 0 [Oversize] ChargeAI
+UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [12,19] 0 0 0 0 [SteelMusket] ChargeAI
+// t2
+UNIT Incendivis AxeCav Nicodemus Level(10,Enemy,True) [6,12] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Incendivis Mercenary Nicodemus Level(10,Enemy,True) [8,10] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [10,9] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Incendivis Mage Nicodemus Level(10,Enemy,True) [0,15] 0 0 0 0 [Elfire] AttackInRangeAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [4,19] 0 0 0 0 [SteelLance] AttackInRangeAI
+// t3
+UNIT Incendivis Shaman Nicodemus Level(10,Enemy,True) [0,8] 0 0 0 0 [Elfire] ChargeAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [1,9] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [3,9] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [4,7] 0 0 0 0 [SteelMusket] ChargeAI
+// t4
+// UNIT Incendivis Myrmidon Nicodemus Level(10,Enemy,True) [5,1] 0 0 0 0 [Lancereaver] ChargeAI
+UNIT Incendivis Myrmidon Nicodemus Level(10,Enemy,True) [6,2] 0 0 0 0 [Onigiri] ChargeAI
+UNIT Incendivis Halberdier Nicodemus Level(12,Enemy,True) [8,3] 0 0 0 0 [SteelLance,HideShield] ChargeAI
+UNIT Incendivis SwordCav Nicodemus Level(10,Enemy,True) [10,1] 0 0 0 0 [Wingclipper] ChargeAI
+// UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [1,3] 0 0 0 0 [SteelAxe,Oversize] ChargeAI
+// t5
+UNIT Incendivis Curate Nicodemus Level(10,Enemy,True) [17,5] 0 0 0 0 [Silence] BossAI
+UNIT Incendivis DragonRider Nicodemus Level(10,Enemy,True) [5,4] 0 0 0 0 [HandAxe] GroupTwoAI
+UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [9,5] 0 0 0 0 [SteelAxe] GroupTwoAI
+UNIT Incendivis Warden Nicodemus Level(10,Enemy,True) [13,8] 0 0 0 0 [SteelSword] GroupTwoAI
+// UNIT Incendivis Archer Nicodemus Level(10,Enemy,True) [11,4] 0 0 0 0 [SteelBow,Tomereaver] GroupTwoAI
+// UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [13,5] 0 0 0 0 [SilverLance] GroupTwoAI
+// t6
+// UNIT Incendivis Shaman Nicodemus Level(10,Enemy,True) [9,7] 0 0 0 0 [Sagittae] BossAI
+UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [1,6] 0 0 0 0 [Bloodaxe,Bloodaxe,Bloodaxe] GroupThreeAI
+UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [4,3] 0 0 0 0 [Axereaver,Lancereaver] GroupThreeAI
+UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [20,8] 0 0 0 0 [SteelLance,Impaler] AttackInTwoAI
+UNIT Incendivis AxeCav Nicodemus Level(10,Enemy,True) [19,7] 0 0 0 0 [SteelAxe] AttackInTwoAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [17,9] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT Incendivis SwordKnight Nicodemus Level(12,Enemy,True) [20,7] 0 0 0 0 [Rapier] AttackInTwoAI
+// i don't evne fucking know anymore
+UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [16,1] 0 0 0 0 [SteelAxe] GroupFourAI
+UNIT Incendivis Mercenary Nicodemus Level(10,Enemy,True) [15,2] 0 0 0 0 [SteelSword] GroupFourAI
+// UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [18,3] 0 0 0 0 [SteelMusket] GroupFourAI
+UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [22,3] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT Incendivis Curate Nicodemus Level(10,Enemy,True) [5,10] 0 0 0 0 [Heal,Restore] [0x0E,0x03,0x04,0x0]
+UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [20,2] 0 0 0 0 [SteelLance,HandAxe] BossAI
+UNIT Incendivis Warden Nicodemus Level(10,Enemy,True) [21,1] 0 0 0 0 [SteelSword,Javelin] BossAI
+UNIT
+
+
+Reinforcements_T6:
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [16,0] 0 0 1 REDA16R0 [Javelin,SteelLance] ChargeAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [17,0] 0 0 1 REDA17R0 [SteelLance,Javelin] ChargeAI
+UNIT
+
+Reinforcements_T7:
+UNIT Incendivis Mercenary Nicodemus Level(10,Enemy,True) [24,0] 0 0 1 REDA24R0 [SteelSword] ChargeAI
+UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [25,0] 0 0 1 REDA25R0 [SteelAxe] ChargeAI
+UNIT
+
+Reinforcements_T8:
+UNIT Incendivis AxeCav Nicodemus Level(10,Enemy,True) [4,0] 0 0 1 REDA4R0 [SteelAxe] ChargeAI
+UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [6,0] 0 0 1 REDA6R0 [SteelLance] ChargeAI
+UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [8,0] 0 0 1 REDA8R0 [Pistol,Blunderbuss] ChargeAI
+UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [10,0] 0 0 1 REDA10R0 [Blunderbuss,Pistol] ChargeAI
+UNIT
+
+CutsceneNicoSquad:
+UNIT Nicodemus Cataphract 0 Level(13,Enemy,False) [12,6] 0 0 0 0 [Pike,Tomahawk,RiderBadge] NoAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [9,5] 0 0 0 0 [SteelLance] NoAI
+UNIT Incendivis Mercenary_F Nicodemus Level(10,Enemy,True) [10,7] 0 0 0 0 [SteelSword] NoAI
+UNIT Fata Monk 0 Level(10,NPC,True) [3,5] 0 0 0 0 [Elfire,Luna] NoAI
+UNIT
+
+LuaIntroSquad:
+UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [IronSword] NoAI
+UNIT Desiderio Vanguard 0 Level(10,Ally,False) [15,15] 0 0 0 0 [IronAxe] NoAI
+UNIT
+
+Trees_T2:
+SOUN 0xBC
+TILEREVERT 0x1
+TILECHANGE 0x2
+TILEREVERT 0x3
+CameraCursor(Lua)
+Text(B5_LuaConfused)
+NoFade
+ENDA
+
+Trees_T3:
+SOUN 0xBC
+TILEREVERT 0x2
+TILEREVERT 0xB
+TILECHANGE 0x0
+TILECHANGE 0xA
+TILEREVERT 0xE
+NoFade
+ENDA
+
+Trees_T4:
+SOUN 0xBC
+TILECHANGE 0xE
+TILECHANGE 0x5
+TILECHANGE 0x0
+TILEREVERT 0xC
+TILECHANGE 0xB
+NoFade
+ENDA
+
+Trees_T5:
+SOUN 0xBC
+TILEREVERT 0x5
+TILECHANGE 0x3
+TILECHANGE 0x8
+TILECHANGE 0x1
+NoFade
+ENDA
+
+Trees_T6:
+SOUN 0xBC
+TILEREVERT 0x0
+TILECHANGE 0x4
+TILEREVERT 0xA
+TILECHANGE 0x6
+NoFade
+ENDA
+
+Trees_T7:
+SOUN 0xBC
+TILECHANGE 0xF
+TILECHANGE 0x7
+TILEREVERT 0x8
+TILECHANGE 0x2
+NoFade
+ENDA
+
+Trees_T8:
+SOUN 0xBC
+TILECHANGE 0x0
+TILEREVERT 0x7
+TILEREVERT 0x1
+NoFade
+ENDA
+
+Trees_T10:
+SOUN 0xBC
+NoFade
+TILEREVERT 0xF
+TILECHANGE 0x7
+TILEREVERT 0x4
+TILEREVERT 0xB
+TILEREVERT 0x2
+TILEREVERT 0x6
+ENDA
+
+Trees_T12:
+SOUN 0xBC
+TILEREVERT 0x7
+TILEREVERT 0x3
+TILEREVERT 0xE
+TILEREVERT 0x0
+NoFade
+ENDA
+
+
+WarningReinforcements:
+CHECK_ALIVE Nicodemus
+BEQ 0xB00B 0x0 0xC
+CameraCursor(Nicodemus)
+Text(B5_ReinforcementWarn)
+LABEL 0xB00B
+NoFade
+ENDA
+
+
+Reinforcements1:
+SpawnReinforcements(Reinforcements_T6)
+NoFade
+ENDA 
+
+Reinforcements2:
+SpawnReinforcements(Reinforcements_T8)
+NoFade
+ENDA 
+
+Reinforcements3:
+SpawnReinforcements(Reinforcements_T7)
+NoFade
+ENDA 
+
+
+FataHouse:
+SetBackground(Salehs_House)
+TEXTSTART
+TEXTSHOW B5_FataHouse
+TEXTEND
+STAL 60
+MUSC NewHandsOnDeckID
+TEXTCONT
+TEXTEND
+REMA
+CALL $9EE2C4
+LOAD1 1 FataTemp
+ENUN
+NoFade
+ENDA
+
+
+
+B5_GraveEvent_A:
+SVAL s2 0
+CALL 0x89EE1B8
+Music(SleepinWithTheSkyFishesID)
+CenterTextbox(B5_Grave_A)
+NoFade
+ENDA
+
+B5_GraveEvent_B:
+SVAL s2 0
+CALL 0x89EE1B8
+Music(SleepinWithTheSkyFishesID)
+CenterTextbox(B5_Grave_B)
+NoFade
+ENDA
+
+B5_GraveEvent_C:
+SVAL s2 0
+CALL 0x89EE1B8
+Music(SleepinWithTheSkyFishesID)
+CenterTextbox(B5_Grave_C)
+NoFade
+ENDA

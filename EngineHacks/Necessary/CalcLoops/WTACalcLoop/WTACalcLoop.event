@@ -10,6 +10,8 @@ POIN PanacheWTA
 POIN Nonconforming
 POIN TriangleAdept
 POIN Poise
+POIN Analyze
+POIN ArmsMasterSkill
 #ifdef REAVER_SPLIT
 	POIN DoubleWeaponTriangle
 #endif // REAVER_SPLIT

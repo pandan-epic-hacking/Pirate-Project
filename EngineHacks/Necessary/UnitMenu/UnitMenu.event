@@ -188,6 +188,12 @@ UnitMenuTable:
 
   UM_Item
   UM_Trade
+
+  //Shuffle
+  MenuCommand(UM_Shuffle, UM_ShuffleDesc, GreenText, ShuffleUsability, ShuffleEffect)
+  
+  //Swift
+  MenuCommand(UM_Swift, UM_SwiftDesc, GreenText, SwiftUsability, SwiftEffect)
   
   //UM_Supply
   MenuCommand(0x68F,0x6D5,GreenText,NewSupplyUsability,0x23FB8)

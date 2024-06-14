@@ -177,6 +177,13 @@ bne End
 
 @if crit:
 IsCrit:
+mov r0,r4
+ldr r1,=CritthriftIDLink
+ldrb r1,[r1]
+blh SkillTester, r3
+cmp r0,#1
+beq SkipCritDamageBoost
+
 mov r0,r5		@defender
 ldr r1, =ExpertiseIDLink
 ldrb r1, [ r1 ]
@@ -191,6 +198,7 @@ add r2, r1 @damagex3
 StoreDamage:
 strh r2, [r7, #4] @final damage
 
+SkipCritDamageBoost:
 @set crit flag
 ldr     r2,[r6]    
 lsl     r1,r2,#0xD                @ 0802B42C 0351     

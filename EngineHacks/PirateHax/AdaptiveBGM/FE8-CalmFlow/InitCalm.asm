@@ -20,11 +20,22 @@ cmp		r0,r1
 bne		NoMute			@ Don't mute if sound/music argument is not the map BGM
 ldr		r0,=BGMSTRUCT
 ldrh	r0,[r0,#0x4]
-ldr		r1,=MusicID
-cmp		r0,r1
-bne		NoMute			@ Don't mute if BGM is not Desire below
-cmp		r5,#0xD
-ble		Mute			@ Mute if track is 3 or ... or 15 (decimal)
+ldr		r1,CalmFlowList
+LoopStart:
+ldrh    r2,[r1]
+cmp     r2,#0
+beq     NoMute @don't mute if not adaptive bgm
+cmp     r0,r2
+beq     LoopExit
+add     r1,r1,#4
+b       LoopStart
+
+LoopExit:
+ldrh	r2,[r1,#2]
+mov		r1,#16
+sub     r1,r1,r2
+cmp		r5,r1
+ble		Mute			@ Mute if track is in flow range
 
 NoMute:
 strb	r6,[r4,#0x13]
@@ -44,3 +55,9 @@ mov		r1,r4
 @return
 pop		{r0}
 bx		r0
+
+.ltorg
+.align
+
+CalmFlowList:
+@POIN CalmFlowList

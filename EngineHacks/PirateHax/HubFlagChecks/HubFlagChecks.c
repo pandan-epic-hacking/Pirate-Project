@@ -59,7 +59,7 @@ void UnsetAllHubChapterFlagsASMC(){
 
 
 bool LuaIsInHub(Unit* unit){
-    if (CheckEventId(0xA0)){ //list of hub chapters
+    if (CheckEventId(0xA0)){ 
         return true; //give 15 move
     }
     return false;
@@ -72,7 +72,7 @@ int ReturnNumberOfHubChaptersVisited(){
         hubChapters++;
     }
 
-    if (hubChapters < 0){
+    if (hubChapters <= 0){
         return 0;
     }
     else{

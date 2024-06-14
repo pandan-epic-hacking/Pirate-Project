@@ -60,15 +60,22 @@ POP
 ALIGN 4
 InitCalm:
 #incbin "InitCalm.dmp"
+POIN CalmFlowSongList
 
 FadeoutCalm:
 #incbin "FadeoutCalm.dmp"
+POIN CalmFlowSongList
 
 ReturnCalm:
 #incbin "ReturnCalm.dmp"
+POIN CalmFlowSongList
 
 EndBattleCalm:
 #incbin "EndBattleCalm.dmp"
+POIN CalmFlowSongList
 
 Cbbgm:
 #incbin "ContinueBattleBGM.dmp"
+POIN CalmFlowSongList
+POIN BossChangeBGM
+

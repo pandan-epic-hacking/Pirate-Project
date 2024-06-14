@@ -6,6 +6,7 @@
 .endm
 .equ MiracleID, SkillTester+4
 .equ d100Result, 0x802a52c
+
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
 mov r4, r0 @attacker
@@ -21,7 +22,25 @@ mov r1, #2 @miss
 tst r0, r1
 bne End
 
-@check defender's hp >50%
+@first of all if the attack isn't lethal, we don't need to proc miracle
+ldrb r1, [r5,#0x13] @current hp
+mov r0, #4
+ldsh r0, [r7, r0]
+cmp r0, r1
+blt End @not gonna die
+
+@then we check if unit has the Miraclemaker bit set
+push {r0-r3}
+mov r0,r5
+bl GetUnitDebuffEntry 
+ldr r1, =MiraclemakerBitOffset_Link
+ldr r1, [r1]
+bl CheckBit
+cmp	r0,#0
+bne GrantMiraclemaker @if yes, immediately grant effect
+pop {r0-r3}
+
+@if we don't have Miraclemaker bit, check if hp <= 50%
 ldrb r0, [r5,#0x12] @max hp
 ldrb r1, [r5,#0x13] @current hp
 cmp r1, #1 @1hp left?
@@ -30,25 +49,38 @@ lsr r0, #1 @max/2
 cmp r1, r0
 ble End
 
-@check damage >= currhp
-mov r0, #4
-ldrsh r0, [r7, r0]
-cmp r0, r1
-blt End @not gonna die
-
-@check for Miracle
-ldr r0, SkillTester
+@lastly check that defender has Miracle
+ldr r0,SkillTester
 mov lr, r0
 mov r0, r5 @defender data
-ldr r1, MiracleID
+ldr r1,MiracleID
 .short 0xf800
 cmp r0, #0
 beq End
+b GrantNormalMiracle
 
 @and set damage to currhp-1
-ldrb r0, [r5, #0x13] @currhp
+GrantMiraclemaker:
+pop {r0-r3}
+GrantNormalMiracle:
+ldrb r0, [r5,#0x13] @currhp
 sub r0, #1
-strh r0, [r7, #4] @final damage
+strh r0, [r7,#4] @final damage
+
+@finally, we unset the miraclemaker bit if it procced
+
+@if this isn't a real battle, skip this part
+ldrh r0,[r7] @battle stats config
+mov r1,#1
+and r0,r1
+cmp r0,#0
+beq End
+
+mov r0,r5
+bl GetUnitDebuffEntry
+ldr r1, =MiraclemakerBitOffset_Link
+ldr r1, [r1]
+bl UnsetBit
 
 End:
 pop {r4-r7}

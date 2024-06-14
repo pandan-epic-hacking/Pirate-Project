@@ -13,7 +13,6 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0, TangyuanGreen, 1)
 TurnEventPlayer(0, HomiesHere, 5)
 TurnEventPlayer(0, HereTheyCome, 9)
 END_MAIN
@@ -47,6 +46,7 @@ ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(5,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -58,6 +58,7 @@ UNIT
 
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(5,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -77,30 +78,30 @@ UNIT Razvan Curate 0 Level(3,Ally,False) [15,19] 0 0 0x1 REDA15R17  [Mend, Heal,
 UNIT
 
 TheBads:
-UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [8,5] 0 0 0 0 [IronMusket, Blunderbuss] BossAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [IronMusket, Blunderbuss] BossAI
 UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [0,7] 0 0 0 0 [IronMusket] AttackInRangeAI
 UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [14,1] 0 0 0 0 [Pistol] AttackInRangeAI
 UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] BossAI
 UNIT BrickBoys Thief 0 Level(3, Enemy, True) [3,12] 0 0 0 0 [IronDagger] AttackInTwoAI
-UNIT BrickBoys Thief 0 Level(3, Enemy, True) [6,2] 0 0 0 0 [IronKnife] AttackInRangeAI
-UNIT BrickBoys Thief 0 Level(3, Enemy, True) [12,7] 0 0 0 0 [IronKnife] AttackInRangeAI
+//UNIT BrickBoys Thief 0 Level(3, Enemy, True) [6,2] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [12,8] 0 0 0 0 [IronKnife] AttackInRangeAI
 UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [7,17] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [5,2] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
+//UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
 UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [8,9] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
-UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
-UNIT BrickBoys Warden 0 Level(3, Enemy, True) [0,15] 0 0 0 0 [IronLance, SteelSword] ChargeAI
-UNIT BrickBoys Vanguard 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [HandAxe, SteelLance] BossAI
+//UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
+//UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
+//UNIT BrickBoys Warden 0 Level(3, Enemy, True) [0,15] 0 0 0 0 [IronLance, SteelSword] ChargeAI
+//UNIT BrickBoys Vanguard 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [HandAxe, SteelLance] BossAI
 UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [4,7] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT TheDukes Hunter 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [Greatbow] BossAI
 UNIT TheDukes Hunter 0 Level(3, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
-UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,3] 0 0 0 0 [MiniBow] AttackInRangeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [MiniBow] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(3, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [0,0] 0 0 0 0 [Thani] AttackInTwoAI
 UNIT BigBrick Fighter 0 Level(5, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
 UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [8,1] 0 0 0 0 [Peacekeeper] AttackInRangeAI
 UNIT MrMist Mage 0 Level(6, Enemy, True) [12,17] 0 0 0 0 [Galestrike] AttackInRangeAI
@@ -120,7 +121,7 @@ UNIT Jozef Gunner 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R19 [SilverMusk
 UNIT
 
 TheCad:
-UNIT Tangyuan DragonRider_F 0 Level(3,NPC,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(5,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT
 
 TheMads:
@@ -157,6 +158,7 @@ CAMERA Tangyuan
 CURSOR Tangyuan
 STAL 45
 REMOVE_CURSORS
+MUSC SwabbieTalkID
 Text(Tangyuan1)
 STAL 30
 CAMERA MrMist
@@ -166,8 +168,8 @@ STAL 20
 CURSOR MrMist
 STAL 45
 REMOVE_CURSORS
-Text(ThePlan2)
-MOVE 20 MrMist [10, 11]
+TextWithMusicChange(ThePlan2, AvastMeHeartiesID)
+MOVE 20 MrMist [10, 9]
 ENUN
 STAL 20
 CAMERA Tangyuan
@@ -214,6 +216,7 @@ ENDA
 
 EndingScene:
 SetBackground(Fort_Ruins)
+MUSC SwabbieTalkID
 Text(Jozef3)
 SetBackground(Ship)
 Text(WeWin)

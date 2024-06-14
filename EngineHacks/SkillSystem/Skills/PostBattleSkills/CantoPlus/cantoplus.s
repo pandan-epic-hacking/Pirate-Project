@@ -28,7 +28,7 @@ cmp r0, #0x1
 beq End
 
 @check if moved all the squares
-ldr	r0,=#0x8019224	@mov getter
+ldr	r0,=0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4		@attacker
 .short	0xF800
@@ -37,7 +37,7 @@ cmp	r0,r1
 beq	End
 
 blh 0x801A1F5 @first refresh the entity map
-ldr	r1,=#0x8018BD8	@check if can move again
+ldr	r1,=0x8018BD8	@check if can move again
 mov	lr, r1
 .short	0xF800
 lsl	r0, #0x18
@@ -52,7 +52,27 @@ and	r0, r1
 cmp	r0, #0x00
 bne	End
 
+@check for option and ability (copied shamelessly from canto code)
+ldr	r0,[r4]		@load character data
+cmp	r0,#0x00	@just in case there's no pointer (was doing weird things with generics without this)
+beq	JumpLoad1
+ldr	r0,[r0,#0x28]	@load character abilities
+JumpLoad1:
+ldr	r1,[r4,#0x04]	@load class data
+cmp	r1,#0x00	@just in case there's no pointer
+beq	JumpLoad2
+ldr	r1,[r1,#0x28]	@load class abilities
+JumpLoad2:
+orr	r0,r1
+mov	r1,#4		@canto bit
+lsl	r1, #28
+and	r0,r1
+cmp	r0,r1
+beq	CanCanto	@if the option is set and has the ability, skip skill check
+
+
 @check for skill
+HasSkill:
 mov	r0, r4
 ldr	r1, CantoPlusID
 ldr	r3, SkillTester
@@ -61,6 +81,7 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+CanCanto:
 @ if this is off, only refresh unit if player 
 ldr r3, =CantoAI_Label
 ldr r3, [r3] 
@@ -93,7 +114,7 @@ bne End @ do not canto if cannot move
 
 @ instead of trying to get the AI to play nice, just make the unit move to the safest tile via a ASMCs in an event 
 @add unit to the AI list so enemies act twice
-@ldr	r0,=#0x203AA04
+@ldr	r0,=0x203AA04
 @ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 @mov r3, #0 @ counter 
 @sub r3, #1 

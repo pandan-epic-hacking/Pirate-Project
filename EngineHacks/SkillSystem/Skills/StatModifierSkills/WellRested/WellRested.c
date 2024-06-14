@@ -21,6 +21,7 @@ u8 WellRested_GetBonus(Unit* unit) {
 void WellRested_IncrementBonus(Unit* unit) {
 	int val = WellRestedRAMLoc->wellRestedBoost;
 	val++;
+	val++;
 	if (val > 15) val = 15;
 	WellRestedRAMLoc->wellRestedBoost = val;	
 }

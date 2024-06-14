@@ -17,5 +17,6 @@ RangeSkill(PointBlankID, PointBlankBonus)
 RangeSkill(TomeRangeUpID, TomeRangeBonus)
 RangeSkill(RunningStartID, RunningStartBonus)
 RangeSkill(PanacheID, PanacheBonus)
+RangeSkill(DogfightID, DogfightBonus)
 RangeSkillListEnd
 

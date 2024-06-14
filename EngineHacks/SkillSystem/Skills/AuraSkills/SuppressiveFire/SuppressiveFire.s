@@ -39,38 +39,6 @@ ldr r3, =0x0801829D @returns unit struct in r0
 mov lr, r3
 .short 0xF800
 
-@ everything here is supposed to be a replacement for the hardcoded unit check but it freezes when trying to open a unit's status screen.
-/*
-@then we check all units on the map to see which of them has Suppressive Fire
-ldr r0, GetUnitsInRange
-mov lr, r0
-mov r0, r4
-mov r2, #0x0 @check for same allegiance
-mov r3, #0xFF @essentially whole map range
-.short 0xF800 @returns list of unit ids in r0
-
-@now that we've got our list of units in r0, loop until we find an instance of Suppressive Fire
-mov r2, #0x0
-Loop:
-ldrb r1, [r0,r2] @get unit id from list
-push {r0,r2} @we need to preserve these values for later
-ldr r3, =0x0801829D 
-mov lr, r3
-.short 0xF800 @get character struct for unit id in list
-ldr r3, SkillTester 
-mov lr, r3
-ldr r1, SuppressiveFireID
-.short 0xf800 @test character struct for Suppressive Fire
-cmp r0, #0
-bne HasSkill @if unit has skill, we exit the loop and move on with our lives
-pop {r0,r2} @bring back the list of unit ids and our current position
-add r2, #0x1 @advance list by one unit
-b Loop
-
-HasSkill:
-pop {r0,r2} 
-*/
-
 mov r1, #0x1e @first item in unit's inventory
 ldrb r0, [r0,r1]
 ldr r3, =0x08017684 @max range getter

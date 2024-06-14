@@ -19,6 +19,8 @@
 //#define Lancereaver $12 
 #define Peacekeeper $d8
 
+#define LunarBlade $EB
+
 //LANCES
 #define Saunion $13
 //#define IronLance $14
@@ -35,6 +37,7 @@
 #define Harpoon $d6
 #define Sidepierce $d9
 #define Pitchfork $df
+#define GuBalg $e8
 
 //AXES
 //#define IronAxe $1f
@@ -86,7 +89,9 @@
 
 //#define Luna $46
 //#define Nosferatu $47
+//#define Eclipse 0x48
 #define Galestrike $dc
+#define Elsurge 0xE9
 
 //KNIVES
 #define IronKnife $bd
@@ -102,6 +107,7 @@
 #define Baselard $c7
 #define Heartpiercer $c8
 #define Compass $dd
+#define RuneDagger $ec
 
 // GUNS
 #define IronMusket $c9
@@ -119,8 +125,11 @@
 // EQUIPS
 #define HideShield $ca
 #define GlassShield $d2
+#define HexlockShield $e7
 #define ShoveGlove $d3
 #define Statuette $e5
+#define SwapShoes 0xF1
+#define IronShield 0xEA
 
 //Items
 
@@ -130,8 +139,12 @@
 #define FliersPermit $67
 #define MagesRing $68
 #define RidersBadge $97
+#define RiderBadge $97
 #define Tonic 0xCB // a durability based item 
+#define MetisTome $89
 #define TealGem $e0
 #define Eyepatch $e1
 #define AshArrow $e2
-
+#define AshQuiver AshArrow
+#define KnightRing $e6
+#define SuppliesItem $ed

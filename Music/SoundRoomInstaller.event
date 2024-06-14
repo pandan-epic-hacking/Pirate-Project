@@ -1,0 +1,63 @@
+PUSH
+ORG $1BC14
+POIN SoundRoomList
+ORG $1BCC4
+POIN SoundRoomList
+ORG $AECA8
+POIN SoundRoomList
+ORG $AECD0
+POIN SoundRoomList
+ORG $AED2C
+POIN SoundRoomList
+ORG $AEEBC
+POIN SoundRoomList
+ORG $AF438
+POIN SoundRoomList
+ORG $AF830
+POIN SoundRoomList
+ORG $AFE30
+POIN SoundRoomList
+ORG $B0080
+POIN SoundRoomList
+ORG $B042C
+POIN SoundRoomList
+POP
+
+#define SoundRoomEntry(songID,songLength,nameTextID) "WORD songID songLength 0 nameTextID"
+#define SoundRoomConditionalEntry(songID,songLength,functionPointer,nameTextID) "WORD songID songLength; POIN functionPointer; WORD nameTextID"
+#define SoundRoomTerminator "WORD 0xFFFFFFFF 0 0 0"
+
+ALIGN 4
+SoundRoomList:
+
+SoundRoomEntry(PortGreagorID,0,SongName_PortGreagor)
+SoundRoomEntry(BeatToQuartersID,0,SongName_BeatToQuarters)
+SoundRoomEntry(DistantSkiesID,0,SongName_DistantSkies)
+SoundRoomEntry(ScalleywagsOnDeckID,0,SongName_ScalleywagsOnDeck)
+SoundRoomEntry(FoolsBoldID,0,SongName_FoolsBold)
+SoundRoomEntry(ABlackheartsPrideID,0,SongName_ABlackheartsPride)
+SoundRoomEntry(AvastMeHeartiesID,0,SongName_AvastMeHearties)
+SoundRoomEntry(StillZephyrsID,0,SongName_StillZephyrs)
+SoundRoomEntry(TheRebelsKnifeID,0,SongName_TheRebelsKnife)
+SoundRoomEntry(OrlandoThemeID,0,SongName_OrlandoTheme)
+SoundRoomEntry(SwabbieTalkID,0,SongName_SwabbieTalk)
+SoundRoomEntry(EmergencyCrewmateID,0,SongName_EmergencyCrewmate)
+SoundRoomEntry(WelcomeAboardMateyID,0,SongName_WelcomeAboardMatey)
+SoundRoomEntry(ToTheCrowsNestID,0,SongName_ToTheCrowsNest)
+SoundRoomEntry(LookAtMeWaresID,0,SongName_LookAtMeWares)
+SoundRoomEntry(SleepinWithTheSkyFishesID,0,SongName_SleepinWithTheSkyFishes)
+SoundRoomEntry(DrownInGoodIntentionsID,0,SongName_DrownInGoodIntentions)
+SoundRoomEntry(MeetTheCrewID, 0, SongName_MeetTheCrew)
+SoundRoomEntry(OutIntoTheOpenSkyID, 0, SongName_OutIntoTheOpenSky)
+SoundRoomEntry(LastDanceSinkingShipID, 0, SongName_LastDanceSinkingShip)
+SoundRoomEntry(WellAndTrulyLostID, 0, SongName_WellAndTrulyLost)
+SoundRoomEntry(ToTheSkiesID, 0, SongName_ToTheSkies)
+SoundRoomEntry(FinInTheCloudsID, 0, SongName_FinInTheClouds)
+SoundRoomEntry(LetterOpenerID, 0, SongName_LetterOpener)
+SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
+SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
+SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
+SoundRoomEntry(CastawayHeartID, 0, SongName_CastawayHeart)
+SoundRoomTerminator
+
+

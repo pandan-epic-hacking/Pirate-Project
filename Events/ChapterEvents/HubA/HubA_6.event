@@ -69,7 +69,7 @@ Text(ChA6BombExplodes)
 EARTHQUAKE_END
 CALL 0x592104
 NoFade
-ENDA
+ENDB
 
 Turn1EP:
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-1,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
@@ -92,6 +92,7 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb5Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(3
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
+PlayBombMusicIfBombReady(3,16)
 NoFade
 ENDA
 
@@ -105,11 +106,12 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer-3,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-3,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-3,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
 CHECK_AT [3,16]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(3,16)
 CALL BombExplodes
 LABEL 1
+ENUF 4
 NoFade
 ENDA
 
@@ -122,6 +124,7 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
+PlayBombMusicIfBombReady(11,14)
 NoFade
 ENDA
 
@@ -135,11 +138,12 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-5,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-5,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-5,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
 CHECK_AT [11,14]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(11,14)
 CALL BombExplodes
 LABEL 1
+PlayBombMusicIfBombReady(21,16)
 NoFade
 ENDA
 
@@ -150,10 +154,9 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem)
 
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
-//SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem) // Explode!
 CHECK_AT [21,16]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(21,16)
 CALL BombExplodes
 LABEL 1
@@ -167,28 +170,27 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-7,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-7,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem)
 
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-7,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
+PlayBombMusicIfEitherBombReady(5,8,14,12)
 NoFade
 ENDA
 
 Turn8EP:
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
-//SetUnitStatusAll(Bomb,CurrentHP,Bomb2Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(5,8,5,8),AnyItem) // Explode!
 SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem)
-
-//SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem) // Explode!
 CHECK_AT [5,8]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(5,8)
 CALL BombExplodes
 LABEL 1
 CHECK_AT [14,12]
-SMOV s0 Bomb
-BEQ 2 s0 sC
+SMOV s1 Bomb
+BNE 2 s1 sC
 CameraCursor(14,12)
 CALL BombExplodes
 LABEL 2
+PlayBombMusicIfBombReady(19,6)
 NoFade
 ENDA
 
@@ -197,11 +199,12 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem)
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem) // Explode!
 CHECK_AT [19,6]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(19,6)
 CALL BombExplodes
 LABEL 1
+PlayBombMusicIfBombReady(12,10)
 NoFade
 ENDA
 
@@ -209,19 +212,20 @@ Turn10EP:
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-10,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-10,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem) // Explode!
 CHECK_AT [12,10]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(12,10)
 CALL BombExplodes
 LABEL 1
+PlayBombMusicIfBombReady(13,2)
 NoFade
 ENDA
 
 Turn11EP:
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-11,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem) // Explode!
 CHECK_AT [13,2]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(13,2)
 CALL BombExplodes
 LABEL 1
@@ -280,6 +284,34 @@ LoadUnit(7,25)
 LoadUnit(9,25)
 UNIT
 
+CutsceneNPCS_1:
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [17,11] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [18,11] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,11] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [17,12] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,12] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [17,13] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [18,13] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,13] 0 0 0 0 [0x0] NoAI
+// Bosses
+UNIT Santiago Gunner 0 Level(8, Enemy, True) [18,14] 0 0 0 0 [Culverin, Blunderbuss, GlassShield] BossAI
+UNIT Slicer Mercenary 0 Level(6, Enemy, True) [17,15] 0 0 0 0 [SilverSword] AttackInRangeAI
+UNIT Dicer Thief 0 Level(6, Enemy, True) [19,15] 0 0 0 0 [SilverDagger] AttackInRangeAI
+UNIT
+
+CutsceneNPCS_2: //Lua and new units + rochefort showing up
+UNIT Lua Captain 0 Level(1, Ally, False) [7,25] 0 0 0 0 [0, 0, 0, 0] NoAI 
+UNIT Rochefort 0 0 Level(1,NPC,False) [5,25] 0x0 0x0 0 0 [SteelMusket] NoAI
+UNIT Matteo Mercenary 0 Level(4,NPC,True) [6,25] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
+UNIT Suzanne Gunner 0 Level(4,NPC,True) [8,25] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
+UNIT
+
+CutsceneNPCS_3: //Slicer and Dicer, who show up to walk down towards Lua.
+UNIT Slicer Mercenary 0 Level(6, Enemy, True) [17,17] 0 0 0 0 [SilverSword] AttackInRangeAI
+UNIT Dicer Thief 0 Level(6, Enemy, True) [8,13] 0 0 0 0 [SilverDagger] AttackInRangeAI
+UNIT
+
+
 NewUnits:
 UNIT Matteo Mercenary 0 Level(4,Ally,True) [6,23] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
 UNIT Suzanne Gunner 0 Level(4,Ally,True) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
@@ -299,7 +331,7 @@ UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [6,19] 0 0 0 0 [IronAx
 UNIT A6Pirate Deserter 0 Level(A6PirateLevel, Enemy, True) [5,16] 0 0 0 0 [IronLance] PursueWithoutHeedAI
 UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [8,14] 0 0 0 0 [IronAxe] PursueWithoutHeedAI
 
-UNIT A6Pirate Shaman 0 Level(A6PirateLevel, Enemy, True) [1,14] 0 0 0 0 [Fire] PursueWithoutHeedAI
+UNIT A6Pirate Shaman 0 Level(A6PirateLevel, Enemy, True) [0,16] 0 0 0 0 [Fire] PursueWithoutHeedAI
 UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [2,8] 0 0 0 0 [SlimAxe] PursueWithoutHeedAI
 UNIT
 
@@ -374,21 +406,67 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+CAMERA_CENTERED [17,13]
+LoadCutsceneUnits(CutsceneNPCS_1)
+FADU 13
+MUSC SwabbieTalkID
+STAL 30
+FlashCursor(Santiago, 60)
 SetBackground(0x28)
 Text(ChA6Pre1)
 ClearBackground
-SetBackground(0x34)
+
+CURSOR_FLASHING [17,11]
+CURSOR_FLASHING [18,11]
+CURSOR_FLASHING [19,11]
+CURSOR_FLASHING [17,12]
+CURSOR_FLASHING [19,12]
+CURSOR_FLASHING [17,13]
+CURSOR_FLASHING [18,13]
+CURSOR_FLASHING [19,13]
+STAL 60
+REMOVE_CURSORS 
+SetBackground(0x28)
 Text(ChA6Pre2)
+ClearBackground
+
+CAMERA_CENTERED [7,23]
+CLEN 0
+CLEE 0
+MUSC AvastMeHeartiesID
+LoadCutsceneUnits(CutsceneNPCS_2)
+MOVE 10 Lua [7,22]
+MOVE 10 Suzanne [8,23]
+MOVE 10 Matteo [6, 23]
+MOVE 8 Rochefort [7,24]
+ENUN
+FlashCursor(Lua, 40)
+SetBackground(0x34)
+Text(ChA6Pre3)
+ClearBackground
+
+LoadCutsceneUnits(CutsceneNPCS_3)
+MOVE 15 Slicer [10, 23]
+MOVE 15 Dicer [7,20]
+ENUN
+CURSOR [7,20]
+CURSOR [10,23]
+STAL 60
+REMOVE_CURSORS
+SetBackground(0x34)
+Text(ChA6Pre4)
 FADI 15
 
+WEATHER 7
+CLEN 0
+CLEE 0
+CLEA 0
 LoadPlayerUnits(NewUnits)
-
 LoadEnemies(EnemyUnitsBosses)
 LoadEnemies(EnemyUnits1)
 LoadEnemies(EnemyUnits2)
 LoadEnemies(EnemyUnits3)
 LoadEnemies(EnemyUnitsBombs)
-
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb2Timer,AnyDeployed,AnyArmy,AnyClass,Area(5,8,5,8),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem)
@@ -397,13 +475,14 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb5Timer,AnyDeployed,AnyArmy,AnyClass,Area(3,1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
-
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
+FadeOutMusic
 SetBackground(0x28)
+MUSC SwabbieTalkID
 Text(ChA6End1)
 GiveItem(Mine,Lua)
 GoToHubChapter(HubA)

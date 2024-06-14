@@ -8,52 +8,52 @@ Lance Cav,3,30,20,0
 Lance Cav (F),3,30,20,0
 Paladin,2,10,24,2
 Paladin (F),2,10,24,2
-Warden,4,35,20,0
-Armour Knight (F),4,35,20,0
-General,0,0,22,0
-General (F),0,0,22,0
+Warden,5,40,20,0
+Armour Knight (F),5,40,20,0
+General,6,35,30,0
+General (F),6,35,30,0
 Thief,1,20,20,0
 Manakete,0,0,20,0
 Mercenary,1,20,20,0
 Mercenary (F),1,20,20,0
-Hero,0,20,23,0
-Hero (F),0,20,23,0
-Myrmidon,4,35,20,0
-Myrmidon (F),4,35,20,0
-Swordmaster,2,30,23,1
-Swordmaster (F),2,30,23,1
-Assassin,3,25,30,0
-Assassin (F),3,25,30,0
+Hero,2,20,30,0
+Hero (F),2,20,30,0
+Myrmidon,3,30,20,0
+Myrmidon (F),3,30,20,0
+Swordmaster,4,30,30,0
+Swordmaster (F),4,30,30,0
+Assassin,6,35,30,0
+Assassin (F),6,35,30,0
 Archer,1,20,20,0
 Archer (F),1,20,20,0
-Sniper,1,20,30,1
-Sniper (F),1,20,30,1
-Ranger,0,0,22,0
-Ranger (F),0,0,22,0
-Wyvern Rider,1,20,20,0
-Wyvern Rider (F),1,20,20,0
-Wyvern Lord,0,20,30,0
-Wyvern Lord (F),0,20,30,0
+Sniper,2,20,30,1
+Sniper (F),2,20,30,1
+Ranger,2,20,30,0
+Ranger (F),2,20,30,0
+Dragon Rider,2,25,20,0
+Dragon Rider,2,25,20,0
+Dracoknight,3,25,30,0
+Dracoknight,3,25,30,0
 Wyvern Knight,1,20,30,1
 Wyvern Knight (F),1,20,30,1
-Mage,8,55,20,0
-Mage (F),8,55,20,0
-Sage,11,55,30,0
-Sage (F),11,55,30,0
-Mage Knight,8,45,30,0
-Mage Knight (F),8,45,30,0
+Mage,7,50,20,0
+Mage (F),7,50,20,0
+Sage,12,55,30,0
+Sage (F),12,55,30,0
+Dark Knight,8,40,30,0
+Dark Knight (F),8,40,30,0
 Bishop,4,35,25,2
 Bishop (F),4,35,25,1
-Shaman,10,65,20,0
-Shaman (F),10,65,20,0
+Shaman,9,60,20,0
+Shaman (F),9,60,20,0
 Druid,6,55,29,0
 Druid (F),7,55,29,0
 Summoner,5,50,27,0
 Summoner (F),5,50,27,0
-Rogue,3,25,26,3
+Rogue,2,20,30,0
 Gorgon Egg,0,0,30,0
-Great Knight,1,20,30,0
-Great Knight (F),1,20,30,0
+Great Knight,2,20,30,0
+Great Knight (F),2,20,30,0
 Recruit (2),0,0,20,0
 Journeyman (3),0,0,22,0
 Pupil (3),5,55,29,2
@@ -63,18 +63,18 @@ Manakete (F),2,0,20,0
 Journeyman (1),0,0,20,0
 Pupil (1),1,55,20,0
 Fighter,1,20,20,0
-Warrior,0,0,21,0
+Warrior,2,20,30,0
 Brigand,2,25,20,0
 Pirate,0,0,20,0
-Berserker,0,0,21,0
-Monk,6,45,20,0
-Priest,4,35,20,0
+Berserker,3,25,30,0
+Monk,5,40,20,0
+Priest,6,45,20,0
 Bard,1,45,20,0
 Recruit (1),0,0,20,0
-Pegasus Knight,3,30,20,0
-Falcon Knight,3,30,23,3
+Pegasus Knight,4,35,20,0
+Falcon Knight,6,35,30,3
 Cleric,6,45,20,0
-Troubadour,4,35,20,0
+Troubadour,5,40,20,0
 Valkyrie,4,35,25,2
 Dancer,1,45,20,0
 Soldier,2,25,20,0
@@ -127,47 +127,47 @@ Cyclops,0,0,21,0
 Elder Bael,0,0,22,0
 Journeyman (2),0,0,20,0
 Pupil (2),2,55,20,1
-Captain,2,20,30,0
+Captain,4,20,30,0
 Ninja,3,30,20,0
 Vanguard,1,20,20,0
 Curate,8,55,20,0
 Deserter,1,20,20,0
 Hunter,4,35,20,0
-Gunner,2,25,20,0
+Gunner,1,20,20,0
 SwordCav,1,20,20,0
 AxeCav,1,20,20,0
-GriffinRider,2,25,20,0
+GriffinRider,3,30,20,0
 Hunter_F,4,35,20,0
-Champion,1,20,20,0
+Champion,2,20,30,0
 Log,0,0,0,0
 Master Ninja,4,30,30,0
-Dreadnought,1,20,30,0
-Seraph,7,40,30,0
-Bombardier,2,25,20,0
+Dreadnought,2,20,30,0
+Seraph,9,45,30,0
+Bombardier,4,25,30,0
 Bomb,0,10,20,0
-Trickster,9,45,20,0
+Trickster,6,35,30,0
 BowCav,1,20,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
+Runeshield,9,45,30,0
+Wolf Knight,2,20,30,0
+Fighter (F),1,20,20,0
+Slayer,6,35,30,0
+Slayer (F),6,35,30,0
+Monk (F),5,40,20,0
+Trickster (F),6,35,30,0
+War Monk,7,35,30,0
+War Monk (F),7,35,30,0
+Halberdier,3,25,30,0
+Adventurer,7,40,30,0
+Adventurer,7,40,30,0
+Malig Knight,7,40,30,0
+Warrior (F),2,20,30,0
+Dragoon,2,20,30,0
+Gryphknight,4,30,30,0
+Marksman,2,20,30,0
+Sword Knight,2,20,30,0
+Axe Knight,2,20,30,0
+Lance Knight,4,30,30,0
+Bow Knight,2,20,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0

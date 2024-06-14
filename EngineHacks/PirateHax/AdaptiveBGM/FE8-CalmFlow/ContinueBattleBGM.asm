@@ -17,6 +17,15 @@
 
 .equ MapBGM,						0x3006650 @ Start of second musicplayer, contains address to the map's BGM
 .equ MusicID,						0x3DD @ Desire Below's ID, alter if necessary
+.equ BossBGMFunction, CalmFlowList+4
+
+@only the value in r0 is needed, r1-r3 are not
+@let's pass it to another function that will return the relevant thing
+
+@ldr r3, BossBGMFunction
+@mov lr, r3
+@.short 0xf800
+
 
 @ldr   r3,=0x02024E5C   @ FE8J (BGMSTRUCT@BGM.音楽関係のフラグ1 )
 ldr   r3,=0x02024E5C  @ FE8U (BGMSTRUCT@BGM.音楽関係のフラグ1 )
@@ -24,16 +33,29 @@ ldr   r3,=0x02024E5C  @ FE8U (BGMSTRUCT@BGM.音楽関係のフラグ1 )
 ldrh  r3,[r3,#0x4]   @      (BGMSTRUCT@BGM.再生しているBGM )
 cmp   r3,r4
 bne   SwitchBGM
-ldr	  r4,=MusicID
-cmp	  r3,r4
-bne	  Exit
+
+ldr	  r4,CalmFlowList
+LoopStart:
+ldrh  r0,[r4]
+cmp   r0,#0
+beq   Exit
+cmp   r3,r0
+beq   LoopEnd
+add   r4,r4,#4
+b     LoopStart
+
+LoopEnd:
+ldrh  r6,[r4,#2] @r6 = # of tracks to avoid
+
+
 
 	@Disable/Enable tracks for Flow version of song
 	ldr 	r0,=MapBGM
 	ldrh	r4,[r0,#0x8]	@trackcount
 	ldr 	r0,[r0,#0x2C]	@Address to track 0
 	mov		r1,r4			@trackiterator
-	sub		r5,r4,#0x3		@Top three tracks don't need to be adjusted (Desire Below-specific)
+	ldrh    r3,[r3,#2]		@ channel offset
+	sub		r5,r4,r6		@apply # of tracks to avoid
 	
 	Loop:
 	cmp		r1,r5
@@ -74,3 +96,11 @@ Exit:
 pop {r4}
 pop {r0}
 bx r0
+
+.ltorg
+.align
+
+CalmFlowList:
+@POIN CalmFlowList
+@POIN BossBGMFunction
+

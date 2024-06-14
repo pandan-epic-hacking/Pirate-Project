@@ -10,7 +10,7 @@
 
 //Shade: Enemies are less likely to target this unit.
 //By Sme
-#define ShadeID 255
+// #define ShadeID 255
 
 //Shade+: Enemies will not target this unit.
 //By Sme
@@ -298,15 +298,11 @@
 //By Leonarth
 #define ForagerID 255
 
-//Imbue: Recover HP equal to Magic at the start of each turn.
-//By Sme
-#define ImbueID 255
-
 //Movement Skills
 
 //Acrobat: All traversable terrain costs 1 movement.
 //By Tequila
-#define AcrobatID 255
+//#define AcrobatID 255
 
 //Armor March: At start of turn, if unit is adjacent to an armor ally, unit and adjacent armor allies gain +2 Mov.
 //By Leonarth
@@ -716,10 +712,6 @@
 //By Jopettajah
 #define StunningSmileID 255
 
-// Keen Fighter: Unit takes 75% damage if the opponent can double. 
-// By Vesly 
-#define KeenFighterID 255
-
 // Steady Brawler: This unit deals 25% less damage while doubling, but 25% more when not. 
 // By Vesly 
 #define SteadyBrawlerID 255
@@ -872,10 +864,6 @@
 #define VengeanceID 255
 
 //Range Skills
-
-//Bow Range +1: Maximum range of equipped bows is increased.
-//By Teraspark
-#define BowRangeUpID 255
 
 //Point Blank: Minimum range of equipped bows is set to 1.
 //By Teraspark
@@ -1057,7 +1045,7 @@
 
 //Smite: Allows unit to push other units two tiles away.
 //By StanH
-#define SmiteID 255
+//#define SmiteID 255
 
 //Pivot: Allows unit to move to the opposite side of an adjacent ally.
 //By StanH
@@ -1065,11 +1053,11 @@
 
 //Reposition: Allows unit to pull an adjacent ally to its opposite side.
 //By StanH
-#define RepositionID 255
+//#define RepositionID 255
 
 //Swap: Allows unit to swap positions with an adjacent ally.
 //By StanH
-#define SwapID 255
+//#define SwapID 255
 
 //Swarp: Allows unit to swap positions with a distant ally.
 //Be Sme

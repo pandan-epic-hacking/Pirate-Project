@@ -17,33 +17,192 @@ POIN BeginningScene EndingScene
 //10 - pirate boss death quote flag
 //11 - rebel boss death quote flag
 //12 - early arrival flag (if pirate boss is killed before rebels show up)
-//13 - second early arrival flag that stops itself from existing
+//13 - funny archer death quote flag
 //14 - turned on by PirateBossDefeat misc event
 //15 - turned on by RebelBossDefeat misc event
+//16 - pirate boss battle quote
+//17 - rebel boss battle quote
+//18 - turned on by JuanReaction misc event
+//19 - rebel arrival event flag (can't share with other turn based events for whatever reason)
 
 TurnBasedEvents:
+TurnEventPlayer(0, SurvivorsTalk, 1)
 TurnEventPlayer(0, RebelPremonition, 2)
-TurnEventPlayer(13, RebelEarlyArrival, 2, 5)
 TurnEventPlayer(0, ThiefArrival, 4)
-TurnEventPlayer(12, RebelWarning1, 4)
+TurnEventPlayer(19, RebelArrival, 3, 5)
+TurnEventPlayer(12, RebelWarning1, 3)
 TurnEventPlayer(12, RebelWarning2, 5)
 TurnEventPlayer(12, RebelWarning3, 6)
-TurnEventPlayer(13, RebelArrival, 7)
 END_MAIN
+
+SurvivorsTalk:
+Music(ABlackheartsPrideID)
+CameraCursor(0,25)
+SetBackground(Inn)
+Text(A4_TurnEvent0)
+EraseBackground
+NoFade
+ENDA
+
+RebelPremonition:
+SpawnReinforcements(RebelScoutSpawn)
+ENUN
+MOVE 10 Rebel [20,6]
+ENUN
+CameraCursor(Rebel)
+Text(A4_TurnEvent1_A)
+MOVE 20 Rebel [23,11]
+ENUN
+REMOVEUNIT Rebel
+CameraCursor(Lua)
+Text(A4_TurnEvent1_B)
+NoFade
+ENDA
+
+ThiefArrival:
+SpawnReinforcements(ThiefSpawn)
+AddTrap(RedSigilTrapID,0,22)
+NoFade
+ENDA
+
+RebelArrival:
+CHECK_TURNS
+SVAL s1 7
+BEQ 1 s1 sC  //if the turn count is 7, then we branch to the rebel spawn event
+	CHECK_EVENTID 10
+	BNE 1 s0 sC //if the pirate boss is dead, play the event early
+		ENUF 19 //unset the rebel arrival flag if neither of these are true
+		GOTO 2
+LABEL 1
+	MUSC 0x7FFF
+	CAMERA_CENTERED [23,16]
+	TILECHANGE 1
+	STAL 30
+	TILECHANGE 2
+	SOUN 0x02D7 //snag falling sound effect
+	STAL 15
+	FADI 15
+	SpawnReinforcements(RebelSpawn)
+	FADU 15
+	ENUN
+	Music(AvastMeHeartiesID)
+	CameraCursor(Ramiro)
+	Text(A4_TurnEvent4)
+	SetAI(Razorblood,0,0,4,0)
+	CHECK_EXISTS Stingray //play this stuff if the pirate boss is still alive, else skip to label 10
+	BEQ 10 s0 sC
+		CameraCursor(Stingray)
+		Text(A4_TurnEvent4_B)
+		SetAI(Stingray,0,0,4,0)
+	LABEL 10
+	ENUT 12
+	SetChapterObjectiveText(ChA4GoalWindowB, ChA4StatusObjectiveB)
+LABEL 2
+NoFade
+ENDA
+
+RebelWarning1:
+ENUF 12 //turn this off, as the player could still potentially kill the boss early
+CHECK_EVENTID 10 //play this event if the boss hasn't been killed
+BNE 4 s0 sC
+	CAMERA_CENTERED [23,25]
+	STAL 30
+	TILECHANGE 3
+	CameraCursor(Lua)
+	Text(A4_TurnEvent2_A)
+	CameraCursor(Stingray)
+	Text(A4_TurnEvent2_B)
+LABEL 4
+NoFade
+ENDA
+
+RebelWarning2:
+ENUF 12 //turn this off, as the player could still potentially kill the boss early
+CHECK_EVENTID 10 //play this event if the boss hasn't been killed
+BNE 5 s0 sC
+	CAMERA_CENTERED [23,20]
+	STAL 30
+	TILECHANGE 4
+LABEL 5
+NoFade
+ENDA
+
+RebelWarning3:
+ENUF 12 //turn this off, as the player could still potentially kill the boss early
+CHECK_EVENTID 10 //play this event if the boss hasn't been killed
+BNE 6 s0 sC
+	CAMERA_CENTERED [23,16]
+	STAL 30
+	TILECHANGE 1
+LABEL 6
+Text(A4_TurnEvent3_A)
+//if pirate boss is still alive
+	CHECK_EXISTS Stingray //returns 1 if true (thus is still alive)
+	BEQ 8 s0 sC
+		Text(A4_TurnEvent3_B_A) //if he's alive, play this quote
+		GOTO 9
+	LABEL 8
+		Text(A4_TurnEvent3_B_B) //if he's dead, play this instead
+LABEL 9
+NoFade
+ENDA
 
 CharacterBasedEvents:
 CharacterEventBothWays(9, JuanRecruitment, Lua, Juan)
 END_MAIN
 
+JuanRecruitment:
+MUSS WelcomeAboardMateyID
+SetAI(Juan,0,0,0,0)
+Text(ChA4JuanRecruitText)
+CUSA Juan
+MURE 2
+NoFade
+ENDA
+
+JuanReaction:
+CHECK_ALIVE Juan
+BEQ 7 s0 sC //if he's dead, branch and don't check allegiance
+CHECK_ALLEGIANCE Juan //returns 0 if he's a player, 2 if an NPC
+BNE 7 s0 sC //skip to label 7 if Juan is not a player unit
+	CHECK_TURNS
+	SVAL s1 2
+	BNE 7 s1 sC //skip if not turn 2
+		CHECK_ACTIVEID Lua //returns 1 if Lua, 0 if not
+		BEQ 7 s0 sC //skip if Lua is not the active unit
+			CameraCursor(Juan)
+			Text(A4_JuanReaction_Optional)
+LABEL 7
+NoFade
+ENDA
+
 LocationBasedEvents:
 DurabilityChest(SkillScroll,CritthriftID,12,22)
+Chest(TakeAim, 10, 1)
 END_MAIN
 
 MiscBasedEvents:
 AFEV 14 PirateBossDefeat 10
 AFEV 15 RebelBossDefeat 11
+AFEV 18 JuanReaction 13
 CauseGameOverIfLordDies
 END_MAIN
+
+PirateBossDefeat:
+CHECK_EVENTID 11 //check if the rebelBoss death quote has been played
+BEQ 1 s0 sC
+	CALL EndingScene
+LABEL 1
+NoFade
+ENDA
+
+RebelBossDefeat:
+CHECK_EVENTID 10 //check if the pirateBoss death quote has been played
+BEQ 1 s0 sC
+	CALL EndingScene
+LABEL 1
+NoFade
+ENDA
 
 Units1:
 UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
@@ -70,187 +229,130 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NPCGroup:
-UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
+UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] BossAI
 UNIT
 
 EnemyGroup:
-//boss debug, delete later!
-//UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [3,2] 0 0 0 0 [Vulnerary] GroupFiveAI
-//UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [3,3] 0 0 0 0 [Vulnerary] ChargeAI
-//UNIT A4Pirate Thief 0 Level(4, Enemy, True) [12,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
+//debug
+//UNIT Stingray Deserter 0 Level(5,Enemy,True) [9,0] 0 0 0 0 [Javelin, SteelLance] BossAI
+//UNIT Ramiro SwordCav 0 Level(5, Enemy, True) [10,0] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
 //turn 1
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Razorblood Deserter 0 Level(3, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Razorblood Mercenary 0 Level(3, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
 //turn 2
-UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Flux, Vulnerary, TealGem] ChargeAI
-UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
+UNIT Razorblood Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, False) [12,12] 0 0 0 0 [IronBow] ChargeAI //dies in a gag for Juan's recruitment convo
+UNIT Razorblood Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Tonic, TealGem] ChargeAI //speed tonic guy
+UNIT Razorblood Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
-UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
-UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT Razorblood Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
+UNIT Razorblood Mercenary 0 Level(3, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
+UNIT Razorblood Fighter 0 Level(3, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
 //turn 4
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
-UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,17] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
+UNIT Razorblood Deserter 0 Level(3, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
+UNIT Razorblood Ninja 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
+UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
 //turn 5
-UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
+UNIT Razorblood Brigand 0 Level(3, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Razorblood Deserter 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
+UNIT Razorblood Hunter 0 Level(3, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Flux, Vulnerary] GroupThreeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
-UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
+UNIT Razorblood Myrmidon 0 Level(3, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
+UNIT Razorblood Shaman 0 Level(3, Enemy, True) [6,22] 0 0 0 0 [Elfire, Tonic] GroupThreeAI //def tonic
+UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
+UNIT Razorblood Mage 0 Level(3, Enemy, True) [10,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7
-UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
-UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
+UNIT Razorblood Fighter 0 Level(3, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
+UNIT Razorblood Hunter 0 Level(3, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
+UNIT Stingray Deserter 0 Level(5,Enemy,True) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
 UNIT
 
 RebelSpawn:
-UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
-UNIT Rebel Soldier 0 Level(4, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Rebel Warden 0 Level(4, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
-UNIT Rebel Warden 0 Level(4, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
-UNIT Rebel Archer 0 Level(4, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
-UNIT Rebel Fighter 0 Level(4, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
-UNIT Rebel GriffinRider 0 Level(4, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
+UNIT Ramiro SwordCav 0 Level(5, Enemy, True) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
+UNIT Rebel Soldier 0 Level(3, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Warden 0 Level(3, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
+UNIT Rebel Warden 0 Level(3, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
+UNIT Rebel Archer 0 Level(3, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
+UNIT Rebel Fighter 0 Level(3, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
+UNIT Rebel GriffinRider 0 Level(3, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
 UNIT
 
 RebelScoutSpawn:
-UNIT Rebel GriffinRider 0 Level(4, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Rebel GriffinRider 0 Level(3, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT
 
 ThiefSpawn:
-UNIT A4Pirate Thief 0 Level(4, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
+UNIT Razorblood Thief 0 Level(3, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
 UNIT
 
-JuanRecruitment:
-SetAI(Juan,0,0,4,0)
-Text(ChA4JuanRecruitText)
-CUSA Juan
-NoFade
-ENDA
+CutsceneGreens:
+// We're being clever here and just reusing the Greagor NPCs as the non-dying units here. 
+// The imperials that die reuse Incendivis and IncendivisMage. 
+UNIT GreagorCaptain Captain 0 Level(13, NPC, True) [10,16] 0 0 0 0 [SilverMusket] ChargeAI //imperial captain
+UNIT GreagorVillager Gunner 0 Level(3, NPC, True) [10,17] 0 0 0 0 [SteelLance] ChargeAI //imperial recruit
+UNIT Incendivis Soldier 0 Level(3, NPC, True) [11,15] 0 0 0 0 [Javelin] ChargeAI //first imperial who gets owned
+UNIT IncendivisMageA2 Mage_F 0 Level(3, NPC, True) [7,16] 0 0 0 0 [Fire] ChargeAI //second dead imperial
+UNIT GreagorLibrarian Fighter 0 Level(3, NPC, True) [6,18] 0 0 0 0 [] ChargeAI
+UNIT GreagorGuard Soldier 0 Level(3, NPC, True) [11,18] 0 0 0 0 [] ChargeAI
+UNIT GreagorSmuggler Fighter 0 Level(3, NPC, True) [8,21] 0 0 0 0 [] ChargeAI
+UNIT GreagorShipwright Archer 0 Level(3, NPC, True) [11,20] 0 0 0 0 [] ChargeAI
+//
+//
+//
+UNIT
 
-ThiefArrival:
-SpawnReinforcements(ThiefSpawn)
-AddTrap(RedSigilTrapID,0,22)
-NoFade
-ENDA
+CutsceneReds:
+UNIT Razorblood Fighter 0 Level(3, Enemy, True) [8,15] 0 0 0 0 [SteelAxe] GroupFiveAI //kills second imperial, and attempts to attack recruit
+UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, True) [11,13] 0 0 0 0 [SteelBow] ChargeAI //kills first imperial
+// All the units below are stock, and just use the Rebel label for their ID.  
+UNIT Rebel Thief 0 Level(3, Enemy, True) [9, 10] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Deserter 0 Level(3, Enemy, True) [10,11] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Brigand 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Ninja 0 Level(3, Enemy, True) [9,12] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Warden 0 Level(3, Enemy, True) [13,12] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Myrmidon 0 Level(3, Enemy, True) [6,14] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Deserter 0 Level(3, Enemy, True) [6,15] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Rebel Warden 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [SteelAxe] ChargeAI
+//lotsa pirates, the non-attacking ones are just rebels in disguise omg 
+//
+UNIT
 
-RebelPremonition:
-SpawnReinforcements(RebelScoutSpawn)
-ENUN
-MOVE 10 Rebel [20,6]
-ENUN
-CameraCursor(Rebel)
-Text(ChA4RebelPremonitionText1)
-MOVE 20 Rebel [23,11]
-ENUN
-REMOVEUNIT Rebel
-CameraCursor(Lua)
-Text(ChA4RebelPremonitionText2)
-NoFade
-ENDA
+CutsceneStingray:
+UNIT Stingray Deserter 0 Level(5,Enemy,True) [16,12] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI //pirate captain
+UNIT
 
-RebelWarning1:
-ENUF 12 //turn this off, as the player could still potentially kill the boss early
-CHECK_EVENTID 10 //play this event if the boss hasn't been killed
-BNE 4 s0 sC
-	CAMERA_CENTERED [23,25]
-	STAL 30
-	TILECHANGE 2
-	CameraCursor(Lua)
-	Text(ChA4RebelWarningText)
-LABEL 4
-NoFade
-ENDA
+CutsceneUnits:
+UNIT Lua 0x0 0x0 Level(1, Ally, False) [0,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [0,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Razvan 0x0 0x0 Level(1, Ally, False) [0,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0x0 0x0 Level(1, Ally, False) [0,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT
 
-RebelWarning2:
-ENUF 12 //turn this off, as the player could still potentially kill the boss early
-CHECK_EVENTID 10 //play this event if the boss hasn't been killed
-BNE 5 s0 sC
-	CAMERA_CENTERED [23,20]
-	STAL 30
-	TILECHANGE 3
-LABEL 5
-NoFade
-ENDA
+EndingSceneBaseCrew:
+UNIT Lua 0x0 0x0 Level(1, Ally, False) [7,19] 0 0 0 0 [Vulnerary] NoAI
+UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [7,18] 0 0 0 0 [Vulnerary] NoAI
+UNIT Razvan 0x0 0x0 Level(1, Ally, False) [6,20] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0x0 0x0 Level(1, Ally, False) [9,18] 0 0 0 0 [Vulnerary] NoAI
+UNIT
 
-RebelWarning3:
-ENUF 12 //turn this off, as the player could still potentially kill the boss early
-CHECK_EVENTID 10 //play this event if the boss hasn't been killed
-BNE 6 s0 sC
-	CAMERA_CENTERED [23,16]
-	STAL 30
-	TILECHANGE 0
-LABEL 6
-NoFade
-ENDA
+EndingSceneLuaAndRazvan:
+UNIT Lua 0x0 0x0 Level(1, Ally, False) [16,10] 0 0 0 0 [Vulnerary] NoAI
+UNIT Razvan 0x0 0x0 Level(1, Ally, False) [16,9] 0 0 0 0 [Vulnerary] NoAI
+UNIT
 
-RebelArrival:
-ENUF 10 //turn the pirateBoss deathquote back off, as he is still alive if this is playing
-CAMERA_CENTERED [23,16]
-STAL 30
-TILECHANGE 1
-SOUN 0x02D7 //snag falling sound effect
-STAL 15
-FADI 15
-SpawnReinforcements(RebelSpawn)
-FADU 15
-ENUN
-Text(ChA4RebelArrivalText)
-SetAI(A4PirateBoss,0,0,4,0)
-SetAI(A4Pirate,0,0,4,0)
-NoFade
-ENDA
+EndingSceneCaptain:
+UNIT GreagorCaptain Captain 0 Level(13, NPC, True) [8,19] 0 0 0 0 [SilverMusket] ChargeAI //imperial captain
+UNIT
 
-RebelEarlyArrival:
-ENUF 12
-ENUF 13
-CHECK_EVENTID 10 //play this event if the boss has been killed
-BEQ 3 s0 sC
-CHECK_EVENTID 12 //play this event if it HASN'T been played yet
-BNE 3 s0 sC
-CHECK_EVENTID 13 //then, play this event if it HASN'T been played yet
-BNE 3 s0 sC
-	ENUT 12 //turn on flag 12 to prevent this (and some other events) from playing in the future
-	ENUT 13 //turn on flag 12 to prevent this (and some other events) from playing in the future	
-	CAMERA_CENTERED [23,16]
-	TILECHANGE 0
-	STAL 30
-	TILECHANGE 1
-	SOUN 0x02D7 //snag falling sound effect
-	STAL 15
-	FADI 15
-	SpawnReinforcements(RebelSpawn)
-	FADU 15
-	ENUN
-	Text(ChA4RebelArrivalText)
-	SetAI(A4Pirate,0,0,4,0)
-LABEL 3
-NoFade
-ENDA
-
-PirateBossDefeat:
-CHECK_EVENTID 11 //check if the rebelBoss death quote has been played
-BEQ 1 s0 sC
-	CALL EndingScene
-LABEL 1
-NoFade
-ENDA
-
-RebelBossDefeat:
-CHECK_EVENTID 10 //check if the pirateBoss death quote has been played
-BEQ 2 s0 sC
-	CALL EndingScene
-LABEL 2
-NoFade
-ENDA
+EndingSceneImperialCrew:
+UNIT GreagorVillager Gunner 0 Level(3, NPC, True) [7,19] 0 0 0 0 [SteelLance] ChargeAI //imperial recruit
+UNIT GreagorLibrarian Fighter 0 Level(3, NPC, True) [8,19] 0 0 0 0 [] ChargeAI
+UNIT GreagorGuard Soldier 0 Level(3, NPC, True) [8,19] 0 0 0 0 [] ChargeAI
+UNIT GreagorSmuggler Fighter 0 Level(3, NPC, True) [7,19] 0 0 0 0 [] ChargeAI
+UNIT GreagorShipwright Archer 0 Level(3, NPC, True) [8, 19] 0 0 0 0 [] ChargeAI
+UNIT 
 
 Traps1:
 ENDTRAP
@@ -262,20 +364,310 @@ ALIGN 4
 
 BeginningScene:
 WEATHER 7
-Text(ChA4StartText)
-FADI 15
+SetBackground(Inn)
+Music(StillZephyrsID) //could probably use something else similar here once more event music gets added?
+TEXTSTART
+TEXTSHOW A4StartEventBase_1
+TEXTEND
+SOUN 0xA2 //armor knight footsteps
+SOUN 0xA3
+SOUN 0xA4
+TEXTCONT
+TEXTEND
+REMA
+
+STAL 30
+SetBackground(Ship)
+MUSC 0x47 //windy day
+TEXTSTART
+TEXTSHOW A4StartEventBase_2
+TEXTEND
+Music(SwabbieTalkID)
+TEXTCONT
+TEXTEND
+NoFade
+REMA
+
+//Big battle cutscene occurs here. Many green units and red units. 
+FADI 60
+LoadCutsceneUnits(CutsceneGreens)
+LoadCutsceneUnits(CutsceneReds)
+CAMERA_CENTERED [9,15]
+TILECHANGE 0x6 //imperial ship tile change
+Music(ScalleywagsOnDeckID)
+EraseBackground
+FADU 13
+STAL 60
+
+FlashCursor(A4FunnyArcher, 40)
+StartBattle
+CriticalHit(0, 36)
+EndAttack
+FIGHT_MAP A4FunnyArcher Incendivis 0x00 0x00
+
+MOVE 5 Razorblood [8,16]
+ENUN
+FlashCursor(Razorblood, 40)
+
+StartBattle
+NormalDamage(0, 24)
+EndAttack
+FIGHT_MAP Razorblood IncendivisMageA2 0x00 0x00
+FlashCursor(GreagorCaptain, 60)
+
+TEXTSTART
+TEXTSHOW A4StartEventBase_3
+TEXTEND
+REMA
+
+//Pirate approaches valerie, but then the captain shoots them before combat.
+MOVE 5 Razorblood [9,17]
+ENUN
+FlashCursor(GreagorCaptain,40)
+StartBattle
+NormalDamage(0, 35)
+EndAttack
+FIGHT_MAP GreagorCaptain Razorblood SilverMusket 0x00
+TEXTSTART
+TEXTSHOW A4StartEventBase_4
+TEXTEND
+REMA
+
+//Stingray, captain of the Razorbloods, appears. 
+LoadCutsceneUnits(CutsceneStingray);
+Music(AvastMeHeartiesID)
+//have pirate captain walk up
+MOVE 12 Stingray [10,14]
+ENUN
+FlashCursor(Stingray, 60)
+SetBackground(Ship)
+TEXTSTART
+TEXTSHOW A4StartEventBase_5
+TEXTEND
+ClearBackground
+
+//cutscene of green units managing to retreat into the hull.
+CAMERA_CENTERED [9,19]
+STAL 15
+MOVE 10 GreagorShipwright [7,19]
+MOVE 10 GreagorSmuggler [8,19]
+MOVE 10 GreagorVillager [10,20]
+ENUN
+DISA GreagorShipwright
+DISA GreagorSmuggler
+MOVE 10 GreagorGuard [7,19]
+MOVE 10 GreagorLibrarian [8,19]
+ENUN
+DISA GreagorLibrarian
+DISA GreagorGuard
+STAL 30
+MOVE 10 GreagorVillager [7,19]
+ENUN
+DISA GreagorVillager
+STAL 10 
+CAMERA_CENTERED [9,15]
+STAL 55
+
+FlashCursor(Stingray,60)
+SetBackground(Ship)
+TEXTSTART
+TEXTSHOW A4StartEventBase_6
+TEXTEND
+//Captain throws a 'grenade', allows her and other green units to safely retreat
+MUSI
+FAWI 15
+SOUN 0xF8 //elfire sfx, supposed to be explosion
+FAWU 15
+MUNO
+TEXTCONT
+TEXTEND
+REMA
+ClearBackground
+STAL 30
+CAMERA_CENTERED [9,19]
+MOVE 15 GreagorCaptain [10,20]
+ENUN
+MOVE 10 Stingray [8,20]
+MOVE 15 GreagorCaptain [8,19]
+ENUN
+CLEN 0
+SOUN 0xB1 //lockpick sound
+TILECHANGE 0x7 //doors closing
+STAL 30
+FlashCursor(Stingray, 40)
+SetBackground(Ship)
+Text(A4StartEventBase_7)
+ClearBackground
+
+FADI 60 //fade to black and revert the cutscene tile changes. 
+TILEREVERT 0x6 
+TILEREVERT 0x7
+CLEE 0 //clear all cutscene enemies, we want them to be back to their normal forms for the map. 
+CLEN 0 // 
+CAMERA_CENTERED [5,3]
 LOAD1 1 NPCGroup
 LOAD1 1 EnemyGroup
+LOAD1 1 CutsceneUnits
 ENUN
+FADU 15
+STAL 30 
+SOUN 0xAF //snag falling
+TILECHANGE 0x8 //show planks falling
+MOVE 8 Lua [5,3]
+MOVE 8 Desiderio [6,2] 
+MOVE 8 Pilar [5,2]
+MOVE 8 Razvan [6,1] 
+ENUN
+FlashCursor(Lua, 60)
+SetBackground(Ship)
+Text(A4StartEventBase_8)
+FADI 15
+EraseBackground
+SetUnitItemDurability(9, 11, 1, SpdTonic) 
+SetUnitItemDurability(6, 21, 1, DefTonic) 
+STAL 1
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
-Text(ChA4EndText)
-GiveGold(1200)
+
+FADI 15
+CLEE 0
+CLEN 0
+CLEA 0 //clear all units for cutscene purposes
+CAMERA_CENTERED [9,19] //center of the bottom of the pirate ship
+LOAD1 1 EndingSceneBaseCrew //Lua, Razvan, Desiderio and Pilar. 
+FADU 15
+Music(ABlackheartsPrideID)
+STAL 30
+FlashCursor(Lua, 60)
+Text(A4_EndEvent_1)
+MOVE 15 Pilar [18, 18]
+MOVE 5 Desiderio [9, 16]
+ENUN
+DISA Pilar
+DISA Desiderio
+STAL 30
+Text(A4_EndEvent_2)
+FADI 15
+CLEA 0
+MUSC 0x47 //windy day
+
+//Lua and Razvan move onboard the imperial ship. Seems as if there's no sign of life.
+CAMERA_CENTERED [9,14]
+TILECHANGE 0x6 //show imperial ship 
+TILECHANGE 0x7 //doors closed still
+LOAD1 1 EndingSceneLuaAndRazvan
+FADU 15
+
+MOVE 10 Lua [10, 13] //Lua are walking from pirate galleon to crusier. 
+MOVE 10 Razvan [11, 12]
+ENUN
+STAL 40
+MOVE 5 Lua [8,14]
+MOVE 5 Razvan [8, 12]
+ENUN
+STAL 40
+MOVE 5 Lua [10,16]
+MOVE 5 Razvan [9, 15]
+ENUN
+FlashCursor(Lua, 60)
+SetBackground(Ship)
+Text(A4_EndEvent_3)
+ClearBackground
+MUSC 0x7FFF //silence
+
+CAMERA_CENTERED [9,17]
+STAL 20 
+SOUN 0xB1 //lockpick sound
+Music(ABlackheartsPrideID)
+TILECHANGE 9 //doors opening (new tile change was needed, hacky solution so that doors don't reappear.)
+STAL 40
+LOAD1 1 EndingSceneCaptain
+MOVE 10 GreagorCaptain [10,20]
+ENUN
+MOVE 7 GreagorCaptain [10,18]
+ENUN
+FlashCursor(GreagorCaptain, 60)
+SetBackground(Ship)
+Text(A4_EndEvent_4)
+ClearBackground
+
+//lotsa character movement here 
+LOAD 1 EndingSceneImperialCrew
+MOVE 6 GreagorShipwright [6,18]
+MOVE 6 GreagorVillager [11,19]
+MOVE 6 GreagorLibrarian [11,21]
+MOVE 6 GreagorGuard [7,17]
+MOVE 6 GreagorSmuggler [6,15]
+ENUN 
+STAL 30
+MOVE 8 GreagorVillager [11, 18]
+ENUN
+FlashCursor(GreagorVillager, 60)
+SetBackground(Ship)
+Text(A4_EndEvent_5)
+ClearBackground
+
+//Razvan and some other crew members move an injured unit down to the hull.
+MOVE 12 GreagorSmuggler [10,17]
+SVAL s1 0x10 //rescuing state
+SET_CONDITION GreagorSmuggler
+ENUN
+MOVE 5 Razvan [10,21]
+MOVE 5 GreagorVillager [6,20]
+MOVE 8 GreagorSmuggler [10,20]
+ENUN 
+MOVE 8 GreagorSmuggler [8,19]
+MOVE 5 Razvan [9,20]
+ENUN
+DISA GreagorSmuggler
+MOVE 5 Razvan [8,19]
+MOVE 5 GreagorVillager [7,19]
+ENUN 
+STAL 30
+
+DoesUnitHaveItem(Razvan, Heal)
+SVAL s1 1
+BEQ 776 s1 sC //Does Razvan have a heal staff? 
+	DoesUnitHaveItem(Razvan, Mend)
+	SVAL s1 1
+	BEQ 776 s1 sC //Does Razvan have a mend staff?
+		//If Razvan doesn't have either staff, play a special cutscene where he gets a free heal staff. 
+		SetBackground(Inn)
+		Text(A4_EndEvent_Secret)
+		ClearBackground
+		GiveItem(Heal, Razvan)
+LABEL 776 //If either are true, go straight to here.
+DISA Razvan
+DISA GreagorVillager
+
+MUSI
+SOUN 0x89
+STAL 60
+SOUN 0x89
+STAL 60
+MUNO
+
+FlashCursor(GreagorCaptain, 60)
+SetBackground(Ship)
+Text(A4_EndEvent_6)
+ClearBackground
+GiveGold(1500)
+
+MOVE 10 Lua [15,9]
+ENUN
+FlashCursor(GreagorCaptain, 60)
+Text(A4_EndEvent_7)
+
+Music(BeatToQuartersID)
+SetBackground(Inn)
+Text(A4_EndEvent_8)
 GoToHubChapter(HubA)
 NoFade
+//note to self (Muffle), add hub text for this chapter
+CLEA 0
 ENDA
 
 Dunno1: //down here because nothing here is really used

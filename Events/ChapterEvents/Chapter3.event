@@ -1,0 +1,164 @@
+EventPointerTable(Chapter3EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Units1:
+UNIT Lua 0 0 Level(10,Ally,False) [21,40] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [3,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(10,Ally,False) [30,1] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan 0 0 Level(10,Ally,False) [12,42] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+LoadUnit(21,41)
+LoadUnit(20,40)
+LoadUnit(13,42)
+LoadUnit(12,41)
+
+LoadUnit(31,1)
+LoadUnit(30,2)
+LoadUnit(31,2)
+
+LoadUnit(2,2)
+LoadUnit(2,3)
+LoadUnit(3,3)
+UNIT
+
+LeftSideUnits: //axes, guns, knives
+//turn 1
+UNIT Blackheart Brigand 0 Level(14,Enemy,True) [9,39] 0 0 0 0 [SteelAxe] PursueWithoutHeedAI
+UNIT Blackheart Thief 0 Level(14,Enemy,True) [10,38] 0 0 0 0 [SteelKnife] PursueWithoutHeedAI
+
+UNIT TorchUnit Rogue 0 Level(16,Enemy,True) [7,3] 0 0 0 0 [Peshkatz, SilverKnife] GroupSixAI
+UNIT Blackheart Gunner 0 Level(14,Enemy,True) [8,2] 0 0 0 0 [SteelMusket] GroupSixAI
+UNIT Blackheart Brigand 0 Level(14,Enemy,True) [8,4] 0 0 0 0 [SteelAxe] GroupSixAI
+
+//turn 2
+UNIT Blackheart Thief 0 Level(14,Enemy,True) [3,34] 0 0 0 0 [SteelKnife] GroupSevenAI
+UNIT TorchUnit Marksman 0 Level(16,Enemy,True) [4,35] 0 0 0 0 [SilverMusket, Blunderbuss] GroupSevenAI
+UNIT Blackheart Brigand 0 Level(14,Enemy,True) [3,36] 0 0 0 0 [SteelAxe] GroupSevenAI
+
+//turn 3
+UNIT Blackheart Gunner 0 Level(14,Enemy,True) [9,29] 0 0 0 0 [SteelMusket] AttackInRangeAI
+UNIT Blackheart Thief 0 Level(14,Enemy,True) [8,30] 0 0 0 0 [SteelKnife] AttackInRangeAI
+
+//turn 4?
+UNIT Blackheart Gunner 0 Level(14,Enemy,True) [7,17] 0 0 0 0 [SteelMusket] AttackInRangeAI
+UNIT Blackheart Brigand 0 Level(14,Enemy,True) [8,18] 0 0 0 0 [SteelAxe] AttackInRangeAI
+
+
+//turn 5-6?
+UNIT Blackheart Thief 0 Level(14,Enemy,True) [1,16] 0 0 0 0 [SteelDagger] GroupOneAI
+UNIT TorchUnit Berserker 0 Level(16,Enemy,True) [2,17] 0 0 0 0 [Swordreaver, Crusher] GroupOneAI
+UNIT Blackheart Gunner 0 Level(14,Enemy,True) [1,18] 0 0 0 0 [Culverin] GroupOneAI
+UNIT
+
+CenterBoatUnits: //armored units, staffers, and bows
+UNIT Dalila Assassin 0 Level(18, Enemy, True) [16,12] 0 0 0 0 [Scorpio, SilverKnife, Pursuer] BossAI
+UNIT AlonsoChapter3 Adventurer 0 Level(20, Enemy, True) [17,13] 0 0 0 0 [BraveBow, ShiningBow, Sleep] BossAI
+
+UNIT BlackheartElite Sniper 0 Level(15, Enemy, True) [15,17] 0 0 0 0 [SilverBow, Greatbow] BossAI
+UNIT BlackheartElite Sniper 0 Level(15, Enemy, True) [18,17] 0 0 0 0 [SilverBow, Greatbow] BossAI
+UNIT BlackheartElite Sniper 0 Level(15, Enemy, True) [15,8] 0 0 0 0 [SilverBow, Greatbow] BossAI
+UNIT BlackheartElite Sniper 0 Level(15, Enemy, True) [18,8] 0 0 0 0 [SilverBow, Greatbow] BossAI
+
+//big ship guards
+UNIT TorchUnit General 0 Level(16,Enemy,True) [16,6] 0 0 0 0 [Spear, SteelAxe] BossAI
+UNIT TorchUnit General 0 Level(16,Enemy,True) [17,6] 0 0 0 0 [FlameSword, Pike] BossAI
+
+UNIT TorchUnit Dreadnought 0 Level(16,Enemy,True) [19,14] 0 0 0 0 [SilverBow, Bloodaxe] BossAI
+UNIT TorchUnit General 0 Level(16,Enemy,True) [19,15] 0 0 0 0 [Spear, SilverSword] BossAI
+UNIT TorchUnit General 0 Level(16,Enemy,True) [14,14] 0 0 0 0 [Spear, SilverAxe] BossAI
+UNIT TorchUnit Dreadnought 0 Level(16,Enemy,True) [14,15] 0 0 0 0 [SilverAxe, Harpoon] BossAI
+
+UNIT TorchUnit Baron 0 Level(16,Enemy,True) [16,22] 0 0 0 0 [Arcfire, Peacekeeper] BossAI
+UNIT TorchUnit Baron 0 Level(16,Enemy,True) [17,22] 0 0 0 0 [SilverSword, Thani] BossAI
+UNIT
+//turn 1
+
+RightSideUnits: //lances, swords, tomes
+//turn 1
+UNIT Blackheart Deserter 0 Level(15,Enemy,True) [27,2] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT Blackheart Mercenary 0 Level(15,Enemy,True) [28,3] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
+
+UNIT Blackheart Deserter 0 Level(14,Enemy,True) [23,37] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT Blackheart Shaman 0 Level(14,Enemy,True) [24,38] 0 0 0 0 [Elfire] PursueWithoutHeedAI
+
+//turn 2
+UNIT TorchUnit Halberdier 0 Level(16,Enemy,True) [28,8] 0 0 0 0 [SilverLance, Harpoon] GroupThreeAI
+UNIT Blackheart Deserter 0 Level(14,Enemy,True) [27,9] 0 0 0 0 [SteelLance] GroupThreeAI
+UNIT Blackheart Shaman 0 Level(14,Enemy,True) [29,9] 0 0 0 0 [Elfire] GroupThreeAI
+
+UNIT Blackheart Deserter 0 Level(14,Enemy,True) [29,35] 0 0 0 0 [SteelLance] GroupFiveAI
+UNIT TorchUnit Swordmaster 0 Level(16,Enemy,True) [30,36] 0 0 0 0 [SilverSword, Onigiri] GroupFiveAI
+UNIT Blackheart Shaman 0 Level(14,Enemy,True) [31,35] 0 0 0 0 [Elfire] GroupFiveAI
+
+//turn 3
+UNIT Blackheart Mercenary 0 Level(14,Enemy,True) [24,30] 0 0 0 0 [SteelBlade] AttackInRangeAI
+UNIT Blackheart Soldier 0 Level(14,Enemy,True) [25,31] 0 0 0 0 [SteelLance] AttackInRangeAI
+
+//turn 4
+UNIT Blackheart Deserter 0 Level(14,Enemy,True) [26,16] 0 0 0 0 [SteelLance] GroupFourAI
+UNIT TorchUnit Champion 0 Level(16,Enemy,True) [27,17] 0 0 0 0 [SilverBlade, Spear] GroupFourAI
+UNIT Blackheart Mercenary 0 Level(14,Enemy,True) [26,18] 0 0 0 0 [SteelBlade] GroupFourAI
+
+//(turn 5-6?)
+UNIT Blackheart Mercenary 0 Level(14,Enemy,True) [31,19] 0 0 0 0 [Wingclipper] GroupTwoAI
+UNIT TorchUnit Slayer 0 Level(16,Enemy,True) [32,18] 0 0 0 0 [FlameSword, Arcfire] GroupTwoAI
+UNIT Blackheart Shaman 0 Level(14,Enemy,True) [33,19] 0 0 0 0 [Sagittae] GroupTwoAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+WEATHER 7
+STAL 5
+LoadEnemies(LeftSideUnits)
+LoadEnemies(CenterBoatUnits)
+LoadEnemies(RightSideUnits)
+GotoPrepScreen
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

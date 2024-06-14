@@ -31,6 +31,15 @@ mov r3, #1 @max range of receiving bonus
 cmp r0, #0
 beq End
 
+@ check for no move, if so don't do it
+ldr	r0,=0x8019224	@mov getter
+mov	lr, r0
+mov	r0, r4
+.short	0xF800
+cmp r0, #0x2
+blt End
+
+SeaShantySkill:
 @give unit ability to move after combat
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x02
@@ -41,11 +50,17 @@ orr	r0, r1
 str	r0, [r4,#0x0C]
 
 @canto amount = unit's move - how much they moved, so we change how much they moved to (unit's move - 2).
-ldr	r0,=#0x8019224	@mov getter
+ldr	r0,=0x8019224	@mov getter
 mov	lr, r0
 mov	r0, r4
 .short	0xF800
-sub r0, #0x2 
+sub r0, #0x2
+
+cmp r0, #0x0
+bge BeforeEnd
+mov r0, #0x0		@if r0 is LESS than 0, we set it to 0 so we're not passing in negative mov
+
+BeforeEnd:
 strb r0, [r6,#0x10]
 
 End:

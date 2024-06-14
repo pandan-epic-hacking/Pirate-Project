@@ -52,7 +52,7 @@ DurabilityChest(SkillScroll,PassID,18,11)
 END_MAIN
 
 MiscBasedEvents:
-DefeatBoss(EndingScene)
+DefeatAll(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -72,10 +72,13 @@ BeginningScene:
 ASMC ClearAllDebuffs // now clears tonics, too. If you add a prep screen to this chapter, then restarting the chapter after saving will remove any tonic boosts because this ASMC is being called each time. 
 WEATHER 7
 SetBackground(Inn)
+MUSC MeetTheCrewID
 Text(Ch1BeginningScene1)
 SetBackground(Ship)
+MUSC 0x7FFF
 Text(Ch1BeginningScene2)
 Text(Ch1BeginningScene3)
+MUSC AvastMeHeartiesID
 Text(Ch1BeginningScene4)
 Text(Ch1BeginningScene5)
 Text(Ch1BeginningScene6)
@@ -88,9 +91,9 @@ NoFade
 ENDA
 
 PlayerGroup:
-UNIT Lua Captain 0 Level(10,Ally,False) [6,19] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Desiderio Vanguard 0 Level(8,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [5,19] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(8,Ally,False) [6,19] 0 0 0 0 [SteelBlade, IronMusket, Vulnerary] NoAI
+UNIT Desiderio Vanguard 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [5,19] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] NoAI
 UNIT Razvan Curate 0 Level(3,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
 UNIT Carmen Mage_F 0 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire, Vulnerary] NoAI
 UNIT Ximo Archer 0 Level(1,Ally,False) [6,21] 0 0 0 0 [IronBow, Vulnerary] NoAI
@@ -99,26 +102,26 @@ UNIT
 EnemyGroup:
 UNIT Khazhak Fighter 0 Level(5,Enemy,False) [17,8] 0 0 0 0 [SteelAxe, HandAxe, HideShield] BossAI
 UNIT Blackheart Deserter 0 Level(2, Enemy, True) [17,7] 0 0 0 0 [SteelLance] AttackInTwoAI
-UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,8] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,8] 0 0 0 0 [SteelBow] AttackWhenInRangeAI
 
 UNIT Blackheart Deserter 0 Level(2, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
 UNIT Blackheart Fighter 0 Level(2, Enemy, True) [12,19] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Blackheart Warden 0 Level(3, Enemy, True) [13,18] 0 0 0 0 [SteelSword, Javelin] BossAI
 UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,21] 0 0 0 0 [IronBow] ChargeAI
-UNIT Blackheart Myrmidon 0 Level(2, Enemy, True) [18,18] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Blackheart Hunter 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [IronBow] AttackWhenInRangeAI
 
 UNIT Blackheart Mercenary 0 Level(2, Enemy, True) [15,14] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT Blackheart Deserter 0 Level(2, Enemy, True) [13,11] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT Blackheart Deserter 0 Level(2, Enemy, True) [13,11] 0 0 0 0 [SteelLance] AttackWhenInRangeAI
 
 UNIT Blackheart Warden 0 Level(2, Enemy, True) [15,12] 0 0 0 0 [SteelSword, Javelin] BossAI
 UNIT Blackheart Warden 0 Level(2, Enemy, True) [16,12] 0 0 0 0 [SteelLance, Javelin] BossAI
-UNIT Blackheart Fighter 0 Level(2, Enemy, True) [19,9] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Blackheart Fighter 0 Level(2, Enemy, True) [19,9] 0 0 0 0 [IronAxe] AttackWhenInRangeAI
 UNIT
 
 EndingScene:
-MUSC 0x7FFF
+FadeOutMusic
 SetBackground(Ship)
+MUSC ABlackheartsPrideID
 Text(Ch1EndingScene1)
 Text(Ch1EndingScene2)
 Text(Ch1EndingScene3)

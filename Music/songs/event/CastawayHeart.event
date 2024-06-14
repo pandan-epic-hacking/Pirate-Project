@@ -1,0 +1,733 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    CastawayHeart_grp  voicegroup000
+        #define    CastawayHeart_pri  0
+        #define    CastawayHeart_rev  0
+        #define    CastawayHeart_key  0
+
+        // .rodata
+        // CastawayHeart
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+CastawayHeart_0:
+        BYTE   KEYSH   CastawayHeart_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   90/2
+CastawayHeart_0_LOOP:
+        BYTE           VOICE   51
+        BYTE           TIE     Dn5   v021
+        BYTE           TIE     Fs4
+        BYTE           VOL     127
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE           EOT
+        BYTE           EOT     Dn5
+        BYTE           TIE     Gs4
+        BYTE           TIE     En5
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE           EOT
+        BYTE           EOT     Gs4
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   GoTo
+         POIN2  CastawayHeart_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+CastawayHeart_1:
+        BYTE   KEYSH   CastawayHeart_key+0
+// 000   ----------------------------------------
+CastawayHeart_1_LOOP:
+        BYTE           PAN     c_v-15
+        BYTE           VOICE   46
+        BYTE           N01     CnM2   v042
+        BYTE           VOL     127
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE           N92     Cs3   v049   gtp3
+        BYTE           N44     En3   v049   gtp2
+        BYTE   W02
+        BYTE                   Fs4
+        BYTE   W44
+        BYTE   W02
+        BYTE           N96     Fs3
+        BYTE           N48     Cs4
+        BYTE   W48
+// 009   ----------------------------------------
+        BYTE                   An3
+        BYTE           N24     Gs4
+        BYTE   W24
+        BYTE                   Fs4
+        BYTE   W24
+        BYTE           N48     Fs3   v042
+        BYTE           N48     Gs3
+        BYTE   W24
+        BYTE           N24     Cs4   v049
+        BYTE   W24
+// 010   ----------------------------------------
+        BYTE           N96     Bn2
+        BYTE   W01
+        BYTE           N92     Gs3   v049   gtp3
+        BYTE   W01
+        BYTE           TIE     En4
+        BYTE   W92
+        BYTE   W02
+// 011   ----------------------------------------
+        BYTE           N48     En3
+        BYTE   W48
+        BYTE           EOT     En4
+        BYTE           N48     Dn3
+        BYTE           N48     Gs3
+        BYTE   W48
+// 012   ----------------------------------------
+        BYTE           N96     Cs3
+        BYTE   W01
+        BYTE           N44     Fs3   v049   gtp3
+        BYTE   W01
+        BYTE           N44     En4   v049   gtp2
+        BYTE   W44
+        BYTE   W02
+        BYTE           N96     Fs3
+        BYTE           N48     Cs4
+        BYTE   W48
+// 013   ----------------------------------------
+        BYTE                   An3
+        BYTE           N24     Dn4
+        BYTE   W24
+        BYTE                   En4
+        BYTE   W24
+        BYTE           N48     Gs3   v042
+        BYTE           N48     Fs3
+        BYTE   W24
+        BYTE           N24     Cs4   v049
+        BYTE   W24
+// 014   ----------------------------------------
+        BYTE           N92     Gs3   v049   gtp3
+        BYTE   W01
+        BYTE                   Bn3
+        BYTE   W01
+        BYTE           TIE     Cs4
+        BYTE   W92
+        BYTE   W02
+// 015   ----------------------------------------
+        BYTE           N48     Cs3
+        BYTE   W44
+        BYTE   W03
+        BYTE                   Dn3
+        BYTE   W01
+        BYTE           EOT     Cs4
+        BYTE           N48     Fs3
+        BYTE   W48
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   GoTo
+         POIN2  CastawayHeart_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+CastawayHeart_2:
+        BYTE   KEYSH   CastawayHeart_key+0
+// 000   ----------------------------------------
+CastawayHeart_2_LOOP:
+        BYTE           VOICE   40
+        BYTE           PAN     c_v+16
+        BYTE           VOL     127
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE           N96     Fs4   v016
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE                   Fs4   v019
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE                   Fs4   v022
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE                   Fs4   v025
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE                   An4   v028
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE           N48     Gs4
+        BYTE   W48
+        BYTE           N24     An4
+        BYTE   W24
+        BYTE                   Cs5
+        BYTE   W24
+// 010   ----------------------------------------
+        BYTE           N48     Bn4
+        BYTE   W48
+        BYTE                   An4
+        BYTE   W48
+// 011   ----------------------------------------
+        BYTE           N96     Gs4
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE                   Cs5
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE           N48     Dn5
+        BYTE   W48
+        BYTE           N24     Cs5
+        BYTE   W24
+        BYTE                   Bn4
+        BYTE   W24
+// 014   ----------------------------------------
+        BYTE           N48     An4
+        BYTE   W48
+        BYTE                   Gs4
+        BYTE   W48
+// 015   ----------------------------------------
+        BYTE           N72     Cs5
+        BYTE   W72
+        BYTE           N12     Bn4
+        BYTE           N12     Bn3
+        BYTE   W12
+        BYTE                   An4
+        BYTE           N12     An3
+        BYTE   W12
+// 016   ----------------------------------------
+        BYTE           N72     Bn3
+        BYTE           N24     An4
+        BYTE   W24
+        BYTE           N48     Fs4
+        BYTE   W48
+        BYTE           N12     Bn4
+        BYTE           N12     Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE           N12     An4
+        BYTE   W12
+// 017   ----------------------------------------
+        BYTE           N96     An3
+        BYTE           N36     Gs4
+        BYTE   W36
+        BYTE                   En4
+        BYTE   W36
+        BYTE           N24     Dn4
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE           N96     Gs3
+        BYTE           N96     En4
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE           N72     Dn4
+        BYTE           N72     An3
+        BYTE   W72
+        BYTE           N12     Bn4
+        BYTE           N12     Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE           N12     An4
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE           N72     Bn3
+        BYTE           N24     An4
+        BYTE   W24
+        BYTE           N48     Fs4
+        BYTE   W48
+        BYTE           N12     Bn3
+        BYTE           N12     Bn4
+        BYTE   W12
+        BYTE                   An4
+        BYTE           N12     An3
+        BYTE   W12
+// 021   ----------------------------------------
+        BYTE           N96
+        BYTE           N36     Gs4
+        BYTE   W36
+        BYTE                   An4
+        BYTE   W36
+        BYTE           N24     Cs5
+        BYTE   W24
+// 022   ----------------------------------------
+        BYTE           N96     Gs3
+        BYTE           N96     Bn4
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE                   An4
+        BYTE           N96     Fs3
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE           N48     Fs3   v021
+        BYTE           N48     An4
+        BYTE   W48
+        BYTE                   Fs3   v014
+        BYTE           N48     An4
+        BYTE   W48
+// 025   ----------------------------------------
+        BYTE   GoTo
+         POIN2  CastawayHeart_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+CastawayHeart_3:
+        BYTE   KEYSH   CastawayHeart_key+0
+// 000   ----------------------------------------
+CastawayHeart_3_LOOP:
+        BYTE           VOICE   1
+        BYTE           N96     Dn2   v042
+        BYTE           N44     En3   v042   gtp2
+        BYTE           N96     Cs3
+        BYTE           VOL     127
+        BYTE   W02
+        BYTE           N44     Fs4   v042   gtp2
+        BYTE   W44
+        BYTE   W02
+        BYTE           N48     Cs4
+        BYTE           N96     Fs3
+        BYTE   W48
+// 001   ----------------------------------------
+        BYTE           N24     Gs4
+        BYTE           N96     Fs2
+        BYTE           N48     An3
+        BYTE   W24
+        BYTE           N24     Fs4
+        BYTE   W24
+        BYTE           N48     Gs3   v035
+        BYTE           N48     Fs3
+        BYTE   W24
+        BYTE           N24     Cs4   v042
+        BYTE   W24
+// 002   ----------------------------------------
+        BYTE           N96     En2
+        BYTE           N96     Bn2
+        BYTE   W01
+        BYTE           N92     Gs3   v042   gtp3
+        BYTE   W01
+        BYTE           TIE     En4
+        BYTE   W92
+        BYTE   W02
+// 003   ----------------------------------------
+        BYTE           N96     Cs2
+        BYTE           N48     En3
+        BYTE   W48
+        BYTE           EOT     En4
+        BYTE           N48     Gs3
+        BYTE           N48     Dn3
+        BYTE   W48
+// 004   ----------------------------------------
+        BYTE           N96     Dn2
+        BYTE           N96     Cs3
+        BYTE   W01
+        BYTE           N44     Fs3   v042   gtp3
+        BYTE   W01
+        BYTE           N44     En4   v042   gtp2
+        BYTE   W44
+        BYTE   W02
+        BYTE           N96     Fs3
+        BYTE           N48     Cs4
+        BYTE   W48
+// 005   ----------------------------------------
+        BYTE           N96     Bn1
+        BYTE           N24     Dn4
+        BYTE           N48     An3
+        BYTE   W24
+        BYTE           N24     En4
+        BYTE   W24
+        BYTE           N48     Gs3   v035
+        BYTE           N48     Fs3
+        BYTE   W24
+        BYTE           N24     Cs4   v042
+        BYTE   W24
+// 006   ----------------------------------------
+        BYTE           N96     An2
+        BYTE           N92     Gs3   v042   gtp3
+        BYTE   W01
+        BYTE                   Bn3
+        BYTE   W01
+        BYTE           TIE     Cs4
+        BYTE   W92
+        BYTE   W02
+// 007   ----------------------------------------
+        BYTE           N96     Dn2
+        BYTE           N48     Cs3
+        BYTE   W44
+        BYTE   W03
+        BYTE                   Dn3
+        BYTE   W01
+        BYTE           EOT     Cs4
+        BYTE           N48     Fs3
+        BYTE   W48
+// 008   ----------------------------------------
+        BYTE           N96     Cs3   v028
+        BYTE           N96     Fs2
+        BYTE           N96     An2
+        BYTE           N96     Dn2
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE                   An2
+        BYTE           N96     Cs3
+        BYTE           N96     En3
+        BYTE           N96     Fs2
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE                   Bn2
+        BYTE           N96     Dn3
+        BYTE           N96     Gs2
+        BYTE           N96     En2
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE                   Cs2
+        BYTE           N96     Bn2
+        BYTE           N96     Gs2
+        BYTE           N96     En2
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE                   Dn2
+        BYTE           N96     Cs3
+        BYTE           N96     Fs2
+        BYTE           N96     An2
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE                   Bn1
+        BYTE           N96     Dn2
+        BYTE           N96     Fs2
+        BYTE           N96     An2
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE                   An2
+        BYTE           N96     Cs3
+        BYTE           N96     En2
+        BYTE           N96     Gs2
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE                   Dn2
+        BYTE           N96     Fs2
+        BYTE           N96     An2
+        BYTE           N96     Cs3
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE           N48     Bn2
+        BYTE           N48     Dn3
+        BYTE           N48     Cs3
+        BYTE   W72
+        BYTE                   Bn2
+        BYTE           N48     Cs3
+        BYTE           N48     Gs2
+        BYTE   W24
+// 017   ----------------------------------------
+        BYTE   W48
+        BYTE                   An2
+        BYTE           N48     Cs3
+        BYTE           N48     Bn2
+        BYTE   W48
+// 018   ----------------------------------------
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE           N48     Bn2
+        BYTE           N48     Cs3
+        BYTE   W72
+// 019   ----------------------------------------
+        BYTE           N96     An2
+        BYTE           N96     Bn2
+        BYTE           N96     En2
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE           N48     Cs3
+        BYTE           N48     Dn3
+        BYTE           N48     Bn2
+        BYTE   W72
+        BYTE                   Bn2
+        BYTE           N48     Cs3
+        BYTE           N48     Gs2
+        BYTE   W24
+// 021   ----------------------------------------
+        BYTE   W48
+        BYTE                   Bn2
+        BYTE           N48     Cs3
+        BYTE           N48     An2
+        BYTE   W48
+// 022   ----------------------------------------
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE           N48     Gs2
+        BYTE           N48     Cs3
+        BYTE   W72
+// 023   ----------------------------------------
+        BYTE           N96     Fs2
+        BYTE           N96     Dn3
+        BYTE           N96     An2
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   GoTo
+         POIN2  CastawayHeart_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+CastawayHeart_4:
+        BYTE   KEYSH   CastawayHeart_key+0
+// 000   ----------------------------------------
+CastawayHeart_4_LOOP:
+        BYTE           VOICE   32
+        BYTE           N96     Dn2   v042
+        BYTE           VOL     127
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE           N96     Fs2
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE                   En2
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE                   Cs2
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE                   Dn2
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE                   Bn1
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE                   An1
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE                   Dn2
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE           N36
+        BYTE   W36
+        BYTE           N12     Dn2   v035
+        BYTE   W24
+        BYTE           N24     Dn2   v042
+        BYTE   W24
+        BYTE           N12     Dn2   v035
+        BYTE   W12
+// 009   ----------------------------------------
+        BYTE           N36     Fs2   v042
+        BYTE   W36
+        BYTE           N12     Fs2   v035
+        BYTE   W24
+        BYTE           N24     Fs2   v042
+        BYTE   W24
+        BYTE           N12     Fs2   v035
+        BYTE   W12
+// 010   ----------------------------------------
+        BYTE           N36     En2   v042
+        BYTE   W36
+        BYTE           N12     En2   v035
+        BYTE   W24
+        BYTE           N24     En2   v042
+        BYTE   W24
+        BYTE           N12     En2   v035
+        BYTE   W12
+// 011   ----------------------------------------
+        BYTE           N36     Cs2   v042
+        BYTE   W36
+        BYTE           N12     Cs2   v035
+        BYTE   W24
+        BYTE                   Bn1   v042
+        BYTE   W12
+        BYTE                   Cn2
+        BYTE   W12
+        BYTE                   Cs2   v035
+        BYTE   W12
+// 012   ----------------------------------------
+        BYTE           N36     Dn2   v042
+        BYTE   W36
+        BYTE           N12     Dn2   v035
+        BYTE   W24
+        BYTE                   Dn2   v042
+        BYTE   W24
+        BYTE                   Dn2   v035
+        BYTE   W12
+// 013   ----------------------------------------
+        BYTE           N36     Bn1   v042
+        BYTE   W36
+        BYTE           N12     Bn1   v035
+        BYTE   W24
+        BYTE                   Bn1   v042
+        BYTE   W24
+        BYTE                   Bn1   v035
+        BYTE   W12
+// 014   ----------------------------------------
+        BYTE           N36     An1   v042
+        BYTE   W36
+        BYTE           N12     An1   v035
+        BYTE   W24
+        BYTE                   An1   v042
+        BYTE   W24
+        BYTE                   An1   v035
+        BYTE   W12
+// 015   ----------------------------------------
+        BYTE           N36     Dn2   v042
+        BYTE   W36
+        BYTE           N12     Dn2   v035
+        BYTE   W24
+        BYTE                   Dn2   v042
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Cn2   v035
+        BYTE   W12
+// 016   ----------------------------------------
+CastawayHeart_4_16:
+        BYTE           N36     Bn1   v042
+        BYTE   W36
+        BYTE                   Bn1   v035
+        BYTE   W36
+        BYTE           N24     Bn1   v042
+        BYTE   W24
+        BYTE   PEND
+// 017   ----------------------------------------
+CastawayHeart_4_17:
+        BYTE           N36     An1   v042
+        BYTE   W36
+        BYTE                   An1   v035
+        BYTE   W36
+        BYTE           N24     An1   v042
+        BYTE   W24
+        BYTE   PEND
+// 018   ----------------------------------------
+CastawayHeart_4_18:
+        BYTE           N36     Gs1   v042
+        BYTE   W36
+        BYTE                   Gs1   v035
+        BYTE   W36
+        BYTE           N24     Gs1   v042
+        BYTE   W24
+        BYTE   PEND
+// 019   ----------------------------------------
+        BYTE           N36     Fs1
+        BYTE   W36
+        BYTE                   Fs1   v035
+        BYTE   W36
+        BYTE           N12     Gs1   v042
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  CastawayHeart_4_16
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  CastawayHeart_4_17
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  CastawayHeart_4_18
+// 023   ----------------------------------------
+        BYTE           N36     Fs1   v042
+        BYTE   W36
+        BYTE                   Fs1   v035
+        BYTE   W36
+        BYTE           N24     Fs1   v042
+        BYTE   W24
+// 024   ----------------------------------------
+        BYTE           N96
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   GoTo
+         POIN2  CastawayHeart_4_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+CastawayHeart:
+        BYTE   5                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   CastawayHeart_pri       // Priority
+        BYTE   CastawayHeart_rev       // Reverb
+
+        POIN2   CastawayHeart_grp      
+
+        POIN2   CastawayHeart_0
+        POIN2   CastawayHeart_1
+        POIN2   CastawayHeart_2
+        POIN2   CastawayHeart_3
+        POIN2   CastawayHeart_4
+
+        

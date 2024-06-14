@@ -2,15 +2,79 @@
 #define DeathQuote(Character,Chapter,EventID,TextID,Pointer) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID ; POIN Pointer"
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 
+// Players
+DeathQuote(Lua, AllChapters, 0x65, LuaDQ)
+DeathQuote(Pilar, AllChapters, 0, PilarDQ)
+DeathQuote(Desiderio, AllChapters, 0, DesiderioDQ)
+DeathQuote(Razvan, AllChapters, 0, RazvanDQ)
+DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
+DeathQuote(Ximo, AllChapters, 0, XimoDQ)
+DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
+DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
+// the B-2 trio have game over death quotes inside B-2 to save on conditionals
+DeathQuote(Husniye, HubB_2, 0x65, HusniyeDQ)
+DeathQuote(Husniye, AllChapters, 0, HusniyeDQ)
+DeathQuote(Avocado, HubB_2, 0x65, AvocadoDQ)
+DeathQuote(Avocado, AllChapters, 0, AvocadoDQ)
+DeathQuote(Magdalena, HubB_2, 0x65, MagdalenaDQ)
+DeathQuote(Magdalena, AllChapters, 0, MagdalenaDQ)
+// B-3
+DeathQuote(Ernest, AllChapters, 0, ErnestDQ)
+DeathQuote(Kai, AllChapters, 0, KaiDQ)
+
+//Adrian and Lexa can die as enemies and have seperate quotes for event purposes
+DeathQuote(Adrian, HubB_4, 0xC, AdrianDQB_4)
+DeathQuote(Adrian, AllChapters, 0, AdrianDQ)
+DeathQuote(Lexa, HubB_4, 0xD, LexaDQB_4)
+DeathQuote(Lexa, AllChapters, 0, LexaDQ)
+
+// B-5
+DeathQuote(Fata, AllChapters, 0, FataDQ)
+
+
+//DeathQuote()
+
 // Bosses
 
+
+
 DeathQuote(Khazhak,Chapter1, 2, 0)
-DeathQuote(Felipe,HubA_2, 0xA, 0)
-DeathQuote(Sierra,HubA_2, 0xB, 0)
-DeathQuote(Manfred,HubA_2, 0xC, 0)
-DeathQuote(Lua, AllChapters, 0x65, 0)
+
+DeathQuote(Geraldo, HubA_1, 0x0, GeraldoDeathQuote)
+DeathQuote(Bozo, HubA_1, 0x0, BozoDeathQuote)
+DeathQuote(Buzu, HubA_1, 0x0, BuzuDeathQuote)
+DeathQuote(Yurena, HubA_1, 0x0, YurenaDeathQuote)
+
+DeathQuote(Felipe,HubA_2, 0xA, FelipeDeathQuote)
+DeathQuote(Sierra,HubA_2, 0xB, SierraDeathQuote)
+DeathQuote(Manfred,HubA_2, 0xC, ManfredDeathQuote)
+
+DeathQuote(Sagargala, HubA_3, 0x2, A3SagargalaDeathQuote)
+
+DeathQuote(Stingray, HubA_4, 10, A4_StingrayDefeated)
+DeathQuote(Ramiro, HubA_4, 11, A4_RamiroDefeated)
+
 DeathQuote(Gunsmith, HubA_5, 0x9, 0)
-DeathQuote(A4PirateBoss, HubA_4, 10, 0)
-DeathQuote(A4RebelBoss, HubA_4, 11, 0)
+
+
+DeathQuote(Juliana, Chapter2, 0, JulianaDeathQuote)
+DeathQuote(Hugo, Chapter2, 0, HugoDeathQuote)
+DeathQuote(Ignacio, Chapter2, 0, IgnacioDeathQuote)
+DeathQuote(ElodiaBoss, Chapter2, 0, ElodiaDefeatQuoteCh2)
+
+DeathQuote(Kiril, HubB_1, 2, KirilDeathQuote)
+
+DeathQuote(Yadney, HubB_2, 0, YadneyDeathQuote)
+DeathQuote(Cruz, HubB_2, 0x2, CruzDeathQuote)
+
+DeathQuote(Azahar, HubB_3, 2, AzaharDQ)
+DeathQuote(RebelThief, HubB_3, 0xF, 0x0)
+
+DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
+
+DeathQuote(Nicodemus, HubB_5, 0, NicodemusDeathQuote)
+
+DeathQuote(AlonsoChapter3, Chapter3, 0x2, 0)
+DeathQuote(Dalila, Chapter3, 0, 0)
 
 DeathQuote(0xFFFF,0,0,0) // terminator

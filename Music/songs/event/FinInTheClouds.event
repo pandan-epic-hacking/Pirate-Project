@@ -1,0 +1,1226 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    FinInTheClouds_grp  voicegroup000
+        #define    FinInTheClouds_pri  0
+        #define    FinInTheClouds_rev  0
+        #define    FinInTheClouds_key  0
+
+        // .rodata
+        // FinInTheClouds
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+FinInTheClouds_0:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   220/2
+        BYTE           VOICE   21
+        BYTE           PAN     c_v+27
+        BYTE           VOL     75
+        BYTE           N48     Gs3   v089
+        BYTE           N48     Cs3
+        BYTE   W48
+        BYTE                   En3
+        BYTE   W48
+// 001   ----------------------------------------
+FinInTheClouds_0_1:
+        BYTE           N48     Gs3   v089
+        BYTE           N48     Cs3
+        BYTE   W48
+        BYTE                   En3
+        BYTE   W48
+        BYTE   PEND
+// 002   ----------------------------------------
+FinInTheClouds_0_2:
+        BYTE           N24     Cs3   v089
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W24
+        BYTE   PEND
+// 003   ----------------------------------------
+FinInTheClouds_0_3:
+        BYTE           N24     An2   v089
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE                   Gn2
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 006   ----------------------------------------
+FinInTheClouds_0_6:
+        BYTE           N24     Cs3   v089
+        BYTE   W24
+        BYTE           N12     Gs2
+        BYTE   W12
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE           N24     En3
+        BYTE   W24
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE   PEND
+// 007   ----------------------------------------
+FinInTheClouds_0_7:
+        BYTE           N24     Cs4   v089
+        BYTE   W24
+        BYTE                   Gs3   v064
+        BYTE   W24
+        BYTE                   Cs4   v089
+        BYTE   W24
+        BYTE                   Gs3   v064
+        BYTE   W24
+        BYTE   PEND
+// 008   ----------------------------------------
+FinInTheClouds_0_LOOP:
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_2
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_3
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_2
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_3
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_6
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_0_7
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+FinInTheClouds_1:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   39
+        BYTE           PAN     c_v-19
+        BYTE           VOL     39
+        BYTE           N12     Cs3   v102
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+// 001   ----------------------------------------
+FinInTheClouds_1_1:
+        BYTE           N12     Cs3   v102
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+FinInTheClouds_1_2:
+        BYTE           N12     An2   v102
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE   PEND
+// 003   ----------------------------------------
+FinInTheClouds_1_3:
+        BYTE           N12     Gs2   v102
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_2
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_3
+// 008   ----------------------------------------
+FinInTheClouds_1_LOOP:
+        BYTE           N12     Cs3   v102
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_2
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_3
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_1
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_2
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_1_3
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+FinInTheClouds_2:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   124
+        BYTE           VOL     67
+        BYTE           N24     Cn1   v108
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N24     Cn1
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+// 001   ----------------------------------------
+FinInTheClouds_2_1:
+        BYTE           N24     Cn1   v108
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N24     Cn1
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+FinInTheClouds_2_2:
+        BYTE           N24     Cn1   v108
+        BYTE           N24     Ds1
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N24     Cn1
+        BYTE           N24     Ds1
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE   PEND
+// 003   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_2
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 007   ----------------------------------------
+FinInTheClouds_2_7:
+        BYTE           N06     Fs1   v089
+        BYTE           N12     Dn1
+        BYTE   W24
+        BYTE           N24     As1
+        BYTE   W24
+        BYTE           N06     Fs1
+        BYTE           N06     Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE           N12     Fs1
+        BYTE           N12     En1
+        BYTE   W12
+        BYTE           N06     Dn1
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE           N06     Dn1
+        BYTE   W06
+        BYTE           N12     En1
+        BYTE           N12     Gs1
+        BYTE   W12
+        BYTE   PEND
+// 008   ----------------------------------------
+FinInTheClouds_2_LOOP:
+        BYTE           N12     Fs1   v089
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE           N06     As1
+        BYTE           N12     Ds1
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   As1
+        BYTE   W12
+        BYTE                   Ds1
+        BYTE           N06     Fs1
+        BYTE   W12
+        BYTE           N12     Ds1
+        BYTE   W12
+// 009   ----------------------------------------
+FinInTheClouds_2_9:
+        BYTE           N12     Fs1   v089
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE           N06     As1
+        BYTE           N12     Ds1
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   As1
+        BYTE   W12
+        BYTE                   Ds1
+        BYTE           N06     Fs1
+        BYTE   W12
+        BYTE           N12     Ds1
+        BYTE   W12
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 016   ----------------------------------------
+FinInTheClouds_2_16:
+        BYTE           N12     Fs1   v089
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE           N06     As1
+        BYTE           N12     Ds1
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Ds1
+        BYTE           N06     Fs1
+        BYTE   W12
+        BYTE           N12     Ds1
+        BYTE   W12
+        BYTE   PEND
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_16
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_16
+// 019   ----------------------------------------
+        BYTE           N12     Fs1   v089
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE           N06     As1
+        BYTE           N12     Ds1
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE           N06     Fs1
+        BYTE           N06     Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE           N12     Fs1
+        BYTE           N12     En1
+        BYTE   W12
+        BYTE           N06     Dn1
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE           N06     Dn1
+        BYTE   W06
+        BYTE           N12     En1
+        BYTE           N12     Gs1
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_9
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_16
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_7
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_7
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_7
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_1
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_2_7
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+FinInTheClouds_3:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   42
+        BYTE           PAN     c_v-26
+        BYTE           VOL     53
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+FinInTheClouds_3_3:
+        BYTE   W72
+        BYTE           N24     En3   v101
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+FinInTheClouds_3_4:
+        BYTE           N72     En3   v101
+        BYTE           N72     Gs3
+        BYTE   W72
+        BYTE           N24     En3
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE   PEND
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_4
+// 006   ----------------------------------------
+        BYTE           N72     Cs3   v101
+        BYTE           N72     An3
+        BYTE   W72
+        BYTE           N24     Fs3
+        BYTE           N24     Cn4
+        BYTE           N24     Gs3
+        BYTE   W24
+// 007   ----------------------------------------
+        BYTE           N48     An3
+        BYTE           N48     Cs4
+        BYTE   W48
+        BYTE                   Gs3
+        BYTE           N48     En3
+        BYTE   W48
+// 008   ----------------------------------------
+FinInTheClouds_3_LOOP:
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_4
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_4
+// 014   ----------------------------------------
+FinInTheClouds_3_14:
+        BYTE           N72     Cs3   v101
+        BYTE           N72     An3
+        BYTE   W72
+        BYTE           N24     Fs3
+        BYTE           N24     Cn4
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+FinInTheClouds_3_15:
+        BYTE           N72     En3   v101
+        BYTE           N72     Gs3
+        BYTE   W72
+        BYTE           N24     Fs3
+        BYTE           N24     Cn4
+        BYTE   W24
+        BYTE   PEND
+// 016   ----------------------------------------
+        BYTE                   Cs4   v108
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N24
+        BYTE   W24
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+// 017   ----------------------------------------
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE                   Gs3
+        BYTE   W24
+        BYTE                   Fs3
+        BYTE   W24
+        BYTE                   Gs3
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE                   An3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE           N24
+        BYTE   W24
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   Fs3
+        BYTE   W12
+// 019   ----------------------------------------
+        BYTE           N24     Gs3
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W24
+        BYTE                   Fs3
+        BYTE   W24
+        BYTE                   Ds3
+        BYTE   W24
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_4
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_4
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_14
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_3_15
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+FinInTheClouds_4:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   6
+        BYTE           VOL     56
+        BYTE           PAN     c_v+31
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+FinInTheClouds_4_LOOP:
+        BYTE           N48     En3   v101
+        BYTE           N48     Gs3
+        BYTE   W48
+        BYTE                   En3
+        BYTE           N48     Gs3
+        BYTE   W48
+// 009   ----------------------------------------
+FinInTheClouds_4_9:
+        BYTE           N48     An3   v102
+        BYTE           N48     Fs3
+        BYTE   W48
+        BYTE                   En3   v101
+        BYTE           N48     Gs3
+        BYTE   W48
+        BYTE   PEND
+// 010   ----------------------------------------
+FinInTheClouds_4_10:
+        BYTE           N48     Fs3   v102
+        BYTE           N48     Cs3
+        BYTE   W48
+        BYTE                   En3   v101
+        BYTE           N48     Gs3
+        BYTE   W48
+        BYTE   PEND
+// 011   ----------------------------------------
+FinInTheClouds_4_11:
+        BYTE           N48     En3   v102
+        BYTE           N48     Cs3
+        BYTE   W48
+        BYTE                   Fs3
+        BYTE           N48     Cn3
+        BYTE   W48
+        BYTE   PEND
+// 012   ----------------------------------------
+FinInTheClouds_4_12:
+        BYTE           N48     En3   v101
+        BYTE           N48     Gs3
+        BYTE   W48
+        BYTE                   En3
+        BYTE           N48     Gs3
+        BYTE   W48
+        BYTE   PEND
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_10
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 016   ----------------------------------------
+        BYTE           N24     Gs3   v101
+        BYTE   W48
+        BYTE                   Gs3
+        BYTE   W48
+// 017   ----------------------------------------
+        BYTE                   An3   v102
+        BYTE   W48
+        BYTE                   Fs3
+        BYTE   W48
+// 018   ----------------------------------------
+        BYTE                   Gs3   v101
+        BYTE   W48
+        BYTE                   An3
+        BYTE   W48
+// 019   ----------------------------------------
+        BYTE                   Fs3   v102
+        BYTE   W48
+        BYTE                   Fs3
+        BYTE   W48
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_12
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_10
+// 023   ----------------------------------------
+        BYTE           N48     En3   v102
+        BYTE           N48     Cs3
+        BYTE   W48
+        BYTE                   Cn3
+        BYTE           N48     Ds3
+        BYTE   W48
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_4_LOOP
+        BYTE   FINE
+
+//****************** Track 5 (Midi-Chn.5) ******************//
+
+FinInTheClouds_5:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   19
+        BYTE           VOL     47
+        BYTE           PAN     c_v-26
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+FinInTheClouds_5_LOOP:
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_12
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_10
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_11
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_12
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_10
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_12
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_10
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_11
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_12
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_10
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_4_9
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_5_LOOP
+        BYTE   FINE
+
+//****************** Track 6 (Midi-Chn.6) ******************//
+
+FinInTheClouds_6:
+        BYTE   KEYSH   FinInTheClouds_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   41
+        BYTE           PAN     c_v-7
+        BYTE           VOL     56
+        BYTE           N12     Gs4   v083
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+// 001   ----------------------------------------
+FinInTheClouds_6_1:
+        BYTE           N12     Gs4   v083
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Gs4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_6_1
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_6_1
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+FinInTheClouds_6_LOOP:
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_6_1
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_6_1
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_6_1
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  FinInTheClouds_6_1
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   GoTo
+         POIN2  FinInTheClouds_6_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+FinInTheClouds:
+        BYTE   7                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   FinInTheClouds_pri      // Priority
+        BYTE   FinInTheClouds_rev      // Reverb
+
+        POIN2   FinInTheClouds_grp     
+
+        POIN2   FinInTheClouds_0
+        POIN2   FinInTheClouds_1
+        POIN2   FinInTheClouds_2
+        POIN2   FinInTheClouds_3
+        POIN2   FinInTheClouds_4
+        POIN2   FinInTheClouds_5
+        POIN2   FinInTheClouds_6
+
+        

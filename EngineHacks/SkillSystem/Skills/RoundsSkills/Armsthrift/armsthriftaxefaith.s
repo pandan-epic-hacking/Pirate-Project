@@ -10,12 +10,16 @@ _ReturnLocation   = 0x0802B828+1
 LUnitHasSkill      = EALiterals+0x00
 LArmsthriftSkillID = EALiterals+0x04
 LAxeFaithSkillID   = EALiterals+0x08
+LCritthriftID	   = EALiterals+0x0C
 
 @ Hook from 0802B7F8
 ArmsthriftHook:
 	@ r0 is Current Round Data (first word)
 	@ r5 is Attacker
 	@ Nothing needs to be saved (we branch back to the function epilogue)
+	
+	push {r6}
+	mov r6, r0
 
 	mov r1, #2   @ Miss flag
 
@@ -77,7 +81,24 @@ NonArmsthrift:
 	cmp r0, #WTYPE_AXE @ #0x02 
 	beq End            @ goto End if true (AxeFaith triggers)
 
-NonAxeFaith:
+NonAxeFaith: @NOTE: the contents of this function are never run because Break overrides the function this hooks entirely. see its BattleGenerateHitEffects function instead
+	mov r0, r5
+	ldr r1, LCritthriftID
+	
+	ldr r3, LUnitHasSkill
+	bl BXR3
+	
+	cmp r0, #0
+	beq NonSkillActivation
+	
+	@unit has skill; did they crit?
+	mov r0, r6
+	mov r1, #1 @crit flag
+	tst r0,r1
+	beq End @if bit is set, don't decrease uses
+
+
+NonSkillActivation:
 	mov  r4, #0x48 @ offsetof(BattleUnit.weaponAfter)
 
 	ldrh r0, [r5, r4] @ Load weapon
@@ -96,6 +117,7 @@ NonAxeFaith:
 	strb r0, [r5, r1] @ BattleUnit.weaponBroke = true
 
 End:
+	pop {r6}
 	ldr r3, =_ReturnLocation
 BXR3:
 	bx  r3
@@ -107,3 +129,6 @@ EALiterals:
 	@ POIN SkillTester|1
 	@ WORD ArmsthriftID
 	@ WORD AxeFaithID
+	@ WORD CritthriftID
+	
+	

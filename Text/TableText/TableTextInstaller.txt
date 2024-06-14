@@ -2,3 +2,4 @@
 #include "ClassNamesDescs.txt"
 #include "CharacterNamesDescs.txt"
 #include "EscapeQuotes.txt"
+#include "DeathQuotes.txt"

@@ -20,16 +20,19 @@ ldrb r0, [r4,r0] @this is the byte for attacker's wt hit bonus
 cmp r0, #0x0
 ble End @if wt hit bonus is <= 0, attacker doesn't have wta
 
-@give crit and crit avoid
+@give crit
 mov r0, #0x66
 ldrh r1, [r4,r0]
 add r1, #0x0F @add 15 crit
 strh r1, [r4,r0]
 
-mov r0, #0x68
-ldrh r1, [r4,r0]
-add r1, #0x1E @add 30 crit avoid
-strh r1, [r4,r0]
+@give damage = to enemy battle defense / 2
+mov r0, #0x5A
+ldrh r1, [r4,r0] @ loads attack of attacker
+mov r2, #0x5C 
+ldrh r2, [r5, r2] @ loads defense of defender
+add r1, r2 
+strh r1, [r4,r0] @ adds the second to the first and stores it
 
 End:
 pop {r4-r7, r15}

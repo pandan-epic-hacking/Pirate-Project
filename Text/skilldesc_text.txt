@@ -1600,8 +1600,8 @@ cannot counter, this unit doubles.[X]
 
 ## SD_SuppressiveFire
 Suppressive Fire: If an ally attacks[N]
-an enemy in this unit's attack range,[N]
-ally ignores enemy's AVO.[X]
+an enemy within range of this unit's[N]
+weapon, ally ignores enemy's AVO.[X]
 
 ## SD_SurpriseAttack
 Surprise Attack: If foe is unable[N]
@@ -1624,7 +1624,7 @@ additional 2 tiles post-action.[X]
 
 ## SD_RunningStart
 Running Start: +1 max attack range[N]
-with bows for every 3 tiles moved.[X]
+with bows for every 2 tiles moved.[X]
 
 ## SD_Hangover
 Hangover: For the first two turns,[N]
@@ -1636,9 +1636,9 @@ combat, next ally's Atk against the same[N]
 target this turn increases by unit Mag.[X]
 
 ## SD_Underhanded
-Underhanded: When unit has weapon[N]
-triangle advantage, +15 crit and[N]
-+30 crit avoid.[X]
+Underhanded: If opponent is at weapon[N]
+triangle disadvantage, this unit gains[N]
+15 Crit and ignores 50% of defenses.[X]
 
 ## SD_LiquidCourage
 Liquid Courage: Once per turn, unit[N]
@@ -1662,8 +1662,7 @@ above the doubling threshold.[X]
 
 ## SD_Nonconforming
 Nonconforming: Unit reverses the[N]
-weapon triangle in all combats.[N]
-Reavers have no effect.[X]
+weapon triangle in all combats.[X]
 
 ## SD_Panache
 Panache: Unit can initiate combat[N]
@@ -1702,9 +1701,9 @@ and kills an enemy, +1 Str and +1 Mag[N]
 (Max +5). Lasts until end of chapter.[X]
 
 ## SD_WellRested
-Well-rested: When unit isn't deployed for one[N]
-chapter, +1 MOV. If deployed two maps in a row,[N]
--1 MOV (Min: Base MOV, Max: 15).[X]
+Well-rested: When unit isn't deployed for[N]
+a chapter, +2 MOV. If deployed two maps[N]
+in a row, -1 MOV (Min: Base, Max: 15).[X]
 
 ## SD_ForestFriend
 Forest Friend: Unit can traverse[N]
@@ -1725,10 +1724,57 @@ Game over at zero HP! Attack at melee[N]
 to disarm (sword/lance/axe/knife only).[X]
 
 ## SD_Critthrift
-Armsthrift: +15 crit. Unit's crits[N]
+Critthrift: +30 crit. Unit's crits[N]
 no longer deal extra damage, but[N]
 durability isn't used up during crits.[X]
 
 ## SD_DeftHands
 Deft Hands: Unit can act again,[N]
 but not move, after stealing.[X]
+
+## SD_FaithsAegis
+Miraclemaker: If this unit uses a staff[N]
+on an ally, ally can survive fatal damage[N]
+once (lasts until end of turn).[X]
+
+## SD_Shuffle
+Shuffle: Command. Equips target with a[N]
+weapon in their inventory and allows[N]
+this unit to act, but not move, again.[X]
+
+## SD_NailedDown
+Nailed Down: When this unit initiates[N]
+battle, target's Mov = 0 for a turn.[X]
+
+## SD_Analyze
+Analyze: Foes adjacent to this unit[N]
+gain WTD against this unit's allies.[N]
+Does not trigger Break.[X]
+
+## SD_Delegation
+Distracting Delusion: After combat, the[N]
+next action for allies in unit's attack[N]
+range hits lower of foe's Def/Res.[X]
+
+## SD_Swift
+Swift: Unit can use a command to[N]
+grant an ally +3 Move for 1 turn.[N]
+Does not end the user's turn.[X]
+
+## SD_DubiousAdvice
+Dubious Advice: Adjacent allies gain[N]
++15 to all growths, but -15% exp gain.[X]
+
+## SD_FrigidAura
+Frigid Aura: Adjacent allies take 20%[N]
+max HP damage at the start of the turn.[X]
+
+## SD_ArcaneArtifice
+Arcane Artifice: If this unit's weapon[N]
+uses MAG and the enemy's uses STR,[N]
+this unit's attacks cannot be countered.[X]
+
+## SD_ScoutsInstinct
+Scout's Instinct: If attacked,[N]
+this unit's Avo is multiplied by number[N]
+of tiles between them and the attacker.[X]

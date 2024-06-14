@@ -1,7 +1,87 @@
 #define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "SHORT Character1 Character2 Chapter EventID TextID 0x0 0x0 0x0; SHORT Character2 Character1 Chapter EventID TextID 0x0 0x0 0x0"
 #define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x0 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x0 Character Chapter EventID TextID 0x0 0x0 0x0"
 
-
+// Chapter 1
 UnspecifiedBattleConvo(Khazhak, Chapter1, 1, 0)
+
+// Chapter A-1
+SpecifiedBattleConvo(Geraldo, Lua, 			HubA_1, A1_GeraldoLuaBattleQuoteSeen, 			GeraldoLuaBattleQuote)
+SpecifiedBattleConvo(Geraldo, Pilar, 		HubA_1, A1_GeraldoPilarBattleQuoteSeen, 		GeraldoPilarBattleQuote)
+SpecifiedBattleConvo(Geraldo, Desiderio, 	HubA_1, A1_GeraldoDesiderioBattleQuoteSeen, 	GeraldoDesiderioBattleQuote)
+SpecifiedBattleConvo(Geraldo, Razvan, 		HubA_1, A1_GeraldoRazvanBattleQuoteSeen, 		GeraldoRazvanBattleQuote)
+SpecifiedBattleConvo(Geraldo, Carmen, 		HubA_1, A1_GeraldoCarmenBattleQuoteSeen, 		GeraldoCarmenBattleQuote)
+SpecifiedBattleConvo(Geraldo, Ximo, 		HubA_1, A1_GeraldoXimoBattleQuoteSeen, 		GeraldoXimoBattleQuote)
+SpecifiedBattleConvo(Geraldo, Estelle, 		HubA_1, A1_GeraldoEstelleBattleQuoteSeen, 		GeraldoEstelleBattleQuote)
+SpecifiedBattleConvo(Geraldo, Hermenegildo, HubA_1, A1_GeraldoHermeneBattleQuoteSeen, 		GeraldoHermeneBattleQuote)
+UnspecifiedBattleConvo(Geraldo, HubA_1, A1_GeraldoGenericBattleQuoteSeen, GeraldoGenericBattleQuote)
+
+UnspecifiedBattleConvo(Buzu, HubA_1, A1_GuardshelmGenericBattleQuoteSeen, GuardshelmGenericBattleQuote)
+UnspecifiedBattleConvo(Bozo, HubA_1, A1_GuardshelmGenericBattleQuoteSeen, GuardshelmGenericBattleQuote)
+
+UnspecifiedBattleConvo(Yurena, HubA_1, A1_YurenaGenericBattleQuoteSeen, YurenaGenericBattleQuote)
+
+// Chapter A-2
+UnspecifiedBattleConvo(Felipe, HubA_2, 0x10, FelipeBossQuote)
+UnspecifiedBattleConvo(Sierra, HubA_2, 0x11, SierraBossQuote)
+UnspecifiedBattleConvo(Manfred, HubA_2, 0x12, ManfredBossQuote)
+
+// Chapter A-3
+SpecifiedBattleConvo(Sagargala,Hermenegildo,HubA_3,14,A3_BossQuote_Hermen)
+SpecifiedBattleConvo(Sagargala,Biko,HubA_3,15,A3_BossQuote_Biko)
+SpecifiedBattleConvo(Sagargala,Ondeh,HubA_3,16,A3_BossQuote_Ondeh)
+SpecifiedBattleConvo(Sagargala,Lua,HubA_3,17,A3_BossQuote_Lua)
+UnspecifiedBattleConvo(Sagargala, HubA_3, 1, A3_BossQuote_All)
+
+// Chapter A-4
+UnspecifiedBattleConvo(A4FunnyArcher, HubA_4, 13, 0)
+UnspecifiedBattleConvo(Stingray, HubA_4, 16, A4_StingrayBattleQuote)
+UnspecifiedBattleConvo(Ramiro, HubA_4, 17, A4_RamiroBattleQuote)
+
+// Chapter 2
+UnspecifiedBattleConvo(Hugo, Chapter2, 0x13, HugoBossQuote)
+UnspecifiedBattleConvo(Juliana, Chapter2, 0x14, JulianaBossQuote)
+UnspecifiedBattleConvo(Ignacio, Chapter2, 0x15, IgnacioBossQuote)
+UnspecifiedBattleConvo(ElodiaBoss, Chapter2, 0x16, ElodiaBossQuoteCh2)
+
+// Chapter B-2
+SpecifiedBattleConvo(Yadney,Avocado,HubB_2,0x11,B2_BQ_YadneyAvocado)
+SpecifiedBattleConvo(Yadney,Razvan,HubB_2,0x12,B2_BQ_YadneyRazvan)
+SpecifiedBattleConvo(Yadney,Desiderio,HubB_2,0x13,B2_BQ_YadneyDesiderio)
+SpecifiedBattleConvo(Yadney,Pilar,HubB_2,0x14,B2_BQ_YadneyPilar)
+SpecifiedBattleConvo(Yadney,Lua,HubB_2,0x15,B2_BQ_YadneyLua)
+SpecifiedBattleConvo(Yadney,Jaime,HubB_2,0x16,B2_BQ_YadneyJaime)
+SpecifiedBattleConvo(Yadney,Ximo,HubB_2,0x17,B2_BQ_YadneyXimo)
+SpecifiedBattleConvo(Yadney,Husniye,HubB_2,0x18,B2_BQ_YadneyHusniye)
+SpecifiedBattleConvo(Yadney,Magdalena,HubB_2,0x19,B2_BQ_YadneyMagdalena)
+UnspecifiedBattleConvo(Yadney,HubB_2,0x1A,B2_BQ_YadneyGeneric)
+
+SpecifiedBattleConvo(Cruz,Husniye,HubB_2,0x21,B2_BQ_CruzHusniye)
+SpecifiedBattleConvo(Cruz,Avocado,HubB_2,0x22,B2_BQ_CruzAvocado)
+SpecifiedBattleConvo(Cruz,Magdalena,HubB_2,0x23,B2_BQ_CruzMagdalena)
+SpecifiedBattleConvo(Cruz,Lua,HubB_2,0x24,B2_BQ_CruzLua)
+SpecifiedBattleConvo(Cruz,Leonor,HubB_2,0x25,B2_BQ_CruzLeonor)
+SpecifiedBattleConvo(Cruz,Pilar,HubB_2,0x26,B2_BQ_CruzPilar)
+SpecifiedBattleConvo(Cruz,Orlando,HubB_2,0x27,B2_BQ_CruzOrlando)
+UnspecifiedBattleConvo(Cruz,HubB_2,0x28,B2_BQ_CruzGeneric)
+
+// Chapter B-3
+SpecifiedBattleConvo(Azahar,Pilar,    HubB_3,0x9,PilarAzaharBQ)
+SpecifiedBattleConvo(Azahar,Desiderio,HubB_3,0xA,DesiAzaharBQ)
+SpecifiedBattleConvo(Azahar,Kai,      HubB_3,0xB,KaiAzaharBQ)
+SpecifiedBattleConvo(Azahar,Ernest,   HubB_3,0xC,ErnestAzaharBQ)
+SpecifiedBattleConvo(Azahar,Lua,      HubB_3,0xD,LuaAzaharBQ)
+UnspecifiedBattleConvo(Azahar,        HubB_3,0x1,AzaharBQ)
+
+// Chapter B-4
+UnspecifiedBattleConvo(Javier,HubB_4,0x14,JavierBQ)
+
+// Chapter B-5
+SpecifiedBattleConvo(Nicodemus,Fata,HubB_5,0x11,B5_BQ_NicodemusFata)
+SpecifiedBattleConvo(Nicodemus,Lua,HubB_5,0x12,B5_BQ_NicodemusLua)
+SpecifiedBattleConvo(Nicodemus,Razvan,HubB_5,0x13,B5_BQ_NicodemusRazvan)
+SpecifiedBattleConvo(Nicodemus,Pilar,HubB_5,0x14,B5_BQ_NicodemusPilar)
+SpecifiedBattleConvo(Nicodemus,Avocado,HubB_5,0x15,B5_BQ_NicodemusAvocado)
+SpecifiedBattleConvo(Nicodemus,MrYodsen,HubB_5,0x16,B5_BQ_NicodemusYodsen)
+UnspecifiedBattleConvo(Nicodemus,HubB_5,0x17,B5_BQ_NicodemusGeneric)
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

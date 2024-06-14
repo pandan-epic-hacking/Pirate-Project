@@ -6,3 +6,12 @@
 #include "HubA/A4.txt"
 #include "HubA/A5.txt"
 #include "HubA/A6.txt"
+#include "Ch2.txt"
+#include "HubB/Hub.txt
+#include "HubB/B1.txt
+#include "HubB/B2.txt
+#include "HubB/B2a.txt
+#include "HubB/B3.txt
+#include "HubB/B4.txt
+#include "HubB/B5.txt
+#include "Ch3.txt"

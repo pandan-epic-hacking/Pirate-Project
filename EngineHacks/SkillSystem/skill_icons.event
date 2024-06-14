@@ -1094,12 +1094,14 @@ ORG SkillIcon(UnderhandedID)
 #incbin "SkillIcons/Underhanded.dmp"
 ORG SkillIcon(CritthriftID)
 #incbin "SkillIcons/Armsthrift.dmp"
+ORG SkillIcon(AstralBlessingID)
+#incbin "SkillIcons/AstralBlessing.dmp"
+ORG SkillIcon(AdaptableID)
+#incbin "SkillIcons/Versatile.dmp"
 
 //placeholder
 ORG SkillIcon(PanacheID)
-#incbin "SkillIcons/SuppressiveFire.dmp" 
-ORG SkillIcon(AdaptableID)
-#incbin "SkillIcons/SpectrumStance.dmp" 
+#incbin "SkillIcons/SuppressiveFire.dmp"
 ORG SkillIcon(SeaShantyID)
 #incbin "SkillIcons/ReMove.dmp"
 ORG SkillIcon(RunningStartID)
@@ -1109,9 +1111,7 @@ ORG SkillIcon(ArmsMasteryID)
 ORG SkillIcon(StudiousBlowID)
 #incbin "SkillIcons/HoneMag.dmp"
 ORG SkillIcon(ResoluteSacrificeID)
-#incbin "SkillIcons/LiveToServe.dmp"
-ORG SkillIcon(AstralBlessingID)
-#incbin "SkillIcons/LullLck.dmp"
+#incbin "SkillIcons/ResoluteSacrifice.dmp"
 ORG SkillIcon(WellRestedID)
 #incbin "SkillIcons/DriveSpd.dmp"
 ORG SkillIcon(HardworkingID)
@@ -1122,8 +1122,32 @@ ORG SkillIcon(CatchingUpID)
 #incbin "SkillIcons/SpurSpd.dmp"
 ORG SkillIcon(NonconformingID)
 #incbin "SkillIcons/TriAdept.dmp"
-
-
+ORG SkillIcon(FaithsAegisID)
+#incbin "SkillIcons/Miraclemaker.dmp"
+ORG SkillIcon(ShuffleID)
+#incbin "SkillIcons/StealPlus.dmp"
+ORG SkillIcon(AnalyzeID)
+#incbin "SkillIcons/TriangleAdeptB.dmp"
+ORG SkillIcon(NailedDownID)
+#incbin "SkillIcons/Anathema.dmp"
+ORG SkillIcon(ForestFriendID)
+#incbin "SkillIcons/Resourceful.dmp"
+ORG SkillIcon(CanterID)
+#incbin "SkillIcons/Canto.dmp"
+ORG SkillIcon(DogfightID)
+#incbin "SkillIcons/AirRaidSpd.dmp"
+ORG SkillIcon(EqualizerID)
+#incbin "SkillIcons/DarkBargain.dmp"
+ORG SkillIcon(DelegationID)
+#incbin "SkillIcons/Loyalty.dmp"
+ORG SkillIcon(SwiftID)
+#incbin "SkillIcons/RallySpd.dmp"
+ORG SkillIcon(DubiousAdviceID)
+#incbin "SkillIcons/HoardersBane.dmp"
+ORG SkillIcon(FrigidAuraID)
+#incbin "SkillIcons/SavageBlow.dmp"
+ORG SkillIcon(ArcaneArtificeID)
+#incbin "SkillIcons/ArcaneBlade.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

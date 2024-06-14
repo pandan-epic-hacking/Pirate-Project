@@ -1,0 +1,119 @@
+EventPointerTable(HubALibraryEventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units2
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEvent(RazvanHermenegildoHubATalkFlag, RazvanHermenegildoHubATalk, Lua, Razvan)
+CharacterEvent(RazvanHermenegildoHubATalkFlag, RazvanHermenegildoHubATalk, Lua, Hermenegildo)
+CharacterEvent(0, NPCLibrarianATalk, Lua, GreagorLibrarian)
+CharacterEvent(0, NPCLibrarianBTalk, Lua, GreagorLibrarianB)
+END_MAIN
+
+RazvanHermenegildoHubATalk:
+Text(RazvanHermenegildoBaseSceneText)
+NoFade
+ENDA
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AREA LibraryToMainRoom GoBackToMainRoomFromLibrary [18,7] [18,8]
+AFEV 0 RefreshLua 0
+END_MAIN
+
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
+GoBackToMainRoomFromLibrary:
+InitiateLoadMapHub(Chapter2, CUSALibraryGreens, LuaFromDaLibrary, MainRoomSpawnEvent)
+SetChapterObjectiveText(HubAGoalWindow, HubAStatusObjective)
+ENUF MainRoomToOtherRooms
+ENUF MainRoomToPort
+NoFade
+ENDA
+
+CUSALibraryGreens:
+TurnUnitBlueIfAlive(Hermenegildo, 1)
+TurnUnitBlueIfAlive(Razvan, 2)
+NoFade
+ENDA
+
+NPCLibrarianATalk:
+Text(NPCLibrarianDialogueA)
+NoFade
+ENDA
+
+NPCLibrarianBTalk:
+Text(NPCLibrarianDialogueB)
+NoFade
+ENDA
+
+LuaFromDaLibrary:
+UNIT Lua Captain 0 Level(10,Ally,False) [0,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+MainRoomSpawnEvent:
+LoadPlayerUnits(OrlandoRahelUnitGroup)
+SpawnQuestSigil(WentToHubA1, 1, RedSigilTrapID, 17, 11)
+NoFade
+ENDA
+
+OrlandoRahelUnitGroup:
+UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+Traps1:
+BlueSigil(18,7)
+BlueSigil(18,8)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+BeginningScene: //not an actual chapter so doesn't need to do anything but exist
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [13,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+Units2:
+UNIT Lua Captain 0 Level(10,Ally,False) [13,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT

@@ -69,7 +69,8 @@
 #define CanUseLockpick 0x00000008
 #define CanDance 0x00000010
 #define CanPlay 0x00000020
-#define CritBoost 0x00000040
+//#define CritBoost 0x00000040
+#define ArmsMaster 0x00000040
 #define UseBallista 0x00000080
 #define IsPromoted 0x00000100
 #define IsSupply 0x00000200
@@ -82,12 +83,7 @@
 #define UnlockLock1 0x00010000
 #define SwordmasterUnlock 0x00020000
 #define UseMonsterWeapons 0x00040000
-#ifdef _FE7_
-  #define Morph 0x00080000
-#endif
-#ifdef _FE8_
   #define TraineeLevelCap 0x00080000
-#endif
 #define CannotControl 0x00100000
 #define TriangleAttack 0x00200000
 #define TriangleAttack2 0x00400000
@@ -95,20 +91,11 @@
 #define GiveNoExp 0x01000000
 #define Lethality 0x02000000
 #define IsMagicSeal 0x04000000
-#ifdef _FE7_
-  #define DropLastItem 0x08000000
-  #define UnlockEliwood 0x10000000
-  #define UnlockHector 0x20000000
-  #define UnlockLyn 0x40000000
-  #define UnlockAthos 0x80000000
-#endif
-#ifdef _FE8_
-  #define Summoning 0x08000000
-  #define UnlockEirika 0x10000000
-  #define UnlockEphraim 0x20000000
-  #define UnlockLock3 0x40000000
-  #define UnlockLock4 0x80000000
-#endif
+#define Summoning 0x08000000
+#define UnlockEirika 0x10000000
+#define UnlockEphraim 0x20000000
+#define HasCantoPlus 0x40000000
+#define HasFlightPlus 0x80000000
 
 // Affinity
 #define NoAffinity 0

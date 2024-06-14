@@ -13,11 +13,24 @@ ldr   r0,GetCharData
 mov   r14,r0
 ldrb  r0,[r3,#0xA]
 .short  0xF800      @returns char data pointer of moving unit
-ldr   r1,SkillTester
-mov   r14,r1
-ldr   r1,PassID
-.short  0xF800
-cmp   r0,#0x1     @set z flag if unit has Pass
+
+@check for option and ability (copied shamelessly from canto code)
+ldr	r5,[r0]		@load character data
+cmp	r5,#0x00	@just in case there's no pointer (was doing weird things with generics without this)
+beq	JumpLoad1
+ldr	r5,[r5,#0x28]	@load character abilities
+JumpLoad1:
+ldr	r1,[r0,#0x04]	@load class data
+cmp	r1,#0x00	@just in case there's no pointer
+beq	JumpLoad2
+ldr	r1,[r1,#0x28]	@load class abilities
+JumpLoad2:
+orr	r5,r1
+mov	r1,#8		@flight+ bit
+lsl	r1, #28
+and	r5,r1
+cmp	r5,r1
+
 GoBack:
 pop   {r0-r6}
 pop   {r4}

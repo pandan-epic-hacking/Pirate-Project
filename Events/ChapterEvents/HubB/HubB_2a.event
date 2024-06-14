@@ -1,0 +1,403 @@
+// To anyone trying to edit this event later, be very careful if you're trying to add a prep screen!
+// Because Razvan/Pilar/Desiderio are turned into green units,
+// saving in preps and Restarting Chapter will erase their unit data.
+// You have been warned!
+// - RW
+
+EventPointerTable(HubB_2aEventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(0x11, B2a_Magdalena, Lua, Magdalena)
+
+CharacterEventBothWays(0, B2a_Husniye, Lua, Husniye)
+CharacterEventBothWays(0, B2a_Cruz, Lua, CruzFake)
+CharacterEventBothWays(0, B2a_Avocado, Lua, Avocado)
+
+CharacterEventBothWays(0, B2a_Quim, Lua, Quim)
+CharacterEventBothWays(0, B2a_Gavriel, Lua, Gavriel)
+CharacterEventBothWays(0, B2a_Fogaca, Lua, Fogaca)
+CharacterEventBothWays(0, B2a_Dario, Lua, Dario)
+CharacterEventBothWays(0, B2a_Thais, Lua, Thais)
+
+CharacterEventBothWays(0, B2a_Pilar, Lua, Pilar)
+CharacterEventBothWays(0, B2a_Desiderio, Lua, Desiderio)
+CharacterEventBothWays(0, B2a_Razvan, Lua, Razvan)
+END_MAIN
+
+LocationBasedEvents:
+Village(0xD,TalismanVillage,11,13)
+END_MAIN
+
+MiscBasedEvents:
+AFEV 0 RefreshLua 0
+AREA 0 B2a_Desk [15,1] [15,1]
+AREA 0 B2a_Window [17,4] [17,4]
+AREA 0x12 B2a_Hedge [10,10] [10,10]
+CauseGameOverIfLordDies
+END_MAIN
+
+Traps1:
+GreenSigil(15,1)
+GreenSigil(17,4)
+GreenSigil(10,10)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [5,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+OutroLua:
+UNIT Lua Captain 0 Level(10,Ally,False) [14,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+OutroMagdalena:
+UNIT Magdalena 0 0 Level(17,NPC,False) [14,15] 0 0 0 0 [Thunder,Mend] NoAI
+UNIT
+
+OutroAvocado:
+UNIT Avocado 0 0 Level(12,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
+UNIT
+
+OutroHusniye:
+UNIT Husniye 0 0 Level(10,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
+UNIT
+
+OutroCruz:
+UNIT CruzFake 0 0 Level(11,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
+UNIT
+
+MainCastTrio:
+UNIT Desiderio 0 0 Level(4,Ally,True) [2,8] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [10,18] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [16,16] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+VillagerGroup:
+UNIT Magdalena 0 0 Level(15,NPC,True) [5,10] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
+UNIT Avocado 0 0 Level(12,NPC,True) [4,19] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT Husniye 0 0 Level(10,NPC,True) [14,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
+UNIT CruzFake 0 0 Level(11,NPC,False) [15,22] 0 0 0 0 [Sagittae,Elfire,Vulnerary] NoAI
+
+UNIT RecelosoPriest 0 0 Level(1,NPC,False) [11,5] 0 0 0 0 [Heal,PureWater] NoAI
+UNIT RecelosoCorpse 0 0 Level(1,NPC,False) [16,3] 0 0 0 0 [Mend,RedGem] NoAI
+UNIT RecelosoStudent 0 0 Level(1,NPC,False) [13,25] 0 0 0 0 [Fire] NoAI
+UNIT RecelosoGuard 0 0 Level(1,NPC,False) [18,14] 0 0 0 0 [IronLance] NoAI
+UNIT RecelosoBarkeep 0 0 Level(1,NPC,False) [9,23] 0 0 0 0 [Vulnerary,Tonic,Tonic] NoAI
+UNIT
+
+BeginningScene:
+ENUF HusniyeAccused
+ENUF CruzAccused
+ENUF AvocadoAccused
+MUSC WindAmbienceID
+SetBackground(Ship)
+FADU 16
+Text(B2a_OnBoat)
+FADI 16
+// MUSC GreyMoralityID
+SetBackground(Harbor)
+FADU 16
+Text(B2a_OnDocks)
+FADI 16
+EraseBackground
+LoadCutsceneUnits(MainCastTrio)
+CUSN Desiderio
+CUSN Pilar
+CUSN Razvan
+LOAD1 1 VillagerGroup
+LOAD1 1 Units1
+ENUN
+// give the barkeep tonics - alcohol flavored, after all!
+SetUnitItemDurability(9, 23, 1, SklTonic)
+SetUnitItemDurability(9, 23, 2, LuckTonic) 
+ENUT LuaInAHubFlag
+CAM1 Lua
+FADU 16
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
+CameraCursor(Lua)
+ASMC MakeMusicAhoyASMC
+Text(B2a_MagExplainsHusniye)
+CameraCursor(Husniye)
+Text(B2a_MagExplainsCruz)
+CameraCursor(CruzFake)
+Text(B2a_MagExplainsAvocado)
+CameraCursor(Avocado)
+Text(B2a_MagExplainsRest)
+CenterTextbox(B2a_MechanicalExplanation)
+NoFade 
+ENDA
+
+
+
+
+
+B2a_Magdalena:
+Text(B2a_TalkToMag)
+ASMC (prCallSecondChoiceMenu+1) // hus, cruz, avo, none
+SVAL s1 0
+BNE 11 s1 sC // only continue if Husniye, otherwise jump to 11
+	ENUT HusniyeAccused
+	ENUT 0x3
+	//CALL EndingScene
+	GOTO 0xD00
+LABEL 11
+SVAL s1 1
+BNE 22 s1 sC // only continue if Cruz, otherwise jump to 22
+	ENUT CruzAccused
+	ENUT 0x3
+	//CALL EndingScene
+	GOTO 0xD00
+LABEL 22
+SVAL s1 2
+BNE 33 s1 sC // only continue if Avocado, otherwise jump to 33
+	ENUT AvocadoAccused
+	ENUT 0x3
+	//CALL EndingScene
+	GOTO 0xD00
+LABEL 33
+// should only be here if nobody was accused
+ENUF 0x11
+Text(B2a_TalkToMagAlt)
+LABEL 0xD00
+NoFade
+ENDA
+
+B2a_Window:
+CenterTextbox(B2a_TalkToWindow)
+NoFade
+ENDA
+
+B2a_Desk:
+CenterTextbox(B2a_TalkToDesk)
+NoFade
+ENDA
+
+B2a_Hedge:
+CenterTextbox(B2a_TalkToHedge)
+RemoveTrapAtCoords(10,10)
+GiveItem(Peshkatz,0xFFFF)
+NoFade
+ENDA
+
+TalismanVillage:
+SetBackground(HouseBG)
+Text(B2a_TalismanVillage)
+EraseBackground
+GiveItem(Talisman,0xFFFF)
+TILECHANGE 0x0
+NoFade
+ENDA
+
+B2a_Gavriel:
+CenterTextbox(B2a_TalkToGavriel)
+NoFade
+ENDA
+
+B2a_Desiderio:
+Text(B2a_TalkToDesiderio)
+NoFade
+ENDA
+
+B2a_Razvan:
+Text(B2a_TalkToRazvan)
+NoFade
+ENDA
+
+B2a_Pilar:
+Text(B2a_TalkToPilar)
+NoFade
+ENDA
+
+B2a_Husniye:
+Text(B2a_TalkToHusniye)
+NoFade
+ENDA
+
+B2a_Cruz:
+Text(B2a_TalkToCruz)
+NoFade
+ENDA
+
+B2a_Avocado:
+Text(B2a_TalkToAvocado)
+NoFade
+ENDA
+
+B2a_Fogaca:
+Text(B2a_TalkToFogaca)
+NoFade
+ENDA
+
+B2a_Dario:
+Text(B2a_TalkToDario)
+NoFade
+ENDA
+
+B2a_Quim:
+Text(B2a_TalkToQuim)
+NoFade
+ENDA
+
+B2a_Thais:
+Text(B2a_TalkToThais)
+NoFade
+ENDA
+
+
+
+EndingScene:
+CUSA Desiderio
+CUSA Pilar
+CUSA Razvan
+FADI 16
+ENUF LuaInAHubFlag
+CLEA 0
+CLEN 0
+CLEE 0
+MUSC SwabbieTalkID
+LOAD1 1 OutroLua
+LOAD1 1 OutroMagdalena
+CAM1 Lua
+CAM1 Magdalena
+ENUN
+FlagIsSet(HusniyeAccused, 0x11)
+	LOAD1 1 OutroHusniye
+	ENUN
+LABEL 0x11
+FlagIsSet(AvocadoAccused, 0x22)
+	LOAD1 1 OutroAvocado
+	ENUN
+LABEL 0x22
+FlagIsSet(CruzAccused, 0x33)
+	LOAD1 1 OutroCruz
+	ENUN
+LABEL 0x33
+FADU 16
+CameraCursor(Lua)
+CameraCursor(Magdalena)
+FlagIsSet(HusniyeAccused, 0x101)
+	CameraCursor(Husniye)
+	CUSE Husniye
+	STAL 30
+	CameraCursor(Husniye)
+	Text(B2a_ArrestHusniye)
+LABEL 0x101
+FlagIsSet(AvocadoAccused, 0x202)
+	CameraCursor(Avocado)
+	CUSE Avocado
+	STAL 30
+	CameraCursor(Avocado)
+	Text(B2a_ArrestAvocado)
+LABEL 0x202
+FlagIsSet(CruzAccused, 0x303)
+	CameraCursor(CruzFake)
+	CUSE CruzFake
+	STAL 30
+	CameraCursor(CruzFake)
+	Text(B2a_ArrestCruz)
+LABEL 0x303
+FADI 16
+// MUSC GreyMoralityID
+SetBackground(Harbor)
+FADU 16
+Text(B2a_MagdalenaGivesMoney)
+GiveGold(2500)
+FADI 16
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
+
+// delete this later - for reference purposes
+// #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
+
+FlagIsSet(CruzAccused, 0x666)
+	SetBackground(Prison_Cell) // if cruz in jail
+	ASMC MakeMusicAhoyASMC
+	FADU 16
+	ASMC MakeMusicAhoyASMC
+	// cruz conversation here
+	TEXTSTART
+	TEXTSHOW B2a_CruzBreakout
+	TEXTEND
+	ASMC MakeMusicAvastASMC
+	TEXTCONT
+	TEXTEND
+	REMA
+	// more cruz conversation
+	GOTO 0x777
+LABEL 0x666
+	SetBackground(Woodland_Night) // if cruz spared
+	ASMC MakeMusicAhoyASMC
+	FADU 16
+	ASMC MakeMusicAhoyASMC
+	// cruz conversation here
+
+	TEXTSTART
+	TEXTSHOW B2a_MagdalenaFuckingDies
+	TEXTEND
+	ASMC MakeMusicAvastASMC
+	TEXTCONT
+	TEXTEND
+	// sagittae sound effects. hopefully correct
+	//SOUN 0xD8
+	SOUN 0x0100
+	STAL 40
+	SOUN 0x02BC
+	TEXTCONT
+	TEXTEND
+	// death sound effect
+	SOUN 0xD6
+	TEXTCONT
+	TEXTEND
+	REMA
+
+	// more cruz conversation here
+LABEL 0x777
+ASMC MakeMusicAhoyASMC
+FADI 16
+MNC2 HubB_2
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
+
+
+
+

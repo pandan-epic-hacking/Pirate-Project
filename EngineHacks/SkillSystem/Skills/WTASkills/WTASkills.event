@@ -22,3 +22,17 @@ PanacheWTA:
 #incbin "Panache/Panache.dmp"
 POIN SkillTester
 WORD PanacheID
+
+ALIGN 4
+AnalyzeID_Link:
+WORD AnalyzeID
+
+ALIGN 4
+AnalyzeRange_Link:
+WORD 1
+
+ALIGN 4
+#include "Analyze/Analyze.lyn.event"
+
+ALIGN 4
+#include "ArmsMaster/ArmsMaster.lyn.event"

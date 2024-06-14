@@ -1,0 +1,24 @@
+#include "Portrait/repointedPortraitTable.event"
+#include "Text/repointedTextTable.event"
+#include "Anim/repointedAnimTable.event"
+
+PUSH
+ORG $CC7D0
+POIN gDummyTable
+ORG $CC824
+POIN gDummyTable
+ORG $CC860
+POIN gDummyTable
+ORG $CC8A4
+POIN gDummyTable
+ORG $CC8EC
+POIN gDummyTable
+ORG $CCE8C
+POIN gDummyTable
+ORG $CDB74
+POIN gDummyTable
+POP
+
+ALIGN 4
+gDummyTable:
+FILL (2*256) 1

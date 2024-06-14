@@ -1,3 +1,15 @@
 #include "ASMCs.lyn.event"
 
 #define A3ReturnLogDroppedStatus "ASMC A3ReturnLogDroppedStatusASMC"
+#define DoesBattleTargetHaveSupplies "ASMC DoesBattleTargetHaveSuppliesASMC"
+#define GetNumberOfSuppliesItemsOnHand "ASMC GetNumberOfSuppliesItemsOnHandASMC"
+#define PlayBombMusicIfBombReady(xCoord,yCoord) "SVAL s1 xCoord; SVAL s2 yCoord; ASMC PlayBombMusicIfBombReadyASMC"
+#define PlayBombMusicIfEitherBombReady(xCoord1,yCoord1, xCoord2, yCoord2) "SVAL s1 xCoord1; SVAL s2 yCoord1; SVAL s3 xCoord2; SVAL s4 yCoord2"
+
+ALIGN 4
+SuppliesItemIDLink:
+BYTE SuppliesItem
+
+ALIGN 4
+BombCharIDLink:
+BYTE Bomb

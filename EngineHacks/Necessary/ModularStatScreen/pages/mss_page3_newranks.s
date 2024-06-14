@@ -56,4 +56,6 @@ pop {r5-r7}
 
 blh      DrawSupports
 
+blh DrawBWLNumbers
+
 page_end

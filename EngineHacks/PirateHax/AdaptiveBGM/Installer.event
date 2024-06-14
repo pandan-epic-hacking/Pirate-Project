@@ -3,3 +3,8 @@
 
 //Adaptive BGM (credit: Huichelaar)
 #include "FE8-CalmFlow/CalmFlow.txt"
+#include "CalmFlowList.event"
+#include "ASMCs/ASMCs.event"
+
+//Boss BGM persists until boss dies (credit: Sme)
+#include "BossChangeBGM/BossChangeBGM.event"

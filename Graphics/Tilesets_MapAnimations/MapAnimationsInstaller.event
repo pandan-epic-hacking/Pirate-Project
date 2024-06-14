@@ -110,3 +110,58 @@ tilesetAnimation(0x1C,0x1000,FF5CaveTileAnimations13)
 tilesetAnimation(0x1C,0x1000,FF5CaveTileAnimations14)
 tilesetAnimation(0x1C,0x1000,FF5CaveTileAnimations15)
 WORD 0 0
+
+EventPointerTable(SnowyBernAnimationsID, SnowyBernAnimations)
+
+ALIGN 4
+BernAnim0:
+#incbin "TilesetAnimations/SnowyBern/Frame0.dmp"
+BernAnim1:
+#incbin "TilesetAnimations/SnowyBern/Frame1.dmp"
+BernAnim2:
+#incbin "TilesetAnimations/SnowyBern/Frame2.dmp"
+BernAnim3:
+#incbin "TilesetAnimations/SnowyBern/Frame3.dmp"
+BernAnim4:
+#incbin "TilesetAnimations/SnowyBern/Frame4.dmp"
+BernAnim5:
+#incbin "TilesetAnimations/SnowyBern/Frame5.dmp"
+BernAnim6:
+#incbin "TilesetAnimations/SnowyBern/Frame6.dmp"
+BernAnim7:
+#incbin "TilesetAnimations/SnowyBern/Frame7.dmp"
+BernAnim8:
+#incbin "TilesetAnimations/SnowyBern/Frame8.dmp"
+BernAnim9:
+#incbin "TilesetAnimations/SnowyBern/Frame9.dmp"
+BernAnim10:
+#incbin "TilesetAnimations/SnowyBern/Frame10.dmp"
+BernAnim11:
+#incbin "TilesetAnimations/SnowyBern/Frame11.dmp"
+BernAnim12:
+#incbin "TilesetAnimations/SnowyBern/Frame12.dmp"
+BernAnim13:
+#incbin "TilesetAnimations/SnowyBern/Frame13.dmp"
+BernAnim14:
+#incbin "TilesetAnimations/SnowyBern/Frame14.dmp"
+BernAnim15:
+#incbin "TilesetAnimations/SnowyBern/Frame15.dmp"
+
+SnowyBernAnimations:
+tilesetAnimation(0x1C,0x1000,BernAnim0)
+tilesetAnimation(0x1C,0x1000,BernAnim1)
+tilesetAnimation(0x1C,0x1000,BernAnim2)
+tilesetAnimation(0x1C,0x1000,BernAnim3)
+tilesetAnimation(0x1C,0x1000,BernAnim4)
+tilesetAnimation(0x1C,0x1000,BernAnim5)
+tilesetAnimation(0x1C,0x1000,BernAnim6)
+tilesetAnimation(0x1C,0x1000,BernAnim7)
+tilesetAnimation(0x1C,0x1000,BernAnim8)
+tilesetAnimation(0x1C,0x1000,BernAnim9)
+tilesetAnimation(0x1C,0x1000,BernAnim10)
+tilesetAnimation(0x1C,0x1000,BernAnim11)
+tilesetAnimation(0x1C,0x1000,BernAnim12)
+tilesetAnimation(0x1C,0x1000,BernAnim13)
+tilesetAnimation(0x1C,0x1000,BernAnim14)
+tilesetAnimation(0x1C,0x1000,BernAnim15)
+WORD 0 0

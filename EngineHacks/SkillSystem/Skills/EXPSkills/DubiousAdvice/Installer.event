@@ -1,0 +1,13 @@
+#include "DubiousAdvice.lyn.event"
+
+ALIGN 4
+DubiousAdviceID_Link:
+WORD DubiousAdviceID
+
+ALIGN 4
+DubiousAdviceReduction_Link:
+WORD 15
+
+ALIGN 4
+DubiousAdviceBonus_Link:
+WORD 15

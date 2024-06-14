@@ -4,7 +4,7 @@
 
 #include "EXPCalcLoop.lyn.event"
 EXPCalcFunctions:
-POIN Paragon Blossom VoidCurse
+POIN Paragon Blossom DubiousAdviceExp VoidCurse
 #ifdef MODULAR_EXP
 	POIN ModularEXP
 #endif // MODULAR_EXP

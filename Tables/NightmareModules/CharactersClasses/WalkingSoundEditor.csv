@@ -145,30 +145,30 @@ Dreadnought,4
 Seraph,3
 Bombardier,3
 Bomb,4
-0x92,0
-0x93,0
-0x94,0
-0x95,0
-0x96,0
-0x97,0
-0x98,0
-0x99,0
-0x9a,0
-0x9b,0
-0x9c,0
-0x9d,0
-0x9e,0
-0x9f,0
-0xa0,0
-0xa1,0
-0xa2,0
-0xa3,0
-0xa4,0
-0xa5,0
-0xa6,0
-0xa7,0
-0xa8,0
-0xa9,0
+Trickster,InfantrySound
+BowCav,CavalrySound
+Runeshield,ArmorSound
+Wolf Knight,DogSound
+Fighter (F),InfantrySound
+Slayer,InfantrySound
+Slayer (F),InfantrySound
+Monk (F),InfantrySound
+Trickster (F),InfantrySound
+War Monk,InfantrySound
+War Monk (F),InfantrySound
+Halberdier,InfantrySound
+Adventurer,InfantrySound
+Adventurer (F),InfantrySound
+Malig Knight,WyvernSound
+Warrior (F),InfantrySound
+Dragoon,CavalrySound
+Gryphknight,PegasusSound
+Marksman,InfantrySound
+Sword Knight,CavalrySound
+Axe Knight,CavalrySound
+Lance Knight,CavalrySound
+Bow Knight,CavalrySound
+Horse,CavalrySound
 0xaa,0
 0xab,0
 0xac,0

@@ -51,11 +51,20 @@ ALIGN 4
 ALIGN 4
 
 ForcedDeploymentList: //Vanilla list at 0x9ED64C
+ForcedDeployment(Lua,LockedPosition,AllModes,Chapter3)
+ForcedDeployment(Pilar,LockedPosition,AllModes,Chapter3)
+ForcedDeployment(Desiderio,LockedPosition,AllModes,Chapter3)
+ForcedDeployment(Razvan,LockedPosition,AllModes,Chapter3)
+ForcedDeployment(Lua,LockedPosition,AllModes,Chapter2)
+ForcedDeployment(Orlando,LockedPosition,AllModes,Chapter2)
+ForcedDeployment(Rahel,LockedPosition,AllModes,Chapter2)
 ForcedDeployment(Lua,UnlockedPosition,AllModes,AllChapters)
 ForcedDeployment(Indio,UnlockedPosition,AllModes,HubA_1)
 ForcedDeployment(Jaime,UnlockedPosition,AllModes,HubA_2)
+ForcedDeployment(Leonor,UnlockedPosition,AllModes,HubA_2)
 ForcedDeployment(Ondeh,UnlockedPosition,AllModes,HubA_3)
 ForcedDeployment(Biko,UnlockedPosition,AllModes,HubA_3)
+ForcedDeployment(Tangyuan,LockedPosition,AllModes, HubA_5)
 ForcedDeployment(Matteo,UnlockedPosition,AllModes,HubA_6)
 ForcedDeployment(Suzanne,UnlockedPosition,AllModes,HubA_6)
 EndForcedDeploymentList

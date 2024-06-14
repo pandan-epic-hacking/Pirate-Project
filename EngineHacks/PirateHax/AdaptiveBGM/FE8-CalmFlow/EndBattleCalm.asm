@@ -26,16 +26,24 @@ Next:
 @ Mute Flow tracks if BGM is Desire Below
 ldr		r0,=BGMSTRUCT
 ldrh	r0,[r0,#0x4]
-ldr		r7,=MusicID
-cmp		r0,r7
-bne		Exit			@ No muting if BGM is not Desire below
+ldr		r6,CalmFlowList
+LoopStart:
+ldrh    r1,[r6]
+cmp     r1,#0
+beq     Exit
+cmp     r0,r1
+beq     LoopExit
+add     r6,r6,#4
+b       LoopStart
 
+LoopExit:
 @Disable/Enable tracks for Flow version of song
 ldr 	r0,=MapBGM
 ldrh	r7,[r0,#0x8]	@trackcount
 ldr 	r0,[r0,#0x2C]	@Address to track 0
 mov		r1,r7			@trackiterator
-sub		r5,r7,#0x3		@Top three tracks don't need to be adjusted (Desire Below-specific)
+ldrh    r6,[r6,#2]		@ channel offset
+sub		r5,r7,r6		@ skip specified # of tracks
 	
 Loop:
 	cmp		r1,r5
@@ -63,3 +71,9 @@ bgt		Loop
 Exit:
 pop {r0}
 bx r0
+
+.ltorg
+.align
+
+CalmFlowList:
+@POIN CalmFlowList

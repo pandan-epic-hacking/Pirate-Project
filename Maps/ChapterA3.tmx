@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="19" height="17" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="19" height="17" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
  <tileset firstgid="1" name="6C006D6E" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="Tilesets/Mountainous.png" trans="ffffff" width="512" height="512"/>
  </tileset>
@@ -17,9 +17,9 @@
   </properties>
   <data>
    <tile gid="907"/>
-   <tile gid="475"/>
-   <tile gid="1007"/>
-   <tile gid="1007"/>
+   <tile gid="983"/>
+   <tile gid="849"/>
+   <tile gid="984"/>
    <tile gid="907"/>
    <tile gid="807"/>
    <tile gid="198"/>
@@ -36,9 +36,9 @@
    <tile gid="198"/>
    <tile gid="993"/>
    <tile gid="1007"/>
-   <tile gid="1007"/>
-   <tile gid="475"/>
-   <tile gid="476"/>
+   <tile gid="1015"/>
+   <tile gid="823"/>
+   <tile gid="1016"/>
    <tile gid="1007"/>
    <tile gid="807"/>
    <tile gid="198"/>

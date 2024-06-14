@@ -1,0 +1,24 @@
+// hey guys sorry about this. i need my battle quote flags to be defined earlier than in my event file lol. -Dragz
+#define A1_CarmenIndioTalkSeen 0x7
+#define A1_PilarRazvanTalkSeen 0x8
+#define A1_LeandraTalkSeen 0x9
+#define A1_LeandraRecruited 0xA
+#define A1_RelicRecovered 0xB
+#define A1_ObjectiveSwitched 0xC
+#define A1_EscapeDisallowed 0xD
+#define A1_GeraldoLuaBattleQuoteSeen 0xE
+#define A1_GeraldoPilarBattleQuoteSeen 0xF
+#define A1_GeraldoDesiderioBattleQuoteSeen 0x10
+#define A1_GeraldoRazvanBattleQuoteSeen 0x11
+#define A1_GeraldoCarmenBattleQuoteSeen 0x12
+#define A1_GeraldoXimoBattleQuoteSeen 0x13
+#define A1_GeraldoEstelleBattleQuoteSeen 0x14
+#define A1_GeraldoHermeneBattleQuoteSeen 0x15
+#define A1_GuardshelmGenericBattleQuoteSeen 0x16
+#define A1_YurenaGenericBattleQuoteSeen 0x27
+#define A1_GeraldoGenericBattleQuoteSeen 0x28
+
+// not sure where exactly these are meant to go, but eh -RW
+#define HusniyeAccused 0xB1
+#define CruzAccused 0xB2
+#define AvocadoAccused 0xB3

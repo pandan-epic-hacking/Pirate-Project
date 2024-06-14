@@ -1,14 +1,17 @@
 ## LuaEscapeQuote
- [A][X]
+[ML][LoadLua]
+Pick up the pace, you lot![N]
+A few more steps, and we're home free![A][X]
  
 ## PilarEscapeQuote
 [ML][LoadPilar]
-[ML]Another successful infiltration. I'll[N]
-see you on the other side, Captain.[A][X]
+[ML]Another successful infiltration.[N]
+I'll see you on the other side, Captain.[A][X]
 
 ## DesiderioEscapeQuote
 [ML][LoadDesiderio]
-[ML][A][X]
+[ML]Not a fan of runnin', boss[Beat][N]
+But orders are orders. I'm goin' ahead![A][X]
 
 ## RazvanEscapeQuote
 [ML][LoadRazvan]
@@ -17,13 +20,13 @@ They see us all to safety[Beat][A][X]
 
 ## CarmenEscapeQuote
 [ML][LoadCarmen]
-[ML]Aw, am I to bow out so soon? Just[N]
-when I had my encore prepared![A][X]
+[ML]Aw, am I to bow out so soon?[N]
+Just when I had my encore prepared![A][X]
 
 ## XimoEscapeQuote
 [ML][LoadXimo]
-[ML]All in a hard day's work. I did[N]
-my job serviceably, I'd say.[A][X]
+[ML]All in a hard day's work.[N]
+I did my job serviceably, I'd say.[A][X]
 
 ## EstelleEscapeQuote
 [ML][LoadEstelle]
@@ -32,8 +35,33 @@ Truly, this is a blessed day![A][X]
 
 ## HermenegildoEscapeQuote
 [ML][LoadHermenegildo]
-[ML]Freedom! I smell freedom! One step[N]
-closer to my final escape![A][X]
+[ML]Freedom! I smell freedom![N]
+One step closer to my final escape![A][X]
+
+## MrYodsenEscapeQuote
+[ML][LoadMrYodsen]
+Running isn't exactly my expertise,[N]
+but if I must[Beat] Cover me, will you?[A][X]
+
+## DurghamEscapeQuote
+[ML][LoadDurgham]
+Phew! What an exciting job this was.[N]
+I'll ride ahead and scout the path out![A][X]
+
+## TrianaEscapeQuote
+[ML][LoadTriana]
+When I spoke about an adventure,[N]
+running for my life wasn't in the plan![A][X]
+
+## MedwynEscapeQuote
+[ML][LoadMedwyn]
+Woah, hold on, don't leave me behind![N]
+[Beat]I'll never run with a hangover again.[A][X]
+
+## BartzEscapeQuote
+[ML][LoadBartz]
+A clean getaway, eh? Not bad at all.[N]
+I'll keep watch for an ambush, captain![A][X]
 
 ## IndioEscapeQuote
 [ML][LoadIndio]
@@ -45,6 +73,16 @@ Let's keep this pace up, Indio![A][X]
 [ML]You're telling me to pull out already?[N]
 You better not cheapen out on my cut![A][X]
 
+## JaimeEscapeQuote
+[ML][LoadJaime]
+Seriously? Running isn't my speed,[N]
+but fine. This better be worth it![A][X]
+
+## LeonorEscapeQuote
+[ML][LoadLeonor]
+Fleeing like rats yet again[Beat][N]
+I'm tired of this, captain.[A][X]
+
 ## BikoEscapeQuote
 [ML][LoadBiko]
 [ML]Whew, we made it[Beat][N]
@@ -54,6 +92,53 @@ Can't wait to take a break![A][X]
 [ML][LoadOndeh]
 [ML]Can't stop here. Need to[N]
 keep up the pace. Follow me![A][X]
+
+## JuanEscapeQuote
+[ML][LoadJuan]
+In this chaos, perhaps the captain[N]
+may fail to notice missing loot[Beat][A][X]
+
+## TangyuanEscapeQuote
+[ML][LoadTangyuan]
+Don't need to tell me twice, boss.[N]
+Come on, boy! Let's scram![A][X]
+
+## MatteoEscapeQuote
+[ML][LoadMatteo]
+Here I was, hoping for a brawl.[N]
+This job better pay well, boss![A][X]
+
+## SuzanneEscapeQuote
+[ML][LoadSuzanne]
+Aw, that was barely a challenge.[N]
+Captain, I hope the gold's worth it![A][X]
+
+## OrlandoEscapeQuote
+[ML][LoadOrlando]
+Heh heh heh! The great Orlando[N]
+makes yet another daring escape![A][X]
+
+## RahelEscapeQuote
+[ML][LoadRahel]
+Run, run! Do pirates do anything else?[N]
+Dang good thing I have you, girl![A][X]
+
+## HusniyeEscapeQuote
+[ML][LoadHusniye]
+Not getting caught here[Beat][N]
+I'll leave all this behind.[A][X]
+
+## AvocadoEscapeQuote
+[ML][LoadAvocado]
+[Beat]So I must run away again,[N]
+always fleeing from my fate[Beat][A][X]
+
+## MagdalenaEscapeQuote
+[ML][LoadMagdalena]
+If we must truly[N]
+leave this place[Beat][A][X]
+
+
 
 ## PlaceholderEscapeQuote
 [ML][LoadCurrent]

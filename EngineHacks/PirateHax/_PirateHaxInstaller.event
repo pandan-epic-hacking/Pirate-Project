@@ -88,6 +88,42 @@
 #include "ChangeChapterObjective/Installer.event"
 //Zeta/Gilgamesh
 
+#include "FortuneStaff/FortuneStaff.event"
+//Sme
+
+#include "Kirito/Extern.event"
+//Pikmin1211
+
+#include "FancyChapterPreview/FancyChapterPreview.event"
+//Sme
+
+#include "prep_shop_each_chapter2/Installer.event"
+//7743
+
+//#include "StealWithFullInv/Installer.event"
+//Vesly
+
+#include "PortraitHeight/PortraitShiftTable(installthisone).event"
+//2WB
+
+
+// use EventMenuCommand instead!
+// there are two versions becaue RW is bad at organizing things
+// #include "EventMenu/EventMenuDef.event"
+// StanH
+
+#include "EventMenuCommand/EventMenuCommand.event"
+// stan? i think?
+
+#include "DoesUnitHaveItemASMC/DoesUnitHaveItem.event"
+//Sme
+
+#include "NewComputeUnitBattleDefense/Installer.event"
+//Dragz
+
+//#include "FE8-Convoy_Partition_and_Item_Combining/FE8-Convoy_Stuff_EA.event" //soley being used for item combination
+//Tequila
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0
@@ -132,6 +168,13 @@ ORG 0x26B42
 BYTE 0x00 0x20	//
 POP
 
+// Makes uncounterable weapons not forced range
+// vennobennu
+PUSH
+ORG 0x57278
+BYTE 0x16 0xE0
+POP
+
 PUSH // prep screen markup gone
 ORG 0xB5237
 BYTE 0xE0
@@ -146,4 +189,58 @@ ORG 0x9A820 //Prep screen item menu tile width
 BYTE 0x6
 ORG 0x98728 //Prep screen pick units tile width
 BYTE 0x6
+POP
+
+PUSH //stops the hang when check_alive on npcs
+	ORG $1027C
+	BYTE 0x00 0x20 0x02 
+POP
+
+//let's remove throne/floor res and reduce throne/gate avoid
+PUSH
+ORG 0x80C513 //goodbye res!
+BYTE 0
+ORG 0x80C51A
+BYTE 0
+ORG 0x80C498
+BYTE 20
+ORG 0x80C49C
+BYTE 20
+POP
+
+PUSH //fixes level reset in prep screen - Pikmin1211
+	//ORG 0x736D0
+	//SHORT 0x1840 0x81D0 0x491C 0x2008 0x5628 0x8008
+	ORG 0x736C4
+	SHORT 0x7A28
+POP
+
+//changing several vanilla songs to a different, not hardcoded ID
+PUSH
+ORG $7272A //promotion
+BYTE ToTheCrowsNestID
+ORG $B4C0C //vendor
+BYTE LookAtMeWaresID
+ORG $835FA 
+BYTE SleepinWithTheSkyFishesID
+ORG $212CA
+BYTE SleepinWithTheSkyFishesID
+ORG $837B8 //gameover 
+BYTE SleepinWithTheSkyFishesID
+ORG $83628 //unit death
+BYTE DrownInGoodIntentionsID
+POP
+
+// Rescue Trade
+PUSH
+ORG 0x0229A8
+SHORT 0x1C00
+ORG 0x022A10
+SHORT 0x1C00
+POP
+
+// BWL on first playthrough
+PUSH
+ORG $86FE0
+BYTE 0x0 0x1C 0x0 0x1C 0x00 0x1C 0x00 0x1C //nops the check entirely
 POP

@@ -1,0 +1,491 @@
+## HubB_4Title
+Ch. B-4: Town Under Thumb[X]
+
+## HubB_4StatusObjective
+Rout bandits before[N]
+Incendevis arrive.[X]
+
+## HubB_4GoalWindow
+Rout Bandits[X]
+
+## TutorialTextTemp
+[MidLeft][LoadLua]
+Rout enemies in turn limit.[N]
+2 enemy recruitables.[A][X]
+
+## HubB_4TestText
+[ML][LoadLua]
+Haiii[A][X]
+
+## HubB_4BeginningScene1
+[FL][LoadOrlando]
+[L][LoadPilar]
+[R][LoadLua]
+[FR][LoadDesiderio]
+[R][1LB]
+Finally,[.4] I can see the gates.[A]
+
+[FR][2LB]
+That's the annoying thing about inland towns,[.4][N]
+can't just park right in the middle.[A]
+
+[FL][3LB]
+Yes well,[.4] either way we're here now.[.4][N]
+Best look presentable and try and act[N]
+like we aren't pirates on the run.[A]
+
+[R][2LB]
+Looks a bit quiet up ahead,[.4] not a guard[N]
+in sight.[.4] Bit unusual if you ask me.[A]
+
+[FL][2LB]
+Hmm.[.4] Now that you mention it[Beat][.4] Best[N]
+to keep our guard up then.[.5] Never know[N]
+what goes on out this far from the empire.[A][X]
+
+
+
+
+## HubB_4BeginningScene2
+[FL][LoadOrlando]
+[L][LoadPilar]
+[R][LoadLua]
+[FR][LoadDesiderio]
+[R][2LB]
+Okay this really is too quiet.[.4][N]
+What is going on here?[A][X]
+
+## HubB_4BeginningScene3
+[FL][LoadLua]
+[L][LoadOrlando]
+[R][LoadPirate]
+[FR][LoadPirate][2LB]
+What do we have here?[.4] Buncha[N]
+wandering misfits in our town?[A]
+
+[L][2LB]
+Your town?[.4] You don't exactly look[N]
+like ordinary townsfolk to me.[A]
+
+[R][2LB]
+Guess you ain't heard.[.4] This town's[N]
+had a change of management.[AN]
+And the new management don't take[N]
+kindly to strangers just wandering in.[A]
+
+[L][2LB]
+Looks like a gang of ruffians has moved[N]
+in Lua.[.4] It doesn't seem worth the fuss.[A]
+
+[FL]
+You're right,[.4] I don't like it but[N]
+we haven't got time to be playing hero.[AN]
+Well,[.4] it was lovely chatting with you[N]
+both but I think we'll be on our way then.[A]
+
+[FR][3LB]
+I don't think you quite understand,[.4] we're[N]
+not asking you guys to leave,[.4] in fact[N]
+we're not letting you leave at all.[A]
+
+[FL][2LB]
+Tch.[.5] Well,[.4] it doesn't seem[N]
+like we have much of a choice.[AN]
+Well if you want to be that way we'll[N]
+just have to show you your own mistake.[AN]
+Crew![.4] To arms,[.4] let's rout these[N]
+flightless desert rats.[A][X]
+
+
+## HubB_4BeginningScene4
+[ML][LoadPilar]
+[MR][LoadLua]
+[ML][2LB]
+Bad news Lua,[.4] just spotted[N]
+an imperial ship on the horizon.[AN]
+They're probably on their way here[N]
+to deal with the bandits themselves.[A]
+
+[MR][3LB]
+Could this day go any more wrong?[.4][N]
+We'll just have to finish and get[N]
+out of here as fast as we can.[A]
+
+[ML][2LB]
+I'd give us [Red]10 minutes[Red] for[N]
+us to clean this bandit hole.[AN]
+If we want any chance of leaving[N]
+before they get here that is.[A][X]
+
+
+
+
+## HubB_4EndingScene1
+[ML][LoadLua][2LB]
+I think that's the lot of them.[.4][N]
+I thought that would never end.[A]
+
+[MR][LoadGreagorLibrarianB][2LB]
+Traveller![.4] I cannot thank you enough[N]
+for ridding us of these bandits.[AN]
+I am the mayor of our little oasis.[.4][N]
+Who are you?[.4] Incendivis mercenaries?[A]
+
+[ML][2LB]
+Hah-[.4] Nothing like that,[.4][N]
+[Beat] to be honest,[.4] we're pirates.[AN]
+We were here to make some trade but,[.4][N]
+well,[.4] we weren't expecting brigands.[A]
+
+[MR][3LB]
+Yes,[.4] well,[.4] unfortunately being one of the[N]
+few prosperous towns this far out makes[N]
+us a ripe target for criminal sorts.[AN]
+They moved in a week and a half ago and[N]
+slaughtered our guard.[.4] No Incendivis[N]
+to protect us this far out I'm afraid.[AN]
+They were extorting us for everything we[N]
+had,[.4] so it's a good thing you came along[N]
+miss.[.4] Pirates or no,[.4] you have our gratitude.[A]
+
+[ML][3LB]
+I'm glad of that at least.[.4] Being a pirate[N]
+may not be the most moral,[.4] but extorting[N]
+innocent villagers is just low beyond low.[A]
+
+[MR][2LB]
+Oh but I'm forgetting myself,[.4] you must be[N]
+exahausted,[.4] we can tend your crew's wounds.[AN]
+We could prepare a meal to too,[.4] it's not[N]
+much given the circumstances but[Beat][A]
+
+[ML][3LB]
+We're flattered really but,[.5] well,[.4][N]
+there's an Incendivis ship on the horizon[N]
+and unfortunately we're on the run.[AN]
+They must be here to deal with[N]
+your former bandit problem.[AN]
+But we can't stay,[.4] in fact we[N]
+really should be going before[N]
+they can catch up to us.[A]
+
+[MR][2LB]
+Well,[.4] I know not the circumstances[N]
+of your wanted status but I care not.[AN]
+You are clearly a crew of moral fiber[Beat][.5][AN]
+I want you to have this,[.4] I trust[N]
+it will be of use in your journeys.[A]
+[CloseSpeechSlow]
+[MR][MoveLeft]
+[L][MoveLeft]
+[L][ClearFace]
+[MR][LoadGreagorLibrarianB]
+
+[ML][1LB]
+Sir-[.4] we can't-[.4][A]
+
+[MR][2LB]
+But you can,[.4] now go before they get[N]
+here.[.4] Lest you get into another scuffle.[A][X]
+
+
+
+## HubB_4EndingScene2
+[ML][LoadRedFSoldier]
+[MR][LoadRedSoldier]
+[ML][2LB]
+Sir it appears that the bandits[N]
+have already been wiped out.[AN]
+And recently too,[.4] these[N]
+bodies are very fresh.[A]
+
+[MR][2LB]
+Is that so?[.4] Perhaps it was[N]
+some kind of bandit turf war?[AN]
+But then there's not a lot of[N]
+large gangs around these parts.[AN]
+And besides,[.4] they would still be[N]
+here if that was the case[Beat][A][CloseSpeechSlow]
+[Event]
+
+[ML][MoveLeft]
+[FL][LoadRedSoldier][3LB]
+Sir![.4] We've spoken to some of the[N]
+townsfolk,[.4] they seemed rather tight[N]
+lipped but some gave some vague leads.[AN]
+It appears a faction came here,[.4][N]
+a fight broke out and they immediately left.[.4][N]
+Perhaps it was mercenaries or pirates.[A]
+
+[MR][1LB]
+Pirates[Beat][.6] I wonder[Beat][A][CloseSpeechSlow]
+[MR][3LB]
+Private,[.4] I want you to get a message[N]
+sent to Elodia.[.5] I think we might[N]
+have a tip on her target[Beat][A][X]
+
+
+
+
+
+
+## AdrianLexaWarningText
+[ML][LoadAdrian]
+[MR][LoadLexa]
+[ML][3LB]
+This does not look like it's[N]
+going well at all sis.[AN]
+I mean our guys are getting mowed[N]
+down and there's that imperial[N]
+boat coming in on the horizon[Beat][A]
+
+[MR][3LB]
+Maybe we should just jump ship[N]
+again? I don't fancy dying[N]
+in some desert nowhere village.[A]
+
+[ML][3LB]
+Agreed.[.4] Let's just talk to one[N]
+that looks important and flip sides[N]
+as soon as we get a chance.[A][X]
+
+
+
+## AdrianLexaLuaText
+[FL][LoadAdrian]
+[L][LoadLexa]
+[MR][LoadLua]
+[L][2LB]
+Hey![.4] You the head[N]
+honcho of this show?[A]
+
+[MR][1LB]
+And if I am?[A]
+
+[L][2LB]
+Look,[.4] we can see this gig is up,[.4][N]
+so we want to offer to switch sides.[AN]
+I don't want to end up dead in this[N]
+town with the rest of these chumps.[A]
+
+[MR][2LB]
+Quick to switch sides aren't you?[.4][N]
+What's to stop you backstabbing me too?[A]
+
+[FL][2LB]
+If you run a tight ship we wont.[.4] Besides[.4][N]
+we could just front stab you now.[A]
+[Event]
+[MR][2LB]
+[CloseEyes][Beat][.4][AN][OpenEyes]
+I guess you make a good point,[.4] fair enough.[.4][N]
+But one wrong move and you're out,[.4] got it?[A]
+
+[L][1LB][ToggleSmile]
+Loud and clear![.4] Let's move bro.[A][X]
+
+
+## AdrianLexaDesiderioText
+[FL][LoadAdrian]
+[L][LoadLexa]
+[MR][LoadDesiderio]
+[L][2LB]
+Hey![.4] You look important![.4][N]
+You a commander or something here?[A]
+
+[MR][1LB]
+And if I am?[A]
+
+[L][2LB]
+Look,[.4] we can see this gig is up,[.4][N]
+so we want to offer to switch sides.[AN]
+I don't want to end up dead in this[N]
+town with the rest of these chumps.[A]
+
+[MR][3LB]
+I know all about your type.[.4] Leeches[N]
+who turn tail as soon as the going[N]
+gets tough,[.4] sound about right?[AN]
+Why should I trust that you won't do[N]
+the same to us?[.4] Heavens knows[N]
+I've met enough backstabbers.[A]
+
+[FL][3LB][ToggleSmile]
+You make a fair point,[.4] I ain't gonna give[N]
+you our whole sob story,[.4] but I think you could[N]
+probably use our blades right now eh?[AN]
+If you run a tight ship you won't have[N]
+to worry about any kind of traitoring.[A]
+
+[MR][1LB][ToggleSmile]
+[CloseEyes][Beat][.5][A]
+[Event]
+[CloseSpeechSlow]
+[MR][2LB]
+[OpenEyes]
+I don't like it but I guess you're right. But[N]
+I will be keeping a stern eye on both of you.[A]
+
+[L][1LB][ToggleSmile]
+You got it boss![.4] Point us where you need us![A]
+
+[L][ClearFace]
+[FL][ClearFace]
+
+[MR][1LB][ToggleSmile]
+[CloseEyes]
+I just know I'm going to regret this[Beat][.4][A][X]
+
+
+## AdrianLexaOrlandoText
+[FL][LoadAdrian]
+[L][LoadLexa]
+[MR][LoadOrlando]
+[FL][2LB]
+Hey![.4] You look important![.4][N]
+You with this pirate gang?[A]
+
+[MR][1LB]
+And if I am brigand?[A]
+
+[FL][2LB]
+We got a proposition for you then.[AN]
+Me and my sister we're not dumb,[.4][N]
+we can see that this gig is up.[AN]
+So we're wanna fight for you instead,[.4] join[N]
+your crew and leave these chumps behind.[AN][ToggleSmile]
+What do you say old man?[A]
+
+[MR][3LB][ToggleSmile]
+Not very loyal are you?[.4] How[N]
+do I know you won't just backstab[N]
+us when it becomes convenient?[A]
+
+[L][2LB][ToggleSmile]
+Well,[.4] alternatively I could stab[N]
+you in the front right now.[A]
+
+[MR][3LB][ToggleSmile]
+Ergh-[.6] that doesn't seem necessary[Beat][.6][N][Event]
+Fine,[.4] you've made your point but you'll[N]
+regret it if you think of crossing us too.[A]
+
+[L][ToggleSmile][2LB]
+Glad you could see things our[N]
+way, happy to be aboard![A]
+
+[L][ClearFace]
+[FL][ClearFace]
+
+[MR][1LB][ToggleSmile][CloseEyes]
+This better not be a mistake[Beat][A][X]
+
+
+## AdrianAvengeText
+[ML][LoadAdrian][2LB]
+L-Lexa?![.4] You bastards![.4][N]
+Forget joining you,[.4] I'm gonna bury you![A][X]
+
+## LexaAvengeText
+[ML][LoadLexa][2LB]
+Adrian?![.4] No,[.4] damnit you idiot[Beat][.4][N]
+If that's how you wanna play it then![A][X]
+
+
+
+
+
+
+
+
+
+## LunarBladeText
+[MR][LoadCurrent][2LB]
+Huh?[.4] What's that[N]
+glowing under the water?[A][X]
+
+## B4VillageAText
+[ML][LoadQuim]
+[MR][LoadCurrent]
+[ML]
+Who're you?[.4] Here to clean up[N]
+this forsaken gang are you?[AN]
+Well take this then,[.4] was from my[N]
+days as an imperial archer.[AN]
+I ain't got no use for it anymore.[.4][N]
+But you might know someone who might.[A][X]
+
+## B4VillageBText
+[ML][LoadGreagorVillagerB]
+[MR][LoadCurrent]
+[ML]
+My son has always had issues getting[N]
+to bed so I bought this staff.[AN]
+But with these bandits around not[N]
+even that is helping anymore.[AN]
+Maybe you could use it to incapacitate[N]
+them and make the fight easier?[A][X]
+
+## B4VillageCText
+[ML][LoadNoah2]
+[MR][LoadCurrent]
+[ML][2LB]
+H-[.4]hey who are you guys?[.5][N]
+Are you here to fight the bandits?[AN]
+I-[.4] was off duty w-[.4]when they attacked[N]
+so they didn't come after me[Beat][AN]
+I'd like to join you and avenge[N]
+my friends,[.4] if I can be of any help[Beat][AN]
+Oh,[.4] wait,[.4] just let me get my armor on.[A]
+[ClearFace]
+[.7][.4]
+[ML][LoadNoah]
+Alright-[.4][MoveMidLeft] *huff*[.5] I'm ready![A][X]
+
+
+
+
+## B4HurryWarning
+[MR][LoadPilar]
+We might want to get a move[N]
+on,[.4] Incendivis ain't far out.[A][X]
+
+## JavierBQ
+[ML][LoadJavier]
+Swept through my gang huh?[AN]
+Well you'll find me a cut above[N]
+those chumps,[.4] prepare to die.[A][X]
+
+## JavierDQ
+[ML][LoadJavier]
+Urk-[.4] What the[Beat][.4] hell.[.4][CloseEyes][N]
+How'd I[Beat][.4] lose?[Beat][A][X]
+
+## AdrianDQ
+[MR][LoadAdrian]
+Face in the dirt just like that[Beat][.4][N]
+What a sorry way to die.[Beat][CloseEyes][A][X]
+
+## AdrianDQB_4
+[ML][LoadAdrian]
+Ugh-[.4] Not how this was supposed[N]
+to go[Beat][.4] I'm sorry Lexa[CloseEyes][Beat][A][X]
+
+## LexaDQ
+[MR][LoadLexa]
+Are you kidding?[.4] Bested like that[Beat][.4][N]
+Sorry Adrian[Beat][.4][CloseEyes] It's up for me[Beat][A][X]
+
+## LexaDQB_4
+[ML][LoadLexa]
+Wait that wasn't what we[N]
+planned[Beat][.4] Adrian I'm[Beat][.4][CloseEyes] Sorry[Beat][A][X]
+
+## HubB_4GameOverText
+[MR][LoadLua]
+Blast![.5] They caught up to us[.4][N]
+No way we're getting out of here now.[A][X]
+
+## RoutTestText
+[ML][LoadLuaHatless]
+Woo.[A][X]

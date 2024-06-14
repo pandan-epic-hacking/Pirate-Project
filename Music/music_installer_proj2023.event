@@ -46,6 +46,144 @@ SongTable(FoolsBoldID,FoolsBold,MapMusicGroup)
 #include "songs/boss/FoolsBold.event"
 }
 
+// 11 - A Blackheart's Pride
+{
+SongTable(ABlackheartsPrideID,ABlackheartsPride,MapMusicGroup)
+#include "songs/event/ABlackheartsPride.event"
+}
+
+// 12 - Avast Me Hearties
+{
+SongTable(AvastMeHeartiesID,AvastMeHearties,MapMusicGroup)
+#include "songs/event/AvastMeHearties.event"
+}
+
+// 13 - Still Zephyrs
+{
+SongTable(StillZephyrsID,StillZephyrs,MapMusicGroup)
+#include "songs/event/StillZephyrs.event"
+}
+
+//14 - The Rebel's Knife
+{
+SongTable(TheRebelsKnifeID,TheRebelsKnife,MapMusicGroup)
+#include "songs/map/TheRebelsKnife.event"
+}
+
+//15 - Orlando's Theme
+{
+SongTable(OrlandoThemeID,OrlandoTheme,MapMusicGroup)
+#include "songs/event/OrlandoTheme.event"
+}
+
+//16 - Swabbie Talk
+{
+SongTable(SwabbieTalkID,SwabbieTalk,MapMusicGroup)
+#include "songs/event/SwabbieTalk.event"
+}
+
+//17 - Emergency Crewmate
+{
+SongTable(EmergencyCrewmateID,EmergencyCrewmate,MapMusicGroup)
+#include "songs/event/EmergencyCrewmate.event"
+}
+
+//18 - Welcome Aboard, Matey
+{
+SongTable(WelcomeAboardMateyID,WelcomeAboardMatey,MapMusicGroup)
+#include "songs/event/WelcomeAboardMatey.event"
+}
+
+//19 - To The Crow's Nest
+{
+SongTable(ToTheCrowsNestID,ToTheCrowsNest,MapMusicGroup)
+#include "songs/event/ToTheCrowsNest.event"
+}
+
+//20 - Look At Me Wares
+{
+SongTable(LookAtMeWaresID,LookAtMeWares,MapMusicGroup)
+#include "songs/event/LookAtMeWares.event"
+}
+
+//21 - Sleepin' With The Sky Fishes
+{
+SongTable(SleepinWithTheSkyFishesID,SleepinWithTheSkyFishes,BattleMusicGroup)
+#include "songs/event/SleepinWithTheSkyFishes.event"
+}
+
+//22 - Drown In Good Intentions
+{
+SongTable(DrownInGoodIntentionsID,DrownInGoodIntentions,BattleMusicGroup)
+#include "songs/event/DrownInGoodIntentions.event"
+}
+
+//23 - Meet The Crew
+{
+SongTable(MeetTheCrewID,MeetTheCrew,BattleMusicGroup)
+#include "songs/event/MeetTheCrew.event"
+}
+
+//24 - Out Into The Open Sky
+{
+SongTable(OutIntoTheOpenSkyID,OutIntoTheOpenSky,MapMusicGroup)
+#include "songs/preps/OutIntoTheOpenSky.event"
+}
+
+// 25 - Last Dance, Sinking Ship
+{
+SongTable(LastDanceSinkingShipID,LastDanceSinkingShip,MapMusicGroup)
+#include "songs/map/LastDanceSinkingShip.event"
+}
+
+// 26 - Well and Truly Lost
+{
+SongTable(WellAndTrulyLostID,WellAndTrulyLost,MapMusicGroup)
+#include "songs/map/WellAndTrulyLost.event"
+}
+
+// 27 - To The Skies
+{
+SongTable(ToTheSkiesID,ToTheSkies,MapMusicGroup)
+#include "songs/map/ToTheSkies.event"
+}
+
+// 28 - Fin In The Clouds
+{
+SongTable(FinInTheCloudsID,FinInTheClouds,MapMusicGroup)
+#include "songs/event/FinInTheClouds.event"
+}
+
+// 29 - Letter Opener
+{
+SongTable(LetterOpenerID,LetterOpener,MapMusicGroup)
+#include "songs/map/LetterOpener.event"
+}
+
+// 30 - The Wave's Apprentice
+{
+SongTable(TheWavesApprenticeID,TheWavesApprentice,BattleMusicGroup)
+#include "songs/boss/TheWavesApprentice.event"
+}
+
+// 31 - Tougher Tussle
+{
+SongTable(TougherTussleID,TougherTussle,BattleMusicGroup)
+#include "songs/boss/TougherTussle.event"
+}
+
+// 32 - Time's Ticking
+{
+SongTable(TimesTickingID,TimesTicking,MapMusicGroup)
+#include "songs/map/TimesTicking.event"
+}
+
+// 33 - Castaway Heart
+{
+SongTable(CastawayHeartID,CastawayHeart,MapMusicGroup)
+#include "songs/event/CastawayHeart.event"
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 
@@ -205,8 +343,8 @@ VoiceMulti(MusicVoices,0x0,PianoTable,notechart0)
 VoiceMulti(MusicVoices,0x1,Table1,notechart0)
 //2 0 faster env
 VoiceMulti(MusicVoices,0x2,PianofastTable,notechart0)
-//3 1 faster env
-VoiceMulti(MusicVoices,0x3,Table3,notechart0)
+//3 old piano (Triton elec piano)
+VoiceMulti(MusicVoices,0x3,Table3,notechart3)
 //4 ep (Proteus VX: Proteus 1: Emperor)
 VoiceMulti(MusicVoices,0x4,Table4,notechartc2toc6)
 //5 ep faster env
@@ -564,14 +702,14 @@ VoiceDirect(Table1,0x7,0x3c,i1n5,0x0,0x0,0x0,0xff,0xf1,0x0,0xe0)
 ORG Table1+0xc*8
 
 Table3:
-VoiceDirect(Table3,0x0,0x3c,i1n0,0x0,0x0,0x0,0xff,0xf4,0x50,0x80)
-VoiceDirect(Table3,0x1,0x3c,i1n0,0x0,0x0,0x0,0xff,0xf3,0x50,0x80)
-VoiceDirect(Table3,0x2,0x3c,i1n1,0x0,0x0,0x0,0xff,0xf3,0x50,0x80)
-VoiceDirect(Table3,0x3,0x3c,i1n2,0x0,0x0,0x0,0xff,0xf3,0x50,0x80)
-VoiceDirect(Table3,0x4,0x3c,i1n3,0x0,0x0,0x0,0xff,0xf3,0x50,0x80)
-VoiceDirect(Table3,0x5,0x3c,i1n4,0x0,0x0,0x0,0xff,0xf3,0x50,0x90)
-VoiceDirect(Table3,0x6,0x3c,i1n5,0x0,0x0,0x0,0xff,0xf2,0x50,0xa0)
-VoiceDirect(Table3,0x7,0x3c,i1n5,0x0,0x0,0x0,0xff,0xf0,0x40,0xc0)
+VoiceDirect(Table3,0x0,0x3c,i3n0,0x0,0x0,0x0,0xff,0xfa,0x0,0xc0)
+VoiceDirect(Table3,0x1,0x3c,i3n1,0x0,0x0,0x0,0xff,0xf9,0x0,0xc0)
+VoiceDirect(Table3,0x2,0x3c,i3n2,0x0,0x0,0x0,0xff,0xf9,0x0,0xc0)
+VoiceDirect(Table3,0x3,0x3c,i3n3,0x0,0x0,0x0,0xff,0xf9,0x0,0xd0)
+VoiceDirect(Table3,0x4,0x3c,i3n4,0x0,0x0,0x0,0xff,0xf9,0x0,0xd8)
+VoiceDirect(Table3,0x5,0x3c,i3n5,0x0,0x0,0x0,0xff,0xf8,0x0,0xe0)
+VoiceDirect(Table3,0x6,0x3c,i3n5,0x0,0x0,0x0,0xff,0xf5,0x0,0xe8)
+VoiceDirect(Table3,0x7,0x3c,i3n5,0x0,0x0,0x0,0xff,0xf1,0x0,0xf0)
 ORG Table3+0xc*8
 
 Table4:
@@ -2490,6 +2628,10 @@ ORG SFXTable1+0xc*112
 
 // ---------- NOTE CHARTS ----------
 
+notechart3:
+#incbin "notecharts/notechart3.dmp"
+ALIGN 4
+
 notechart0:
 #incbin "notecharts/notechart0.dmp"
 ALIGN 4
@@ -2632,6 +2774,30 @@ ALIGN 4
 
 
 // ---------- SAMPLES: INSTRUMENTS ----------
+
+i3n0:
+#incbin "samples/i3n0.dmp"
+ALIGN 4
+
+i3n1:
+#incbin "samples/i3n1.dmp"
+ALIGN 4
+
+i3n2:
+#incbin "samples/i3n2.dmp"
+ALIGN 4
+
+i3n3:
+#incbin "samples/i3n3.dmp"
+ALIGN 4
+
+i3n4:
+#incbin "samples/i3n4.dmp"
+ALIGN 4
+
+i3n5:
+#incbin "samples/i3n5.dmp"
+ALIGN 4
 
 i0n0:
 #incbin "samples/i0n0.dmp"
@@ -4037,6 +4203,8 @@ se_break:
 ALIGN 4
 
 //
+
+#include "SoundRoomInstaller.event"
 
 #else
 ERROR You are not assembling FE8 events!

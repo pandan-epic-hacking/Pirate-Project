@@ -126,6 +126,9 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     gBattleHitIterator->hpChange = gBattleStats.damage;
 
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS) || attacker->weaponAttributes & (IA_UNCOUNTERABLE | IA_MAGIC)) {
+		
+		if (gSkillTester(&attacker->unit,CritthriftIDLink) && gBattleHitIterator->attributes & BATTLE_HIT_ATTR_CRIT) return;
+		
         attacker->weapon = GetItemAfterUse(attacker->weapon);
 
         if (!(attacker->weapon))
@@ -170,6 +173,20 @@ void New_BattleInitTargetCanCounter(){
 		gBattleTarget.canCounter = false;
 		return;
 	}
+
+    // kai skill
+    if (gSkillTester(&gBattleActor.unit, ArcaneArtificeIDLink)){
+        if (GetItemData(GetItemIndex(gBattleActor.weapon))->attributes & (IA_MAGIC | IA_MAGICDAMAGE)){
+            if (GetItemData(GetItemIndex(gBattleTarget.weapon))->attributes & (IA_MAGIC | IA_MAGICDAMAGE)){
+            
+            }
+            else{
+                gBattleTarget.weapon = 0;
+		        gBattleTarget.canCounter = false;
+		        return;
+            }
+        }
+    }
 
 }
 

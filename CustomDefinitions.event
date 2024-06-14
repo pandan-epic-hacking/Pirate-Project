@@ -48,6 +48,22 @@
 #define jumpToHack_r2(offset) "SHORT 0x4A00 0x4710 ; POIN (offset|1)"
 #define jumpToHack_r3(offset) "SHORT 0x4B00 0x4718 ; POIN (offset|1)"
 
+//Defines for movement sounds (I wasn't sure where else to put them lol)
+
+#define InfantrySound 0
+#define CavalrySound 1
+#define WyvernSound 2
+#define PegasusSound 3
+#define ArmorSound 4
+#define ShipSound 5
+#define ManaketeSound 6
+#define RevenantSound 7
+#define BonewalkerSound 8
+#define SpiderSound 9
+#define DogSound 0xA
+#define MogallSound 0xB
+#define GorgonSound 0xC
+
 // #define __CHAPTERJUMP__ // Uncomment to enable chapter jump
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p

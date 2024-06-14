@@ -19,6 +19,9 @@ ALIGN 4
 BreakExemptClassList:
 BYTE Warden
 BYTE Vanguard
+BYTE General
+BYTE Runeshield
+BYTE Cataphract
 BYTE 0
 
 //skillsys stuff; comment out if you have it elsewhere
@@ -30,4 +33,12 @@ ALIGN 4
 
 DazzleIDLink:
 BYTE DazzleID
+ALIGN 4
+
+CritthriftIDLink:
+BYTE CritthriftID
+ALIGN 4
+
+ArcaneArtificeIDLink:
+BYTE ArcaneArtificeID
 ALIGN 4

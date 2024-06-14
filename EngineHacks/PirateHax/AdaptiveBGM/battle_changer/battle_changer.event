@@ -1,9 +1,16 @@
-PUSH
-ORG 0x726CA
-#incbin "battle_changer.bin"
+#include "battle_changer.lyn.event"
 
-ORG 0x72700
-#incbin "72700.bin"
+PUSH
+
+ORG $726CA
+//#incbin "battle_changer.bin"
+SHORT 0x46C0 // nop
+jumpToHack(battle_changer)
+
+ORG $72700
+WORD 0x202BCF0 
+SHORT 0x8886 // ldrh r6,[r0,#4]
+SHORT 0x46C0 // nop
 
 POP
 

@@ -10,3 +10,5 @@ void ClearActiveFactionGrayedStates(void);
 void SMS_UpdateFromGameData(void);
 void SwitchGameplayPhase(void);
 s8 RunPhaseSwitchEvents(void);
+
+extern u8 CritthriftIDLink;

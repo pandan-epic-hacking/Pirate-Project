@@ -24,7 +24,7 @@ cmp		r0,#0
 beq		End
 
 @check if last action was stealing
-ldr r0,=#0x203A958
+ldr r0,=0x203A958
 ldrb r0,[r0,#0x11]
 mov r1,#0x6
 cmp r0,r1

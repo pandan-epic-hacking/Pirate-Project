@@ -45,13 +45,13 @@
 
     @ get current saved damage bonus
     mov  r2, #0x37
-    ldrb r1, [r4, r2]
+    @ ldrb r1, [r4, r2]
 
     @ compare with existing damage bonus
-    cmp  r1, r0
-    bge  save_end
+    @ cmp  r1, r0
+    @ bge  save_end
 
-    @ store if new is bigger
+    @ store new hit
     lsr r0, #1 @ divides it by 2
     strb r0, [r4, r2]
 

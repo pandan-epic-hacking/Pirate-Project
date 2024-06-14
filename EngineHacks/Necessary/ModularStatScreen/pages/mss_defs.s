@@ -791,7 +791,7 @@
   mov     r4, r0
   mov     r5, #0x0
   cmp     r4, #0x0             @no equipped item will be -1
-  blt     SS_DoneEquipHighlightBar
+  blt     DrawEquippableAccessory
   
   SS_DrawEquippedItemHighlight:
   lsl     r4, r4, #0x1
@@ -810,6 +810,8 @@
   mov     r2, #0xC1
   lsl     r2, r2, #0x6
   blh     BgMap_ApplyTsa
+
+  DrawEquippableAccessory:
   ldr r0, [r6, #0xC]
   blh DrawUnitEquippedItem
   cmp     r5, #0x0

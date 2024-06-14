@@ -1,5 +1,5 @@
 ## ChA6Title
-Chapter A-6[X]
+Ch A-6: Race Against Time[X]
 
 ## ChA6GoalWindow
 Rout[X]
@@ -15,7 +15,11 @@ This is incredible[Beat][AN]
 At last, we have the power to[N]
 strike back at the empire![AN]
 This looks like enough to level[N]
-the imperial palace![AN]
+the imperial palace![AN][X]
+
+## ChA6Pre2
+[FL][LoadRedFighter][L][LoadRedSoldier][MR][LoadSantiago]
+[FL]
 [3LB][L]
 Don't be ridiculous, we'd never[N]
 get close enough. They'd blast us[N]
@@ -87,11 +91,14 @@ We're with you to the end![AN]
 Good, let's give them hell![AN]
 [X]
 
-## ChA6Pre2
+## ChA6Pre3
 [R][LoadLua][FR][LoadRochefort]
 [R]
 Come on out! We're here for the[N]
-spice shipment you stole![AN]
+spice shipment you stole![AN][X]
+
+## ChA6Pre4
+[R][LoadLua][FR][LoadRochefort]
 [FL][LoadSlicer][L][LoadDicer]
 [1LB][FL]
 Spice shipment?[AN]

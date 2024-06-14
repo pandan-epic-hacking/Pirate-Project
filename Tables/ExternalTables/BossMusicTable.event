@@ -4,9 +4,21 @@
 ALIGN 4
 BossBGMTable:
 BossBGMEntry(Khazhak,FoolsBoldID)
-BossBGMEntry(Felipe,FoolsBoldID) 
-BossBGMEntry(Sargargala,FoolsBoldID) 
-BossBGMEntry(Santiago,FoolsBoldID) 
+BossBGMEntry(Sanz,FoolsBoldID)
+BossBGMEntry(Manfred, FoolsBoldID)
+BossBGMEntry(Sargargala,FoolsBoldID)
+BossBGMEntry(Stingray,FoolsBoldID)
+BossBGMEntry(Ramiro,FoolsBoldID)
+BossBGMEntry(BigBrick,FoolsBoldID)
+BossBGMEntry(Santiago,FoolsBoldID)
+// these ones should probably be Waves' Apprentice?
+BossBGMEntry(ElodiaBoss,TheWavesApprenticeID)
+BossBGMEntry(Kiril, TheWavesApprenticeID)
+BossBGMEntry(Yadney,TheWavesApprenticeID)
+BossBGMEntry(Cruz,TheWavesApprenticeID)
+BossBGMEntry(Azahar,TheWavesApprenticeID)
+BossBGMEntry(Javier,TheWavesApprenticeID)
+BossBGMEntry(Nicodemus,TheWavesApprenticeID)
 BossBGMTerminator
 
 PUSH

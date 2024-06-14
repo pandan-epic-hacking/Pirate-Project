@@ -1,0 +1,176 @@
+#define ClassAnimTable NewAnimTable //this is for repointing purposes
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + ((index-1) * 0x20)"
+
+//////////////Installed animations go here:
+#define SwordAnim(Animation) "BYTE Swords 0x01 ; SHORT Animation"
+#define LanceAnim(Animation) "BYTE Lances 0x01 ; SHORT Animation"
+#define AxeAnim(Animation) "BYTE Axes 0x01 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00; SHORT Animation"
+#define BowAnim(Animation) "BYTE Bows 0x01 ; SHORT Animation"
+#define StaffAnim(Animation) "BYTE Staff 0x01 ; SHORT Animation"
+#define TomeAnim(Animation) "BYTE Tome 0x01 ; SHORT Animation"
+#define KnifeAnim(Animation) "BYTE Knife 0x01 ; SHORT Animation"
+#define GunAnim(Animation) "BYTE Gun 0x01 ; SHORT Animation"
+#define UnarmedAnim(Animation) "BYTE Unarmed 0x01 ; SHORT Animation"
+#define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define EndAnim "WORD 0x0"
+
+//0xC9 is last vanilla anim: just in case
+#define ArmorSwordAnim 0xCA
+#define ArmorLanceAnim 0xCB
+#define ArmorAxeAnim 0xCC
+#define ArmorHandAxeAnim 0xCD
+#define ArmorUnarmedAnim 0xCE
+
+#define DeserterLanceAnim 0xCF
+#define DeserterUnarmedAnim 0xD0
+
+#define HunterFBowAnim 0xD1
+#define HunterFUnarmedAnim 0xD2
+#define HunterMBowAnim 0xD3
+#define HunterMUnarmedAnim 0xD4
+
+#define NinjaKnifeAnim 0xD5
+#define NinjaUnarmedAnim 0xD6
+
+#define CurateStaffAnim 0xD7
+#define CurateUnarmedAnim 0xD8
+
+#define ThiefKnifeAnim 0xD9
+#define ThiefUnarmedAnim 0xDA
+
+#define PegasusRiderSwordAnim 0xDB
+#define PegasusRiderUnarmedAnim 0xDC
+
+#define DragonRiderAxeAnim 0xDD
+#define DragonRiderHandAxeAnim 0xDE
+#define DragonRiderUnarmedAnim 0xDF
+
+#define GriffinRiderLanceAnim 0xE0
+#define GriffinRiderUnarmedAnim 0xE1
+
+#define SoldierLanceAnim 0xE2
+#define SoldierUnarmedAnim 0xE3
+
+#define Fighter_FAxeAnim 0xE4
+#define Fighter_FHandAxeAnim 0xE5
+#define Fighter_FUnarmedAnim 0xE6
+
+#define SlayerSwordAnim 0xE7
+#define SlayerTomeAnim 0xE8
+
+#define Slayer_FSwordAnim 0xE9
+#define Slayer_FTomeAnim 0xEA
+
+#define TricksterKnifeAnim 0xEB
+#define TricksterTomeAnim 0xEC
+
+#define MonkTomeAnim 0xED
+#define Monk_FTomeAnim 0xEE
+
+#define Mercenary_FSwordAnim 0xEF
+#define Mercenary_FUnarmedAnim 0xF0
+
+#define Hero_FSwordAnim 0xF1
+#define Hero_FAxeAnim 0xF2
+#define Hero_FHandaxeAnim 0xF3
+#define Hero_FUnarmedAnim 0xF4
+
+#define WarMonkStaffAnim 0xF5
+#define WarMonkAxeAnim 0xF6
+#define WarMonkHandaxeAnim 0xF7
+#define WarMonkUnarmedAnim 0xF8
+
+#define WarMonk_FStaffAnim 0xF9
+#define WarMonk_FAxeAnim 0xFA
+#define WarMonk_FHandaxeAnim 0xFB
+#define WarMonk_FUnarmedAnim 0xFC
+
+#define HalberdierLanceAnim 0xFD
+#define HalberdierUnarmedAnim 0xFE
+
+#define AdventurerBowAnim 0xFF
+#define AdventurerStaffAnim 0x100
+#define AdventurerUnarmedAnim 0x101
+
+#define Adventurer_FBowAnim 0x102
+#define Adventurer_FStaffAnim 0x103
+#define Adventurer_FUnarmedAnim 0x104
+
+#define MasterNinjaKnifeAnim 0x105
+#define MasterNinjaSwordAnim 0x106
+#define MasterNinjaUnarmedAnim 0x107
+
+#define RuneshieldSwordAnim 0x108
+#define RuneshieldLanceAnim 0x109
+#define RuneshieldMagicAnim 0x10a
+
+#define MarshallAxeAnim 0x10b
+#define MarshallHandaxeAnim 0x10c
+#define MarshallLanceAnim 0x10d
+#define MarshallBowAnim 0x10e
+#define MarshallUnarmedAnim 0x10f
+
+#define DarkKnightLanceAnim 0x110 //put this in later
+#define DarkKnightMagicAnim 0x110
+
+#define SwordCavSwordAnim 0x112
+#define SwordCavUnarmedAnim 0x113
+#define AxeCavAxeAnim 0x114
+#define AxeCavHandaxeAnim 0x115
+#define AxeCavUnarmedAnim 0x116
+
+#define BowCavBowAnim 0x117
+#define BowCavUnarmedAnim 0x118
+
+#define MaligKnightAxeAnim 0x119
+#define MaligKnightHandaxeAnim 0x11a
+#define MaligKnightMagicAnim 0x11b
+
+#define SeraphSwordAnim 0x11c
+#define SeraphStaffAnim 0x11d
+#define SeraphUnarmedAnim 0x11e
+
+#define WarriorAxeAnim 0x11f
+#define WarriorHandaxeAnim 0x120
+#define WarriorBowAnim 0x121
+#define WarriorUnarmedAnim 0x122
+
+#define Warrior_FAxeAnim 0x123
+#define Warrior_FHandaxeAnim 0x124
+#define Warrior_FBowAnim 0x125
+#define Warrior_FUnarmedAnim 0x126
+
+#define BombardierBowAnim 0x127
+#define BombardierLanceAnim 0x128
+#define BombardierUnarmedAnim 0x129
+
+#define DracoknightAxeAnim 0x12a
+#define DracoknightHandaxeAnim 0x12b
+#define DracoknightUnarmedAnim 0x12c
+
+#define AssassinKnifeAnim 0x12d
+#define AssassinBowAnim 0x12e
+
+#define Assassin_FKnifeAnim 0x12f
+#define Assassin_FBowAnim 0x130
+
+#define RogueKnifeAnim 0x131
+#define RogueUnarmedAnim 0x111
+
+#define WolfKnightLanceAnim 0x132
+#define WolfKnightKnifeAnim 0x133
+#define WolfKnightUnarmedAnim 0x134
+
+#define LanceCavLanceAnim 0x135
+#define LanceCavUnarmedAnim 0x136
+
+#define AxeKnightAxeAnim 0x137
+#define AxeKnightHandaxeAnim 0x138
+
+#define BowKnightBowAnim 0x139
+#define BowKnightUnarmedAnim 0x13a
+
+#define LanceKnightLanceAnim 0x13b
+#define LanceKnightUnarmedAnim 0x13c

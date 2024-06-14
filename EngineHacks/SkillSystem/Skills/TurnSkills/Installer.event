@@ -66,3 +66,5 @@ BYTE 3
 
 AstralBlessingIDLink:
 BYTE AstralBlessingID
+
+#include "FrigidAura/Installer.event"

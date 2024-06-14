@@ -1,11 +1,10 @@
-#ifdef _FE8_
+
     #include "EAstdlib.event"
     #include "CustomDefinitions.event"
     #include "Definitions/_DefinitionsInstaller.event"
 //PROTECT $25224
     ORG FreeSpace
-
-    #include "repointedTextTable.event"
+    #include "Tables/Repointed/_MasterRepointer.event"
 	
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
@@ -36,6 +35,3 @@
 	//ASSERT (FreeSpaceEnd - currentOffset) // So that you don't overwrite vanilla tables if using default freespace
 	
     MESSAGE Used free space ends at currentOffset
-#else
-    ERROR "You are not assembling FE8 events!"
-#endif

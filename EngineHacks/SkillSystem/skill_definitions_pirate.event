@@ -136,3 +136,63 @@
 
 //Miracle: Survive a lethal attack if HP > 50%.
 #define MiracleID 42
+
+//Acrobat: All traversable terrain costs 1 movement.
+//By Tequila
+#define AcrobatID 43
+
+//Faith's Aegis
+#define FaithsAegisID 44
+#define MiraclemakerID FaithsAegisID
+
+//Shuffle
+#define ShuffleID 45
+
+//Analyze
+#define AnalyzeID 46
+
+//Nailed Down
+#define NailedDownID 47
+
+//Bow Range +1: Maximum range of equipped bows is increased.
+//By Teraspark
+#define BowRangeUpID 48
+
+//Imbue: Recover HP equal to Magic at the start of each turn.
+//By Sme
+#define ImbueID 49
+
+//Delegation: After combat, next action of allies in unit's attack range hits lower of foe's Def/Res. (Dragz)
+#define DelegationID 50
+
+//Reposition: we all know what this does (StanH)
+#define RepositionID 51
+
+//Swift: Command that grants adjacent ally +3 move for 1 turn. (Dragz)
+#define SwiftID 52
+
+//Dubious Advice: Adjacent allies gain +15 all growths and -15% experience. (Dragz)
+#define DubiousAdviceID 53
+
+//Frigid Aura: All adjacent units take 20% damage at the start of turn. (Dragz)
+#define FrigidAuraID 54
+
+#define SwapID 55
+
+//Smite: Allows unit to push other units two tiles away.
+//By StanH
+#define SmiteID 56
+
+#define CantoAttackID 57
+
+#define ScoutsInstinctID 58
+
+#define ArcaneArtificeID 59
+
+// Keen Fighter: Unit takes 75% damage if the opponent can double. 
+// By Vesly 
+#define KeenFighterID 60
+
+//Shade: Enemies are less likely to target this unit.
+//By Sme
+#define ShadeID 61

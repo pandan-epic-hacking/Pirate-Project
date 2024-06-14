@@ -17,6 +17,7 @@ AcrobatCheck:
 #incbin "Acrobat/Acrobat.dmp"
 POIN SkillTester
 WORD AcrobatID
+WORD ForestFriendID
 
 ALIGN 4
 PassCheck:

@@ -1,74 +1,74 @@
 INLINE EscapeQuoteTable,Text ID
 0x0,0x0
-0x01 Lua,PlaceholderEscapeQuote
+0x01 Lua,LuaEscapeQuote
 0x02 Pilar,PilarEscapeQuote
-0x03 Desiderio,PlaceholderEscapeQuote
+0x03 Desiderio,DesiderioEscapeQuote
 0x04 Razvan,RazvanEscapeQuote
 0x05 Carmen,CarmenEscapeQuote
 0x06 Ximo,XimoEscapeQuote
 0x07 Estelle,EstelleEscapeQuote
 0x08 Hermenegildo,HermenegildoEscapeQuote
-0x09 Mr. Yodsen,PlaceholderEscapeQuote
-0x0A Durgham,PlaceholderEscapeQuote
+0x09 MrYodsen,MrYodsenEscapeQuote
+0x0A Durgham,DurghamEscapeQuote
 0x0B Indio,IndioEscapeQuote
 0x0C Leandra,LeandraEscapeQuote
-Natasha,PlaceholderEscapeQuote
-Cormag,PlaceholderEscapeQuote
-Ephraim,PlaceholderEscapeQuote
-Forde,PlaceholderEscapeQuote
-Kyle,PlaceholderEscapeQuote
-Amelia,PlaceholderEscapeQuote
-Artur,PlaceholderEscapeQuote
-Gerik,PlaceholderEscapeQuote
-Tethys,PlaceholderEscapeQuote
-Marisa,PlaceholderEscapeQuote
-Saleh,PlaceholderEscapeQuote
-Ewan,PlaceholderEscapeQuote
-L'Arachel,PlaceholderEscapeQuote
-Dozla,PlaceholderEscapeQuote
-EMPTY,PlaceholderEscapeQuote
-Rennac,PlaceholderEscapeQuote
-Duessel,PlaceholderEscapeQuote
-Myrrh,PlaceholderEscapeQuote
-Knoll,PlaceholderEscapeQuote
-Joshua,PlaceholderEscapeQuote
-Syrene,PlaceholderEscapeQuote
-Tana,PlaceholderEscapeQuote
-Lyon,PlaceholderEscapeQuote
-Orson,PlaceholderEscapeQuote
-Glen,PlaceholderEscapeQuote
-Selena,PlaceholderEscapeQuote
-Valter,PlaceholderEscapeQuote
-Riev,PlaceholderEscapeQuote
-Caellach,PlaceholderEscapeQuote
-Fado,PlaceholderEscapeQuote
-Ismaire,PlaceholderEscapeQuote
-Hayden,PlaceholderEscapeQuote
-0x2d,PlaceholderEscapeQuote
-0x2e,PlaceholderEscapeQuote
-0x2f,PlaceholderEscapeQuote
-0x30,PlaceholderEscapeQuote
-0x31,PlaceholderEscapeQuote
-0x32,PlaceholderEscapeQuote
-0x33,PlaceholderEscapeQuote
-0x34,PlaceholderEscapeQuote
-0x35,PlaceholderEscapeQuote
-0x36,PlaceholderEscapeQuote
-0x37,PlaceholderEscapeQuote
-0x38,PlaceholderEscapeQuote
-0x39,PlaceholderEscapeQuote
-0x3a,PlaceholderEscapeQuote
-0x3b,PlaceholderEscapeQuote
-0x3c,PlaceholderEscapeQuote
-0x3d,PlaceholderEscapeQuote
-0x3e,PlaceholderEscapeQuote
-0x3f,PlaceholderEscapeQuote
-0x40,PlaceholderEscapeQuote
-0x41,PlaceholderEscapeQuote
-0x42,PlaceholderEscapeQuote
-0x43,PlaceholderEscapeQuote
-0x44,PlaceholderEscapeQuote
-0x45,PlaceholderEscapeQuote
+0x0D Jaime,JaimeEscapeQuote
+0x0E Leonor,LeonorEscapeQuote
+0x0F Ondeh,OndehEscapeQuote
+0x10 Biko,BikoEscapeQuote
+0x11 Tangyuan,TangyuanEscapeQuote
+0x12 Juan,JuanEscapeQuote
+0x13 Matteo,MatteoEscapeQuote
+0x14 Suzanne,SuzanneEscapeQuote
+0x15 Orlando,OrlandoEscapeQuote
+0x16 Rahel,RahelEscapeQuote
+0x17 Saleh,PlaceholderEscapeQuote
+0x18 Husniye,HusniyeEscapeQuote
+0x19 Avocado,AvocadoEscapeQuote
+0x1A Magdalena,MagdalenaEscapeQuote
+0x1B -,PlaceholderEscapeQuote
+0x1C Rennac,PlaceholderEscapeQuote
+0x1D Duessel,PlaceholderEscapeQuote
+0x1E Myrrh,PlaceholderEscapeQuote
+0x1F Knoll,PlaceholderEscapeQuote
+0x20 Joshua,PlaceholderEscapeQuote
+0x21 Syrene,PlaceholderEscapeQuote
+0x22 Tana,PlaceholderEscapeQuote
+0x23 Lyon,PlaceholderEscapeQuote
+0x24 Orson,PlaceholderEscapeQuote
+0x25 Glen,PlaceholderEscapeQuote
+0x26 Selena,PlaceholderEscapeQuote
+0x27 Valter,PlaceholderEscapeQuote
+0x28 Riev,PlaceholderEscapeQuote
+0x29 Caellach,PlaceholderEscapeQuote
+0x2A Fado,PlaceholderEscapeQuote
+0x2B Ismaire,PlaceholderEscapeQuote
+0x2C Hayden,PlaceholderEscapeQuote
+0x2D -,PlaceholderEscapeQuote
+0x2E -,PlaceholderEscapeQuote
+0x2F -,PlaceholderEscapeQuote
+0x30 -,PlaceholderEscapeQuote
+0x31 -,PlaceholderEscapeQuote
+0x32 -,PlaceholderEscapeQuote
+0x33 -,PlaceholderEscapeQuote
+0x34 -,PlaceholderEscapeQuote
+0x35 -,PlaceholderEscapeQuote
+0x36 -,PlaceholderEscapeQuote
+0x37 -,PlaceholderEscapeQuote
+0x38 -,PlaceholderEscapeQuote
+0x39 -,PlaceholderEscapeQuote
+0x3A -,PlaceholderEscapeQuote
+0x3B Lyon's Summon,PlaceholderEscapeQuote
+0x3C <Summon>,PlaceholderEscapeQuote
+0x3D <'Summonern'>,PlaceholderEscapeQuote
+0x3E Knoll's Summon,PlaceholderEscapeQuote
+0x3F Ewan's Summon,PlaceholderEscapeQuote
+0x40 idk yet,PlaceholderEscapeQuote
+0x41 Alonso,PlaceholderEscapeQuote
+0x42 Elodia,PlaceholderEscapeQuote
+0x43 Triana,TrianaEscapeQuote
+0x44 Medwyn,MedwynEscapeQuote
+0x45 Bartz,BartzEscapeQuote
 0x46,PlaceholderEscapeQuote
 0x47,PlaceholderEscapeQuote
 0x48,PlaceholderEscapeQuote

@@ -60,37 +60,29 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
 		}
 
         int levelDiff = GetLevelDifference(actor, target);
-        int bossFactor = 1;
-        if (target->unit.pCharacterData->attributes & CA_BOSS){
-				bossFactor = 2;
-		}
 		// killed
 		if (target->unit.curHP == 0){		
-            int expFromLevelDiff = 6 * levelDiff;
-            if (expFromLevelDiff > 30){
-                expFromLevelDiff = 30;
-            }
-            int initialKillExp = (30 + expFromLevelDiff) * bossFactor;
+            int initialKillExp = 25 + 5 * levelDiff;
 
 			if(initialKillExp <= 5){
 				return 5;
 			}
-			else if(initialKillExp >= 100){
-				return 100;
-			}
+            else if (initialKillExp >= 50){
+                return 50;
+            }
 			else{
-				return initialKillExp;
+				return initialKillExp; //50 kill exp cap
 			}
 		}
 
 		// hit
-		int initialHitExp = 10 + 2 * levelDiff;
+		int initialHitExp = 5 + 1 * levelDiff;
 
 			if(initialHitExp <= 1){
 				return 1;
 			}
-			else if(initialHitExp >= 20){
-				return 20;
+			else if(initialHitExp >= 10){
+				return 10;
 			}
 			else{
 				return initialHitExp;
@@ -249,11 +241,11 @@ int GetStealExpValue(int item){
     
     int stealExp = totalCost / 50 + GetLevelDifference(&gBattleActor, &gBattleTarget) * 2;
 
-    if (stealExp >= 20){
-        return 20;
+    if (stealExp >= 15){
+        return 15;
     }
-    else if (stealExp <= 1){
-        return 1;
+    else if (stealExp <= 2){
+        return 2;
     }
     else{
         return stealExp;
@@ -314,11 +306,13 @@ int CanUnitRescue(const struct Unit* actor, const struct Unit* target){
         return false; //cannot be rescued
     }
 
-    
+    if (LuaIsInHub(gActiveUnit)){ //unit doesn't matter
+        return false;
+    }
+
     int actorAid  = GetUnitAid(actor);
     int targetCon = UNIT_CON(target);
 
-    
     return (actorAid >= targetCon) ? TRUE : FALSE;
 }
 
@@ -348,7 +342,7 @@ void ApplyUnitDefaultPromotion(struct Unit* unit) {
         unit->pow = 30;
     }
 
-	unit->mag += (MagClassTable[promotedClass->number].promotionMag - MagClassTable[currentClass->number].promotionMag);
+	unit->mag += (MagClassTable[promotedClass->number].baseMag - MagClassTable[currentClass->number].baseMag);
 
 	if (unit->mag > 30){
         unit->mag = 30;
@@ -432,7 +426,7 @@ void ApplyUnitPromotion(struct Unit* unit, u8 classId) {
         unit->pow = 30;
     }
 
-	unit->mag += (MagClassTable[promotedClass->number].promotionMag - MagClassTable[currentClass->number].promotionMag);
+	unit->mag += (MagClassTable[promotedClass->number].baseMag - MagClassTable[currentClass->number].baseMag);
 
 	if (unit->mag > 30){
         unit->mag = 30;
@@ -554,7 +548,7 @@ int CanUnitUseWeapon(struct Unit* unit, int item) {
     if (GetItemAttributes(item) & IA_LOCK_ANY) {
         // Check for item locks
 
-        if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1))
+        if ((GetItemAttributes(item) & IA_LOCK_4) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_4))
             return FALSE;
 
         if (GetItemAttributes(item) & IA_UNUSABLE)
@@ -711,7 +705,7 @@ void UnitAutolevelCore(struct Unit* unit, int classId, int levelCount) {
         else{
             unit->maxHP += GetAutoleveledStatIncrease(unit->pClassData->growthHP,  levelCount);
             unit->pow   += GetAutoleveledStatIncrease(unit->pClassData->growthPow, levelCount);
-            unit->mag   += GetAutoleveledStatIncrease(MagCharTable[unit->pClassData->number].growthMag, levelCount);
+            unit->mag   += GetAutoleveledStatIncrease(MagClassTable[unit->pClassData->number].growthMag, levelCount);
             unit->skl   += GetAutoleveledStatIncrease(unit->pClassData->growthSkl, levelCount);
             unit->spd   += GetAutoleveledStatIncrease(unit->pClassData->growthSpd, levelCount);
             unit->def   += GetAutoleveledStatIncrease(unit->pClassData->growthDef, levelCount);
@@ -798,4 +792,68 @@ s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) {
     }
 
     return 1;
+}
+
+
+int GetUnitLuckCap(Unit* unit){
+    if (unit->pClassData->attributes & CA_PROMOTED){
+        return 30; //unpromo'd units get 25 cap
+    }
+    else{
+        return 20;
+    }
+}
+
+void CheckBattleUnitStatCaps(struct Unit* unit, struct BattleUnit* bu) {
+    if ((unit->maxHP + bu->changeHP) > UNIT_MHP_MAX(unit)){
+        bu->changeHP = UNIT_MHP_MAX(unit) - unit->maxHP;
+    }
+    if ((unit->pow + bu->changePow) > UNIT_POW_MAX(unit)){
+        bu->changePow = UNIT_POW_MAX(unit) - unit->pow;
+    }
+    if ((unit->mag + bu->changeMag) > MagClassTable[unit->pClassData->number].maxMag){
+        bu->changeMag = MagClassTable[unit->pClassData->number].maxMag - unit->mag;
+    }
+    if ((unit->skl + bu->changeSkl) > UNIT_SKL_MAX(unit)){
+        bu->changeSkl = UNIT_SKL_MAX(unit) - unit->skl;
+    }      
+    if ((unit->spd + bu->changeSpd) > UNIT_SPD_MAX(unit)){
+        bu->changeSpd = UNIT_SPD_MAX(unit) - unit->spd;
+    }
+    if ((unit->def + bu->changeDef) > UNIT_DEF_MAX(unit)){
+        bu->changeDef = UNIT_DEF_MAX(unit) - unit->def;
+    }
+    if ((unit->res + bu->changeRes) > UNIT_RES_MAX(unit)){
+        bu->changeRes = UNIT_RES_MAX(unit) - unit->res;
+    }
+    if ((unit->lck + bu->changeLck) > GetUnitLuckCap(unit)){
+        bu->changeLck = GetUnitLuckCap(unit) - unit->lck;
+    } 
+}
+
+void UnitCheckStatCaps(struct Unit* unit) {
+    if (unit->maxHP > UNIT_MHP_MAX(unit)){
+        unit->maxHP = UNIT_MHP_MAX(unit);
+    }      
+    if (unit->pow > UNIT_POW_MAX(unit)){
+        unit->pow = UNIT_POW_MAX(unit);
+    }
+    if (unit->mag > MagClassTable[unit->pClassData->number].maxMag){
+        unit->mag = MagClassTable[unit->pClassData->number].maxMag;
+    } 
+    if (unit->skl > UNIT_SKL_MAX(unit)){
+        unit->skl = UNIT_SKL_MAX(unit);
+    }       
+    if (unit->spd > UNIT_SPD_MAX(unit)){
+        unit->spd = UNIT_SPD_MAX(unit);
+    }   
+    if (unit->def > UNIT_DEF_MAX(unit)){
+        unit->def = UNIT_DEF_MAX(unit);
+    }       
+    if (unit->res > UNIT_RES_MAX(unit)){
+        unit->res = UNIT_RES_MAX(unit);
+    }
+    if (unit->lck > GetUnitLuckCap(unit)){
+        unit->lck = GetUnitLuckCap(unit);
+    }
 }

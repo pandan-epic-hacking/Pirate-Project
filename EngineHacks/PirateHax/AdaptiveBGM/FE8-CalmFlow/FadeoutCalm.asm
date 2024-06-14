@@ -23,12 +23,28 @@ cmp		r6,r0
 bne		Fadeout			@ Fade-out if sound/music argument is not the map BGM or...
 ldr		r0,=BGMSTRUCT
 ldrh	r0,[r0,#0x4]
-ldr		r7,=MusicID
-cmp		r0,r7
-bne		Fadeout			@ Fade-out if BGM is not Desire below or...
-cmp		r5,#0xD
-bgt		Fadeout			@ Fade-out if track is 0, 1 or 2 (decimal).
+ldr		r7,CalmFlowList
+push    {r1}
+LoopStart:
+ldrh	r1,[r7]
+cmp		r1,#0
+beq		FadeoutFromLoop @ Fade-out if BGM doesn't use this
+cmp     r0,r1
+beq     LoopExit
+add     r7,r7,#4
+b       LoopStart
+
+LoopExit:
+pop     {r1}
+ldrh    r7,[r7,#2]
+sub     r7,r7,#16
+neg     r7,r7
+cmp		r5,r7		
+bgt		Fadeout			@ Fade-out if track is in the calm range
 b		NextIteration
+
+FadeoutFromLoop:
+pop {r1}
 
 Fadeout:
 ldrh	r7,[r6,#0x28]
@@ -47,3 +63,9 @@ bgt		Loop
 @return
 pop		{r0}
 bx		r0
+
+.ltorg
+.align
+
+CalmFlowList:
+@POIN CalmFlowList

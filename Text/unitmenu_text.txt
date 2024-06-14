@@ -211,4 +211,21 @@ Select an area to Heal. Press L/R to Rotate.[X]
  Thunder[X]
 ## UM_AoEExcalibur
  Excalibur[X]
+
+## UM_Shuffle
+ Shuffle[X]
+
+## UM_ShuffleDesc
+Round and round she goes...[X]
+
+## ShuffleHelpText
+Select a unit whose weapons to shuffle.[X]
+
+## UM_Swift
+ Swift[X]
  
+## UM_SwiftDesc
+An ally's haste quickens.[X]
+
+## SwiftHelpText
+Select a unit to hasten movement of.[X]

@@ -31,3 +31,5 @@ GutsID_Link:
 WORD GutsID 
 
 #include "WellRested/WellRested.event"
+
+#include "Swift/Installer.event"

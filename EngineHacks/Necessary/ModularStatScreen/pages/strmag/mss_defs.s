@@ -308,6 +308,24 @@
   blh     DrawBar, r4
 .endm
 
+.macro draw_hp_bar_at, bar_x, bar_y
+  mov     r0, r8
+  blh     MaxHPGetter
+  mov     r1, r8  
+  mov     r3, #0x13
+  ldsb    r3, [r1, r3]
+  str     r0, [sp]     
+  ldr     r0, [r1, #0x4]  @class
+  ldrb    r0, [r0, #0x13]  @stat cap
+  lsl     r0, r0, #0x18    
+  asr     r0, r0, #0x19   @divided by 2    
+  str     r0, [sp, #0x4]    
+  mov     r0, #0x9    
+  mov     r1, #(\bar_x-11)
+  mov     r2, #(\bar_y-2)
+  blh     DrawBar, r4
+.endm
+
 .macro draw_str_bar_at, bar_x, bar_y
   draw_bar_at \bar_x, \bar_y, StrGetter, 0x14, 0
 .endm
@@ -351,18 +369,19 @@
 .endm
 
 .macro draw_luck_bar_at, bar_x, bar_y
-  mov     r0, r8
-  blh     LuckGetter
+  mov r0, r8
+  blh     LuckGetter   
+  str     r0,[sp]
+  mov 	  r0, r8
+  blh	  GetUnitLuckCap
+  str     r0,[sp,#0x4]  
   mov     r1, r8  
   mov     r3, #0x19
-  ldsb    r3, [r1, r3]     
-  str     r0, [sp]     
-  mov     r0, #0x1e  @cap is always 30
-  str     r0, [sp, #0x4]    
-  mov     r0, #0x6   
-  mov     r1, #(\bar_x-11)
-  mov     r2, #(\bar_y-2)
-  blh     DrawBar, r4
+  ldsb    r3,[r1,r3]  
+  mov     r0,#0x6  
+  mov     r1,#(\bar_x-11)
+  mov     r2,#(\bar_y-2)
+  blh      DrawBar, r4
 .endm
 
 .macro draw_def_bar_at, bar_x, bar_y
@@ -418,9 +437,9 @@
   DrawMove:
   add     r0, r0, r3     
   str     r0, [sp]     @r0 is total, r3 is base
-  mov     r6, #0xF     
+  mov     r6, #0x14     
   str     r6, [sp, #0x4]
-  mov     r0, #0x6      @why 6?
+  mov     r0, #0x8      @why 6?
   mov     r1, #(\bar_x-11)
   mov     r2, #(\bar_y-2)   
   blh     DrawBar, r4
@@ -446,7 +465,7 @@
     mov     r3, r0
   MoveNotNegated:
   str     r0, [sp] @final
-  mov     r6, #0xF
+  mov     r6, #0x14
   str     r6, [sp, #4]
   mov     r0, #0x8    
   mov     r1, #(\bar_x-11)
@@ -455,20 +474,9 @@
 .endm
 
 .macro draw_move_number_at, tile_x, tile_y
-  mov     r1, r8
-  ldr     r0, [r1, #0x4] @class
-  mov     r3, #0x12     @move
-  ldsb    r3, [r0, r3]  
-  mov     r0, #0x1D     @bonus
-  ldsb    r0, [r1, r0]   
-  cmp     r0, #0
-  beq     MoveNotBoosted
-  mov     r1, #Green
-  b       FromMoveBoosted
-  MoveNotBoosted:
+  mov     r0, r8
+  blh     MovGetter 
   mov     r1, #Blue
-  FromMoveBoosted:
-  add     r0, r0, r3
   draw_number_at \tile_x, \tile_y
 .endm
 
@@ -1360,7 +1368,7 @@ SkipPool:
   blh     DrawDecNumber
 .endm
 
-.macro draw_max_hp
+.macro draw_max_hp, tile_x, tile_y
   ldr     r0, [r7, #0xC]    @unit pointer
   blh     MaxHPGetter
   cmp     r0, #100
@@ -1368,9 +1376,9 @@ SkipPool:
   mov     r0, #0
   sub     r0, #1
   DrawMaxHP:
-  ldr     r4, =#0x20230F6 @somewhere in bg0 buffer
   mov     r2, r0
-  mov     r0, r4
+  ldr     r0, =(0x20*2*\tile_y)+(2*\tile_x)
+  add     r0, r8
   mov     r1, #2
   blh     DrawDecNumber
   DrawMaxHP_End:

@@ -116,7 +116,7 @@ Bartz[X]
 ## BartzDesc
 Deserter[N]
 A soldier turned to a life of piracy.[N]
-Fights with no regards for honour.[X]
+Fights with no regard for honour.[X]
 
 ## JaimeName
 Jaime[X]
@@ -138,7 +138,7 @@ is always looking for new opportunities.[X]
 Ondeh[X]
 
 ## OndehDesc
-Hunter.[N]
+Hunter[N]
 A young woman forced to grow up[N]
 too soon. Biko's elder sister.[X]
 
@@ -146,7 +146,7 @@ too soon. Biko's elder sister.[X]
 Biko[X]
 
 ## BikoDesc
-Laborer.[N]
+Laborer[N]
 A young man trying to find[N]
 his confidence. Ondeh's brother.[X]
 
@@ -154,7 +154,9 @@ his confidence. Ondeh's brother.[X]
 Juan[X]
 
 ## JuanDesc
- [X]
+Conman[N]
+A suave rogue who always finds his[N]
+pockets full, whether by word or deed.[X]
 
 ## MatteoName
 Matteo[X]
@@ -193,8 +195,32 @@ Rahel[X]
 
 ## RahelDesc
 Carpenter[N]
-As skilled with her bow as her hammer,[N]
+More skilled with a hammer than a bow,[N]
 she repairs ships with a curt nod.[X]
+
+## HusniyeName
+Husniye[X]
+
+## HusniyeDesc
+Courtesan[N]
+A foreign thief, poor and desperate.[N]
+One of the murder suspects.[X]
+
+## AvocadoName
+Avocado[X]
+
+## AvocadoDesc
+Retiree[N]
+A haunted former soldier of Incendivis.[N]
+One of the murder suspects.[X]
+
+## MagdalenaName ^
+Magdalena[X]
+
+## MagdalenaDesc
+Magistrate[N]
+Governor of Port Receloso, broken[N]
+with stress by the recent murders.[X]
 
 ## KhazhakName
 Khazhak[X]
@@ -272,8 +298,8 @@ in the vicinity with a fiery grave![X]
 Explosive[X]
 
 ## BombClassDesc
-No armor can withstand its power.[N]
-Disarm it if you hope to survive.[X]
+Weapons: None[N]
+Traits: Countdown[X]
 
 ## BuzuName
 Buzu[X]
@@ -327,10 +353,10 @@ A full-time officer of House Sanz's[N]
 ever-increasing guard regime.[X]
 
 ## SargargalaName
-Sargargala[X]
+Sagargala[X]
 
 ## SargargalaDesc
-First Mate
+First Mate[N]
 2nd in command of the Rioja Reapers.[N]
 Wary of change.[X]
 
@@ -338,7 +364,9 @@ Wary of change.[X]
 R. Reaper[X]
 
 ## LogPirateDesc
- [X]
+Grunt[N]
+Ne'er-do-wells that buy and sell humans.[N]
+Use the profits for fine wine.[X]
 
 ## A3LogName
 Trunk[X]
@@ -461,21 +489,409 @@ Legend[N]
 The Closer is known for being able to [N]
 close down any problem. For a price.[X]
 
-## A4PirateName
-Pirate[X]
+## RazorbloodName
+Razorblood[X]
 
-## A4PirateDesc
- [X]
+## RazorbloodDesc
+Grunt[N]
+Even among pirates, the Razorbloods are[N]
+feared and reviled for their savagry.[X]
 
-## A4PirateBossName
-Pirate Boss[X]
+## StingrayName
+Stingray[X]
 
-## A4PirateBossDesc
- [X]
+## StingrayDesc
+Captain[N]
+The most vicious of the Razorbloods.[N]
+Enthusiatic about his cruel work.[X]
 
-## A4RebelBossName
-Rebel Boss[X]
+## RamiroName
+Ramiro[X]
 
-## A4RebelBossDesc
- [X]
+## RamiroDesc
+Commander[N]
+Leader of a rebel raiding party.[N]
+A zealot dedicated to the cause.[X]
 
+## TorchUnitName
+T.O.R.C.H.[X]
+
+## TorchUnitDesc
+Members of an elite group tasked[N]
+with maintaining Incendivis order.[X]
+
+## IgniswordsName
+Igniswords[X]
+
+## IgniswordsDesc
+Pirates who cast aside their pride,[N]
+becoming privateers of Incendivis.[X]
+
+## IgnacioName
+Ignacio[X]
+
+## IgnacioDesc
+Captain[N]
+A greedy mage warrior clad in armor[N]
+who orders his crew around like minions.[X]
+
+## ElodiaName
+Elodia[X]
+
+## ElodiaDesc
+Commander[N]
+A senior member of TORCH[N]
+known as the [OQ]Pirate Hunter.[CQ][X]
+
+## HugoName
+Hugo[X]
+
+## HugoDesc
+Sub-Commander[N]
+One of Elodia's chief subordinates.[N]
+Loves brawling, which led him to TORCH.[X]
+
+## JulianaName
+Juliana[X]
+
+## JulianaDesc
+Sub-Commander[N]
+One of Elodia's chief subordinates.[N]
+Prefers slacking off over doing her job.[X]
+
+## IdaName
+Ida[X]
+
+## IdaDesc
+Guildmaster[N]
+The boss of the Shipwright's Guild.[N]
+Has a soft spot for Lua's crew.[X]
+
+## DocksmanName
+Docksman[X]
+
+## DocksmanDesc
+Deckhand[N]
+Port crawlers who guard their crew's[N]
+airship from any nosy onlookers.[X]
+
+## DmitrName
+Dmitr[X]
+
+## DmitrDesc
+Wanderer[N]
+A wayward warrior, adrift[N]
+like the sand in the wind.[X]
+
+## KirilName
+Kiril[X]
+
+## KirilDesc
+Lacewing[N]
+He who leads the Antlions[N]
+to dominance of the desert.[X]
+
+## AntlionName
+Antlion[X]
+
+## AntlionDesc
+Marauder[N]
+Criminals who trap unfortunate[N]
+travelers like prey.[X]
+
+## GreagorVillagerName
+Villager[X]
+
+## GreagorVillagerDesc
+Commoner[N]
+An inhabitant of Port Greagor,[N]
+unshackled by typical empire law.[X]
+
+## GreagorSailorName
+Sailor[X]
+
+## GreagorSailorDesc
+Mariner[N]
+Though docked, these deckhands[N]
+rigorously continue their duties.[X]
+
+## GreagorPatrollerName
+Patroller[X]
+
+## GreagorPatrollerDesc
+Recon[N]
+Aerial scouts of Port Greagor,[N]
+keeping tabs on incoming ships.[X]
+
+## GreagorLibrarianName
+Librarian[X]
+
+## GreagorLibrarianDesc
+Scholar[N]
+Bookkeepers in Lua's cove, allowed[N]
+to study without direct affiliation.[X]
+
+## GreagorGuardName
+Guard[X]
+
+## GreagorGuardDesc
+Watchman[N]
+Said to be dutiful to the Greagor Five.[N]
+...Usually just a bored mercenary.[X]
+
+## GreagorSmugglerName
+Smuggler[X]
+
+## GreagorSmugglerDesc
+Legitimate Merchant[N]
+Sneaks around empire contraband, like[N]
+alcohol, tobacco, and chocolate eggs.[X]
+
+## GreagorShipwrightName
+Shipwright[X]
+
+## GreagorShipwrightDesc
+Ship Artisian[N]
+Member of the Shipwright's guild.[N]
+Adept in repairing ships to be airworthy.[X]
+
+## GreagorCaptainName
+Captain[X]
+
+## GreagorCaptainDesc
+Skipper[N]
+Leader of a vessel docked at port.[N]
+Probably not up to much good.[X]
+
+## GreagorPatronName
+Patron[X]
+
+## GreagorPatronDesc 
+Reveler[N]
+Patron at one of the port's taverns.[N]
+...Worried about his drinking buddy.[X]
+
+## GreagorPatronDrunkName
+Patron[X]
+
+## GreagorPatronDrunkDesc 
+Reveler[N]
+Patron at one of port's taverns.[N]
+Issssh havin'...th'tim ooo'his lyyyfe![X]
+
+## GreagorPeddlerName
+Peddler[X]
+
+## GreagorPeddlerDesc
+Purveyor[N]
+A wandering trader of exotic proportions.[N]
+May have a few powerful connections...[X]
+
+## FataName
+Fata[X]
+
+## FataDesc
+Hermit[N]
+Behind her illusions and crabby[N]
+exterior is a kind heart... allegedly.[X]
+
+## FataDescOld
+Intern[N]
+Not paid enough for her responsibilities,[N]
+which continue to grow by the second.[X]
+
+## YadneyName
+Yadney[X]
+
+## YadneyDesc
+Ringleader[N]
+This wandering warrior led the local[N]
+Rebels to the lofty heights of banditry.[X]
+
+## CruzName
+Cruz[X]
+
+## CruzDesc
+Magician[N]
+A reclusive mage with Rebel sympathies,[N]
+and a covert assassin for their cause.[X]
+
+## CruzFakeDesc
+Magician[N]
+A reclusive mage with Rebel sympathies.[N]
+One of the murder suspects.[X]
+
+## RecelosoPriestName
+Quim[X]
+
+## RecelosoPriestDesc
+Acolyte[N]
+Gruffness, faith, and anger, all stepping[N]
+up to lead in Father Gavriel's absence.[X]
+
+## RecelosoCorpseName
+Gavriel[X]
+
+## RecelosoCorpseDesc
+Corpse[N]
+Once Port Receloso's religious leader.[N]
+Now, he's just another dead body.[X]
+
+## RecelosoStudentName
+Fogaca[X]
+
+## RecelosoStudentDesc
+Student[N]
+A historian in training, learning some[N]
+magical secrets from Cruz's library.[X]
+
+## RecelosoGuardName
+Dario[X]
+
+## RecelosoGuardDesc
+Town Guard[N]
+Port Receloso needs little guarding, but[N]
+Dario keeps faithful watch nontheless.[X]
+
+## RecelosoBarkeepName
+Thais[X]
+
+## RecelosoBarkeepDesc
+Barkeep[N]
+A full bottle, a lively counter, and[N]
+a place of joy in tragic times.[X]
+
+## B4BanditsName
+Bandit[X]
+
+## B4BanditsDesc
+Members of a gang running this town.[N]
+Little more than flightless pirates.[X]
+
+## JavierName
+Javier[X]
+
+## JavierDesc
+Extortionist[N]
+Cutthroat ruler of a mob of bandits.[N]
+Rules over this town with an iron fist.[X]
+
+## AdrianName
+Adrian[X]
+
+## AdrianDesc
+Desperado[N]
+A wandering renegade turned to banditry.[N]
+He's a merciless bully, but good in a fight.[X]
+
+## LexaName
+Lexa[X]
+
+## LexaDesc
+Desperado[N]
+A skilled blade who fights using cheap[N]
+tricks. Her foes lay dead nontheless.[X]
+
+## NoahName
+Noah[X]
+
+## NoahDesc
+Guardsman[N]
+A rookie town guard with an enthusiastic[N]
+mindset. Endearing if nothing else.[X]
+
+## PonteName
+Ponte[X]
+
+## PonteDesc
+Carpenter[N]
+A well-known and praised craftsman,[N]
+willing to work if the price is right.[X]
+
+## PassarolaName
+Passarola[X]
+
+## PassarolaDesc
+Tinkerer[N]
+A forward-thinking cleric[N]
+fascinated by ostensible boondoggles.[X]
+
+## NeltumeName
+Neltume[X]
+
+## NeltumeDesc
+Botanist[N]
+A stoic man who prefers[N]
+plants to people.[X]
+
+## FlintName
+Flint[X]
+
+## FlintDesc
+Gambler[N]
+Gladly leaves everything to chance,[N]
+despite losing his eye to it.[X]
+
+## GeraldName
+Gerald[X]
+
+## GeraldDesc
+Outlaw[N]
+Desperately clings onto marksmanship,[N]
+despite maiming his shooting arm.[X]
+
+## ErnestName
+Ernest[X]
+
+## ErnestDesc
+Scout[N]
+A former sky eye for the Roseblades[N]
+who failed them when it mattered most.[X]
+
+## KaiName
+Kai[X]
+
+## KaiDesc
+Scavenger[N]
+Taking anything he can get his hands on,[N]
+he wanders with no direction or purpose.[X]
+
+## AzaharName
+Azahar[X]
+
+## AzaharDesc
+Rebel Captain[N]
+The leader of a group of rebels[N]
+who have sunk to plundering.[X]
+
+## NicodemusName ^
+Nicodemus[X]
+
+## NicodemusDesc
+Maverick[N]
+A T.O.R.C.H. soldier with a daring plan[N]
+to take down Lua and seize his glory.[X]
+
+## DalilaName
+Dalila[X]
+
+## DalilaDesc
+First Mate[N]
+A founding member of the Blackhearts[N]
+whose loyalty is unbreakable.[X]
+
+## AlonsoName
+Alonso[X]
+
+## AlonsoEnemyDesc
+Captain[N]
+A ruthless pirate boss who has sworn[N]
+to hunt Lua til the horizon ends.[X]
+
+## BlackheartEliteName
+Blackbows[X]
+
+## BlackheartEliteDesc
+Elite[N]
+Known for their unflinching arrows[N]
+that pierce their enemies' hearts.[X]

@@ -20,8 +20,6 @@ push	{r14}
 
 ldr		r0,=MapBGM
 mov		r9,r0
-ldr		r0,=MusicID
-mov		r10,r0
 
 @ Previously overwritten
 @ldr		r0, =gpEkrBattleDeamon
@@ -45,12 +43,29 @@ beq		NextIteration			@ Only increase volume if track is present
 MapBGMCheck:
 cmp		r4,r9
 bne		AdjustAudio				@ Normal behaviour if sound/music argument is not the map BGM
+
 ldr		r0,=BGMSTRUCT
-ldrh	r0,[r0,#0x4]
-cmp		r0,r10
-bne		AdjustAudio				@ Normal behaviour if BGM is not Desire below
-cmp		r2,#0xD
-bgt		NextIteration			@ Don't mute if track is 0, 1 or 2
+ldrh	r0,[r0,#0x4] @r0 = the song we're looking for in the table
+push 	{r1,r2}
+ldr 	r1,CalmFlowList
+LoopStart:
+ldrh 	r2,[r1]
+cmp  	r2,#0
+beq  	AdjustAudioFromLoop @ Normal behaviour if not CalmFlow song
+cmp  	r0,r2
+beq  	LoopExit
+add  	r1,r1,#4
+b    	LoopStart
+
+LoopExit:
+ldrh 	r1,[r1,#2]
+mov  	r2,#16
+sub  	r1,r2,r1
+mov  	r10,r1
+pop 	{r1,r2}
+
+cmp		r2,r10
+bgt		NextIteration			@ Don't mute if track is in calm range
 
 @ Keep tracks muted if BGM switches
 ldr		r0,=InitBattle
@@ -78,6 +93,10 @@ bne		AdjustAudio				@ If Exception2 didn't happen, apply regular behaviour
 
 Mute:
 mov		r6,#0x0					@ Mute audio
+b AdjustAudio
+
+AdjustAudioFromLoop:
+pop {r1,r2}
 
 AdjustAudio:
 strb	r6,[r1,#0x13]
@@ -95,3 +114,9 @@ bgt		Loop
 @return
 pop		{r0}
 bx		r0
+
+.ltorg
+.align
+
+CalmFlowList:
+@POIN CalmFlowList

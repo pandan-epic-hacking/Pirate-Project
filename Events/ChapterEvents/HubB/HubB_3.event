@@ -1,0 +1,372 @@
+#define KaiTalkFlag 7
+#define LeandraErnestTalkFlag 8
+// 0x9-0xD: Battle Quotes
+// 0xE - AREA event for Azahar fleeing (causes a Game Over)
+#define AzaharEscapesFlag 0xE
+#define RebelThiefDeathQuoteFlag 0xF
+#define WasARebelKilledFlag 0x10
+
+EventPointerTable(HubB_3EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, B3FirstTurnEvent, 1)
+//TurnEventPlayer(0, B3ThievesReinforcement1, 2)
+TurnEventPlayer(0, B3KaiIntroductionEvent, 3)
+TurnEventPlayer(0, MoreThievesShowUp, 3)
+TurnEventPlayer(0, B3KaiFleesEvent, 4)
+TurnEventPlayer(0, YetAnotherThiefShowsUp, 7)
+TurnEventPlayer(0, B3AzaharWarnsThatSheWillLeave, 10)
+TurnEventEnemy(0, B3AzaharLeaves, 10)
+END_MAIN
+
+MoreThievesShowUp:
+SpawnReinforcements(TopThief)
+SpawnReinforcements(BotThief)
+NoFade
+ENDA
+
+TopThief:
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [21,1] 0 0 0 0 [SteelKnife, ChestKey] ThieveryAI
+UNIT
+
+BotThief:
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [19,17] 0 0 0 0 [SteelKnife, ChestKey] ThieveryAI
+UNIT
+
+B3FirstTurnEvent:
+CameraCursor(Azahar)
+Text(B3AzaharIntroduction)
+CenterTextbox(B3MapObjectiveExplanation)
+NoFade
+ENDA
+
+B3KaiIntroductionEvent:
+CHECK_ALIVE Kai
+BEQ 776 s0 sC
+    CHECK_ALLEGIANCE Kai
+    BEQ 776 s0 sC //if it returns 0, he's a player, so skip this
+        CameraCursor(Kai)
+        Text(B3KaiIntroduction)
+LABEL 776
+NoFade
+ENDA
+
+B3KaiFleesEvent:
+CHECK_ALIVE Kai
+BEQ 776 s0 sC
+    CHECK_ALLEGIANCE Kai
+    BEQ 776 s0 sC //if it returns 0, he's a player, so skip this
+    CameraCursor(Kai)
+    Text(B3KaiFleeWarning)
+    SetAI(Kai,0x6,0xC,0x4,0x0)
+LABEL 776
+NoFade
+ENDA
+
+YetAnotherThiefShowsUp:
+SpawnReinforcements(FinalThief)
+NoFade
+ENDA
+
+FinalThief:
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [30,17] 0 0 0 0 [SilverKnife, SuppliesItem] EscapeOnlyAI
+UNIT
+
+B3AzaharWarnsThatSheWillLeave:
+CameraCursor(Azahar)
+Text(B3AzaharWarningText)
+LABEL 776
+NoFade
+ENDA
+
+B3AzaharLeaves:
+CameraCursor(Azahar)
+Text(B3AzaharEscapesText_1)
+MOVE 15 Azahar [28,0]
+ENUN
+REMOVEUNIT Azahar
+STAL 10
+CameraCursor(Lua)
+Text(B3AzaharEscapesText_2)
+CALL GameOverStart
+LABEL 776
+NoFade
+ENDA
+
+CharacterBasedEvents:
+CharacterEventBothWays(KaiTalkFlag, KaiPilarTalkEvent, Pilar, Kai)
+CharacterEventBothWays(KaiTalkFlag, KaiLuaTalkEvent, Lua, Kai)
+CharacterEventBothWays(LeandraErnestTalkFlag, LeandraErnestTalkEvent, Leandra, Ernest)
+END_MAIN
+
+KaiPilarTalkEvent:
+Text(B3KaiPilarTalk)
+CUSA Kai
+SetAI(Kai,0,0,0,0)
+NoFade
+ENDA
+
+KaiLuaTalkEvent:
+Text(B3KaiLuaTalk)
+CUSA Kai
+SetAI(Kai,0,0,0,0)
+NoFade
+ENDA
+
+LeandraErnestTalkEvent:
+Text(B3LeandraErnestTalk)
+NoFade
+ENDA
+
+LocationBasedEvents:
+Chest(SuppliesItem, 16, 7)
+Chest(SuppliesItem, 25, 12)
+Chest(SuppliesItem, 25, 13)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AFEV 1 SetGenericBattleQuote 0x9
+AFEV 1 SetGenericBattleQuote 0xA
+AFEV 1 SetGenericBattleQuote 0xB
+AFEV 1 SetGenericBattleQuote 0xC
+AFEV 1 SetGenericBattleQuote 0xD
+AFEV 0 RunEventAfterKillingThief RebelThiefDeathQuoteFlag
+END_MAIN
+
+SetGenericBattleQuote: //this just sets the generic battle quote to not trigger if a specific one comes first
+NoFade
+ENDA
+
+RunEventAfterKillingThief:
+ENUT WasARebelKilledFlag //shows that you killed a rebel, run this no matter how many are killed
+DoesBattleTargetHaveSupplies
+BEQ 776 s0 sC //if they do not, then we skip giving the supplies to the active unit
+    GiveItem(SuppliesItem, 0xFFFF)
+LABEL 776
+ENUF RebelThiefDeathQuoteFlag //unset the flag so it can happen more than once
+NoFade
+ENDA
+
+Traps1:
+RedSigil(28,0)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+//Group 1, bottom - 7 units
+UNIT Lua Captain 0 Level(10,Ally,False) [5,15] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [3,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [4,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [5,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [6,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [5,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [7,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+
+//Group 2, top - 5 units
+UNIT Desiderio 0 0 Level(10,Ally,False) [4,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [6,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [5,1] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [7,1] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [6,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+NewUnits:
+UNIT Ernest Gryphoknight 0 Level(10,Ally,False) [10,12] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
+UNIT
+
+EnemyUnits:
+//end battle
+UNIT Azahar Champion 0 Level(13, Enemy, True) [28,1] 0 0 0 0 [Spear, SilverSword] BossAI
+
+UNIT Rebel Hero 0 Level(11,Enemy,True) [30,3] 0 0 0 0 [Peacekeeper, HandAxe] GroupOneAI
+UNIT Rebel Mercenary 0 Level(10,Enemy,True) [29,2] 0 0 0 0 [SteelBlade] GroupOneAI
+UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [31,2] 0 0 0 0 [KillingEdge] GroupOneAI
+
+//murderhollace enemies
+UNIT Rebel Archer 0 Level(10,Enemy,True) [11,7] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT Rebel Archer 0 Level(10,Enemy,True) [13,8] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT Rebel Hunter 0 Level(10,Enemy,True) [12,0] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT Rebel Hunter 0 Level(10,Enemy,True) [14,16] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [12,2] 0 0 0 0 [Javelin] BossAI
+
+UNIT Rebel Archer 0 Level(10,Enemy,True) [23,1] 0 0 0 0 [Longbow] AttackInRangeAI
+UNIT Rebel Archer 0 Level(10,Enemy,True) [26,3] 0 0 0 0 [Longbow] AttackInRangeAI
+
+//kai group (turn 2-3)
+UNIT Kai Ninja 0 Level(7,Enemy,True) [17,0] 0 0 0 0 [IronKnife, RuneDagger] BossAI
+UNIT Rebel Rogue 0 Level(11,Enemy,True) [18,1] 0 0 0 0 [Stiletto, SteelKnife] BossAI
+UNIT Rebel Thief 0 Level(11,Enemy,True) [19,0] 0 0 0 0 [SteelKnife] BossAI
+
+
+//turn 1
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [8,12] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [6,10] 0 0 0 0 [IronKnife] PursueWithoutHeedAI
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [4,12] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT Rebel Mercenary 0 Level(10,Enemy,True) [8,3] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
+
+//fleeing thieves
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [7,8] 0 0 0 0 [IronKnife, SuppliesItem] EscapeOnlyAI
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [16,7] 0 0 0 0 [IronKnife, ChestKey] ThieveryAI
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [11,0] 0 0 0 0 [IronKnife, SuppliesItem] EscapeOnlyAI
+UNIT RebelThief Thief 0 Level(10,Enemy,True) [12,16] 0 0 0 0 [IronKnife, SuppliesItem] EscapeOnlyAI
+
+//turn 2
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [17,5] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [17,11] 0 0 0 0 [SteelLance] AttackInTwoAI
+
+//later enemies
+UNIT Rebel Mercenary 0 Level(10,Enemy,True) [20,12] 0 0 0 0 [IronBlade] AttackInRangeAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [21,16] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [21,8] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [29,8] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [29,16] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT Rebel Mercenary 0 Level(10,Enemy,True) [30,12] 0 0 0 0 [IronBlade] AttackInRangeAI
+
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [24,11] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [24,14] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Rebel Deserter 0 Level(10,Enemy,True) [26,14] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [26,11] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT
+
+BeginningScene:
+SetBackground(0x8) //Boat
+MUSC WindGustSoundID
+Text(HubB3BeginningScene1_1)
+FADI 10
+STAL 30
+SetBackground(0x29) //outside a ruined fort
+Text(HubB3BeginningScene1_2)
+MUSC StillZephyrsID
+Text(HubB3BeginningScene1_3)
+FADI 10
+STAL 30
+SetBackground(0x11) //night building?
+MUSC NighttimeSoundID
+Text(HubB3BeginningScene2_1)
+Text(HubB3BeginningScene2_2)
+FADI 10
+STAL 30
+SetBackground(0x20) //night forest area
+MUSC CastawayHeartID                    
+Text(HubB3BeginningScene2_3)
+FADI 10
+STAL 30
+SetBackground(0x0) //house background
+MUSC SwabbieTalkID
+Text(HubB3BeginningScene3_1)
+FADI 10
+STAL 30
+SetBackground(0xA) //inner castle area
+MUSC FinInTheCloudsID
+Text(HubB3BeginningScene3_2)
+FADI 10
+LoadPlayerUnits(NewUnits) 
+LoadEnemies(EnemyUnits)
+GotoPrepScreen
+NoFade 
+ENDA
+
+EndingScene:
+FADI 10
+RemoveAll //remove all the units
+STAL 30
+SetBackground(0xA) //inner castle area
+MUSC SwabbieTalkID
+Text(B3EndingScene1) //inital interrogation
+CHECK_ALIVE Ernest
+BEQ 776 s0 sC //if ernest is dead, skip the rest
+    CHECK_EVENTID RebelThiefDeathQuoteFlag
+    BNE 777 s0 sC
+        Text(B3EndingScene2ThievesSpared) //if the flag is not set, the thieves were spared
+        GiveItem(Impaler, Lua)
+        GOTO 778
+    LABEL 777
+        Text(B3EndingScene2ThievesNotSpared)
+        GOTO 778
+LABEL 776
+Text(B3EndingScene2ErnestDead_1)
+Text(B3EndingScene2ErnestDead_2)
+LABEL 778
+FADI 10
+FadeoutMusic
+STAL 30
+SetBackground(0x8) //Boat
+CALL GiveSuppliesItemsCheck
+CHECK_ALIVE Ernest
+BEQ 781 s0 sC
+    MUSC(StillZephyrsID)
+    Text(B3EndingScene3_2_ErnestAlive)
+    Text(B3EndingScene4ErnestAlive)
+    GOTO 782
+LABEL 781
+MUSC CastawayHeartID //sad music, putting this here for now
+Text(B3EndingScene3_2_ErnestDead)
+Text(B3EndingScene4ErnestDead)
+LABEL 782
+GoToHubChapter(HubB)
+NoFade
+ENDA
+
+GiveSuppliesItemsCheck:
+GetNumberOfSuppliesItemsOnHand
+SVAL s1 7
+BLT 1 sC s1 //if number of supplies items is less than 7, do not play all fuel thing
+    Text(B3EndingScene3_1_AllFuel)
+    GiveItem(SilverAxe,Lua)
+    GiveItemWithDurability(SkillScroll,KeenFighterID,Lua)
+    GiveItem(Bloodletter,Lua)
+    GiveItem(GlassShield,Lua)
+    GOTO 2
+LABEL 1
+Text(B3EndingScene3_1_SomeFuel)
+LABEL 2
+SVAL s1 5
+BLT 3 sC s1 //check sC's amount, give items accordingly
+    GiveItemWithDurability(SkillScroll,KeenFighterID,Lua)
+    GiveItem(Bloodletter,Lua)
+    GiveItem(RedGem,Lua)
+    GOTO 5
+LABEL 3
+SVAL s1 3
+BLT 4 sC s1
+    GiveItem(Bloodletter,Lua)
+    GiveItem(RedGem,Lua)
+    GOTO 5
+LABEL 4
+SVAL s1 1
+BLT 5 sC s1
+    GiveItem(RedGem,Lua)
+    GOTO 5
+LABEL 5
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

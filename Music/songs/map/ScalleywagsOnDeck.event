@@ -18,7 +18,7 @@ ScalleywagsOnDeck_0:
         BYTE   TEMPO   120/2
         BYTE           VOICE   60
         BYTE           PAN     c_v-18
-        BYTE           VOL     127
+        BYTE           VOL     97
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -42,7 +42,7 @@ ScalleywagsOnDeck_0:
         BYTE   W96
 // 011   ----------------------------------------
         BYTE   W48
-        BYTE           N06     En2   v063
+        BYTE           N06     En2   v050
         BYTE   W06
         BYTE                   Fn2
         BYTE   W06
@@ -80,11 +80,11 @@ ScalleywagsOnDeck_0:
 // 015   ----------------------------------------
         BYTE           N24     Bn3
         BYTE   W24
-        BYTE                   Bn3   v056
+        BYTE                   Bn3   v044
         BYTE   W24
-        BYTE                   Bn3   v048
+        BYTE                   Bn3   v038
         BYTE   W24
-        BYTE                   Bn3   v040
+        BYTE                   Bn3   v032
         BYTE   W24
 // 016   ----------------------------------------
 ScalleywagsOnDeck_0_LOOP:
@@ -115,7 +115,7 @@ ScalleywagsOnDeck_1:
 // 000   ----------------------------------------
         BYTE           VOICE   61
         BYTE           PAN     c_v-32
-        BYTE           VOL     127
+        BYTE           VOL     97
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -131,7 +131,7 @@ ScalleywagsOnDeck_1:
         BYTE   W96
 // 007   ----------------------------------------
         BYTE   W60
-        BYTE           N06     En2   v063
+        BYTE           N06     En2   v050
         BYTE   W06
         BYTE                   Fn2
         BYTE   W06
@@ -163,11 +163,11 @@ ScalleywagsOnDeck_1:
 // 011   ----------------------------------------
         BYTE           N24     Bn2
         BYTE   W24
-        BYTE                   Bn2   v056
+        BYTE                   Bn2   v044
         BYTE   W24
-        BYTE                   Bn2   v048
+        BYTE                   Bn2   v038
         BYTE   W24
-        BYTE                   Bn2   v040
+        BYTE                   Bn2   v032
         BYTE   W24
 // 012   ----------------------------------------
         BYTE   W96
@@ -206,8 +206,8 @@ ScalleywagsOnDeck_2:
 // 000   ----------------------------------------
         BYTE           VOICE   50
         BYTE           PAN     c_v-38
-        BYTE           N96     En4   v056
-        BYTE           VOL     127
+        BYTE           N96     En4   v044
+        BYTE           VOL     97
         BYTE   W96
 // 001   ----------------------------------------
         BYTE           N96     Dn4
@@ -275,9 +275,9 @@ ScalleywagsOnDeck_3:
 // 000   ----------------------------------------
         BYTE           VOICE   62
         BYTE           PAN     c_v+23
-        BYTE           N96     En3   v056
+        BYTE           N96     En3   v044
         BYTE           N48     An3
-        BYTE           VOL     127
+        BYTE           VOL     97
         BYTE   W48
         BYTE           N48     Cn4
         BYTE   W48
@@ -373,7 +373,7 @@ ScalleywagsOnDeck_3:
         BYTE   W06
 // 016   ----------------------------------------
 ScalleywagsOnDeck_3_LOOP:
-        BYTE           N36     Bn3   v063
+        BYTE           N36     Bn3   v050
         BYTE           N36     En3
         BYTE   W36
         BYTE                   As3
@@ -437,7 +437,7 @@ ScalleywagsOnDeck_3_LOOP:
         BYTE           N36     En3
         BYTE           N36     Fn3
         BYTE   W36
-        BYTE           N06     Fs3   v056
+        BYTE           N06     Fs3   v044
         BYTE           N06     Bn3
         BYTE   W06
         BYTE                   As3
@@ -454,8 +454,8 @@ ScalleywagsOnDeck_4:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   38
-        BYTE           N06     Gn2   v063
-        BYTE           VOL     127
+        BYTE           N06     Gn2   v050
+        BYTE           VOL     97
         BYTE   W06
         BYTE           N06     En1
         BYTE   W06
@@ -489,7 +489,7 @@ ScalleywagsOnDeck_4:
         BYTE   W06
 // 001   ----------------------------------------
 ScalleywagsOnDeck_4_1:
-        BYTE           N06     Gn2   v063
+        BYTE           N06     Gn2   v050
         BYTE   W06
         BYTE                   En1
         BYTE   W06
@@ -526,7 +526,7 @@ ScalleywagsOnDeck_4_1:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_4_1
 // 003   ----------------------------------------
-        BYTE           N12     Gn2   v063
+        BYTE           N12     Gn2   v050
         BYTE   W12
         BYTE           N18     En2
         BYTE   W18
@@ -556,7 +556,7 @@ ScalleywagsOnDeck_4_1:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_4_1
 // 007   ----------------------------------------
-        BYTE           N12     En1   v063
+        BYTE           N12     En1   v050
         BYTE   W12
         BYTE           N18     En2
         BYTE   W18
@@ -578,7 +578,7 @@ ScalleywagsOnDeck_4_1:
         BYTE   W06
 // 008   ----------------------------------------
 ScalleywagsOnDeck_4_8:
-        BYTE           N06     En1   v063
+        BYTE           N06     En1   v050
         BYTE   W06
         BYTE                   En1
         BYTE   W06
@@ -609,7 +609,7 @@ ScalleywagsOnDeck_4_8:
          POIN2  ScalleywagsOnDeck_4_8
 // 011   ----------------------------------------
 ScalleywagsOnDeck_4_11:
-        BYTE           N06     En1   v063
+        BYTE           N06     En1   v050
         BYTE   W06
         BYTE                   En1
         BYTE   W18
@@ -638,7 +638,7 @@ ScalleywagsOnDeck_4_11:
          POIN2  ScalleywagsOnDeck_4_11
 // 016   ----------------------------------------
 ScalleywagsOnDeck_4_LOOP:
-        BYTE           N06     En1   v063
+        BYTE           N06     En1   v050
         BYTE   W06
         BYTE                   En1
         BYTE   W42
@@ -681,7 +681,7 @@ ScalleywagsOnDeck_4_LOOP:
         BYTE   W42
 // 020   ----------------------------------------
 ScalleywagsOnDeck_4_20:
-        BYTE           N06     Gn2   v063
+        BYTE           N06     Gn2   v050
         BYTE   W06
         BYTE                   En1
         BYTE   W06
@@ -710,7 +710,7 @@ ScalleywagsOnDeck_4_20:
         BYTE   PEND
 // 021   ----------------------------------------
 ScalleywagsOnDeck_4_21:
-        BYTE           N06     En2   v063
+        BYTE           N06     En2   v050
         BYTE   W06
         BYTE                   En1
         BYTE   W06
@@ -754,9 +754,9 @@ ScalleywagsOnDeck_5:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   123
-        BYTE           N12     Gs1   v063
+        BYTE           N12     Gs1   v050
         BYTE           N12     Bn0
-        BYTE           VOL     127
+        BYTE           VOL     97
         BYTE   W12
         BYTE           N24     En1
         BYTE           N12     Gs1
@@ -836,36 +836,36 @@ ScalleywagsOnDeck_5:
         BYTE                   As1
         BYTE   W06
 // 003   ----------------------------------------
-        BYTE           N12     Dn1   v056
-        BYTE           N12     Cn2   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N12     Cn2   v050
         BYTE           N06     An1
         BYTE   W12
-        BYTE           N12     Dn1   v056
-        BYTE           N06     An1   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N06     An1   v050
         BYTE   W06
         BYTE           N12     Bn1
         BYTE   W06
-        BYTE                   Dn1   v056
+        BYTE                   Dn1   v044
         BYTE   W12
         BYTE                   Dn1
-        BYTE           N06     Bn1   v063
+        BYTE           N06     Bn1   v050
         BYTE   W06
         BYTE                   Cn2
         BYTE   W06
-        BYTE           N12     Dn1   v056
-        BYTE           N06     Bn1   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N06     Bn1   v050
         BYTE   W06
         BYTE           N12     Gn1
         BYTE   W06
-        BYTE                   Dn1   v056
+        BYTE                   Dn1   v044
         BYTE   W06
-        BYTE           N06     Fn1   v063
+        BYTE           N06     Fn1   v050
         BYTE   W06
-        BYTE           N12     Dn1   v056
-        BYTE           N12     En1   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N12     En1   v050
         BYTE   W12
-        BYTE                   Dn1   v056
-        BYTE           N12     En1   v063
+        BYTE                   Dn1   v044
+        BYTE           N12     En1   v050
         BYTE   W12
 // 004   ----------------------------------------
         BYTE           N96     Cs2
@@ -951,36 +951,36 @@ ScalleywagsOnDeck_5:
         BYTE   W06
 // 007   ----------------------------------------
         BYTE           N12     Dn2
-        BYTE           N12     Dn1   v056
-        BYTE           N06     Bn1   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N06     Bn1   v050
         BYTE   W12
-        BYTE           N12     Dn1   v056
-        BYTE           N06     Bn1   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N06     Bn1   v050
         BYTE   W06
         BYTE           N12     Cn2
         BYTE   W06
-        BYTE                   Dn1   v056
+        BYTE                   Dn1   v044
         BYTE   W12
         BYTE                   Dn1
-        BYTE           N06     Cn2   v063
+        BYTE           N06     Cn2   v050
         BYTE   W06
         BYTE                   Dn2
         BYTE   W06
-        BYTE           N12     Dn1   v056
-        BYTE           N12     Cs2   v063
+        BYTE           N12     Dn1   v044
+        BYTE           N12     Cs2   v050
         BYTE   W12
-        BYTE                   Dn1   v056
-        BYTE           N12     Cs2   v063
+        BYTE                   Dn1   v044
+        BYTE           N12     Cs2   v050
         BYTE   W12
-        BYTE                   Dn1   v056
-        BYTE           N12     Cs2   v063
+        BYTE                   Dn1   v044
+        BYTE           N12     Cs2   v050
         BYTE   W12
-        BYTE                   Dn1   v056
-        BYTE           N12     Cs2   v063
+        BYTE                   Dn1   v044
+        BYTE           N12     Cs2   v050
         BYTE   W12
 // 008   ----------------------------------------
 ScalleywagsOnDeck_5_8:
-        BYTE           N12     En1   v063
+        BYTE           N12     En1   v050
         BYTE           N06     Gs1
         BYTE   W12
         BYTE           N12     Cn1
@@ -1013,7 +1013,7 @@ ScalleywagsOnDeck_5_8:
         BYTE   PEND
 // 009   ----------------------------------------
 ScalleywagsOnDeck_5_9:
-        BYTE           N12     En1   v063
+        BYTE           N12     En1   v050
         BYTE           N06     Gs1
         BYTE   W12
         BYTE           N12     Cn1
@@ -1046,7 +1046,7 @@ ScalleywagsOnDeck_5_9:
         BYTE   PEND
 // 010   ----------------------------------------
 ScalleywagsOnDeck_5_10:
-        BYTE           N12     En1   v063
+        BYTE           N12     En1   v050
         BYTE           N06     Gs1
         BYTE   W12
         BYTE           N12     Cn1
@@ -1079,7 +1079,7 @@ ScalleywagsOnDeck_5_10:
         BYTE   PEND
 // 011   ----------------------------------------
 ScalleywagsOnDeck_5_11:
-        BYTE           N96     En2   v063
+        BYTE           N96     En2   v050
         BYTE           N12     En1
         BYTE   W12
         BYTE                   En1
@@ -1123,7 +1123,7 @@ ScalleywagsOnDeck_5_11:
          POIN2  ScalleywagsOnDeck_5_11
 // 016   ----------------------------------------
 ScalleywagsOnDeck_5_LOOP:
-        BYTE           N12     En1   v063
+        BYTE           N12     En1   v050
         BYTE           N12     Cn1
         BYTE   W12
         BYTE                   Cn1
@@ -1325,85 +1325,85 @@ ScalleywagsOnDeck_6:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   55
-        BYTE           N12     En2   v056
-        BYTE           VOL     127
+        BYTE           N12     En2   v044
+        BYTE           VOL     97
         BYTE   W12
-        BYTE           N12     En2   v063
+        BYTE           N12     En2   v050
         BYTE   W36
-        BYTE                   En2   v056
+        BYTE                   En2   v044
         BYTE   W12
-        BYTE                   En2   v063
+        BYTE                   En2   v050
         BYTE   W36
 // 001   ----------------------------------------
-        BYTE                   Dn2   v056
+        BYTE                   Dn2   v044
         BYTE   W12
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE   W36
-        BYTE                   Dn2   v056
+        BYTE                   Dn2   v044
         BYTE   W12
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE   W36
 // 002   ----------------------------------------
-        BYTE                   Fn2   v056
+        BYTE                   Fn2   v044
         BYTE   W12
-        BYTE                   Fn2   v063
+        BYTE                   Fn2   v050
         BYTE   W36
-        BYTE                   Fn2   v056
+        BYTE                   Fn2   v044
         BYTE   W12
-        BYTE                   Fn2   v063
+        BYTE                   Fn2   v050
         BYTE   W36
 // 003   ----------------------------------------
-        BYTE                   En2   v056
+        BYTE                   En2   v044
         BYTE   W12
-        BYTE                   En2   v063
+        BYTE                   En2   v050
         BYTE   W36
-        BYTE                   En2   v056
+        BYTE                   En2   v044
         BYTE   W12
-        BYTE                   En2   v063
+        BYTE                   En2   v050
         BYTE   W12
-        BYTE                   En2   v056
+        BYTE                   En2   v044
         BYTE   W12
-        BYTE                   En2   v063
+        BYTE                   En2   v050
         BYTE   W12
 // 004   ----------------------------------------
 ScalleywagsOnDeck_6_4:
-        BYTE           N12     En2   v056
+        BYTE           N12     En2   v044
         BYTE   W12
-        BYTE                   En2   v063
+        BYTE                   En2   v050
         BYTE   W84
         BYTE   PEND
 // 005   ----------------------------------------
-        BYTE                   Dn2   v056
+        BYTE                   Dn2   v044
         BYTE   W12
-        BYTE                   Dn2   v063
+        BYTE                   Dn2   v050
         BYTE   W84
 // 006   ----------------------------------------
-        BYTE                   Fn2   v056
+        BYTE                   Fn2   v044
         BYTE   W12
-        BYTE                   Fn2   v063
+        BYTE                   Fn2   v050
         BYTE   W84
 // 007   ----------------------------------------
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_6_4
 // 008   ----------------------------------------
 ScalleywagsOnDeck_6_8:
-        BYTE           N48     En2   v063
+        BYTE           N48     En2   v050
         BYTE   W48
-        BYTE                   En2   v056
+        BYTE                   En2   v044
         BYTE   W48
         BYTE   PEND
 // 009   ----------------------------------------
 ScalleywagsOnDeck_6_9:
-        BYTE           N48     Dn2   v063
+        BYTE           N48     Dn2   v050
         BYTE   W48
-        BYTE                   Dn2   v056
+        BYTE                   Dn2   v044
         BYTE   W48
         BYTE   PEND
 // 010   ----------------------------------------
 ScalleywagsOnDeck_6_10:
-        BYTE           N48     Fn2   v063
+        BYTE           N48     Fn2   v050
         BYTE   W48
-        BYTE                   Fn2   v056
+        BYTE                   Fn2   v044
         BYTE   W48
         BYTE   PEND
 // 011   ----------------------------------------
@@ -1411,9 +1411,9 @@ ScalleywagsOnDeck_6_10:
          POIN2  ScalleywagsOnDeck_6_8
 // 012   ----------------------------------------
 ScalleywagsOnDeck_6_12:
-        BYTE           N48     Gn2   v063
+        BYTE           N48     Gn2   v050
         BYTE   W48
-        BYTE                   Gn2   v056
+        BYTE                   Gn2   v044
         BYTE   W48
         BYTE   PEND
 // 013   ----------------------------------------
@@ -1427,7 +1427,7 @@ ScalleywagsOnDeck_6_12:
          POIN2  ScalleywagsOnDeck_6_8
 // 016   ----------------------------------------
 ScalleywagsOnDeck_6_LOOP:
-        BYTE           N18     En2   v056
+        BYTE           N18     En2   v044
         BYTE           N18     Bn2
         BYTE   W18
         BYTE                   Bn2
@@ -1497,16 +1497,16 @@ ScalleywagsOnDeck_6_LOOP:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_6_9
 // 022   ----------------------------------------
-        BYTE           N48     Cs2   v063
+        BYTE           N48     Cs2   v050
         BYTE   W48
-        BYTE                   Cs2   v056
+        BYTE                   Cs2   v044
         BYTE   W48
 // 023   ----------------------------------------
-        BYTE           N24     En2   v063
+        BYTE           N24     En2   v050
         BYTE   W24
         BYTE                   En2
         BYTE   W24
-        BYTE           N12     En2   v056
+        BYTE           N12     En2   v044
         BYTE   W12
         BYTE                   En2
         BYTE   W12
@@ -1529,8 +1529,8 @@ ScalleywagsOnDeck_7:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   98
-        BYTE           N06     Gn3   v056
-        BYTE           VOL     127
+        BYTE           N06     Gn3   v044
+        BYTE           VOL     97
         BYTE   W06
         BYTE           N06     En2
         BYTE   W06
@@ -1564,7 +1564,7 @@ ScalleywagsOnDeck_7:
         BYTE   W06
 // 001   ----------------------------------------
 ScalleywagsOnDeck_7_1:
-        BYTE           N06     Gn3   v056
+        BYTE           N06     Gn3   v044
         BYTE   W06
         BYTE                   En2
         BYTE   W06
@@ -1601,7 +1601,7 @@ ScalleywagsOnDeck_7_1:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_7_1
 // 003   ----------------------------------------
-        BYTE           N12     Gn3   v056
+        BYTE           N12     Gn3   v044
         BYTE   W12
         BYTE           N18     En3
         BYTE   W18
@@ -1631,7 +1631,7 @@ ScalleywagsOnDeck_7_1:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_7_1
 // 007   ----------------------------------------
-        BYTE           N12     En2   v056
+        BYTE           N12     En2   v044
         BYTE   W12
         BYTE           N18     En3
         BYTE   W18
@@ -1653,7 +1653,7 @@ ScalleywagsOnDeck_7_1:
         BYTE   W06
 // 008   ----------------------------------------
 ScalleywagsOnDeck_7_8:
-        BYTE           N06     En2   v056
+        BYTE           N06     En2   v044
         BYTE   W06
         BYTE                   En2
         BYTE   W06
@@ -1684,7 +1684,7 @@ ScalleywagsOnDeck_7_8:
          POIN2  ScalleywagsOnDeck_7_8
 // 011   ----------------------------------------
 ScalleywagsOnDeck_7_11:
-        BYTE           N06     En2   v056
+        BYTE           N06     En2   v044
         BYTE   W06
         BYTE                   En2
         BYTE   W18
@@ -1713,7 +1713,7 @@ ScalleywagsOnDeck_7_11:
          POIN2  ScalleywagsOnDeck_7_11
 // 016   ----------------------------------------
 ScalleywagsOnDeck_7_LOOP:
-        BYTE           N06     En2   v056
+        BYTE           N06     En2   v044
         BYTE   W06
         BYTE                   En2
         BYTE   W42
@@ -1756,7 +1756,7 @@ ScalleywagsOnDeck_7_LOOP:
         BYTE   W42
 // 020   ----------------------------------------
 ScalleywagsOnDeck_7_20:
-        BYTE           N06     Gn3   v056
+        BYTE           N06     Gn3   v044
         BYTE   W06
         BYTE                   En2
         BYTE   W06
@@ -1785,7 +1785,7 @@ ScalleywagsOnDeck_7_20:
         BYTE   PEND
 // 021   ----------------------------------------
 ScalleywagsOnDeck_7_21:
-        BYTE           N06     En3   v056
+        BYTE           N06     En3   v044
         BYTE   W06
         BYTE                   En2
         BYTE   W06

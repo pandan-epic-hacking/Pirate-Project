@@ -5,6 +5,7 @@
 #define A3Spawn2TurnFlag 11
 #define A3Spawn3TurnFlag 12
 #define A3Spawn3AreaFlag 13
+// 14, 15, 16, 17 are battle quotes
 
 EventPointerTable(HubA_3EventsID, PointerList)
 
@@ -25,8 +26,31 @@ TurnEventPlayer(0, A3Explanation, 1)
 TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
 TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
 TurnEventPlayer(A3Spawn3TurnFlag, A3Reinforce3, 1, 255)
+TurnEventPlayer(0, SpiritWarning, 7)
 Survive(GameOverYeaaaaah,13)
 END_MAIN
+
+SpiritWarning:
+CAMERA_CENTERED [0,0]
+STAL 10
+CURSOR [4,0]
+SOUN 0x02F7 //druid crit charge, but supposed to be sound of phantoms 
+STAL 40
+REMOVE_CURSORS
+STAL 30
+CameraCursor(Lua)
+
+CHECK_ALIVE Biko
+BEQ 775 s0 sC
+	CHECK_ALIVE Ondeh
+	BEQ 775 s0 sC
+		Text(A3_MidBattle_PhantomWarn_AllUnits) //If both Biko and Ondeh are alive, then play cutscene with all of them.
+		GOTO 776
+LABEL 775
+Text(A3_MidBattle_PhantomWarn_LuaSolo) // else do cutscene with only Lua
+LABEL 776
+NoFade
+ENDA
 
 A3Explanation:
 CAMERA_CENTERED [18,14]
@@ -40,6 +64,8 @@ NoFade
 ENDA
 
 GameOverYeaaaaah:
+CameraCursor(Lua)
+Text(A3_SanTorino_Appears)
 CALL GameOverStart
 NoFade
 ENDA
@@ -119,9 +145,8 @@ NoFade
 ENDA
 
 ForestFriendEvent:
-//texto
 RemoveAllThreeLogs
-//texto
+Text(A3_ForestFriendText)
 GiveItemWithDurability(SkillScroll,ForestFriendID,0xFFFF)
 NoFade
 ENDA
@@ -148,6 +173,12 @@ CheckNoUnits:
 GotoEndingSceneIfNoPlayers
 NoFade
 ENDA
+
+CutsceneUnits:
+UNIT Lua 0 0 Level(10,Ally,False) [2,15]  0 0 1 REDA2R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Ondeh 0 0 Level(4,NPC,False) [2,16]  0x0 0 1 REDA3R7 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,NPC,False) [3,16]   0x0 0 1 REDA1R7 [IronLance,Vulnerary] NoAI
+UNIT
 
 Units1:
 UNIT Lua 0 0 Level(10,Ally,False) [2,6] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -194,14 +225,17 @@ Traps2:
 ENDTRAP
 ALIGN 4
 
+BossGroup:
+UNIT Sargargala 0 0 Level(7,Enemy,True) [18,14]  0 0 1 REDA17R14 [KillerLance, LightBrand] BossAI
+UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [18,13] 0 0 1 REDA17R13 [HandAxe] BossAI
+UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [18,15] 0 0 1 REDA17R15 [HandAxe] BossAI
+UNIT
+
 EnemyGroup:
-UNIT Sargargala 0 0 Level(7,Enemy,True) [17,14] 0 0 0 0 [KillerLance, LightBrand] BossAI
-UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,13] 0 0 0 0 [HandAxe] BossAI
-UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,15] 0 0 0 0 [HandAxe] BossAI
 
-UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [4,8] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [3,13] 0 0 1 REDA4R8 [SteelLance] PursueWithoutHeedAI
 
-UNIT RiojaReaper Archer 0 Level(3, Enemy, True) [10,9] 0 0 0 0 [Longbow, TealGem] AttackInRangeAI
+UNIT RiojaReaper Archer 0 Level(3, Enemy, True) [10,11] 0 0 1 REDA10R9 [Longbow, TealGem] AttackWhenInRangeAI
 
 UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [10,14] 0 0 0 0 [HandAxe] BossAI
 UNIT RiojaReaper Shaman 0 Level(3, Enemy, True) [10,15] 0 0 0 0 [Elfire] BossAI
@@ -212,11 +246,11 @@ UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [17,10] 0 0 0 0 [Javelin] Boss
 UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [2,11] 0 0 0 0 [SteelAxe] GroupOneAI
 UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [0,13] 0 0 0 0 [Tomereaver, Longbow] GroupOneAI
 UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [Onigiri] GroupOneAI
-UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackWhenInRangeAI
 
-UNIT RiojaReaper Mage 0 Level(3, Enemy, True) [6,0] 0 0 0 0 [Fire] GroupTwoAI
-UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [10,4] 0 0 0 0 [Pike, Pitchfork] GroupTwoAI
-UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [6,6] 0 0 0 0 [SteelSword] GroupTwoAI
+UNIT RiojaReaper Mage 0 Level(3, Enemy, True) [14,1] 0 0 1 REDA6R0 [Fire] GroupTwoAI
+UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [14,4] 0 0 1 REDA10R4 [Pike, Pitchfork] GroupTwoAI
+UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [4,10] 0 0 1 REDA6R16 [SteelSword] GroupTwoAI
 UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [IronAxe] GroupTwoAI
 
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [15,5] 0 0 0 0 [SteelLance] GroupThreeAI
@@ -226,7 +260,7 @@ UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [18,12] 0 0 0 0 [SteelSwor
 UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [18,16] 0 0 0 0 [SteelLance] GroupFiveAI
 UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronLance] GroupFourAI
 UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [12,16] 0 0 0 0 [IronSword] GroupFiveAI
-UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackInRangeAI
+UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackWhenInRangeAI
 UNIT
 
 LogGroup:
@@ -236,8 +270,53 @@ UNIT A3Log 0 0 Level(1,NPC, False) [6,9] 0 0 0 0 [0x0] BossAI
 UNIT
 
 BeginningScene:
-LOAD1 1 NewPlayerUnits
+MUSC 0x4B
+SetBackground(Forest)
+Text(A3_Scene1_HeadToTemple)
+EraseBackground
+
+LoadCutsceneUnits(CutsceneUnits)
+CAMERA_CENTERED [3,4]
+STAL 30 
+CameraCursor(Lua)
+SetBackground(Temple_Gate)
+Text(A3_Scene2_TempleEntrance)
+EVBIT_F 2 //Skipping stops here
+MUSC 0x7FFF
+EraseBackground
+
+MOVE 6 Lua [2,2]
+MOVE 6 Biko [1,2]
+MOVE 6 Ondeh [3,2]
+STAL 90
+SetBackground(Temple_Ruins_Inside)
+Text(A3_Scene3_InTheTomb)
+EraseBackground
+
+Music(SwabbieTalkID)
+CAMERA_CENTERED [15,14]
+LOAD1 1 BossGroup
+ENUN
+STAL 10
+CameraCursor(Sargargala)
+CAMERA_CENTERED [15,14]
+SetBackground(Forest_2)
+Text(A3_Scene4_Sagargala)
+EraseBackground
+
+CAMERA_CENTERED [3,4]
+STAL 30
 LOAD1 1 EnemyGroup
+ENUN
+STAL 10
+CameraCursor(Lua)
+MOVE 15 Lua [2,3]
+ENUN
+Text(A3_Scene5_ReadyForBattle)
+
+FADI 15
+CLEN 0 //erase the NPC biko and ondeh (sorry guys)
+LOAD1 1 NewPlayerUnits
 LOAD1 1 LogGroup
 ENUN
 ENUT A3Spawn1TurnFlag
@@ -249,6 +328,17 @@ NoFade
 ENDA
 
 EndingScene:
+FadeoutMusic
+SetBackground(Forest_2)
+CHECK_ALIVE Biko
+BEQ 775 s0 sC
+	CHECK_ALIVE Ondeh
+	BEQ 775 s0 sC
+		Text(A3_Ending_AllAlive) //If both Biko and Ondeh are alive, then play cutscene with all of them.
+		GOTO 776
+LABEL 775
+Text(A3_Ending_AllAlive) //if not, play the same cutscene because variations aren't written yet. 
+LABEL 776
 PlayEventIfEventIDSet(A3LogFlag, 1, AshArrowItemEvent)
 ENUF LordMustEscapeLastFlag
 GoToHubChapter(HubA)
@@ -256,7 +346,8 @@ NoFade
 ENDA
 
 AshArrowItemEvent:
-GiveItem(AshArrow, Lua)
+Text(A3_AshQuiverEventText)
+GiveItem(AshQuiver, Lua)
 NoFade
 ENDA
 

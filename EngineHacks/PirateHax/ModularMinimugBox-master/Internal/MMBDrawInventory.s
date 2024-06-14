@@ -67,13 +67,13 @@ Loop:
 		lsl		r1, r0, #24
 		lsr		r1, #24		@ r1 - item id
 		mov		r0, r2		@ moves durability to r0 bc that is item icon id for external sheets
-		cmp		r1, #0xbc	@ checks if it's a skill scroll
-		bne		IsAGrowthScroll
+		cmp		r1, #0xcb	@ checks if it's a skill scroll
+		beq		IsATonic
 				
 			mov		r1, #5		@ skill scrolls use 5th sheet
 			b GetTileIndex
 		
-		IsAGrowthScroll:
+		IsATonic:
 		mov		r1, #6
 		b GetTileIndex
 

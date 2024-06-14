@@ -20,6 +20,33 @@ Tome mastery level.[X]
 # 0x566
 Knife mastery level.[X]
 
+# 0x4E9
+HP[X]
+
+# 0x4fe
+Str[X]
+
+# 0x4ff
+Mag[X]
+
+# 0x4ec
+Skl[X]
+
+# 0x4ed
+Spd[X]
+
+# 0x4EE
+Lck[X]
+
+# 0x4ef
+Def[X]
+
+# 0x4f0
+Res[X]
+
+# 0x4f6
+Mov[X]
+
 # 0x055D
 Chance that the attack will hit.[NL]
 Skl x 3 + Weapon Hit + Triangle Adv.[X]
@@ -190,3 +217,5 @@ Unequip[X]
 
 ## UnequipEquipmentDescription
 Remove this equipment.[X]
+
+#include "soundroom_text.txt"

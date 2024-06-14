@@ -1,16 +1,3 @@
-#ifndef FreeSpace
-	#ifdef _FE8_
-		#define FreeSpace $B30000
-	#endif
-	ORG FreeSpace
-#endif
-
-#ifndef ItemEffectRevamp
-	#define ItemEffectRevamp
-#endif
-
-#include "Extensions/Hack Installation.txt"
-
 #ifdef _FE8_
 	#ifndef IDListCheck
 		#define IDListCheck

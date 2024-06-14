@@ -36,32 +36,81 @@ ALIGN 4
 BravesCrestPromoList:
 PromoListEntry(Deserter, Champion)
 PromoListEntry(Ninja, MasterNinja)
+PromoListEntry(Mercenary, Hero)
+PromoListEntry(Mercenary_F, Hero_F)
+PromoListEntry(Myrmidon, Swordmaster)
+PromoListEntry(Myrmidon_F, Swordmaster_F)
+PromoListEntry(Monk, Slayer)
+PromoListEntry(Monk_F, Slayer_F)
+PromoListEntry(Brigand, Berserker)
+PromoListEntry(Cleric, WarMonk_F)
+PromoListEntry(Priest, WarMonk)
+PromoListEntry(Soldier, Halberdier)
+PromoListEntry(BowCav, Ranger_F)
 PromoListEnd
 
 ALIGN 4
 HuntersMarkPromoList:
-PromoListEntry(Ninja, Assassin)
 PromoListEntry(Archer, Sniper)
 PromoListEntry(Archer_F, Sniper_F)
+PromoListEntry(Hunter, Assassin)
+PromoListEntry(Hunter_F, Assassin_F)
+PromoListEntry(Thief, Rogue)
+PromoListEntry(Priest, Adventurer)
+PromoListEntry(Cleric, Adventurer_F)
+PromoListEntry(Monk, Trickster)
+PromoListEntry(Monk_F, Trickster_F)
+PromoListEntry(Fighter, Warrior)
+PromoListEntry(Fighter_F, Warrior_F)
+PromoListEntry(SwordCav, Dragoon)
+PromoListEntry(Gunner, Marksman)
 PromoListEnd
 
 ALIGN 4
 KnightsPlatePromoList:
-PromoListEntry(Vanguard, Dreadnought)
+PromoListEntry(Vanguard, Marshall) 
+PromoListEntry(Warden, General)
+PromoListEntry(Shaman, Runeshield)
+PromoListEntry(Shaman_F, Runeshield)
+PromoListEntry(Fighter, Marshall)
+PromoListEntry(Fighter_F, Marshall)
+PromoListEntry(Soldier, General)
+PromoListEntry(AxeCav, Cataphract)
 PromoListEnd
 
 ALIGN 4
 RidersBadgePromoList:
 PromoListEntry(Vanguard, Cataphract)
-PromoListEntry(Mage, MageKnight)
-PromoListEntry(Mage_F, MageKnight_F)
+PromoListEntry(Mage, DarkKnight)
+PromoListEntry(Mage_F, DarkKnight)
+PromoListEntry(Mercenary, Ranger)
+PromoListEntry(Mercenary_F, Ranger_F)
+PromoListEntry(Gunner, Dragoon)
+PromoListEntry(Thief, WolfKnight)
+PromoListEntry(Deserter, WolfKnight)
+PromoListEntry(SwordCav, SwordKnight)
+PromoListEntry(AxeCav, AxeKnight)
+PromoListEntry(LanceCav, LanceKnight)
+PromoListEntry(BowCav, BowKnight)
+PromoListEntry(Troubadour, Savior)
 PromoListEnd
 
 ALIGN 4
 MagesRingPromoList:
-PromoListEntry(Curate, Sage)
+PromoListEntry(Warden, Baron)
 PromoListEntry(Mage, Sage)
 PromoListEntry(Mage_F, Sage_F)
+PromoListEntry(Curate, Sage) 
+PromoListEntry(Myrmidon, Slayer)
+PromoListEntry(Myrmidon_F, Slayer_F)
+PromoListEntry(Brigand, WarMonk)
+PromoListEntry(Hunter, Adventurer)
+PromoListEntry(Hunter_F, Adventurer_F)
+PromoListEntry(Ninja, Trickster_F)
+PromoListEntry(LanceCav, DarkKnight)
+PromoListEntry(PegasusRider, Seraph)
+PromoListEntry(DragonRider, MaligKnight)
+PromoListEntry(DragonRider_F, MaligKnight)
 PromoListEnd
 
 ALIGN 4
@@ -69,4 +118,10 @@ FliersPermitPromoList:
 PromoListEntry(Curate, Seraph)
 PromoListEntry(Archer, Bombardier)
 PromoListEntry(Archer_F, Bombardier)
+PromoListEntry(Shaman, MaligKnight)
+PromoListEntry(Shaman_F, MaligKnight)
+PromoListEntry(Troubadour, Seraph)
+PromoListEntry(DragonRider, Dracoknight)
+PromoListEntry(DragonRider_F, Dracoknight)
+PromoListEntry(PegasusRider, Falcoknight)
 PromoListEnd

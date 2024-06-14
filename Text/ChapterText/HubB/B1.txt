@@ -1,0 +1,364 @@
+## HubB_1Title
+Ch. B-1: What Once Was[X]
+
+## HubB_1StatusObjective
+Defeat the[N]
+bandit leader.[X]
+
+## HubB_1GoalWindow
+Defeat Boss[X]
+
+
+
+## HubB_1StartingScene
+[MidLeft][LoadLua][MidRight][LoadRazvan]
+[MidRight][2LB]
+Ah,[.4] Captain![.4][N]
+Do you have a moment?[A]
+
+[MidLeft][1LB]
+What's on your mind Razvan?[A]
+
+[MidRight][3LB]
+Well, since we're on the outskirts[N]
+I've been thinking. This place isn't too[N]
+far out from my hometown.[AN]
+I travelled around a bit in my[N]
+time here and there's a village nearby[N]
+where I remember rumors of treasure.[A]
+
+[MidLeft][1LB]
+Is that so?[A]
+
+[MidRight][2LB]
+Indeed.[.5] It was[Beat][.4] a while ago[N]
+but perhaps it's worth investigating?[A]
+
+[MidLeft][1LB]
+Do you know anything about this treasure?[A]
+
+[MidRight][3LB]
+Truth be told I can't remember much.[.5][N]
+But I remember hearing it was[N]
+riches and weapons in a desert ruin.[AN]
+But it seems like it could be real,[.5][N]
+I mean the desert hides many treasures.[A]
+
+[MidLeft][1LB]
+I suppose a lead is a lead.[A]
+[X]
+
+
+
+
+## HubB_1StartingSceneDeny
+[MidLeft][LoadLua]
+No.[A][X]
+
+
+
+
+## HubB_1StartingScene2
+[MidLeft][LoadLua][MidRight][LoadRazvan]
+[MidLeft][2LB]
+Alright,[.4] seems like a reasonable[N]
+idea.[.5] We could use the funds.[AN]
+Do you still remember the way?[A]
+
+[MidRight][2LB]
+Somewhat,[.4] though we'll need to[N]
+find some clues about the treasure.[A]
+
+[MidLeft][2LB]
+Well it's not like we're above[N]
+a little investigative work.[AN]
+Go talk to Pilar and see about[N]
+charting us a course there.[A]
+
+[MidRight][1LB]
+Right away captain![A]
+[X]
+
+
+
+
+##HubB_1BeginningScene1
+[MidLeft][LoadLua][Right][LoadRazvan][FarRight][LoadPilar]
+[MidLeft][2LB]
+Typical,[.4] not a single person around[N]
+here wants to tell us anything.[A]
+
+[FarRight][2LB]
+Everyone I spoke to alludes to it[N]
+being dangerous,[.4] not worth the risk.[AN]
+All seems to be hearsay though.[A]
+
+[Right]
+We have to be able to find someone[N]
+surely![.5] Someone must know![A]
+
+[MidLeft][2LB]
+I'd say at this point it's unlikely[N]
+to go anywhere Razvan,[.4] sorry.[AN]
+Let's just enjoy a night at this[N]
+tavern and cut our losses for today.[AN]
+No use trekking in the desert blindly.[N]
+We'll set off again in the morning.[A]
+
+[FarFarRight][LoadDmitr][1LB]
+I might be able to help with that.[A]
+
+[Right][ClearFace][FarRight][ClearFace]
+[FarFarRight][MoveMidRight]
+[MidLeft][1LB]
+Oh?[.5] And who might you be?[A]
+
+[MidRight][2LB]
+I'm Dmitr.[.5] I heard you asking[N]
+around about those treasure rumors.[AN]
+I have spent much time in the[N]
+desert, I am willing to be your guide.[A]
+
+[MidLeft][3LB]
+Is that so?[.5] And what's in it for[N]
+you?[.5] Why haven't you claimed[N]
+the treasure for yourself?[AN]
+Seems a bit suspect you[N]
+have to admit?[A]
+
+[MidRight][3LB]
+I ask for payment for my services.[AN]
+People speak of vengeful spirits[N]
+inhabiting those ruins and none,[.4][N]
+even I,[.4] dare set foot there.[AN]
+But for the right price with your[N]
+party in tow,[.4] I could be swayed.[AN]
+
+[MidLeft][2LB]
+[Beat][.5] I see,[.4] well I don't[N]
+know about vengeful spirits.[AN]
+But we certainly can't find our way[N]
+around the desert on our own.[AN]
+What's your fee for your guidance?[A]
+
+[MidRight][2LB]
+A cut of the treasure itself[N]
+should suffice for me.[A]
+
+[MidLeft][2LB]
+Acceptable terms,[.4] very well[N]
+we'll set out tomorrow.[A]
+[X]
+
+
+##HubB_1BeginningScene2
+[FarLeft][LoadLua][Left][LoadRazvan][Right][LoadDmitr][FarRight][LoadPilar]
+[FarLeft][2LB]
+Never did I think I could get[N]
+so tired of seeing sand.[A]
+
+[Right][2LB]
+It's not far now,[.4] we should[N]
+be able to see it soon.[A]
+
+[Left][2LB]
+It's a good thing we left later[N]
+on.[.5] It would be way too hot earlier.[A]
+
+[FarRight][2LB]
+We can't be out here too long[N]
+though.[.4] It'll be freezing[N]
+once it gets really dark.[A]
+
+[Right][2LB]
+I think I see it in the distance.[.5][N]
+only a half hour more at most.[A]
+
+[FarLeft][2LB]
+Good.[.5] I don't think I want[N]
+to keep walking much longer.[AN]
+Let's get this over with and[Beat][.5][N]
+Walk another hour back[Beat][A]
+[X]
+
+
+##HubB_1BeginningScene3
+[MidLeft][LoadKiril][MidRight][LoadPirate]
+[MidRight][3LB]
+Boss.[.5] It looks like we got some[N]
+travellers on the horizon.[.5] Large[N]
+group too,[.4] not the usual adventurers.[A]
+
+[MidLeft][3LB]
+Tch.[.5] This late in the evening?[.5][N]
+Get everyone ready then,[.4] this[N]
+could potentially be a big haul[Beat][A]
+
+[MidRight][1LB]
+Of course,[.4] right away.[A]
+
+[MidRight][ClearFace]
+[MidLeft][2LB]
+A big wandering desert beast falling[N]
+into the sand pit of the Antlion[Beat][AN]
+This haul will keep us going[N]
+for a long time[Beat][A][X]
+
+
+##HubB_1BeginningScene4
+[FarFarRight][LoadLua][MoveMidRight]
+[MidRight][2LB]
+The hell?[.5] This place is[N]
+infested with bandits![A][CSS]
+
+[MidRight][MoveMidLeft][CF]
+[MidLeft][LoadLua][2LB]
+Dmitr?![.5] Is this trap[N]
+your bloody doing?[A]
+
+[MidRight][LoadDmitr][2LB]
+I swear I have nothing[N]
+to do with this![AN]
+Perhaps these are where the rumours[N]
+of vengeful spirits come from.[AN]
+But I promise I am a mere guide![.5][N]
+I will help fight with you.[A]
+
+[MidLeft][2LB]
+Tch.[.5] Good enough for me.[.5][N]
+Can't go anywhere without a damn fight.[AN]
+Everyone ready up,[.4] lets clear[N]
+out this blasted den.[A][X]
+
+
+
+
+
+
+## HubB_1EndingScene1
+[FarLeft][LoadLua][Left][LoadRazvan][Right][LoadDmitr][FarRight][LoadPilar]
+[FarLeft][2LB]
+Well,[.4] that's that.[.5] Yet another[N]
+gang of upstarts put down[Beat][A]
+
+[Left][2LB]
+It's unfortunate their lives[N]
+had to end in such a way.[AN]
+I can't imagine hiding in a ruin[N]
+waiting for travellers is much of a life.[A]
+
+[FarRight][1LB]
+No,[.4] but it's the life they chose.[A]
+
+[FarLeft][2LB]
+I suppose we should think about[N]
+setting on back now[Beat][A]
+
+[Right][2LB]
+Indeed,[.4] it'll take us around[N]
+an hour to get back to town.[AN]
+We will want to set off immediately[N]
+to avoid being stuck freezing at night.[A]
+
+[Left][1LB]
+I can hardly walk anymore[Beat][A]
+
+[Right][2LB]
+If you don't mind my asking,[.4][N]
+what will you do when you return?[A]
+
+[FarLeft][2LB]
+I suppose we'll be sailing off[N]
+and resuming our travels.[AN]
+What's it to you?[A]
+
+[Right][2LB]
+I am a traveller myself,[.4] but in truth[N]
+there is only so far one can go alone.[AN]
+If you would permit it I would[N]
+like to join you on your travels.[AN]
+So long as I have room and board[N]
+that is enough for me.[A]
+
+[FarLeft][2LB]
+Sure,[.4] you fought well and[N]
+we could always use more bodies.[AN]
+I should tell you though this is[N]
+a pirate gang,[.4] we're outlaws.[AN]
+You'll be expected to pull your weight.[A]
+
+[Right][2LB]
+I'd figured you were.[.5] This is fine[N]
+with me.[.5] I'm merely concerned with travel.[A]
+
+[FarLeft][1LB]
+Alright then,[.4] let's get a move on.[A][X]
+
+
+## HubB_1EndingScene1_B
+[MidLeft][LoadLua][Right][LoadRazvan][FarRight][LoadPilar]
+
+[MidLeft][2LB]
+Well,[.4] that's that.[.5] Yet another[N]
+gang of upstarts put down[Beat][A]
+
+[Right][3LB]
+What a shame about our guide though.[.5][N]
+It brings sorrow to see a life[N]
+cut so short.[.5] Especially helping us[Beat][A]
+
+[MidLeft][2LB]
+Yeah it's tough breaks.[.5] Maybe if[N]
+I'd run a tighter ship[Beat][AN]
+Still,[.5] he knew the risk of it.[.5][N]
+Could've happened to any one of us.[AN]
+
+[Right][2LB]
+I suppose we should bury him no?[.5][N]
+I can perform rites for him.[A]
+
+[MidLeft][2LB]
+Mhm.[.5] I reckon a wanderer like[N]
+him wouldn't mind it out here.[AN]
+Amongst the quiet under the stars.[A]
+
+[Right][1LB]
+I suppose that's true yes.[A]
+
+[MidLeft][3LB]
+Pilar,[.4] do you remember how we[N]
+got out here?[.5] Reckon you could[N]
+navigate us back to town?[A]
+
+[FarRight][2LB]
+I wouldn't be much of a[N]
+navigator if I couldn't Lua.[AN]
+I'll have us back before[N]
+we end up freezing to death.[A]
+
+[MidLeft][1LB]
+Alright then,[.4] let's get a move on.[A][X]
+
+
+## ThiefTextB_1
+[MidLeft][LoadPirate][1LB]
+Now's my chance to make my break.[A][CSS]
+[MidLeft][2LB]
+I'll pick what I can and be gone[N]
+before anyone can notice me.[AN]
+By the time Kiril find's out[N]
+they'll have no chance of finding me.[A]
+
+
+
+## ImDmitr
+i'm dmitr[A][X]
+
+## KirilTakesNotice
+aw hell naw intruders[A][X]
+
+## LuaResponds
+cue preps[A][X]
+
+## KirilDeathQuote
+[Beat][.5][CloseEyes][A][X]

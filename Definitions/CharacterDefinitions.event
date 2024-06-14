@@ -12,6 +12,7 @@
 #define Estelle $7
 #define Hermenegildo $8
 #define MrYodsen $9
+#define Yodsen $9
 #define Durgham $A
 //Samson/Arrans
 #define Triana $43
@@ -34,6 +35,32 @@
 #define Mentor $15
 #define Orlando Mentor
 #define Rahel $16
+#define Alonso $41
+#define Elodia $42
+
+// HUB B CHAPTER UNITS
+
+// $17 to $1F (+ $25)
+
+#define Dmitr $17
+#define Husniye $18
+#define Avocado $19
+#define Magdalena $1A
+#define Ernest $1B
+#define Kai $1C
+#define Adrian $1D
+#define Lexa $1E
+#define Fata $1F
+#define Noah $25
+
+// HUB B BASE UNITS
+
+#define Ponte $20
+#define Passarola $21
+#define Neltume $22
+#define Flint $3E //these two are mutually exclusive
+#define Gerald $3F //these two are mutually exclusive
+
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -41,9 +68,30 @@
 #define Khazhak $46
 #define Blackheart $47
 
+// HUB UNITS
+#define Ida $76
+#define Docksman $77
+
 // HUB A CHAPTER UNITS
 
 // HUB A CHAPTER ENEMIES + NPCS
+
+#define GreagorVillager $A0
+#define GreagorSailor $A1
+#define GreagorPatroller $A2
+#define GreagorLibrarian $A3
+#define GreagorGuard $A4
+#define GreagorSmuggler $A5
+#define GreagorShipwright $A6
+#define GreagorCaptain $A7
+#define GreagorPatron $A8
+
+#define GreagorPeddler $A9
+
+#define GreagorLibrarianB $AA
+#define GreagorVillagerB $AB
+#define GreagorPatronB $AC
+#define GreagorVillagerC $AE
 
 //Hub A1
 #define Buzu $48
@@ -61,17 +109,22 @@
 #define Sierra $56
 #define Manfred $6D
 #define CrimsonHeart $6E
+//Used for a scripted battle cutscene. 
+#define IncendivisMageA2 $AD 
+
 
 //Hub A3
 #define Sargargala $5B
+#define Sagargala Sargargala
 #define LogPirate $5C
 #define RiojaReaper LogPirate
 #define A3Log $58
 
 //Hub A4
-#define A4Pirate $6A
-#define A4PirateBoss $6B
-#define A4RebelBoss $6C
+#define Razorblood $6A
+#define Stingray $6B
+#define Ramiro $6C
+#define A4FunnyArcher $78
 
 //A5
 #define Gunsmith $5A
@@ -93,3 +146,48 @@
 #define Bomb 0x57
 #define Rochefort 0x68
 #define A6Pirate 0x69
+
+//Chapter 2
+#define TorchUnit $6f
+#define Igniswords $70
+#define Ignacio $71
+#define TorchUnit2 $72
+#define Hugo $73
+#define Juliana $74
+#define ElodiaBoss $75
+
+
+//Hub B1
+#define Antlion $79
+#define Kiril $7A
+
+//Hub B2
+#define Yadney 0xD0
+#define Cruz 0xD1
+#define CruzFake 0xD2
+#define RecelosoPriest 0xD3
+#define RecelosoCorpse 0xD4
+#define RecelosoStudent 0xD5
+#define RecelosoGuard 0xD6 
+#define RecelosoBarkeep 0xD7
+#define Quim 0xD3
+#define Gavriel 0xD4
+#define Fogaca 0xD5
+#define Dario 0xD6
+#define Thais 0xD7
+
+// Hub B3
+#define Azahar 0xDA
+#define RebelThief 0xAF
+
+//Hub B4
+#define B4Bandit 0xD8
+#define Javier 0xD9
+
+// Hub B5
+#define Nicodemus 0xDB
+
+// Chapter 3
+#define Dalila 0x7B
+#define AlonsoChapter3 0x7C
+#define BlackheartElite 0x7D
